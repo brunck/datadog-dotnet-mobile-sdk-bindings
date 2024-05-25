@@ -3,119 +3,123 @@
 
 # Define workspace and scheme
 WORKSPACE="../../../dd-sdk-ios/Datadog.xcworkspace"
-FRAMEWORK_NAME="DatadogObjc"
-SCHEME="${FRAMEWORK_NAME} iOS"
+FRAMEWORK_NAMES=("DatadogInternal" "DatadogCore" "DatadogLogs" "DatadogTrace" "DatadogRUM" "DatadogSessionReplay" "DatadogCrashReporting" "DatadogObjc")
 CONFIGURATION="Release"
 DERIVED_DATA_PATH="./DerivedData"
-BUILD_DIR="${DERIVED_DATA_PATH}/${FRAMEWORK_NAME}/Build/Products/${CONFIGURATION}"
-SIMULATOR_ARCHIVE_PATH="${BUILD_DIR}/${FRAMEWORK_NAME}-iphonesimulator.xcarchive"
-DEVICE_ARCHIVE_PATH="${BUILD_DIR}/${FRAMEWORK_NAME}-iphoneos.xcarchive"
+BUILD_DIR="${DERIVED_DATA_PATH}/Build/Products/${CONFIGURATION}"
+CARTFILE_DIRECTORY="../../../dd-sdk-ios"
+CARTHAGE_OUTPUT="${CARTFILE_DIRECTORY}/Carthage/Build"
+
+echo
+echo "Building XCFrameworks for Datadog SDK."
+carthage update --platform iOS --use-xcframeworks --project-directory "$CARTFILE_DIRECTORY"
 
 # Define output folder environment variable
 OUTPUT_FOLDER="${PWD}/build"
 
-### Build archives
-# Simulator
-echo 
-echo "Creating Simulator archive."
 echo
-
-# xcodebuild -workspace "${WORKSPACE}" -scheme "${SCHEME}" -configuration Release -sdk iphoneos -derivedDataPath "${OUTPUT_FOLDER}/iphoneos" BUILD_LIBRARY_FOR_DISTRIBUTION=YES SKIP_INSTALL=NO
-if ! xcodebuild -workspace "${WORKSPACE}" archive \
-  -scheme "${SCHEME}" \
-  -archivePath ${SIMULATOR_ARCHIVE_PATH} \
-  -destination "generic/platform=iOS Simulator" \
-  -derivedDataPath "${DERIVED_DATA_PATH}" \
-  -IDECustomBuildProductsPath="" -IDECustomBuildIntermediatesPath="" \
-  ENABLE_BITCODE=NO \
-  SKIP_INSTALL=NO \
-  BUILD_LIBRARY_FOR_DISTRIBUTION=YES; then
-    echo "Simulator build failed. Exiting."
-    echo
-    exit 1
+echo "Cleaning up old .xcframework files at ${OUTPUT_FOLDER}."
+find "${OUTPUT_FOLDER}" -name "*.xcframework" -type d -exec rm -rf {} \;
+if [ $? -ne 0 ]; then
+  echo "Failed to clean up old .xcframework files. Exiting."
+  exit 1
 fi
 
-# Device
-echo "Creating Device archive."
+for FRAMEWORK_NAME in "${FRAMEWORK_NAMES[@]}"; do
+  SCHEME="${FRAMEWORK_NAME} iOS"
+  SIMULATOR_ARCHIVE_PATH="${BUILD_DIR}/${FRAMEWORK_NAME}-iphonesimulator.xcarchive"
+  DEVICE_ARCHIVE_PATH="${BUILD_DIR}/${FRAMEWORK_NAME}-iphoneos.xcarchive"
+
+  ### Build archives
+  # Simulator
+  echo 
+  echo "Creating Simulator archive for ${FRAMEWORK_NAME}."
+  echo
+  if ! xcodebuild -workspace "${WORKSPACE}" archive \
+    -scheme "${SCHEME}" \
+    -archivePath ${SIMULATOR_ARCHIVE_PATH} \
+    -destination "generic/platform=iOS Simulator" \
+    -derivedDataPath "${DERIVED_DATA_PATH}" \
+    -IDECustomBuildProductsPath="" -IDECustomBuildIntermediatesPath="" \
+    ENABLE_BITCODE=NO \
+    SKIP_INSTALL=NO \
+    BUILD_LIBRARY_FOR_DISTRIBUTION=YES; then
+      echo "Simulator build for ${FRAMEWORK_NAME} failed. Exiting."
+      echo
+      exit 1
+  fi
+
+  # Device
+  echo "Creating Device archive for ${FRAMEWORK_NAME}."
+  echo
+  if ! xcodebuild -workspace "${WORKSPACE}" archive \
+    -scheme "${SCHEME}" \
+    -archivePath ${DEVICE_ARCHIVE_PATH} \
+    -destination "generic/platform=iOS" \
+    -derivedDataPath "${DERIVED_DATA_PATH}" \
+    -IDECustomBuildProductsPath="" -IDECustomBuildIntermediatesPath="" \
+    ENABLE_BITCODE=NO \
+    SKIP_INSTALL=NO \
+    BUILD_LIBRARY_FOR_DISTRIBUTION=YES; then
+      echo "Device build for ${FRAMEWORK_NAME} failed. Exiting."
+      echo
+      exit 1
+  fi
+
+  # Create XCFramework by combining all frameworks
+  echo "Creating XCFramework for ${FRAMEWORK_NAME}."
+  echo
+  if ! xcodebuild -create-xcframework \
+    -framework ${SIMULATOR_ARCHIVE_PATH}/Products/Library/Frameworks/${FRAMEWORK_NAME}.framework \
+    -framework ${DEVICE_ARCHIVE_PATH}/Products/Library/Frameworks/${FRAMEWORK_NAME}.framework \
+    -output ${OUTPUT_FOLDER}/${FRAMEWORK_NAME}.xcframework; then
+      echo "Create XCFramework for ${FRAMEWORK_NAME} failed. Exiting."
+      echo
+      exit 1
+  fi
+  echo "Done creating XCFramework for ${FRAMEWORK_NAME}."
+  echo 
+done
+
+echo "Done with all frameworks."
 echo
-#xcodebuild -workspace "${WORKSPACE}" -scheme "${SCHEME}" -configuration Release -sdk iphonesimulator -derivedDataPath "${OUTPUT_FOLDER}/iphonesimulator" BUILD_LIBRARY_FOR_DISTRIBUTION=YES SKIP_INSTALL=NO
-
-if ! xcodebuild -workspace "${WORKSPACE}" archive \
-  -scheme "${SCHEME}" \
-  -archivePath ${DEVICE_ARCHIVE_PATH} \
-  -destination "generic/platform=iOS" \
-  -derivedDataPath "${DERIVED_DATA_PATH}" \
-  -IDECustomBuildProductsPath="" -IDECustomBuildIntermediatesPath="" \
-  ENABLE_BITCODE=NO \
-  SKIP_INSTALL=NO \
-  BUILD_LIBRARY_FOR_DISTRIBUTION=YES; then
-    echo "Device build failed. Exiting."
-    echo
-    exit 1
-fi
-
-# Clean up old output directory
-if [[ -d "${OUTPUT_FOLDER}" ]]; then
-    rm -rf "${OUTPUT_FOLDER:?}"
-fi
-
-# Create XCFramework by combining all frameworks
-echo "Creating XCFramework."
-echo
-
-if ! xcodebuild -create-xcframework \
-  -framework ${SIMULATOR_ARCHIVE_PATH}/Products/Library/Frameworks/${FRAMEWORK_NAME}.framework \
-  -framework ${DEVICE_ARCHIVE_PATH}/Products/Library/Frameworks/${FRAMEWORK_NAME}.framework \
-  -output ${OUTPUT_FOLDER}/${FRAMEWORK_NAME}.xcframework; then
-    echo "Create XCFramework failed. Exiting."
-    echo
-    exit 1
-fi
-
-echo "Done creating XCFramework."
-echo 
 
 echo
 echo "Copying .xcframework/dependencies to binding project path."
 echo
 
-SOURCE_DIR="${DERIVED_DATA_PATH}"
+SOURCE_DIR="${OUTPUT_FOLDER}"
 TARGET_DIR="./Bindings"
 
-# Find .framework files in the source directory
+echo "Cleaning up old .xcframework files at ${TARGET_DIR}."
+echo
+find "${TARGET_DIR}" -name "*.xcframework" -type d -exec rm -rf {} \;
+if [ $? -ne 0 ]; then
+  echo "Failed to clean up old .xcframework files. Exiting."
+  exit 1
+fi
+
+# Find .xcframework files in the source directory
 echo "Copying frameworks from ${SOURCE_DIR} to target directory ${TARGET_DIR}."
 echo
-find "$SOURCE_DIR" -name "*.framework" -type d | while read -r framework
+find "$SOURCE_DIR" -name "*.xcframework" -type d | while read -r framework
 do
-  # Get the name of the framework
-  framework_name=$(basename "$framework")
-
-  if [ "$framework_name" != "${FRAMEWORK_NAME}.framework" ]; then
-    # Copy the framework to the target directory
-    cp -R "$framework" "$TARGET_DIR"
+  # Copy the framework to the target directory
+  cp -R "$framework" "$TARGET_DIR"
+  if [ $? -ne 0 ]; then
+    echo "Failed to copy $framework. Exiting."
+    exit 1
   fi
 done
 
-# if [[ -d "${BINDING_PROJECT_PATH}/${DEPENDENCY_FILE_NAME}" ]]; then
-#     rm -rf "${BINDING_PROJECT_PATH:?}/${DEPENDENCY_FILE_NAME}"
-# fi
-
+echo "Copying CrashReporter.xcframework to target directory ${TARGET_DIR}."
 echo
-echo "Cleaning up old .xcframework at ${TARGET_DIR}."
-echo
-if [[ -d "${TARGET_DIR}/${FRAMEWORK_NAME}.xcframework" ]]; then
-    rm -rf "${TARGET_DIR}/${FRAMEWORK_NAME}.xcframework"
+cp -R "${CARTHAGE_OUTPUT}/CrashReporter.xcframework" "${TARGET_DIR}"
+if [ $? -ne 0 ]; then
+  echo "Failed to copy ${XCFRAMEWORK_NAME}. Exiting."
+  exit 1
 fi
-
-echo "Copying .xcframework to binding project path: ${TARGET_DIR}."
-cp -R "${OUTPUT_FOLDER}/${FRAMEWORK_NAME}.xcframework" ${TARGET_DIR}
 
 echo
 echo "Done."
 echo
-
-# Create XCFramework
-# xcodebuild -create-xcframework \
-# -framework "${OUTPUT_FOLDER}/iphoneos/Build/Products/Release-iphoneos/${SCHEME}.framework" \
-# -framework "${OUTPUT_FOLDER}/iphonesimulator/Build/Products/Release-iphonesimulator/${SCHEME}.framework" \
-# -output "${OUTPUT_FOLDER}/${SCHEME}.xcframework"
