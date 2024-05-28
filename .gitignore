@@ -10,6 +10,9 @@
 *.userosscache
 *.sln.docstates
 
+# Objective-C header files for binding
+src/iOS/Bindings/Headers/
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
