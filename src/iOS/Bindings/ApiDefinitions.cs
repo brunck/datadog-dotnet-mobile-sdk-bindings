@@ -1,7 +1,6 @@
 using System;
 using Foundation;
 using ObjCRuntime;
-using ObjectiveC;
 using UIKit;
 
 namespace Datadog.iOS
@@ -15,14 +14,7 @@ namespace Datadog.iOS
 		[Export ("traceHeaderFields", ArgumentSemantic.Copy)]
 		NSDictionary<NSString, NSString> TraceHeaderFields { get; }
 
-		// -(instancetype _Nonnull)initWithSamplingRate:(float)samplingRate injectEncoding:(enum DDInjectEncoding)injectEncoding __attribute__((deprecated("This will be removed in future versions of the SDK. Use `init(samplingStrategy: .custom(sampleRate:))` instead.")));
-		[Export ("initWithSamplingRate:injectEncoding:")]
-		NativeHandle Constructor (float samplingRate, DDInjectEncoding injectEncoding);
-
-		// -(instancetype _Nonnull)initWithSampleRate:(float)sampleRate injectEncoding:(enum DDInjectEncoding)injectEncoding __attribute__((objc_designated_initializer)) __attribute__((deprecated("This will be removed in future versions of the SDK. Use `init(samplingStrategy: .custom(sampleRate:))` instead.")));
-		[Export ("initWithSampleRate:injectEncoding:")]
-		[DesignatedInitializer]
-		NativeHandle Constructor (float sampleRate, DDInjectEncoding injectEncoding);
+		// removed deprecated constructors that cause build errors
 
 		// -(instancetype _Nonnull)initWithSamplingStrategy:(DDTraceSamplingStrategy * _Nonnull)samplingStrategy injectEncoding:(enum DDInjectEncoding)injectEncoding __attribute__((objc_designated_initializer));
 		[Export ("initWithSamplingStrategy:injectEncoding:")]
@@ -69,11 +61,11 @@ namespace Datadog.iOS
 
 		// -(void)setEncryption:(id<DDDataEncryption> _Nonnull)encryption;
 		[Export ("setEncryption:")]
-		void SetEncryption (DDDataEncryption encryption);
+		void SetEncryption (IDDDataEncryption encryption);
 
 		// -(void)setServerDateProvider:(id<DDServerDateProvider> _Nonnull)serverDateProvider;
 		[Export ("setServerDateProvider:")]
-		void SetServerDateProvider (DDServerDateProvider serverDateProvider);
+		void SetServerDateProvider (IDDServerDateProvider serverDateProvider);
 
 		// @property (nonatomic, strong) NSBundle * _Nonnull bundle;
 		[Export ("bundle", ArgumentSemantic.Strong)]
@@ -89,16 +81,10 @@ namespace Datadog.iOS
 		NativeHandle Constructor (string clientToken, string env);
 	}
 
-	// @protocol DDDataEncryption
-	/*
-  Check whether adding [Model] to this declaration is appropriate.
-  [Model] is used to generate a C# class that implements this protocol,
-  and might be useful for protocols that consumers are supposed to implement,
-  since consumers can subclass the generated class instead of implementing
-  the generated interface. If consumers are not supposed to implement this
-  protocol, then [Model] is redundant and will generate code that will never
-  be used.
-*/[Protocol (Name = "_TtP11DatadogObjc16DDDataEncryption_")]
+	interface IDDDataEncryption {}
+    
+    // @protocol DDDataEncryption
+    [Protocol (Name = "_TtP11DatadogObjc16DDDataEncryption_")]
 	interface DDDataEncryption
 	{
 		// @required -(NSData * _Nullable)encryptWithData:(NSData * _Nonnull)data error:(NSError * _Nullable * _Nullable)error __attribute__((warn_unused_result("")));
@@ -194,13 +180,14 @@ namespace Datadog.iOS
   protocol, then [Model] is redundant and will generate code that will never
   be used.
 */[Protocol (Name = "_TtP11DatadogObjc26DDUIKitRUMActionsPredicate_")]
-	interface DDUIKitRUMActionsPredicate : IDDUITouchRUMActionsPredicate
+	interface DDUIKitRUMActionsPredicate : DDUITouchRUMActionsPredicate
 	{
 	}
 
+#pragma warning disable CS0108
 	// @interface DDDefaultUIKitRUMActionsPredicate : NSObject <DDUIKitRUMActionsPredicate>
 	[BaseType (typeof(NSObject), Name = "_TtC11DatadogObjc33DDDefaultUIKitRUMActionsPredicate")]
-	interface DDDefaultUIKitRUMActionsPredicate : IDDUIKitRUMActionsPredicate
+	interface DDDefaultUIKitRUMActionsPredicate : DDUIKitRUMActionsPredicate
 	{
 		// -(DDRUMAction * _Nullable)rumActionWithTargetView:(UIView * _Nonnull)targetView __attribute__((warn_unused_result("")));
 		[Export ("rumActionWithTargetView:")]
@@ -229,13 +216,14 @@ namespace Datadog.iOS
 
 	// @interface DDDefaultUIKitRUMViewsPredicate : NSObject <DDUIKitRUMViewsPredicate>
 	[BaseType (typeof(NSObject), Name = "_TtC11DatadogObjc31DDDefaultUIKitRUMViewsPredicate")]
-	interface DDDefaultUIKitRUMViewsPredicate : IDDUIKitRUMViewsPredicate
+	interface DDDefaultUIKitRUMViewsPredicate : DDUIKitRUMViewsPredicate
 	{
 		// -(DDRUMView * _Nullable)rumViewFor:(UIViewController * _Nonnull)viewController __attribute__((warn_unused_result("")));
 		[Export ("rumViewFor:")]
 		[return: NullAllowed]
 		DDRUMView RumViewFor (UIViewController viewController);
 	}
+#pragma warning restore CS0108
 
 	// @interface DDHTTPHeadersWriter : NSObject
 	[BaseType (typeof(NSObject), Name = "_TtC11DatadogObjc19DDHTTPHeadersWriter")]
@@ -246,14 +234,7 @@ namespace Datadog.iOS
 		[Export ("traceHeaderFields", ArgumentSemantic.Copy)]
 		NSDictionary<NSString, NSString> TraceHeaderFields { get; }
 
-		// -(instancetype _Nonnull)initWithSamplingRate:(float)samplingRate __attribute__((deprecated("This will be removed in future versions of the SDK. Use `init(samplingStrategy: .custom(sampleRate:))` instead.")));
-		[Export ("initWithSamplingRate:")]
-		NativeHandle Constructor (float samplingRate);
-
-		// -(instancetype _Nonnull)initWithSampleRate:(float)sampleRate __attribute__((objc_designated_initializer)) __attribute__((deprecated("This will be removed in future versions of the SDK. Use `init(samplingStrategy: .custom(sampleRate:))` instead.")));
-		[Export ("initWithSampleRate:")]
-		[DesignatedInitializer]
-		NativeHandle Constructor (float sampleRate);
+		// removed deprecated constructors that cause build errors
 
 		// -(instancetype _Nonnull)initWithSamplingStrategy:(DDTraceSamplingStrategy * _Nonnull)samplingStrategy __attribute__((objc_designated_initializer));
 		[Export ("initWithSamplingStrategy:")]
@@ -795,7 +776,7 @@ namespace Datadog.iOS
 
 		// @property (readonly, copy, nonatomic) NSString * _Nullable selector;
 		[NullAllowed, Export ("selector")]
-		string Selector { get; }
+		string CssSelector { get; }
 
 		// @property (readonly, nonatomic, strong) NSNumber * _Nullable width;
 		[NullAllowed, Export ("width", ArgumentSemantic.Strong)]
@@ -1042,6 +1023,10 @@ namespace Datadog.iOS
 		string Url { get; set; }
 	}
 
+	interface IDDUIKitRUMViewsPredicate { }
+
+	interface IDDUIKitRUMActionsPredicate { }
+
 	// @interface DDRUMConfiguration : NSObject
 	[BaseType (typeof(NSObject), Name = "_TtC11DatadogObjc18DDRUMConfiguration")]
 	[DisableDefaultCtor]
@@ -1066,11 +1051,11 @@ namespace Datadog.iOS
 
 		// @property (nonatomic, strong) id<DDUIKitRUMViewsPredicate> _Nullable uiKitViewsPredicate;
 		[NullAllowed, Export ("uiKitViewsPredicate", ArgumentSemantic.Strong)]
-		DDUIKitRUMViewsPredicate UiKitViewsPredicate { get; set; }
+		IDDUIKitRUMViewsPredicate UiKitViewsPredicate { get; set; }
 
 		// @property (nonatomic, strong) id<DDUIKitRUMActionsPredicate> _Nullable uiKitActionsPredicate;
 		[NullAllowed, Export ("uiKitActionsPredicate", ArgumentSemantic.Strong)]
-		DDUIKitRUMActionsPredicate UiKitActionsPredicate { get; set; }
+		IDDUIKitRUMActionsPredicate UiKitActionsPredicate { get; set; }
 
 		// -(void)setURLSessionTracking:(DDRUMURLSessionTracking * _Nonnull)tracking;
 		[Export ("setURLSessionTracking:")]
@@ -2960,7 +2945,7 @@ namespace Datadog.iOS
 
 		// -(void)setResourceAttributesProvider:(NSDictionary<NSString *,id> * _Nullable (^ _Nonnull)(NSURLRequest * _Nonnull, NSURLResponse * _Nullable, NSData * _Nullable, NSError * _Nullable))provider;
 		[Export ("setResourceAttributesProvider:")]
-		void SetResourceAttributesProvider (Func<NSURLRequest, NSURLResponse, NSData, NSError, NSDictionary<NSString, NSObject>> provider);
+		void SetResourceAttributesProvider (Func<NSUrlRequest, NSUrlResponse, NSData, NSError, NSDictionary<NSString, NSObject>> provider);
 	}
 
 	// @interface DDRUMView : NSObject
@@ -4176,16 +4161,10 @@ namespace Datadog.iOS
 		DDRUMVitalEventVitalVitalType Type { get; }
 	}
 
-	// @protocol DDServerDateProvider
-	/*
-  Check whether adding [Model] to this declaration is appropriate.
-  [Model] is used to generate a C# class that implements this protocol,
-  and might be useful for protocols that consumers are supposed to implement,
-  since consumers can subclass the generated class instead of implementing
-  the generated interface. If consumers are not supposed to implement this
-  protocol, then [Model] is redundant and will generate code that will never
-  be used.
-*/[Protocol (Name = "_TtP11DatadogObjc20DDServerDateProvider_")]
+    interface IDDServerDateProvider {}
+
+    // @protocol DDServerDateProvider
+    [Protocol (Name = "_TtP11DatadogObjc20DDServerDateProvider_")]
 	interface DDServerDateProvider
 	{
 		// @required -(void)synchronizeWithUpdate:(void (^ _Nonnull)(NSTimeInterval))update;
@@ -5025,32 +5004,32 @@ namespace Datadog.iOS
 		// @required -(id<OTSpan> _Nonnull)startSpan:(NSString * _Nonnull)operationName __attribute__((warn_unused_result("")));
 		[Abstract]
 		[Export ("startSpan:")]
-		OTSpan StartSpan (string operationName);
+		IOTSpan StartSpan (string operationName);
 
 		// @required -(id<OTSpan> _Nonnull)startSpan:(NSString * _Nonnull)operationName tags:(NSDictionary * _Nullable)tags __attribute__((warn_unused_result("")));
 		[Abstract]
 		[Export ("startSpan:tags:")]
-		OTSpan StartSpan (string operationName, [NullAllowed] NSDictionary tags);
+		IOTSpan StartSpan (string operationName, [NullAllowed] NSDictionary tags);
 
 		// @required -(id<OTSpan> _Nonnull)startSpan:(NSString * _Nonnull)operationName childOf:(id<OTSpanContext> _Nullable)parent __attribute__((warn_unused_result("")));
 		[Abstract]
 		[Export ("startSpan:childOf:")]
-		OTSpan StartSpan (string operationName, [NullAllowed] OTSpanContext parent);
+		IOTSpan StartSpan (string operationName, [NullAllowed] IOTSpanContext parent);
 
 		// @required -(id<OTSpan> _Nonnull)startSpan:(NSString * _Nonnull)operationName childOf:(id<OTSpanContext> _Nullable)parent tags:(NSDictionary * _Nullable)tags __attribute__((warn_unused_result("")));
 		[Abstract]
 		[Export ("startSpan:childOf:tags:")]
-		OTSpan StartSpan (string operationName, [NullAllowed] OTSpanContext parent, [NullAllowed] NSDictionary tags);
+		IOTSpan StartSpan (string operationName, [NullAllowed] IOTSpanContext parent, [NullAllowed] NSDictionary tags);
 
 		// @required -(id<OTSpan> _Nonnull)startSpan:(NSString * _Nonnull)operationName childOf:(id<OTSpanContext> _Nullable)parent tags:(NSDictionary * _Nullable)tags startTime:(NSDate * _Nullable)startTime __attribute__((warn_unused_result("")));
 		[Abstract]
 		[Export ("startSpan:childOf:tags:startTime:")]
-		OTSpan StartSpan (string operationName, [NullAllowed] OTSpanContext parent, [NullAllowed] NSDictionary tags, [NullAllowed] NSDate startTime);
+		IOTSpan StartSpan (string operationName, [NullAllowed] IOTSpanContext parent, [NullAllowed] NSDictionary tags, [NullAllowed] NSDate startTime);
 
 		// @required -(BOOL)inject:(id<OTSpanContext> _Nonnull)spanContext format:(NSString * _Nonnull)format carrier:(id _Nonnull)carrier error:(NSError * _Nullable * _Nullable)error;
 		[Abstract]
 		[Export ("inject:format:carrier:error:")]
-		bool Inject (OTSpanContext spanContext, string format, NSObject carrier, [NullAllowed] out NSError error);
+		bool Inject (IOTSpanContext spanContext, string format, NSObject carrier, [NullAllowed] out NSError error);
 
 		// @required -(BOOL)extractWithFormat:(NSString * _Nonnull)format carrier:(id _Nonnull)carrier error:(NSError * _Nullable * _Nullable)error;
 		[Abstract]
@@ -5058,49 +5037,55 @@ namespace Datadog.iOS
 		bool ExtractWithFormat (string format, NSObject carrier, [NullAllowed] out NSError error);
 	}
 
+	interface IOTTracer { }
+	interface IOTSpan { }
+	interface IOTSpanContext { }
+
+#pragma warning disable CS0108
 	// @interface DDTracer : NSObject <OTTracer>
 	[BaseType (typeof(NSObject), Name = "_TtC11DatadogObjc8DDTracer")]
 	[DisableDefaultCtor]
-	interface DDTracer : IOTTracer
+	interface DDTracer : OTTracer
 	{
 		// +(id<OTTracer> _Nonnull)shared __attribute__((warn_unused_result("")));
 		[Static]
 		[Export ("shared")]
-		OTTracer Shared { get; }
+		IOTTracer Shared { get; }
 
 		// -(id<OTSpan> _Nonnull)startSpan:(NSString * _Nonnull)operationName __attribute__((warn_unused_result("")));
 		[Export ("startSpan:")]
-		OTSpan StartSpan (string operationName);
+		IOTSpan StartSpan (string operationName);
 
 		// -(id<OTSpan> _Nonnull)startSpan:(NSString * _Nonnull)operationName tags:(NSDictionary * _Nullable)tags __attribute__((warn_unused_result("")));
 		[Export ("startSpan:tags:")]
-		OTSpan StartSpan (string operationName, [NullAllowed] NSDictionary tags);
+		IOTSpan StartSpan (string operationName, [NullAllowed] NSDictionary tags);
 
 		// -(id<OTSpan> _Nonnull)startSpan:(NSString * _Nonnull)operationName childOf:(id<OTSpanContext> _Nullable)parent __attribute__((warn_unused_result("")));
 		[Export ("startSpan:childOf:")]
-		OTSpan StartSpan (string operationName, [NullAllowed] OTSpanContext parent);
+		IOTSpan StartSpan (string operationName, [NullAllowed] IOTSpanContext parent);
 
 		// -(id<OTSpan> _Nonnull)startSpan:(NSString * _Nonnull)operationName childOf:(id<OTSpanContext> _Nullable)parent tags:(NSDictionary * _Nullable)tags __attribute__((warn_unused_result("")));
 		[Export ("startSpan:childOf:tags:")]
-		OTSpan StartSpan (string operationName, [NullAllowed] OTSpanContext parent, [NullAllowed] NSDictionary tags);
+		IOTSpan StartSpan (string operationName, [NullAllowed] IOTSpanContext parent, [NullAllowed] NSDictionary tags);
 
 		// -(id<OTSpan> _Nonnull)startSpan:(NSString * _Nonnull)operationName childOf:(id<OTSpanContext> _Nullable)parent tags:(NSDictionary * _Nullable)tags startTime:(NSDate * _Nullable)startTime __attribute__((warn_unused_result("")));
 		[Export ("startSpan:childOf:tags:startTime:")]
-		OTSpan StartSpan (string operationName, [NullAllowed] OTSpanContext parent, [NullAllowed] NSDictionary tags, [NullAllowed] NSDate startTime);
+		IOTSpan StartSpan (string operationName, [NullAllowed] IOTSpanContext parent, [NullAllowed] NSDictionary tags, [NullAllowed] NSDate startTime);
 
 		// -(BOOL)inject:(id<OTSpanContext> _Nonnull)spanContext format:(NSString * _Nonnull)format carrier:(id _Nonnull)carrier error:(NSError * _Nullable * _Nullable)error;
 		[Export ("inject:format:carrier:error:")]
-		bool Inject (OTSpanContext spanContext, string format, NSObject carrier, [NullAllowed] out NSError error);
+		bool Inject (IOTSpanContext spanContext, string format, NSObject carrier, [NullAllowed] out NSError error);
 
 		// -(BOOL)extractWithFormat:(NSString * _Nonnull)format carrier:(id _Nonnull)carrier error:(NSError * _Nullable * _Nullable)error;
 		[Export ("extractWithFormat:carrier:error:")]
 		bool ExtractWithFormat (string format, NSObject carrier, [NullAllowed] out NSError error);
 	}
+#pragma warning restore CS0108
 
 	// @interface DDTracingHeaderType : NSObject
 	[BaseType (typeof(NSObject), Name = "_TtC11DatadogObjc19DDTracingHeaderType")]
 	[DisableDefaultCtor]
-	interface DDTracingHeaderType
+	interface DDTracingHeaderType : INativeObject
 	{
 		// @property (readonly, nonatomic, strong, class) DDTracingHeaderType * _Nonnull datadog;
 		[Static]
@@ -5110,7 +5095,7 @@ namespace Datadog.iOS
 		// @property (readonly, nonatomic, strong, class) DDTracingHeaderType * _Nonnull b3multi;
 		[Static]
 		[Export ("b3multi", ArgumentSemantic.Strong)]
-		DDTracingHeaderType B3multi { get; }
+		DDTracingHeaderType B3Multi { get; }
 
 		// @property (readonly, nonatomic, strong, class) DDTracingHeaderType * _Nonnull b3;
 		[Static]
@@ -5120,7 +5105,7 @@ namespace Datadog.iOS
 		// @property (readonly, nonatomic, strong, class) DDTracingHeaderType * _Nonnull tracecontext;
 		[Static]
 		[Export ("tracecontext", ArgumentSemantic.Strong)]
-		DDTracingHeaderType Tracecontext { get; }
+		DDTracingHeaderType TraceContext { get; }
 	}
 
 	// @interface DDTrackingConsent : NSObject
@@ -5222,14 +5207,7 @@ namespace Datadog.iOS
 		[Export ("traceHeaderFields", ArgumentSemantic.Copy)]
 		NSDictionary<NSString, NSString> TraceHeaderFields { get; }
 
-		// -(instancetype _Nonnull)initWithSamplingRate:(float)samplingRate __attribute__((deprecated("This will be removed in future versions of the SDK. Use `init(samplingStrategy: .custom(sampleRate:))` instead.")));
-		[Export ("initWithSamplingRate:")]
-		NativeHandle Constructor (float samplingRate);
-
-		// -(instancetype _Nonnull)initWithSampleRate:(float)sampleRate __attribute__((objc_designated_initializer)) __attribute__((deprecated("This will be removed in future versions of the SDK. Use `init(samplingStrategy: .custom(sampleRate:))` instead.")));
-		[Export ("initWithSampleRate:")]
-		[DesignatedInitializer]
-		NativeHandle Constructor (float sampleRate);
+		// removed deprecated constructors causing build errors
 
 		// -(instancetype _Nonnull)initWithSamplingStrategy:(DDTraceSamplingStrategy * _Nonnull)samplingStrategy __attribute__((objc_designated_initializer));
 		[Export ("initWithSamplingStrategy:")]
@@ -5262,12 +5240,12 @@ namespace Datadog.iOS
 		// @required @property (readonly, nonatomic, strong) id<OTSpanContext> _Nonnull context;
 		[Abstract]
 		[Export ("context", ArgumentSemantic.Strong)]
-		OTSpanContext Context { get; }
+		IOTSpanContext Context { get; }
 
 		// @required @property (readonly, nonatomic, strong) id<OTTracer> _Nonnull tracer;
 		[Abstract]
 		[Export ("tracer", ArgumentSemantic.Strong)]
-		OTTracer Tracer { get; }
+		IOTTracer Tracer { get; }
 
 		// @required -(void)setOperationName:(NSString * _Nonnull)operationName;
 		[Abstract]
@@ -5302,7 +5280,7 @@ namespace Datadog.iOS
 		// @required -(id<OTSpan> _Nonnull)setBaggageItem:(NSString * _Nonnull)key value:(NSString * _Nonnull)value __attribute__((warn_unused_result("")));
 		[Abstract]
 		[Export ("setBaggageItem:value:")]
-		OTSpan SetBaggageItem (string key, string value);
+		IOTSpan SetBaggageItem (string key, string value);
 
 		// @required -(NSString * _Nullable)getBaggageItem:(NSString * _Nonnull)key __attribute__((warn_unused_result("")));
 		[Abstract]
@@ -5333,7 +5311,7 @@ namespace Datadog.iOS
 		// @required -(id<OTSpan> _Nonnull)setActive;
 		[Abstract]
 		[Export ("setActive")]
-		OTSpan SetActive();
+		IOTSpan SetActive();
 	}
 
 	// @protocol OTSpanContext
@@ -5402,19 +5380,6 @@ namespace Datadog.iOS
 
 		// @required @property (readonly, nonatomic, strong) DatadogURLSessionDelegate * _Nonnull ddURLSessionDelegate;
 		[Abstract]
-		[NullAllowed, Export ("ddURLSessionDelegate", ArgumentSemantic.Strong)]
-		NSObject WeakDdURLSessionDelegate { get; }
-	}
-
-	// @interface DatadogInternal_Swift_716 (DatadogURLSessionDelegate) <__URLSessionDelegateProviding>
-	[Category]
-	[BaseType (typeof(DatadogURLSessionDelegate))]
-	interface DatadogURLSessionDelegate_DatadogInternal_Swift_716 : I__URLSessionDelegateProviding
-	{
-		[Wrap ("WeakDdURLSessionDelegate")]
-		DatadogURLSessionDelegate DdURLSessionDelegate { get; }
-
-		// @property (readonly, nonatomic, strong) DatadogURLSessionDelegate * _Nonnull ddURLSessionDelegate;
 		[NullAllowed, Export ("ddURLSessionDelegate", ArgumentSemantic.Strong)]
 		NSObject WeakDdURLSessionDelegate { get; }
 	}
