@@ -93,19 +93,14 @@ echo "Copying .xcframework/dependencies to binding project path."
 echo
 
 SOURCE_DIR="${OUTPUT_FOLDER}"
-TARGET_DIR="./Bindings"
-HEADER_FILES_TARGET_PATH="${TARGET_DIR}/Headers"
+TARGET_DIR="./Bindings/Libs"
 
 echo "Cleaning up old .xcframework files at ${TARGET_DIR}."
 echo
 find "${TARGET_DIR}" -name "*.xcframework" -type d -exec rm -rf {} \;
-if [ $? -ne 0 ]; then
-  echo "Failed to clean up old .xcframework files. Exiting."
-  exit 1
-fi
 
 # Find .xcframework files in the source directory
-echo "Copying frameworks from ${SOURCE_DIR} to target directory ${TARGET_DIR}."
+echo "Copying .xcframeworks from ${SOURCE_DIR} to target directory ${TARGET_DIR}."
 echo
 find "$SOURCE_DIR" -name "*.xcframework" -type d | while read -r framework
 do
@@ -124,35 +119,6 @@ if [ $? -ne 0 ]; then
   echo "Failed to copy CrashReporter.xcframework. Exiting."
   exit 1
 fi
-
-HEADER_FILE_PREFIXES=("DatadogObjc" "DatadogCrashReporting" "DatadogInternal")
-
-if [[ -d $HEADER_FILES_TARGET_PATH ]]; then
-    rm -r $SHARPIE_HEADERS_PATH
-fi
-
-if ! mkdir $HEADER_FILES_TARGET_PATH; then
-    echo "Failed to create Sharpie header file path at ${HEADER_FILES_TARGET_PATH}. Exiting."
-    exit 1
-fi
-
-echo "Copying Swift header files to target directory ${HEADER_FILES_TARGET_PATH} for Objective Sharpie."
-echo
-
-for FRAMEWORK_NAME in "${HEADER_FILE_PREFIXES[@]}"; do
-  XCFRAMEWORK_PATH="${OUTPUT_FOLDER}/${FRAMEWORK_NAME}.xcframework"
-  HEADER_FILE_PATH=$(find "${XCFRAMEWORK_PATH}" -name "${FRAMEWORK_NAME}-Swift.h" | head -n 1)
-  if [ -z "${HEADER_FILE_PATH}" ]; then
-
-    echo "Failed to find ${FRAMEWORK_NAME}-Swift.h in ${XCFRAMEWORK_PATH}. Exiting."
-    exit 1
-  fi
-  cp -f "${HEADER_FILE_PATH}" "${HEADER_FILES_TARGET_PATH}"
-  if [ $? -ne 0 ]; then
-    echo "Failed to copy ${HEADER_FILE_PATH} to ${HEADER_FILES_TARGET_PATH}. Exiting."
-    exit 1
-  fi
-done
 
 echo
 echo "Done."
