@@ -17,47 +17,47 @@
 		<ObjcBindingCoreSource Include="StructsAndEnums.cs" />
 	</ItemGroup>
 	<ItemGroup>
-		<NativeReference Include="DatadogObjc.xcframework">
+		<NativeReference Include="Libs/DatadogObjc.xcframework">
 			<Kind>Framework</Kind>
 			<SmartLink>False</SmartLink>
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
-		<NativeReference Include="DatadogCore.xcframework">
+		<NativeReference Include="Libs/DatadogCore.xcframework">
 			<Kind>Framework</Kind>
 			<SmartLink>False</SmartLink>
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
-		<NativeReference Include="DatadogCrashReporting.xcframework">
+		<NativeReference Include="Libs/DatadogCrashReporting.xcframework">
 			<Kind>Framework</Kind>
 			<SmartLink>False</SmartLink>
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
-		<NativeReference Include="CrashReporter.xcframework">
+		<NativeReference Include="Libs/CrashReporter.xcframework">
 			<Kind>Framework</Kind>
 			<SmartLink>False</SmartLink>
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
-		<NativeReference Include="DatadogInternal.xcframework">
+		<NativeReference Include="Libs/DatadogInternal.xcframework">
 			<Kind>Framework</Kind>
 			<SmartLink>False</SmartLink>
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
-		<NativeReference Include="DatadogLogs.xcframework">
+		<NativeReference Include="Libs/DatadogLogs.xcframework">
 			<Kind>Framework</Kind>
 			<SmartLink>False</SmartLink>
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
-		<NativeReference Include="DatadogRUM.xcframework">
+		<NativeReference Include="Libs/DatadogRUM.xcframework">
 			<Kind>Framework</Kind>
 			<SmartLink>False</SmartLink>
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
-		<NativeReference Include="DatadogSessionReplay.xcframework">
+		<NativeReference Include="Libs/DatadogSessionReplay.xcframework">
 			<Kind>Framework</Kind>
 			<SmartLink>False</SmartLink>
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
-		<NativeReference Include="DatadogTrace.xcframework">
+		<NativeReference Include="Libs/DatadogTrace.xcframework">
 			<Kind>Framework</Kind>
 			<SmartLink>False</SmartLink>
 			<ForceLoad>True</ForceLoad>
