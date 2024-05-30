@@ -12,6 +12,7 @@
 
 # Objective-C header files for binding
 src/iOS/Bindings/Headers/
+src/iOS/Bindings/Libs
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
