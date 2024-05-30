@@ -62,7 +62,7 @@ namespace Datadog.iOS
 	public enum DDRUMActionEventContainerSource : long
 	{
 		Android = 0,
-		Ios = 1,
+		IOS = 1,
 		Browser = 2,
 		Flutter = 3,
 		ReactNative = 4,
@@ -95,10 +95,10 @@ namespace Datadog.iOS
 	public enum DDRUMActionEventRUMConnectivityEffectiveType : long
 	{
 		None = 0,
-		Slow2g = 1,
-		EffectiveType2g = 2,
-		EffectiveType3g = 3,
-		EffectiveType4g = 4
+		Slow2G = 1,
+		EffectiveType2G = 2,
+		EffectiveType3G = 3,
+		EffectiveType4G = 4
 	}
 
 	[Native]
@@ -108,8 +108,8 @@ namespace Datadog.iOS
 		Bluetooth = 1,
 		Cellular = 2,
 		Ethernet = 3,
-		Wifi = 4,
-		Wimax = 5,
+		WiFi = 4,
+		WiMax = 5,
 		Mixed = 6,
 		Other = 7,
 		Unknown = 8,
@@ -130,7 +130,7 @@ namespace Datadog.iOS
 		Mobile = 0,
 		Desktop = 1,
 		Tablet = 2,
-		Tv = 3,
+		TV = 3,
 		GamingConsole = 4,
 		Bot = 5,
 		Other = 6
@@ -141,7 +141,7 @@ namespace Datadog.iOS
 	{
 		User = 0,
 		Synthetics = 1,
-		CiTest = 2
+		CITest = 2
 	}
 
 	[Native]
@@ -149,7 +149,7 @@ namespace Datadog.iOS
 	{
 		None = 0,
 		Android = 1,
-		Ios = 2,
+		IOS = 2,
 		Browser = 3,
 		Flutter = 4,
 		ReactNative = 5,
@@ -170,7 +170,7 @@ namespace Datadog.iOS
 	public enum DDRUMErrorEventContainerSource : long
 	{
 		Android = 0,
-		Ios = 1,
+		IOS = 1,
 		Browser = 2,
 		Flutter = 3,
 		ReactNative = 4,
@@ -236,7 +236,7 @@ namespace Datadog.iOS
 		Ad = 1,
 		Advertising = 2,
 		Analytics = 3,
-		Cdn = 4,
+		CDN = 4,
 		Content = 5,
 		CustomerSuccess = 6,
 		FirstParty = 7,
@@ -282,23 +282,23 @@ namespace Datadog.iOS
 		None = 0,
 		Android = 1,
 		Browser = 2,
-		Ios = 3,
+		IOS = 3,
 		ReactNative = 4,
 		Flutter = 5,
 		Roku = 6,
-		Ndk = 7,
-		IosIl2cpp = 8,
-		NdkIl2cpp = 9
+		NDK = 7,
+		IOSIl2CPP = 8,
+		NDKIl2CPP = 9
 	}
 
 	[Native]
 	public enum DDRUMErrorEventRUMConnectivityEffectiveType : long
 	{
 		None = 0,
-		Slow2g = 1,
-		EffectiveType2g = 2,
-		EffectiveType3g = 3,
-		EffectiveType4g = 4
+		Slow2G = 1,
+		EffectiveType2G = 2,
+		EffectiveType3G = 3,
+		EffectiveType4G = 4
 	}
 
 	[Native]
@@ -308,8 +308,8 @@ namespace Datadog.iOS
 		Bluetooth = 1,
 		Cellular = 2,
 		Ethernet = 3,
-		Wifi = 4,
-		Wimax = 5,
+		WiFi = 4,
+		WiMax = 5,
 		Mixed = 6,
 		Other = 7,
 		Unknown = 8,
@@ -330,7 +330,7 @@ namespace Datadog.iOS
 		Mobile = 0,
 		Desktop = 1,
 		Tablet = 2,
-		Tv = 3,
+		TV = 3,
 		GamingConsole = 4,
 		Bot = 5,
 		Other = 6
@@ -341,7 +341,7 @@ namespace Datadog.iOS
 	{
 		User = 0,
 		Synthetics = 1,
-		CiTest = 2
+		CITest = 2
 	}
 
 	[Native]
@@ -349,7 +349,7 @@ namespace Datadog.iOS
 	{
 		None = 0,
 		Android = 1,
-		Ios = 2,
+		IOS = 2,
 		Browser = 3,
 		Flutter = 4,
 		ReactNative = 5,
@@ -371,7 +371,7 @@ namespace Datadog.iOS
 	public enum DDRUMLongTaskEventContainerSource : long
 	{
 		Android = 0,
-		Ios = 1,
+		IOS = 1,
 		Browser = 2,
 		Flutter = 3,
 		ReactNative = 4,
@@ -404,10 +404,10 @@ namespace Datadog.iOS
 	public enum DDRUMLongTaskEventRUMConnectivityEffectiveType : long
 	{
 		None = 0,
-		Slow2g = 1,
-		EffectiveType2g = 2,
-		EffectiveType3g = 3,
-		EffectiveType4g = 4
+		Slow2G = 1,
+		EffectiveType2G = 2,
+		EffectiveType3G = 3,
+		EffectiveType4G = 4
 	}
 
 	[Native]
@@ -417,8 +417,8 @@ namespace Datadog.iOS
 		Bluetooth = 1,
 		Cellular = 2,
 		Ethernet = 3,
-		Wifi = 4,
-		Wimax = 5,
+		WiFi = 4,
+		WiMax = 5,
 		Mixed = 6,
 		Other = 7,
 		Unknown = 8,
@@ -439,7 +439,7 @@ namespace Datadog.iOS
 		Mobile = 0,
 		Desktop = 1,
 		Tablet = 2,
-		Tv = 3,
+		TV = 3,
 		GamingConsole = 4,
 		Bot = 5,
 		Other = 6
@@ -450,7 +450,7 @@ namespace Datadog.iOS
 	{
 		User = 0,
 		Synthetics = 1,
-		CiTest = 2
+		CITest = 2
 	}
 
 	[Native]
@@ -458,7 +458,7 @@ namespace Datadog.iOS
 	{
 		None = 0,
 		Android = 1,
-		Ios = 2,
+		IOS = 2,
 		Browser = 3,
 		Flutter = 4,
 		ReactNative = 5,
@@ -481,7 +481,7 @@ namespace Datadog.iOS
 	public enum DDRUMResourceEventContainerSource : long
 	{
 		Android = 0,
-		Ios = 1,
+		IOS = 1,
 		Browser = 2,
 		Flutter = 3,
 		ReactNative = 4,
@@ -527,8 +527,8 @@ namespace Datadog.iOS
 		Bluetooth = 1,
 		Cellular = 2,
 		Ethernet = 3,
-		Wifi = 4,
-		Wimax = 5,
+		WiFi = 4,
+		WiMax = 5,
 		Mixed = 6,
 		Other = 7,
 		Unknown = 8,
@@ -549,7 +549,7 @@ namespace Datadog.iOS
 		Mobile = 0,
 		Desktop = 1,
 		Tablet = 2,
-		Tv = 3,
+		TV = 3,
 		GamingConsole = 4,
 		Bot = 5,
 		Other = 6
@@ -570,7 +570,7 @@ namespace Datadog.iOS
 		Ad = 1,
 		Advertising = 2,
 		Analytics = 3,
-		Cdn = 4,
+		CDN = 4,
 		Content = 5,
 		CustomerSuccess = 6,
 		FirstParty = 7,
@@ -619,7 +619,7 @@ namespace Datadog.iOS
 	{
 		User = 0,
 		Synthetics = 1,
-		CiTest = 2
+		CITest = 2
 	}
 
 	[Native]
@@ -627,7 +627,7 @@ namespace Datadog.iOS
 	{
 		None = 0,
 		Android = 1,
-		Ios = 2,
+		IOS = 2,
 		Browser = 3,
 		Flutter = 4,
 		ReactNative = 5,
@@ -655,7 +655,7 @@ namespace Datadog.iOS
 	public enum DDRUMViewEventContainerSource : long
 	{
 		Android = 0,
-		Ios = 1,
+		IOS = 1,
 		Browser = 2,
 		Flutter = 3,
 		ReactNative = 4,
@@ -719,8 +719,8 @@ namespace Datadog.iOS
 		Bluetooth = 1,
 		Cellular = 2,
 		Ethernet = 3,
-		Wifi = 4,
-		Wimax = 5,
+		WiFi = 4,
+		WiMax = 5,
 		Mixed = 6,
 		Other = 7,
 		Unknown = 8,
@@ -741,7 +741,7 @@ namespace Datadog.iOS
 		Mobile = 0,
 		Desktop = 1,
 		Tablet = 2,
-		Tv = 3,
+		TV = 3,
 		GamingConsole = 4,
 		Bot = 5,
 		Other = 6
@@ -752,7 +752,7 @@ namespace Datadog.iOS
 	{
 		User = 0,
 		Synthetics = 1,
-		CiTest = 2
+		CITest = 2
 	}
 
 	[Native]
@@ -760,7 +760,7 @@ namespace Datadog.iOS
 	{
 		None = 0,
 		Android = 1,
-		Ios = 2,
+		IOS = 2,
 		Browser = 3,
 		Flutter = 4,
 		ReactNative = 5,
@@ -786,7 +786,7 @@ namespace Datadog.iOS
 	public enum DDRUMVitalEventContainerSource : long
 	{
 		Android = 0,
-		Ios = 1,
+		IOS = 1,
 		Browser = 2,
 		Flutter = 3,
 		ReactNative = 4,
@@ -819,10 +819,10 @@ namespace Datadog.iOS
 	public enum DDRUMVitalEventRUMConnectivityEffectiveType : long
 	{
 		None = 0,
-		Slow2g = 1,
-		EffectiveType2g = 2,
-		EffectiveType3g = 3,
-		EffectiveType4g = 4
+		Slow2G = 1,
+		EffectiveType2G = 2,
+		EffectiveType3G = 3,
+		EffectiveType4G = 4
 	}
 
 	[Native]
@@ -832,8 +832,8 @@ namespace Datadog.iOS
 		Bluetooth = 1,
 		Cellular = 2,
 		Ethernet = 3,
-		Wifi = 4,
-		Wimax = 5,
+		WiFi = 4,
+		WiMax = 5,
 		Mixed = 6,
 		Other = 7,
 		Unknown = 8,
@@ -854,7 +854,7 @@ namespace Datadog.iOS
 		Mobile = 0,
 		Desktop = 1,
 		Tablet = 2,
-		Tv = 3,
+		TV = 3,
 		GamingConsole = 4,
 		Bot = 5,
 		Other = 6
@@ -865,7 +865,7 @@ namespace Datadog.iOS
 	{
 		User = 0,
 		Synthetics = 1,
-		CiTest = 2
+		CITest = 2
 	}
 
 	[Native]
@@ -873,7 +873,7 @@ namespace Datadog.iOS
 	{
 		None = 0,
 		Android = 1,
-		Ios = 2,
+		IOS = 2,
 		Browser = 3,
 		Flutter = 4,
 		ReactNative = 5,
@@ -918,7 +918,7 @@ namespace Datadog.iOS
 	public enum DDTelemetryConfigurationEventSource : long
 	{
 		Android = 0,
-		Ios = 1,
+		IOS = 1,
 		Browser = 2,
 		Flutter = 3,
 		ReactNative = 4,
@@ -931,8 +931,8 @@ namespace Datadog.iOS
 		None = 0,
 		Datadog = 1,
 		B3 = 2,
-		B3multi = 3,
-		Tracecontext = 4
+		B3Multi = 3,
+		TraceContext = 4
 	}
 
 	[Native]
@@ -949,7 +949,7 @@ namespace Datadog.iOS
 	public enum DDTelemetryDebugEventSource : long
 	{
 		Android = 0,
-		Ios = 1,
+		IOS = 1,
 		Browser = 2,
 		Flutter = 3,
 		ReactNative = 4,
@@ -960,7 +960,7 @@ namespace Datadog.iOS
 	public enum DDTelemetryErrorEventSource : long
 	{
 		Android = 0,
-		Ios = 1,
+		IOS = 1,
 		Browser = 2,
 		Flutter = 3,
 		ReactNative = 4,
