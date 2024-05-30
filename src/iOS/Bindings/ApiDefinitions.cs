@@ -5349,15 +5349,15 @@ namespace Datadog.iOS
 
 		// -(void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didFinishCollectingMetrics:(NSURLSessionTaskMetrics * _Nonnull)metrics;
 		[Export ("URLSession:task:didFinishCollectingMetrics:")]
-		void URLSession (NSUrlSession session, NSUrlSessionTask task, NSUrlSessionTaskMetrics metrics);
+		void URLSessionTaskDidFinishCollecingMetrics (NSUrlSession session, NSUrlSessionTask task, NSUrlSessionTaskMetrics metrics);
 
 		// -(void)URLSession:(NSURLSession * _Nonnull)session dataTask:(NSURLSessionDataTask * _Nonnull)dataTask didReceiveData:(NSData * _Nonnull)data;
 		[Export ("URLSession:dataTask:didReceiveData:")]
-		void URLSession (NSUrlSession session, NSUrlSessionDataTask dataTask, NSData data);
+		void URLSessionDataTaskDidReceiveData (NSUrlSession session, NSUrlSessionDataTask dataTask, NSData data);
 
 		// -(void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didCompleteWithError:(NSError * _Nullable)error;
 		[Export ("URLSession:task:didCompleteWithError:")]
-		void URLSession (NSUrlSession session, NSUrlSessionTask task, [NullAllowed] NSError error);
+		void URLSessionTaskDidCompleteWithError (NSUrlSession session, NSUrlSessionTask task, [NullAllowed] NSError error);
 	}
 
 	// @protocol __URLSessionDelegateProviding <NSURLSessionDelegate>
@@ -5378,6 +5378,6 @@ namespace Datadog.iOS
 		// @required @property (readonly, nonatomic, strong) DatadogURLSessionDelegate * _Nonnull ddURLSessionDelegate;
 		[Abstract]
 		[NullAllowed, Export ("ddURLSessionDelegate", ArgumentSemantic.Strong)]
-		NSObject WeakDdURLSessionDelegate { get; }
+		NSObject WeakDDURLSessionDelegate { get; }
 	}
 }
