@@ -6,7 +6,10 @@
     <ImplicitUsings>true</ImplicitUsings>
     <SupportedOSPlatformVersion>13.0</SupportedOSPlatformVersion>
   </PropertyGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Bindings\iOSDatadogBindings.csproj" />
-  </ItemGroup>
+
+    <ItemGroup>
+	    <Reference Include="iOSDatadogBindings">
+		    <HintPath>..\Bindings\bin\$(Configuration)\$(TargetFramework)\iOSDatadogBindings.dll</HintPath>
+	    </Reference>
+    </ItemGroup>
 </Project>
