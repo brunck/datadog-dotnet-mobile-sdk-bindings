@@ -13,11 +13,6 @@ CARTHAGE_OUTPUT="${CARTFILE_DIRECTORY}/Carthage/Build"
 
 echo
 echo "Building XCFrameworks for Datadog SDK."
-# carthage update --platform iOS --use-xcframeworks --project-directory "${CARTFILE_DIRECTORY}"
-# if [ $? -ne 0 ]; then
-#   echo "Carthage update failed. Exiting."
-#   exit 1
-# fi
 
 # Define output folder environment variable
 OUTPUT_FOLDER="${PWD}/build"
@@ -111,14 +106,6 @@ do
     exit 1
   fi
 done
-
-# echo "Copying CrashReporter.xcframework to target directory ${TARGET_DIR}."
-# echo
-# cp -R "${CARTHAGE_OUTPUT}/CrashReporter.xcframework" "${TARGET_DIR}"
-# if [ $? -ne 0 ]; then
-#   echo "Failed to copy CrashReporter.xcframework. Exiting."
-#   exit 1
-# fi
 
 echo
 echo "Done."
