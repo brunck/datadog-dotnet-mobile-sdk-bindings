@@ -4,6 +4,7 @@
 # Define workspace and scheme
 WORKSPACE="../../../dd-sdk-ios/Datadog.xcworkspace"
 FRAMEWORK_NAMES=("DatadogInternal" "DatadogCore" "DatadogLogs" "DatadogTrace" "DatadogRUM" "DatadogSessionReplay" "DatadogCrashReporting" "DatadogObjc")
+XCFRAMEWORK_NAMES=("DDInt" "DDC" "DDL" "DDT" "DDR" "DDSR" "DDCR" "DDObjc")
 CONFIGURATION="Release"
 DERIVED_DATA_PATH="./DerivedData"
 BUILD_DIR="${DERIVED_DATA_PATH}/Build/Products/${CONFIGURATION}"
@@ -12,11 +13,11 @@ CARTHAGE_OUTPUT="${CARTFILE_DIRECTORY}/Carthage/Build"
 
 echo
 echo "Building XCFrameworks for Datadog SDK."
-carthage update --platform iOS --use-xcframeworks --project-directory "${CARTFILE_DIRECTORY}"
-if [ $? -ne 0 ]; then
-  echo "Carthage update failed. Exiting."
-  exit 1
-fi
+# carthage update --platform iOS --use-xcframeworks --project-directory "${CARTFILE_DIRECTORY}"
+# if [ $? -ne 0 ]; then
+#   echo "Carthage update failed. Exiting."
+#   exit 1
+# fi
 
 # Define output folder environment variable
 OUTPUT_FOLDER="${PWD}/build"
@@ -24,12 +25,10 @@ OUTPUT_FOLDER="${PWD}/build"
 echo
 echo "Cleaning up old .xcframework files at ${OUTPUT_FOLDER}."
 find "${OUTPUT_FOLDER}" -name "*.xcframework" -type d -exec rm -rf {} \;
-if [ $? -ne 0 ]; then
-  echo "Failed to clean up old .xcframework files. Exiting."
-  exit 1
-fi
 
-for FRAMEWORK_NAME in "${FRAMEWORK_NAMES[@]}"; do
+for INDEX in "${!FRAMEWORK_NAMES[@]}"; do
+  FRAMEWORK_NAME="${FRAMEWORK_NAMES[$INDEX]}"
+  XCFRAMEWORK_NAME="${XCFRAMEWORK_NAMES[$INDEX]}"
   SCHEME="${FRAMEWORK_NAME} iOS"
   SIMULATOR_ARCHIVE_PATH="${BUILD_DIR}/${FRAMEWORK_NAME}-iphonesimulator.xcarchive"
   DEVICE_ARCHIVE_PATH="${BUILD_DIR}/${FRAMEWORK_NAME}-iphoneos.xcarchive"
@@ -71,17 +70,17 @@ for FRAMEWORK_NAME in "${FRAMEWORK_NAMES[@]}"; do
   fi
 
   # Create XCFramework by combining all frameworks
-  echo "Creating XCFramework for ${FRAMEWORK_NAME}."
+  echo "Creating XCFramework ${XCFRAMEWORK_NAME} for ${FRAMEWORK_NAME} framework."
   echo
   if ! xcodebuild -create-xcframework \
     -framework "${SIMULATOR_ARCHIVE_PATH}/Products/Library/Frameworks/${FRAMEWORK_NAME}.framework" \
     -framework "${DEVICE_ARCHIVE_PATH}/Products/Library/Frameworks/${FRAMEWORK_NAME}.framework" \
-    -output "${OUTPUT_FOLDER}/${FRAMEWORK_NAME}.xcframework"; then
-      echo "Create XCFramework for ${FRAMEWORK_NAME} failed. Exiting."
+    -output "${OUTPUT_FOLDER}/${XCFRAMEWORK_NAME}.xcframework"; then
+      echo "Creating XCFramework ${XCFRAMEWORK_NAME} for ${FRAMEWORK_NAME} failed. Exiting."
       echo
       exit 1
   fi
-  echo "Done creating XCFramework for ${FRAMEWORK_NAME}."
+  echo "Done creating XCFramework ${XCFRAMEWORK_NAME} for ${FRAMEWORK_NAME} framework."
   echo 
 done
 
@@ -100,6 +99,7 @@ echo
 find "${TARGET_DIR}" -name "*.xcframework" -type d -exec rm -rf {} \;
 
 # Find .xcframework files in the source directory
+echo
 echo "Copying .xcframeworks from ${SOURCE_DIR} to target directory ${TARGET_DIR}."
 echo
 find "$SOURCE_DIR" -name "*.xcframework" -type d | while read -r framework
@@ -112,13 +112,13 @@ do
   fi
 done
 
-echo "Copying CrashReporter.xcframework to target directory ${TARGET_DIR}."
-echo
-cp -R "${CARTHAGE_OUTPUT}/CrashReporter.xcframework" "${TARGET_DIR}"
-if [ $? -ne 0 ]; then
-  echo "Failed to copy CrashReporter.xcframework. Exiting."
-  exit 1
-fi
+# echo "Copying CrashReporter.xcframework to target directory ${TARGET_DIR}."
+# echo
+# cp -R "${CARTHAGE_OUTPUT}/CrashReporter.xcframework" "${TARGET_DIR}"
+# if [ $? -ne 0 ]; then
+#   echo "Failed to copy CrashReporter.xcframework. Exiting."
+#   exit 1
+# fi
 
 echo
 echo "Done."
