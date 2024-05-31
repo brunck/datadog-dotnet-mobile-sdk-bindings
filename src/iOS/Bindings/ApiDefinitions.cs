@@ -5372,8 +5372,8 @@ namespace Datadog.iOS
 */[Protocol (Name = "_TtP15DatadogInternal29__URLSessionDelegateProviding_")]
 	interface URLSessionDelegateProviding : INSUrlSessionDelegate
 	{
-		[Wrap ("WeakDdURLSessionDelegate"), Abstract]
-		DatadogURLSessionDelegate DdURLSessionDelegate { get; }
+		[Wrap ("WeakDDURLSessionDelegate"), Abstract]
+		DatadogURLSessionDelegate DDURLSessionDelegate { get; }
 
 		// @required @property (readonly, nonatomic, strong) DatadogURLSessionDelegate * _Nonnull ddURLSessionDelegate;
 		[Abstract]
