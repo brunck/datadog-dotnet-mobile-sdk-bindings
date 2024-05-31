@@ -1,4 +1,6 @@
-namespace TestDatadogBindings
+using Datadog.iOS;
+
+namespace T
 {
     [Register("AppDelegate")]
     public class AppDelegate : UIApplicationDelegate
@@ -13,6 +15,11 @@ namespace TestDatadogBindings
         {
             // create a new window instance based on the screen size
             Window = new UIWindow(UIScreen.MainScreen.Bounds);
+
+            // initialize the Datadog SDK
+            DDConfiguration config = new DDConfiguration(
+                "your_client_token", "your_environment"
+            );
 
             // create a UIViewController with a single UILabel
             var vc = new UIViewController();

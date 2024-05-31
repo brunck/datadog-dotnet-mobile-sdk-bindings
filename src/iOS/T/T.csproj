@@ -7,9 +7,9 @@
     <SupportedOSPlatformVersion>13.0</SupportedOSPlatformVersion>
   </PropertyGroup>
 
-    <ItemGroup>
-	    <Reference Include="iOSDatadogBindings">
-		    <HintPath>..\Bindings\bin\$(Configuration)\$(TargetFramework)\iOSDatadogBindings.dll</HintPath>
-	    </Reference>
-    </ItemGroup>
+	<ItemGroup>
+		<Reference Include="iOSDatadogBindings">
+			<HintPath>..\Bindings\bin\$(Configuration)\$(TargetFramework)\iOSDatadogBindings.dll</HintPath>
+		</Reference>
+	</ItemGroup>
 </Project>

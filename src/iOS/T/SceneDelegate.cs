@@ -1,4 +1,4 @@
-namespace TestDatadogBindings
+namespace T
 {
     [Register("SceneDelegate")]
     public class SceneDelegate : UIResponder, IUIWindowSceneDelegate
