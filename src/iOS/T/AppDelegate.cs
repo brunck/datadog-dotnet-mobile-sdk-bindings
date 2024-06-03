@@ -18,8 +18,27 @@ namespace T
 
             // initialize the Datadog SDK
             DDConfiguration config = new DDConfiguration(
-                "your_client_token", "your_environment"
+                "pub85a8b559287d01f91e6f4fd10977151a", "sanddbox"
             );
+
+            config.service = "intermatic-connect";
+            config.site = DDSite.US5;
+
+            DDDatadog.Initialize(config, DDTrackingConsent.Granted);
+            DDDatadog.VerbosityLevel = DDVerbosityLevel.Debug;
+
+            // init the logger
+            DDLoggerConfiguration logConfig = new DDLoggerConfiguration();
+            logConfig.service = "intermatic-connect";
+            logConfig.NetworkInfoEnabled = true;
+            logConfig.PrintLogsToConsole = true;
+
+            DDLogs.Enable(logConfig);
+
+            DDLogger logger = DDLogger.Create(logConfig);
+
+            // test logger
+            logger.Debug("Logging a debug message.");
 
             // create a UIViewController with a single UILabel
             var vc = new UIViewController();
