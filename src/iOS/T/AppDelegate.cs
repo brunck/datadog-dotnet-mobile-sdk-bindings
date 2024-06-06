@@ -21,19 +21,19 @@ namespace T
                 "pub85a8b559287d01f91e6f4fd10977151a", "sanddbox"
             );
 
-            config.service = "intermatic-connect";
-            config.site = DDSite.US5;
+            config.Service = "intermatic-connect";
+            config.Site = DDSite.US5;
 
             DDDatadog.Initialize(config, DDTrackingConsent.Granted);
-            DDDatadog.VerbosityLevel = DDVerbosityLevel.Debug;
+            DDDatadog.VerbosityLevel = DDSDKVerbosityLevel.Debug;
+            DDLogs.Enable(new DDLogsConfiguration(null));
 
             // init the logger
             DDLoggerConfiguration logConfig = new DDLoggerConfiguration();
-            logConfig.service = "intermatic-connect";
+            logConfig.Service = "intermatic-connect";
             logConfig.NetworkInfoEnabled = true;
             logConfig.PrintLogsToConsole = true;
-
-            DDLogs.Enable(logConfig);
+            logConfig.BundleWithRumEnabled = false;
 
             DDLogger logger = DDLogger.Create(logConfig);
 

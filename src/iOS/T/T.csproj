@@ -1,7 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
-  <ItemGroup>
-    <ProjectReference Include="..\Bindings\iOSDatadogBindings.csproj" />
-  </ItemGroup>
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net8.0-ios</TargetFramework>
     <OutputType>Exe</OutputType>
@@ -9,10 +6,13 @@
     <ImplicitUsings>true</ImplicitUsings>
     <SupportedOSPlatformVersion>13.0</SupportedOSPlatformVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bindings\iOSDatadogBindings.csproj" />
+  </ItemGroup>
 
-	<!-- <ItemGroup>
+	 <!--<ItemGroup>
 		<Reference Include="iOSDatadogBindings">
 			<HintPath>..\Bindings\bin\$(Configuration)\$(TargetFramework)\iOSDatadogBindings.dll</HintPath>
 		</Reference>
-	</ItemGroup> -->
+	</ItemGroup>--> 
 </Project>
