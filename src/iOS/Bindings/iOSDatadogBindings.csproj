@@ -6,6 +6,12 @@
 		<IsBindingProject>true</IsBindingProject>
 		<AssemblyName>ios</AssemblyName>
 
+		<!-- NuGet package properties-->
+		<PackageId>bcr.datadog.mobile</PackageId>
+		<PackageVersion>0.1</PackageVersion>
+		<Authors>bcr</Authors>
+		<Description>Bindings for Datadog iOS SDK</Description>
+
 		<!--
       Enable trim analyzers for class libraries.
       To learn more, see: https://learn.microsoft.com/dotnet/core/deploying/trimming/prepare-libraries-for-trimming
