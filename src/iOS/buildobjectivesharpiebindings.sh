@@ -7,6 +7,7 @@ BINDING_OUTPUT_PATH="${FOLDER_PATH}"
 HEADER_FILES_TARGET_PATH="${FOLDER_PATH}/Headers"
 OUTPUT_FOLDER="${PWD}/build"
 HEADER_FILE_PREFIXES=("DatadogObjc" "DatadogCrashReporting" "DatadogInternal")
+XCFRAMEWORK_NAMES=("DDObjc" "DDCR" "DDInt")
 
 if [[ -d $HEADER_FILES_TARGET_PATH ]]; then
     rm -r $HEADER_FILES_TARGET_PATH
@@ -20,8 +21,9 @@ fi
 echo "Copying Swift header files to target directory ${HEADER_FILES_TARGET_PATH} for Objective Sharpie."
 echo
 
-for FRAMEWORK_NAME in "${HEADER_FILE_PREFIXES[@]}"; do
-  XCFRAMEWORK_PATH="${OUTPUT_FOLDER}/${FRAMEWORK_NAME}.xcframework"
+for INDEX in "${HEADER_FILE_PREFIXES[@]}"; do
+  FRAMEWORK_NAME="${HEADER_FILE_PREFIXES[$INDEX]}"
+  XCFRAMEWORK_PATH="${OUTPUT_FOLDER}/${XCFRAMEWORK_NAMES[$INDEX]}.xcframework"
   HEADER_FILE_PATH=$(find "${XCFRAMEWORK_PATH}" -name "${FRAMEWORK_NAME}-Swift.h" | head -n 1)
   if [ -z "${HEADER_FILE_PATH}" ]; then
 
