@@ -5168,7 +5168,7 @@ namespace Datadog.iOS
 		// -(instancetype _Nonnull)initWithDelegateClass:(Class<NSURLSessionDataDelegate> _Nonnull)delegateClass __attribute__((objc_designated_initializer));
 		[Export ("initWithDelegateClass:")]
 		[DesignatedInitializer]
-		NativeHandle Constructor (NSUrlSessionDataDelegate delegateClass);
+		NativeHandle Constructor (INSUrlSessionDataDelegate delegateClass);
 
 		// -(void)setFirstPartyHostsTracing:(DDURLSessionInstrumentationFirstPartyHostsTracing * _Nonnull)firstPartyHostsTracing;
 		[Export ("setFirstPartyHostsTracing:")]
@@ -5176,7 +5176,7 @@ namespace Datadog.iOS
 
 		// @property (nonatomic) Class<NSURLSessionDataDelegate> _Nonnull delegateClass;
 		[Export ("delegateClass", ArgumentSemantic.Assign)]
-		NSUrlSessionDataDelegate DelegateClass { get; set; }
+		INSUrlSessionDataDelegate DelegateClass { get; set; }
 	}
 
 	// @interface DDURLSessionInstrumentationFirstPartyHostsTracing : NSObject
