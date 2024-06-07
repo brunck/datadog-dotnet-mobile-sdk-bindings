@@ -5,10 +5,14 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>true</ImplicitUsings>
     <SupportedOSPlatformVersion>13.0</SupportedOSPlatformVersion>
+    <ProvisioningType>manual</ProvisioningType>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Bindings\iOSDatadogBindings.csproj" />
+    <PackageReference Include="bcr.datadog.mobile" Version="0.1.0" />
   </ItemGroup>
+  <!--<ItemGroup>
+    <ProjectReference Include="..\Bindings\iOSDatadogBindings.csproj" />
+  </ItemGroup>-->
 
 	 <!--<ItemGroup>
 		<Reference Include="iOSDatadogBindings">
