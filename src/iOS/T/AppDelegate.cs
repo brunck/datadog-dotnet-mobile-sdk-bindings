@@ -18,7 +18,7 @@ namespace T
 
             // initialize the Datadog SDK
             DDConfiguration config = new DDConfiguration(
-                "pub85a8b559287d01f91e6f4fd10977151a", "sanddbox"
+                "pub85a8b559287d01f91e6f4fd10977151a", "sandbox"
             );
 
             config.Service = "intermatic-connect";
