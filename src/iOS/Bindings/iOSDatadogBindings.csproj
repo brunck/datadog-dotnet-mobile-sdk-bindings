@@ -32,7 +32,7 @@
 		</NativeReference>
 		<NativeReference Include="Libs/DDC.xcframework">
 			<Kind>Framework</Kind>
-			<Frameworks>Foundation Network SystemConfiguration CoreTelephony UIKit CommonCrypto</Frameworks>
+			<Frameworks>Foundation Network SystemConfiguration CoreTelephony UIKit Security</Frameworks>
 			<SmartLink>False</SmartLink>
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
