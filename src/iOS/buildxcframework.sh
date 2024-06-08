@@ -13,6 +13,11 @@ CARTHAGE_OUTPUT="${CARTFILE_DIRECTORY}/Carthage/Build"
 
 echo
 echo "Building XCFrameworks for Datadog SDK."
+carthage update --platform iOS --use-xcframeworks --project-directory "${CARTFILE_DIRECTORY}"
+if [ $? -ne 0 ]; then
+  echo "Carthage update failed. Exiting."
+  exit 1
+fi
 
 # Define output folder environment variable
 OUTPUT_FOLDER="${PWD}/build"
@@ -34,11 +39,14 @@ for INDEX in "${!FRAMEWORK_NAMES[@]}"; do
   echo "Creating Simulator archive for ${FRAMEWORK_NAME}."
   echo
   if ! xcodebuild -workspace "${WORKSPACE}" archive \
+    -sdk iphonesimulator \
     -scheme "${SCHEME}" \
     -archivePath "${SIMULATOR_ARCHIVE_PATH}" \
     -destination "generic/platform=iOS Simulator" \
     -derivedDataPath "${DERIVED_DATA_PATH}" \
     -IDECustomBuildProductsPath="" -IDECustomBuildIntermediatesPath="" \
+    ONLY_ACTIVE_ARCH=NO \
+    IPHONEOS_DEPLOYMENT_TARGET=13.0 \
     ENABLE_BITCODE=NO \
     SKIP_INSTALL=NO \
     BUILD_LIBRARY_FOR_DISTRIBUTION=YES; then
@@ -51,11 +59,14 @@ for INDEX in "${!FRAMEWORK_NAMES[@]}"; do
   echo "Creating Device archive for ${FRAMEWORK_NAME}."
   echo
   if ! xcodebuild -workspace "${WORKSPACE}" archive \
+    -sdk iphoneos \
     -scheme "${SCHEME}" \
     -archivePath "${DEVICE_ARCHIVE_PATH}" \
     -destination "generic/platform=iOS" \
     -derivedDataPath "${DERIVED_DATA_PATH}" \
     -IDECustomBuildProductsPath="" -IDECustomBuildIntermediatesPath="" \
+    ONLY_ACTIVE_ARCH=NO \
+    IPHONEOS_DEPLOYMENT_TARGET=13.0 \
     ENABLE_BITCODE=NO \
     SKIP_INSTALL=NO \
     BUILD_LIBRARY_FOR_DISTRIBUTION=YES; then

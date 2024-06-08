@@ -26,41 +26,49 @@
 	<ItemGroup>
 		<NativeReference Include="Libs/DDObjc.xcframework">
 			<Kind>Framework</Kind>
+			<Frameworks>Foundation</Frameworks>
 			<SmartLink>False</SmartLink>
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
 		<NativeReference Include="Libs/DDC.xcframework">
 			<Kind>Framework</Kind>
+			<Frameworks>Foundation Network SystemConfiguration CoreTelephony UIKit CommonCrypto</Frameworks>
 			<SmartLink>False</SmartLink>
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
 		<NativeReference Include="Libs/DDCR.xcframework">
 			<Kind>Framework</Kind>
+			<Frameworks>Foundation CrashReporter</Frameworks>
 			<SmartLink>False</SmartLink>
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
 		<NativeReference Include="Libs/DDInt.xcframework">
 			<Kind>Framework</Kind>
+			<Frameworks>Foundation MachO OSLog Compression</Frameworks>
 			<SmartLink>False</SmartLink>
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
 		<NativeReference Include="Libs/DDL.xcframework">
 			<Kind>Framework</Kind>
+			<Frameworks>Foundation</Frameworks>
 			<SmartLink>False</SmartLink>
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
 		<NativeReference Include="Libs/DDR.xcframework">
 			<Kind>Framework</Kind>
+			<Frameworks>Foundation SwiftUI</Frameworks>
 			<SmartLink>False</SmartLink>
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
 		<NativeReference Include="Libs/DDSR.xcframework">
 			<Kind>Framework</Kind>
+			<Frameworks>Foundation CoreGraphics SafariServices SwiftUI WebKit CryptoKit</Frameworks>
 			<SmartLink>False</SmartLink>
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
 		<NativeReference Include="Libs/DDT.xcframework">
 			<Kind>Framework</Kind>
+			<Frameworks>Foundation OpenTelemetryApi</Frameworks>
 			<SmartLink>False</SmartLink>
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
