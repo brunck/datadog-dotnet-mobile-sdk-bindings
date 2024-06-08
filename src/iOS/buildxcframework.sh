@@ -118,6 +118,14 @@ do
   fi
 done
 
+echo "Copying OpenTelemetryApi.xcframework to target directory ${TARGET_DIR}."
+echo
+cp -R "${CARTHAGE_OUTPUT}/OpenTelemetryApi.xcframework" "${TARGET_DIR}"
+if [ $? -ne 0 ]; then
+  echo "Failed to copy OpenTelemetryApi.xcframework. Exiting."
+  exit 1
+fi
+
 echo
 echo "Done."
 echo
