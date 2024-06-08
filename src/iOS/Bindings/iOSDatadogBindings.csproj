@@ -24,6 +24,12 @@
 		<ObjcBindingCoreSource Include="StructsAndEnums.cs" />
 	</ItemGroup>
 	<ItemGroup>
+		<NativeReference Include="Libs/OpenTelemetryApi.xcframework">
+			<Kind>Framework</Kind>
+			<Frameworks></Frameworks>
+			<SmartLink>False</SmartLink>
+			<ForceLoad>True</ForceLoad>
+		</NativeReference>
 		<NativeReference Include="Libs/DDObjc.xcframework">
 			<Kind>Framework</Kind>
 			<Frameworks>Foundation</Frameworks>
@@ -38,13 +44,13 @@
 		</NativeReference>
 		<NativeReference Include="Libs/DDCR.xcframework">
 			<Kind>Framework</Kind>
-			<Frameworks>Foundation CrashReporter</Frameworks>
+			<Frameworks>Foundation</Frameworks>
 			<SmartLink>False</SmartLink>
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
 		<NativeReference Include="Libs/DDInt.xcframework">
 			<Kind>Framework</Kind>
-			<Frameworks>Foundation MachO OSLog Compression</Frameworks>
+			<Frameworks>Foundation OSLog</Frameworks>
 			<SmartLink>False</SmartLink>
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
