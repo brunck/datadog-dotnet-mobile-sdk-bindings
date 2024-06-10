@@ -8,15 +8,6 @@
     <ProvisioningType>manual</ProvisioningType>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Bindings\iOSDatadogBindings.csproj" />
+    <PackageReference Include="bcr.datadog.mobile" Version="0.1.0-pre1" />
   </ItemGroup>
-  <!--<ItemGroup>
-    <ProjectReference Include="..\Bindings\iOSDatadogBindings.csproj" />
-  </ItemGroup>-->
-
-	 <!--<ItemGroup>
-		<Reference Include="iOSDatadogBindings">
-			<HintPath>..\Bindings\bin\$(Configuration)\$(TargetFramework)\iOSDatadogBindings.dll</HintPath>
-		</Reference>
-	</ItemGroup>--> 
 </Project>
