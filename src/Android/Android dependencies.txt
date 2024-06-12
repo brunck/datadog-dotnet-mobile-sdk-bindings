@@ -1,0 +1,119 @@
+Existing NuGet packages:
+
+- not com.lyft.kronos
+
+Xamarin.Google.Guava.ListenableFuture
+    - dependency of Xamarin.AndroidX.Work.Runtime
+
+Xamarin.Jetbrains.Annotations - for org.jetbrains.annotations
+    * depends on Xamarin.Kotlin.StdLib 
+
+Square.OkHttp3
+
+Square.OkIO
+
+GoogleGson
+
+Xamarin.AndroidX.Annotation
+    - already a dependency
+
+Xamarin.AndroidX.Annotation.Experimental
+    - already a dependency
+
+Xamarin.AndroidX.Work.Runtime
+
+Xamarin.AndroidX.Room.Runtime
+    - depends on:
+        Xamarin.AndroidX.Annotation.Experimental (>= 1.4.1.2)
+        Xamarin.AndroidX.Arch.Core.Runtime (>= 2.2.0.9)
+        Xamarin.AndroidX.Room.Common (>= 2.6.1.3 && < 2.6.2)
+        Xamarin.AndroidX.Sqlite (>= 2.4.0.4)
+        Xamarin.AndroidX.Sqlite.Framework (>= 2.4.0.4)
+
+Xamarin.AndroidX.Work.Runtime
+    - depends on:
+        Xamarin.AndroidX.Annotation.Experimental (>= 1.4.1.3)
+        Xamarin.AndroidX.Core (>= 1.13.1.2)
+        Xamarin.AndroidX.Lifecycle.LiveData (>= 2.7.0.4)
+        Xamarin.AndroidX.Lifecycle.Service (>= 2.7.0.4)
+        Xamarin.AndroidX.Room.Room.Ktx (>= 2.6.1.4)
+        Xamarin.AndroidX.Sqlite.Framework (>= 2.4.0.5)
+        Xamarin.AndroidX.Startup.StartupRuntime (>= 1.1.1.14)
+        Xamarin.Google.Guava.ListenableFuture (>= 1.0.0.21)
+        Xamarin.Kotlin.StdLib (>= 1.9.23.3)
+        Xamarin.KotlinX.Coroutines.Android (>= 1.8.0.4)
+
+Xamarin.AndroidX.Collection
+    - depends on:
+        Xamarin.AndroidX.Annotation (>= 1.7.1.4)
+        Xamarin.AndroidX.Collection.Jvm (>= 1.4.0.4)
+        Xamarin.Kotlin.StdLib (>= 1.9.23.3)
+
+Xamarin.AndroidX.Lifecycle.Common
+    - depends on:
+        Xamarin.AndroidX.Annotation (>= 1.7.1.4)
+        Xamarin.Kotlin.StdLib (>= 1.9.23.3)
+        Xamarin.KotlinX.Coroutines.Android (>= 1.8.0.4)
+        Xamarin.KotlinX.Coroutines.Core (>= 1.8.0.4)
+
+Xamarin.Kotlin.StdLib.Jdk8
+    - depends on:
+        Xamarin.Kotlin.StdLib
+        Xamarin.Kotlin.StdLib.Jdk7
+
+Xamarin.Kotlin.StdLib.Common
+    - depends on ..StdLib
+
+
+
+====================
+
+Based on the settings.gradle.kts file, here are the relevant dependencies for each library:
+
+1. dd-sdk-android-core:
+
+com.squareup.okhttp3:okhttp:4.11.0
+com.lyft.kronos:kronos-android:0.0.1-alpha11
+androidx.work:work-runtime:2.8.1
+com.squareup.okio:okio-jvm:3.2.0
+org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22
+com.lyft.kronos:kronos-java:0.0.1-alpha11
+org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22
+org.jetbrains.kotlin:kotlin-stdlib:1.8.22
+com.google.code.gson:gson:2.10.1
+androidx.collection:collection:1.1.0
+androidx.lifecycle:lifecycle-livedata:2.1.0
+androidx.lifecycle:lifecycle-livedata-core:2.1.0
+androidx.arch.core:core-runtime:2.1.0
+androidx.arch.core:core-common:2.1.0
+androidx.lifecycle:lifecycle-common:2.1.0
+androidx.annotation:annotation:1.3.0
+org.jetbrains.kotlin:kotlin-stdlib-common:1.8.22
+org.jetbrains:annotations:13.0
+androidx.annotation:annotation-experimental:1.1.0
+androidx.startup:startup-runtime:1.0.0
+com.google.guava:listenablefuture:1.0
+
+2. dd-sdk-android-rum, dd-sdk-android-logs, dd-sdk-android-ndk, dd-sdk-android-trace, dd-sdk-android-webview, dd-sdk-android-session-replay, dd-sdk-android-session-replay-material:
+
+All dependencies from dd-sdk-android-core
+androidx.room:room-runtime:2.5.0
+androidx.room:room-common:2.5.0
+androidx.sqlite:sqlite-framework:2.3.0
+androidx.sqlite:sqlite:2.3.0
+androidx.core:core:1.6.0
+androidx.versionedparcelable:versionedparcelablle:1.1.1
+androidx.lifecycle:lifecycle-service:2.1.0
+androidx.lifecycle:lifecycle-runtime:2.1.0
+androidx.tracing:tracing:1.0.0
+
+3. dd-sdk-android-coil, dd-sdk-android-compose, dd-sdk-android-fresco, dd-sdk-android-glide, dd-sdk-android-rx, dd-sdk-android-sqldelight, dd-sdk-android-timber, dd-sdk-android-tv, dd-sdk-android-okhttp, dd-sdk-android-rum-coroutines, dd-sdk-android-trace-coroutines:
+
+All dependencies from dd-sdk-android-core and dd-sdk-android-rum
+
+Please note that this is a general grouping based on the library names. The actual dependencies may vary based on the specific functionality of each library.
+ 
+
+
+=====================================
+
