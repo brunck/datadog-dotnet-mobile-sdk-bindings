@@ -1,3 +1,6 @@
+// add the following code to build.gradle.kts, at top-level scope in the file:
+// apply(from = "allAndroidDependencies.gradle.kts")
+
 gradle.projectsEvaluated {
     val projectsToInclude = setOf(
         ":dd-sdk-android-core",
@@ -10,22 +13,23 @@ gradle.projectsEvaluated {
         ":features:dd-sdk-android-session-replay-material"
     )
 
-    // tasks.register("allAndroidDependencies") {
-    //     projectsToInclude.forEach { projectName ->
-    //         dependsOn("$projectName:androidDependencies")
-    //     }
-    // }
-
     tasks.register("allAndroidDependencies") {
         doLast {
             projectsToInclude.forEach { projectName ->
                 val project = project(projectName)
                 val releaseRuntimeClasspath = project.configurations.getByName("releaseRuntimeClasspath")
                 println("Dependencies for $projectName:")
-                releaseRuntimeClasspath.resolvedConfiguration.resolvedArtifacts.forEach { artifact ->
-                    println("${artifact.moduleVersion.id.group}:${artifact.moduleVersion.id.name}:${artifact.moduleVersion.id.version}")
+                releaseRuntimeClasspath.resolvedConfiguration.lenientConfiguration.allModuleDependencies.forEach { dependency ->
+                    printDependencyTree(dependency, "")
                 }
             }
         }
+    }
+}
+
+fun printDependencyTree(dependency: ResolvedDependency, indent: String) {
+    println("$indent- ${dependency.moduleGroup}:${dependency.moduleName}:${dependency.moduleVersion}")
+    dependency.children.forEach { child ->
+        printDependencyTree(child, "$indent  ")
     }
 }
