@@ -9,27 +9,76 @@
 	<remove-node path="/api/package[@name='com.datadog.android.api']/class[@name='InternalLogger.DefaultImpls']" />
 	<remove-node path="/api/package[@name='com.datadog.android.api']/class[@name='InternalLogger.Level']" />
 	<remove-node path="/api/package[@name='com.datadog.android.api']/class[@name='InternalLogger.Target']" />
-	<remove-node path="/api/package[@name='com.datadog.android.api']/class[@name='SdkCore.DefaultImpls']" />
-	<remove-node path="/api/package[@name='com.datadog.android.api']/interface[@name='SdkCore']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='DatadogContext']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='DatadogContext']/method[@name='component2']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='DatadogContext']/method[@name='component3']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='DatadogContext']/method[@name='component4']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='DatadogContext']/method[@name='component5']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='DatadogContext']/method[@name='component6']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='DatadogContext']/method[@name='component7']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='DatadogContext']/method[@name='component8']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='DatadogContext']/method[@name='component9']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='DatadogContext']/method[@name='component10']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='DatadogContext']/method[@name='component11']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='DatadogContext']/method[@name='component12']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='DatadogContext']/method[@name='component13']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='DatadogContext']/method[@name='component14']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='DatadogContext']/method[@name='component15']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='DatadogContext']/method[@name='component16']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='DeviceInfo']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='DeviceInfo']/method[@name='component2']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='DeviceInfo']/method[@name='component3']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='DeviceInfo']/method[@name='component4']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='DeviceInfo']/method[@name='component5']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='DeviceInfo']/method[@name='component6']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='DeviceInfo']/method[@name='component7']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='DeviceInfo']/method[@name='component8']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='DeviceInfo']/method[@name='component9']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='NetworkInfo.Connectivity']/method[@name='fromJson']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='NetworkInfo.Connectivity']/field[@name='Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='NetworkInfo']/method[@name='fromJson']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='NetworkInfo']/method[@name='fromJsonObject']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='NetworkInfo.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='NetworkInfo']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='NetworkInfo']/method[@name='component2']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='NetworkInfo']/method[@name='component3']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='NetworkInfo']/method[@name='component4']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='NetworkInfo']/method[@name='component5']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='NetworkInfo']/method[@name='component6']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='NetworkInfo']/method[@name='component7']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='ProcessInfo']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='TimeInfo']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='TimeInfo']/method[@name='component2']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='TimeInfo']/method[@name='component3']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='TimeInfo']/method[@name='component4']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='UserInfo']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='UserInfo']/method[@name='component2']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='UserInfo']/method[@name='component3']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='UserInfo']/method[@name='component4']" />
+
 	<remove-node path="/api/package[@name='com.datadog.android.api.feature']" />
 	<remove-node path="/api/package[@name='com.datadog.android.api.net']" />
 	<remove-node path="/api/package[@name='com.datadog.android.api.storage']/interface[@name='DataWriter']" />
 	<remove-node path="/api/package[@name='com.datadog.android.api.storage']/class[@name='NoOpDataWriter']" />
 	<remove-node path="/api/package[@name='com.datadog.android.api.storage']/interface[@name='EventBatchWriter']" />
-	<remove-node path="/api/package[@name='com.datadog.android.api.storage']/class[@name='EventType']" />
+	<!--<remove-node path="/api/package[@name='com.datadog.android.api.storage']/class[@name='EventType']" />-->
 	<remove-node path="/api/package[@name='com.datadog.android.api.storage']/class[@name='FeatureStorageConfiguration.Companion']" />
 	<remove-node path="/api/package[@name='com.datadog.android.api.storage']/class[@name='FeatureStorageConfiguration']" />
 	<remove-node path="/api/package[@name='com.datadog.android.api.storage']/class[@name='RawBatchEvent.Companion']" />
-	<remove-node path="/api/package[@name='com.datadog.android.api.storage']/class[@name='RawBatchEvent']" />
+	<!--<remove-node path="/api/package[@name='com.datadog.android.api.storage']/class[@name='RawBatchEvent']" />-->
 	
 	<remove-node path="/api/package[@name='com.datadog.android.core']/class[@name='InternalSdkCore.DefaultImpls']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core']/interface[@name='InternalSdkCore']" />
+	<!--<remove-node path="/api/package[@name='com.datadog.android.core']/class[@name='SdkReference']" />-->
 	<remove-node path="/api/package[@name='com.datadog.android.core']/class[@name='StrictModeExtKt']" />
 	
 	<remove-node path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='HostsSanitizer.Companion']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='HostsSanitizer']" />
+	<!--<remove-node path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='Configuration.Companion']" />-->
 	
 	<remove-node path="/api/package[@name='com.datadog.android.error.internal']" />
+	
+	<remove-node path="/api/package[@name='com.datadog.android.event']/class[@name='NoOpEventMapper']" />
 	
 	<remove-node path="/api/package[@name='com.datadog.android.core.internal.configuration']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core.internal.constraints']" />
@@ -53,13 +102,14 @@
 	
 	<remove-node path="/api/package[@name='com.datadog.android.ndk.internal']" />
 	
-	<remove-node path="/api/package[@name='com.datadog.android.core.metrics']/interface[@name='PerformanceMetric']/field[@name='METRIC_TYPE']" />
+	<!--<remove-node path="/api/package[@name='com.datadog.android.core.metrics']/interface[@name='PerformanceMetric']/field[@name='METRIC_TYPE']" />-->
 	
+	<!--<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/class[@name='PersistenceStrategy.Batch']" />-->
+	<!--<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/interface[@name='PersistenceStrategy.Factory']" />-->
+	<!--<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/interface[@name='PersistenceStrategy']" />-->
 	<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/class[@name='SerializerKt']" />
 	
 	<remove-node path="/api/package[@name='com.datadog.android.core.thread']" />
-	
-	<remove-node path="/api/package[@name='com.datadog.android.security']/interface[@name='Encryption']" />
 	
 	<remove-node path="/api/package[@name='com.datadog.tools.annotation']/interface[@name='NoOpImplementation']" />
 </metadata>
