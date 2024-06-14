@@ -6,4 +6,39 @@
   This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
+	<remove-node path="/api/package[@name='com.datadog.android']/class[@name='_InternalProxy']" />
+	<remove-node path="/api/package[@name='com.datadog.android']/class[@name='Datadog']/method[@name='_internalProxy']" />
+	<remove-node path="/api/package[@name='com.datadog.android']/class[@name='InternalLogger']/method[@name='logMetric']" />
+	<remove-node path="/api/package[@name='com.datadog.android']/class[@name='InternalLogger']/method[@name='startPerformanceMeasure']" />
+
+	<remove-node path="/api/package[@name='com.datadog.android.api']/interface[@name='InternalLogger']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.feature']/class[@name='FeatureScopeExtKt']" />
+
+	<remove-node path="/api/package[@name='com.datadog.android.core']/interface[@name='InternalSdkCore']" />
+	<remove-node path="/api/package[@name='com.datadog.android.core']/class[@name='StrictModeExtKt']" />
+	
+	<remove-node path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='HostsSanitizer']" />
+	
+	<remove-node path="/api/package[@name='com.datadog.android.core.internal.constraints']/class[@name='StringTransformKt']" />
+	<remove-node path="/api/package[@name='com.datadog.android.core.internal.net']/interface[@name='FirstPartyHostHeaderTypeResolver']" />
+	<remove-node path="/api/package[@name='com.datadog.android.core.internal.net']/class[@name='DefaultFirstPartyHostHeaderTypeResolver']" />
+	<remove-node path="/api/package[@name='com.datadog.android.core.internal.persistence']/interface[@name='Deserializer']" />
+	<remove-node path="/api/package[@name='com.datadog.android.core.internal.persistence.file']/class[@name='FileExtKt']" />
+	<remove-node path="/api/package[@name='com.datadog.android.core.internal.system']/interface[@name='BuildSdkVersionProvider']" />
+	<remove-node path="/api/package[@name='com.datadog.android.core.internal.utils']/class[@name='ByteArrayExtKt']" />
+	<remove-node path="/api/package[@name='com.datadog.android.core.internal.utils']/class[@name='ConcurrencyExtKt']" />
+	<remove-node path="/api/package[@name='com.datadog.android.core.internal.utils']/class[@name='MiscUtilsKt']" />
+	<remove-node path="/api/package[@name='com.datadog.android.core.internal.utils']/class[@name='NumberExtKt']" />
+	<remove-node path="/api/package[@name='com.datadog.android.core.internal.utils']/class[@name='ThreadExtKt']" />
+	<remove-node path="/api/package[@name='com.datadog.android.core.internal.utils']/class[@name='ThrowableExtKt']" />
+	
+	<remove-node path="/api/package[@name='com.datadog.android.lint']/class[@name='InternalApi']" />
+	
+	<remove-node path="/api/package[@name='com.datadog.android.core.metrics']/interface[@name='PerformanceMetric']/field[@name='METRIC_TYPE']" />
+	
+	<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/class[@name='SerializerKt']" />
+	
+	<remove-node path="/api/package[@name='com.datadog.android.core.thread']/interface[@name='FlushableExecutorService']" />
+	
+	<remove-node path="/api/package[@name='com.datadog.android.api.storage']/interface[@name='DataWriter']" />
 </metadata>

@@ -1,8 +1,23 @@
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>net8.0-android</TargetFramework>
-    <SupportedOSPlatformVersion>28</SupportedOSPlatformVersion>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net8.0-android</TargetFramework>
+		<SupportedOSPlatformVersion>28</SupportedOSPlatformVersion>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="GoogleGson" Version="2.10.1" />
+		<PackageReference Include="Square.OkHttp3" Version="4.11.0" />
+		<PackageReference Include="Xamarin.AndroidX.Work.Runtime" Version="2.8.1" />
+		<PackageReference Include="Xamarin.Kotlin.StdLib" Version="1.8.22" />
+		<PackageReference Include="Xamarin.Kotlin.StdLib.Jdk8" Version="1.8.22" />
+	</ItemGroup>
+	<ItemGroup>
+		<Folder Include="aars\" />
+	</ItemGroup>
+	<ItemGroup>
+		<AndroidLibrary Update="aars\dd-sdk-android-core-v1.0.aar" />
+		<AndroidLibrary Update="aars\kronos-java-0.0.1-alpha11.jar" Bind="false" />
+		<AndroidLibrary Update="aars\kronos-android-0.0.1-alpha11.aar" Bind="false" />
+	</ItemGroup>
 </Project>
