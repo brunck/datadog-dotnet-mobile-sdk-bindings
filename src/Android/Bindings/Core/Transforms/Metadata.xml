@@ -1,10 +1,16 @@
 ﻿<metadata>
+	<!--******************* Removal *******************-->
+	
 	<remove-node path="/api/package[@name='com.datadog.android']/class[@name='_InternalProxy']" />
 	<remove-node path="/api/package[@name='com.datadog.android']/class[@name='_InternalProxy.Companion']" />
 	<remove-node path="/api/package[@name='com.datadog.android']/class[@name='_InternalProxy._TelemetryProxy']" />
 	<remove-node path="/api/package[@name='com.datadog.android']/class[@name='Datadog']/method[@name='_internalProxy']" />
 	<remove-node path="/api/package[@name='com.datadog.android']/class[@name='Datadog']/field[@name='INSTANCE']" />
+	<remove-node path="/api/package[@name='com.datadog.android']/class[@name='BuildConfig']" />
+	<!--<remove-node path="/api/package[@name='com.datadog.android']/class[@name='Datadog']/method[@name='setTrackingConsent' and count(parameter)=2 and parameter[1][@type='com.datadog.android.privacy.TrackingConsent'] and parameter[2][@type='com.datadog.android.api.SdkCore']]" />-->
 
+	<remove-node path="/api/package[@name='com.datadog.android.event']/class[@name='MapperSerializer']" />
+	
 	<remove-node path="/api/package[@name='com.datadog.android.api']/interface[@name='InternalLogger']" />
 	<remove-node path="/api/package[@name='com.datadog.android.api']/class[@name='InternalLogger.Companion']" />
 	<remove-node path="/api/package[@name='com.datadog.android.api']/class[@name='InternalLogger.DefaultImpls']" />
@@ -63,21 +69,21 @@
 	<remove-node path="/api/package[@name='com.datadog.android.api.storage']/interface[@name='DataWriter']" />
 	<remove-node path="/api/package[@name='com.datadog.android.api.storage']/class[@name='NoOpDataWriter']" />
 	<remove-node path="/api/package[@name='com.datadog.android.api.storage']/interface[@name='EventBatchWriter']" />
-	<!--<remove-node path="/api/package[@name='com.datadog.android.api.storage']/class[@name='EventType']" />-->
+	<remove-node path="/api/package[@name='com.datadog.android.api.storage']/class[@name='EventType']" />
 	<remove-node path="/api/package[@name='com.datadog.android.api.storage']/class[@name='FeatureStorageConfiguration.Companion']" />
 	<remove-node path="/api/package[@name='com.datadog.android.api.storage']/class[@name='FeatureStorageConfiguration']" />
 	<remove-node path="/api/package[@name='com.datadog.android.api.storage']/class[@name='RawBatchEvent.Companion']" />
-	<!--<remove-node path="/api/package[@name='com.datadog.android.api.storage']/class[@name='RawBatchEvent']" />-->
+	<remove-node path="/api/package[@name='com.datadog.android.api.storage']/class[@name='RawBatchEvent']" />
 	
 	<remove-node path="/api/package[@name='com.datadog.android.core']/class[@name='InternalSdkCore.DefaultImpls']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core']/interface[@name='InternalSdkCore']" />
-	<!--<remove-node path="/api/package[@name='com.datadog.android.core']/class[@name='SdkReference']" />-->
+	<remove-node path="/api/package[@name='com.datadog.android.core']/class[@name='SdkReference']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core']/class[@name='StrictModeExtKt']" />
 	
 	<remove-node path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='HostsSanitizer.Companion']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='HostsSanitizer']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='Configuration']/field[@name='Companion']" />
-	<!--<remove-node path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='Configuration.Companion']" />-->
+	<remove-node path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='Configuration.Companion']" />
 	
 	<remove-node path="/api/package[@name='com.datadog.android.core.constraints']/class[@name='DatadogDataConstraints.Companion']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core.constraints']/class[@name='DatadogDataConstraints']/field[@name='Companion']" />
@@ -85,6 +91,11 @@
 	<remove-node path="/api/package[@name='com.datadog.android.error.internal']" />
 	
 	<remove-node path="/api/package[@name='com.datadog.android.event']/class[@name='NoOpEventMapper']" />
+	
+	<remove-node path="/api/package[@name='com.datadog.android.core.feature.event']/class[@name='JvmCrash.Logs']" />
+	<remove-node path="/api/package[@name='com.datadog.android.core.feature.event']/class[@name='JvmCrash.Rum']" />
+	<remove-node path="/api/package[@name='com.datadog.android.core.feature.event']/class[@name='JvmCrash']" />
+	<remove-node path="/api/package[@name='com.datadog.android.core.feature.event']/class[@name='ThreadDump']" />
 	
 	<remove-node path="/api/package[@name='com.datadog.android.core.internal.configuration']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core.internal.constraints']" />
@@ -111,13 +122,25 @@
 	
 	<remove-node path="/api/package[@name='com.datadog.android.ndk.internal']" />
 	
-	<!--<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/class[@name='PersistenceStrategy.Batch']" />-->
-	<!--<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/interface[@name='PersistenceStrategy.Factory']" />-->
-	<!--<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/interface[@name='PersistenceStrategy']" />-->
 	<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/class[@name='SerializerKt']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/interface[@name='Serializer']/field[@name='Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/interface[@name='PersistenceStrategy']/method[@name='currentMetadata']" />
+	<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/interface[@name='PersistenceStrategy']/method[@name='dropAll']" />
+	<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/interface[@name='PersistenceStrategy']/method[@name='lockAndReadNext']" />
+	<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/interface[@name='PersistenceStrategy']/method[@name='migrateData']" />
+	<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/interface[@name='PersistenceStrategy']/method[@name='unlockAndDelete']" />
+	<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/interface[@name='PersistenceStrategy']/method[@name='unlockAndKeep']" />
+	<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/interface[@name='PersistenceStrategy']/method[@name='write']" />
+	<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/interface[@name='PersistenceStrategy.Factory']/method[@name='create']" />
+	<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/class[@name='PersistenceStrategy.Batch']" />
 	
 	<remove-node path="/api/package[@name='com.datadog.android.core.thread']" />
 	
+	<remove-node path="/api/package[@name='com.datadog.android.trace']/class[@name='TracingHeaderType']" />
+	
 	<remove-node path="/api/package[@name='com.datadog.tools.annotation']/interface[@name='NoOpImplementation']" />
+	
+	<!--******************* Renaming *******************-->
+	
+	<attr path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='Configuration']" name="managedName">DDConfiguration</attr>
 </metadata>
