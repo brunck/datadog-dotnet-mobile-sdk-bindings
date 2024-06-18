@@ -84,6 +84,10 @@
 	<remove-node path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='HostsSanitizer']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='Configuration']/field[@name='Companion']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='Configuration.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='BackPressureStrategy']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='BackPressureStrategy']/method[@name='component2']" />
+	<remove-node path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='BackPressureStrategy']/method[@name='component3']" />
+	<remove-node path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='BackPressureStrategy']/method[@name='component4']" />
 	
 	<remove-node path="/api/package[@name='com.datadog.android.core.constraints']/class[@name='DatadogDataConstraints.Companion']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core.constraints']/class[@name='DatadogDataConstraints']/field[@name='Companion']" />
@@ -133,10 +137,9 @@
 	<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/interface[@name='PersistenceStrategy']/method[@name='write']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/interface[@name='PersistenceStrategy.Factory']/method[@name='create']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/class[@name='PersistenceStrategy.Batch']" />
+	<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/class[@name='Serializer.Companion']" />
 	
 	<remove-node path="/api/package[@name='com.datadog.android.core.thread']" />
-	
-	<remove-node path="/api/package[@name='com.datadog.android.trace']/class[@name='TracingHeaderType']" />
 	
 	<remove-node path="/api/package[@name='com.datadog.tools.annotation']/interface[@name='NoOpImplementation']" />
 	
