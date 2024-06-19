@@ -16,6 +16,7 @@
 	<remove-node path="/api/package[@name='com.datadog.android.api']/class[@name='InternalLogger.DefaultImpls']" />
 	<remove-node path="/api/package[@name='com.datadog.android.api']/class[@name='InternalLogger.Level']" />
 	<remove-node path="/api/package[@name='com.datadog.android.api']/class[@name='InternalLogger.Target']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api']/class[@name='SdkCore.DefaultImpls']" />
 	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='DatadogContext']/method[@name='component1']" />
 	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='DatadogContext']/method[@name='component2']" />
 	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='DatadogContext']/method[@name='component3']" />
@@ -77,6 +78,8 @@
 	
 	<remove-node path="/api/package[@name='com.datadog.android.core']/class[@name='InternalSdkCore.DefaultImpls']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core']/interface[@name='InternalSdkCore']" />
+	<!--<remove-node path="/api/package[@name='com.datadog.android']/class[@name='SdkReference']/field[@name='INSTANCE']" />-->
+	<remove-node path="/api/package[@name='com.datadog.android.core']/class[@name='SdkReference.1']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core']/class[@name='SdkReference']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core']/class[@name='StrictModeExtKt']" />
 	
@@ -84,6 +87,8 @@
 	<remove-node path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='HostsSanitizer']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='Configuration']/field[@name='Companion']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='Configuration.Companion']" />
+	<!--<remove-node path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='BackPressureStrategy']/method[@name='getOnItemDropped']" />-->
+	
 	<remove-node path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='BackPressureStrategy']/method[@name='component1']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='BackPressureStrategy']/method[@name='component2']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='BackPressureStrategy']/method[@name='component3']" />
@@ -128,6 +133,7 @@
 	
 	<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/class[@name='SerializerKt']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/interface[@name='Serializer']/field[@name='Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/class[@name='Serializer.Companion']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/interface[@name='PersistenceStrategy']/method[@name='currentMetadata']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/interface[@name='PersistenceStrategy']/method[@name='dropAll']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/interface[@name='PersistenceStrategy']/method[@name='lockAndReadNext']" />
@@ -137,7 +143,7 @@
 	<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/interface[@name='PersistenceStrategy']/method[@name='write']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/interface[@name='PersistenceStrategy.Factory']/method[@name='create']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/class[@name='PersistenceStrategy.Batch']" />
-	<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/class[@name='Serializer.Companion']" />
+
 	
 	<remove-node path="/api/package[@name='com.datadog.android.core.thread']" />
 	
@@ -146,4 +152,19 @@
 	<!--******************* Renaming *******************-->
 	
 	<attr path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='Configuration']" name="managedName">DDConfiguration</attr>
+	
+	<attr path="/api/package[@name='com.datadog.android.core.configuration']" name="managedName">Datadog.Android.Core.Configuration</attr>
+	
+	<attr path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='BackPressureStrategy']/method[@name='getOnItemDropped']" name="managedName">OnItemDroppedInterop</attr>
+	<attr path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='BackPressureStrategy']/method[@name='getOnItemDropped']" name="visibility">private</attr>
+	
+	<attr  path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='BackPressureStrategy']/method[@name='getOnThresholdReached']" name="managedName">OnThresholdReachedInterop</attr>
+	<attr  path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='BackPressureStrategy']/method[@name='getOnThresholdReached']" name="visibility">private</attr>
+	
+	<attr path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='BackPressureStrategy']/method[@name='copy']" name="managedName">CopyInterop</attr>
+	<attr path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='BackPressureStrategy']/method[@name='copy']" name="visibility">private</attr>
+	
+	<attr path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='BackPressureStrategy']/constructor[@name='BackPressureStrategy' and count(parameter)=4 and parameter[1][@type='int'] and parameter[2][@type='kotlin.jvm.functions.Function0&lt;kotlin.Unit&gt;'] and parameter[3][@type='kotlin.jvm.functions.Function1&lt;java.lang.Object, kotlin.Unit&gt;'] and parameter[4][@type='com.datadog.android.core.configuration.BackPressureMitigation']]"
+	      name="visibility">internal</attr>
+	
 </metadata>

@@ -20,4 +20,7 @@
 		<AndroidLibrary Update="aars\kronos-java-0.0.1-alpha11.jar" Bind="false" />
 		<AndroidLibrary Update="aars\kronos-android-0.0.1-alpha11.aar" Bind="false" />
 	</ItemGroup>
+	<ItemGroup>
+		<AndroidNamespaceReplacement Include="com.datadog.android." Replacement="Datadog.Android" />
+	</ItemGroup>
 </Project>
