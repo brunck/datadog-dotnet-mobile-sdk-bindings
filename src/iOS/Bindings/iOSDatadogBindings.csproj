@@ -7,7 +7,7 @@
 		<AssemblyName>ios</AssemblyName>
 
 		<!-- NuGet package properties-->
-		<PackageId>bcr.datadog.mobile</PackageId>
+		<PackageId>Bcr.Datadog.iOS.Sdk</PackageId>
 		<PackageVersion>0.1</PackageVersion>
 		<Authors>bcr</Authors>
 		<Description>Bindings for Datadog iOS SDK</Description>
