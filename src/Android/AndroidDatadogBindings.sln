@@ -5,7 +5,7 @@ VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Bindings\Core\Core.csproj", "{A7D3E393-72E6-4D5E-A830-E3AF43E7B812}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logs", "Bindings\Logs\Logs.csproj", "{9AF59450-0E83-4B51-8AE4-F14F2D35EEAC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatadogLogs", "Bindings\DatadogLogs\DatadogLogs.csproj", "{9AF59450-0E83-4B51-8AE4-F14F2D35EEAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

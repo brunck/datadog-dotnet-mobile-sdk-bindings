@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-android</TargetFramework>
+    <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Bcr.Datadog.Android.Sdk.Core" Version="2.10.1" />
+  </ItemGroup>
+    <ItemGroup>
+		<AndroidLibrary Update="aars\dd-sdk-android-logs-v2.10.1.aar" />
+    </ItemGroup>
+	<ItemGroup>
+		<AndroidNamespaceReplacement Include="com.datadog.android." Replacement="Datadog.Android" />
+	</ItemGroup>
+</Project>
