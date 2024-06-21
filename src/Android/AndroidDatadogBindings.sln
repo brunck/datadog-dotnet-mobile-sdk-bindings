@@ -5,7 +5,9 @@ VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Bindings\Core\Core.csproj", "{A7D3E393-72E6-4D5E-A830-E3AF43E7B812}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatadogLogs", "Bindings\DatadogLogs\DatadogLogs.csproj", "{9AF59450-0E83-4B51-8AE4-F14F2D35EEAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatadogLogs", "Bindings\DatadogLogs\DatadogLogs.csproj", "{9AF59450-0E83-4B51-8AE4-F14F2D35EEAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rum", "Bindings\Rum\Rum.csproj", "{884F8FA5-8629-44D9-ACF9-DDC8822C6119}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{9AF59450-0E83-4B51-8AE4-F14F2D35EEAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9AF59450-0E83-4B51-8AE4-F14F2D35EEAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9AF59450-0E83-4B51-8AE4-F14F2D35EEAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{884F8FA5-8629-44D9-ACF9-DDC8822C6119}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{884F8FA5-8629-44D9-ACF9-DDC8822C6119}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{884F8FA5-8629-44D9-ACF9-DDC8822C6119}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{884F8FA5-8629-44D9-ACF9-DDC8822C6119}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFramework>net8.0-android</TargetFramework>
 		<SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
@@ -7,9 +7,12 @@
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Bcr.Datadog.Android.Sdk.Core" Version="2.11.0" />
+		<PackageReference Include="Xamarin.AndroidX.Navigation.Fragment" Version="2.3.5.1" />
+		<PackageReference Include="Xamarin.AndroidX.RecyclerView" Version="1.2.1.1" />
 	</ItemGroup>
 	<ItemGroup>
-		<AndroidLibrary Update="aars\dd-sdk-android-logs-release.aar" />
+		<AndroidLibrary Update="aars\dd-sdk-android-rum-release.aar" />
+		<AndroidLibrary Update="aars\metrics-performance-1.0.0-alpha04.aar" Bind="false" />
 	</ItemGroup>
 	<ItemGroup>
 		<AndroidNamespaceReplacement Include="com.datadog.android." Replacement="Datadog.Android" />

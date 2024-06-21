@@ -7,12 +7,12 @@
 	</PropertyGroup>
 	<PropertyGroup>
 		<PackageId>Bcr.Datadog.Android.Sdk.Core</PackageId>
-		<Version>2.10.1</Version>
+		<Version>2.11.0</Version>
 		<Authors>bcr</Authors>
 		<Product>Datadog</Product>
 		<Description>Bindings for the Datadog Android SDK Core library</Description>
 		<PackageTags>.NET Android Mobile Binding Core Datadog dd-sdk-android-core</PackageTags>
-		<!--<GeneratePackageOnBuild>true</GeneratePackageOnBuild>-->
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="GoogleGson" Version="2.10.1" />
@@ -22,7 +22,7 @@
 		<PackageReference Include="Xamarin.Kotlin.StdLib.Jdk8" Version="1.8.22" />
 	</ItemGroup>
 	<ItemGroup>
-		<AndroidLibrary Update="aars\dd-sdk-android-core-v2.10.1.aar" />
+		<AndroidLibrary Update="aars\dd-sdk-android-core-release.aar" />
 		<AndroidLibrary Update="aars\kronos-java-0.0.1-alpha11.jar" Bind="false" />
 		<AndroidLibrary Update="aars\kronos-android-0.0.1-alpha11.aar" Bind="false" />
 	</ItemGroup>
