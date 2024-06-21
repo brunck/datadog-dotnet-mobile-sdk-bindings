@@ -7,6 +7,7 @@
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Bcr.Datadog.Android.Sdk.Core" Version="2.11.0" />
+		<PackageReference Include="GoogleGson" Version="2.10.1.8" />
 	</ItemGroup>
 	<ItemGroup>
 		<AndroidLibrary Update="aars\dd-sdk-android-logs-release.aar" />

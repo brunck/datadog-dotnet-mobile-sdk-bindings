@@ -15,7 +15,7 @@
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="GoogleGson" Version="2.10.1" />
+		<PackageReference Include="GoogleGson" Version="2.10.1.8" />
 		<PackageReference Include="Square.OkHttp3" Version="4.11.0" />
 		<PackageReference Include="Xamarin.AndroidX.Work.Runtime" Version="2.8.1" />
 		<PackageReference Include="Xamarin.Kotlin.StdLib" Version="1.8.22" />
