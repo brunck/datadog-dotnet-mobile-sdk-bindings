@@ -1,0 +1,14 @@
+﻿using Datadog.Android.Rum;
+
+namespace Rum.Additions
+{
+    public class RumSessionListener : Java.Lang.Object, IRumSessionListener
+    {
+        public event EventHandler<RumSessionEventArgs>? SessionStarted;
+
+        public void OnSessionStarted(string sessionId, bool isDiscarded)
+        {
+            SessionStarted?.Invoke(this, new RumSessionEventArgs(sessionId, isDiscarded));
+        }
+    }
+}
