@@ -5156,6 +5156,7 @@ namespace Datadog.iOS
 
 		// +(void)disableWithDelegateClass:(Class<NSURLSessionDataDelegate> _Nonnull)delegateClass;
 		[Static]
+		[Internal]
 		[Export ("disableWithDelegateClass:")]
 		void Disable(Class delegateClass);
 	}
