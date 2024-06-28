@@ -1,0 +1,67 @@
+<Type Name="DDSessionReplayConfigurationPrivacyLevel" FullName="Datadog.iOS.DDSessionReplayConfigurationPrivacyLevel">
+  <TypeSignature Language="C#" Value="public enum DDSessionReplayConfigurationPrivacyLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DDSessionReplayConfigurationPrivacyLevel extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>ios</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>ObjCRuntime.Native</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Allow">
+      <MemberSignature Language="C#" Value="Allow" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.DDSessionReplayConfigurationPrivacyLevel Allow = int64(0)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.DDSessionReplayConfigurationPrivacyLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Mask">
+      <MemberSignature Language="C#" Value="Mask" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.DDSessionReplayConfigurationPrivacyLevel Mask = int64(1)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.DDSessionReplayConfigurationPrivacyLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MaskUserInput">
+      <MemberSignature Language="C#" Value="MaskUserInput" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.DDSessionReplayConfigurationPrivacyLevel MaskUserInput = int64(2)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.DDSessionReplayConfigurationPrivacyLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

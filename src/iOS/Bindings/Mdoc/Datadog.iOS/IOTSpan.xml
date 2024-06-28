@@ -1,0 +1,544 @@
+<Type Name="IOTSpan" FullName="Datadog.iOS.IOTSpan">
+  <TypeSignature Language="C#" Value="public interface IOTSpan : IDisposable, ObjCRuntime.INativeObject" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IOTSpan implements class ObjCRuntime.INativeObject, class System.IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>ios</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>ObjCRuntime.INativeObject</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>Foundation.Protocol(Name="_TtP11DatadogObjc6OTSpan_", WrapperType=typeof(Datadog.iOS.OTSpanWrapper))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.ProtocolMember(IsProperty=false, IsRequired=true, IsStatic=false, Name="SetOperationName", ParameterByRef=new System.Boolean[] { false }, ParameterType=new System.Type[] { typeof(System.String) }, Selector="setOperationName:")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.ProtocolMember(IsProperty=false, IsRequired=true, IsStatic=false, Name="SetTag", ParameterByRef=new System.Boolean[] { false, false }, ParameterType=new System.Type[] { typeof(System.String), typeof(System.String) }, Selector="setTag:value:")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.ProtocolMember(IsProperty=false, IsRequired=true, IsStatic=false, Name="SetTag", ParameterByRef=new System.Boolean[] { false, false }, ParameterType=new System.Type[] { typeof(System.String), typeof(Foundation.NSNumber) }, Selector="setTag:numberValue:")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.ProtocolMember(IsProperty=false, IsRequired=true, IsStatic=false, Name="SetTag", ParameterByRef=new System.Boolean[] { false, false }, ParameterType=new System.Type[] { typeof(System.String), typeof(System.Boolean) }, Selector="setTag:boolValue:")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.ProtocolMember(IsProperty=false, IsRequired=true, IsStatic=false, Name="Log", ParameterByRef=new System.Boolean[] { false }, ParameterType=new System.Type[] { typeof(Foundation.NSDictionary`2&lt;Foundation.NSString,Foundation.NSObject&gt;) }, Selector="log:")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.ProtocolMember(IsProperty=false, IsRequired=true, IsStatic=false, Name="Log", ParameterByRef=new System.Boolean[] { false, false }, ParameterType=new System.Type[] { typeof(Foundation.NSDictionary`2&lt;Foundation.NSString,Foundation.NSObject&gt;), typeof(Foundation.NSDate) }, Selector="log:timestamp:")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.ProtocolMember(IsProperty=false, IsRequired=true, IsStatic=false, Name="SetBaggageItem", ParameterByRef=new System.Boolean[] { false, false }, ParameterType=new System.Type[] { typeof(System.String), typeof(System.String) }, ReturnType=typeof(Datadog.iOS.IOTSpan), Selector="setBaggageItem:value:")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.ProtocolMember(IsProperty=false, IsRequired=true, IsStatic=false, Name="GetBaggageItem", ParameterByRef=new System.Boolean[] { false }, ParameterType=new System.Type[] { typeof(System.String) }, ReturnType=typeof(System.String), Selector="getBaggageItem:")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.ProtocolMember(IsProperty=false, IsRequired=true, IsStatic=false, Name="SetError", ParameterByRef=new System.Boolean[] { false }, ParameterType=new System.Type[] { typeof(Foundation.NSError) }, Selector="setError:")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.ProtocolMember(IsProperty=false, IsRequired=true, IsStatic=false, Name="SetError", ParameterByRef=new System.Boolean[] { false, false, false }, ParameterType=new System.Type[] { typeof(System.String), typeof(System.String), typeof(System.String) }, Selector="setErrorWithKind:message:stack:")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.ProtocolMember(IsProperty=false, IsRequired=true, IsStatic=false, Name="Finish", Selector="finish")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.ProtocolMember(IsProperty=false, IsRequired=true, IsStatic=false, Name="Finish", ParameterByRef=new System.Boolean[] { false }, ParameterType=new System.Type[] { typeof(Foundation.NSDate) }, Selector="finishWithTime:")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.ProtocolMember(IsProperty=false, IsRequired=true, IsStatic=false, Name="SetActive", ReturnType=typeof(Datadog.iOS.IOTSpan), Selector="setActive")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.ProtocolMember(ArgumentSemantic=ObjCRuntime.ArgumentSemantic.Strong, GetterSelector="context", IsProperty=true, IsRequired=true, IsStatic=false, Name="Context", PropertyType=typeof(Datadog.iOS.IOTSpanContext), Selector="context")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.ProtocolMember(ArgumentSemantic=ObjCRuntime.ArgumentSemantic.Strong, GetterSelector="tracer", IsProperty=true, IsRequired=true, IsStatic=false, Name="Tracer", PropertyType=typeof(Datadog.iOS.IOTTracer), Selector="tracer")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.NullableContext(1)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Context">
+      <MemberSignature Language="C#" Value="public Datadog.iOS.IOTSpanContext Context { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Datadog.iOS.IOTSpanContext Context" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("context", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.IOTSpanContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finish">
+      <MemberSignature Language="C#" Value="public void Finish ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Finish() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("finish")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finish">
+      <MemberSignature Language="C#" Value="public void Finish (Foundation.NSDate finishTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Finish(class Foundation.NSDate finishTime) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("finishWithTime:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.NullableContext(2)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="finishTime" Type="Foundation.NSDate" />
+      </Parameters>
+      <Docs>
+        <param name="finishTime">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBaggageItem">
+      <MemberSignature Language="C#" Value="public string GetBaggageItem (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetBaggageItem(string key) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("getBaggageItem:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Log">
+      <MemberSignature Language="C#" Value="public void Log (Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; fields);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Log(class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt; fields) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("log:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fields" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="fields">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Log">
+      <MemberSignature Language="C#" Value="public void Log (Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; fields, Foundation.NSDate timestamp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Log(class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt; fields, class Foundation.NSDate timestamp) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("log:timestamp:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fields" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
+        <Parameter Name="timestamp" Type="Foundation.NSDate">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="fields">To be added.</param>
+        <param name="timestamp">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetActive">
+      <MemberSignature Language="C#" Value="public Datadog.iOS.IOTSpan SetActive ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Datadog.iOS.IOTSpan SetActive() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("setActive")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.IOTSpan</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBaggageItem">
+      <MemberSignature Language="C#" Value="public Datadog.iOS.IOTSpan SetBaggageItem (string key, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Datadog.iOS.IOTSpan SetBaggageItem(string key, string value) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("setBaggageItem:value:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.IOTSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetError">
+      <MemberSignature Language="C#" Value="public void SetError (Foundation.NSError error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetError(class Foundation.NSError error) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("setError:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="error" Type="Foundation.NSError" />
+      </Parameters>
+      <Docs>
+        <param name="error">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetError">
+      <MemberSignature Language="C#" Value="public void SetError (string kind, string message, string stack);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetError(string kind, string message, string stack) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("setErrorWithKind:message:stack:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="kind" Type="System.String" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="stack" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="kind">To be added.</param>
+        <param name="message">To be added.</param>
+        <param name="stack">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetOperationName">
+      <MemberSignature Language="C#" Value="public void SetOperationName (string operationName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetOperationName(string operationName) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("setOperationName:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="operationName">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTag">
+      <MemberSignature Language="C#" Value="public void SetTag (string key, Foundation.NSNumber numberValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetTag(string key, class Foundation.NSNumber numberValue) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("setTag:numberValue:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="numberValue" Type="Foundation.NSNumber" />
+      </Parameters>
+      <Docs>
+        <param name="key">To be added.</param>
+        <param name="numberValue">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTag">
+      <MemberSignature Language="C#" Value="public void SetTag (string key, bool boolValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetTag(string key, bool boolValue) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("setTag:boolValue:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="boolValue" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="key">To be added.</param>
+        <param name="boolValue">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTag">
+      <MemberSignature Language="C#" Value="public void SetTag (string key, string value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetTag(string key, string value) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("setTag:value:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tracer">
+      <MemberSignature Language="C#" Value="public Datadog.iOS.IOTTracer Tracer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Datadog.iOS.IOTTracer Tracer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("tracer", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.IOTTracer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

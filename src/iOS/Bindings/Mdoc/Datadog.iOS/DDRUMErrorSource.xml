@@ -1,0 +1,97 @@
+<Type Name="DDRUMErrorSource" FullName="Datadog.iOS.DDRUMErrorSource">
+  <TypeSignature Language="C#" Value="public enum DDRUMErrorSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DDRUMErrorSource extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>ios</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>ObjCRuntime.Native</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Console">
+      <MemberSignature Language="C#" Value="Console" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.DDRUMErrorSource Console = int64(3)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.DDRUMErrorSource</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Custom">
+      <MemberSignature Language="C#" Value="Custom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.DDRUMErrorSource Custom = int64(4)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.DDRUMErrorSource</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Network">
+      <MemberSignature Language="C#" Value="Network" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.DDRUMErrorSource Network = int64(1)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.DDRUMErrorSource</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Source">
+      <MemberSignature Language="C#" Value="Source" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.DDRUMErrorSource Source = int64(0)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.DDRUMErrorSource</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Webview">
+      <MemberSignature Language="C#" Value="Webview" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.DDRUMErrorSource Webview = int64(2)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.DDRUMErrorSource</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,67 @@
+<Type Name="DDRUMViewEventRUMConnectivityStatus" FullName="Datadog.iOS.DDRUMViewEventRUMConnectivityStatus">
+  <TypeSignature Language="C#" Value="public enum DDRUMViewEventRUMConnectivityStatus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DDRUMViewEventRUMConnectivityStatus extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>ios</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>ObjCRuntime.Native</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Connected">
+      <MemberSignature Language="C#" Value="Connected" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.DDRUMViewEventRUMConnectivityStatus Connected = int64(0)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.DDRUMViewEventRUMConnectivityStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Maybe">
+      <MemberSignature Language="C#" Value="Maybe" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.DDRUMViewEventRUMConnectivityStatus Maybe = int64(2)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.DDRUMViewEventRUMConnectivityStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NotConnected">
+      <MemberSignature Language="C#" Value="NotConnected" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.DDRUMViewEventRUMConnectivityStatus NotConnected = int64(1)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.DDRUMViewEventRUMConnectivityStatus</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

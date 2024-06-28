@@ -1,0 +1,117 @@
+<Type Name="IDDDataEncryption" FullName="Datadog.iOS.IDDDataEncryption">
+  <TypeSignature Language="C#" Value="public interface IDDDataEncryption : IDisposable, ObjCRuntime.INativeObject" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IDDDataEncryption implements class ObjCRuntime.INativeObject, class System.IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>ios</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>ObjCRuntime.INativeObject</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>Foundation.Protocol(Name="_TtP11DatadogObjc16DDDataEncryption_", WrapperType=typeof(Datadog.iOS.DDDataEncryptionWrapper))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.ProtocolMember(IsProperty=false, IsRequired=true, IsStatic=false, Name="Encrypt", ParameterByRef=new System.Boolean[] { false, true }, ParameterType=new System.Type[] { typeof(Foundation.NSData), typeof(Foundation.NSError) }, ReturnType=typeof(Foundation.NSData), Selector="encryptWithData:error:")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.ProtocolMember(IsProperty=false, IsRequired=true, IsStatic=false, Name="Decrypt", ParameterByRef=new System.Boolean[] { false, true }, ParameterType=new System.Type[] { typeof(Foundation.NSData), typeof(Foundation.NSError) }, ReturnType=typeof(Foundation.NSData), Selector="decryptWithData:error:")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Decrypt">
+      <MemberSignature Language="C#" Value="public Foundation.NSData Decrypt (Foundation.NSData data, out Foundation.NSError error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Foundation.NSData Decrypt(class Foundation.NSData data, [out] class Foundation.NSError&amp; error) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("decryptWithData:error:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.NullableContext(2)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="Foundation.NSData">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(1)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="error" Type="Foundation.NSError" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="data">To be added.</param>
+        <param name="error">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Encrypt">
+      <MemberSignature Language="C#" Value="public Foundation.NSData Encrypt (Foundation.NSData data, out Foundation.NSError error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Foundation.NSData Encrypt(class Foundation.NSData data, [out] class Foundation.NSError&amp; error) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("encryptWithData:error:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.NullableContext(2)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="Foundation.NSData">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(1)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="error" Type="Foundation.NSError" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="data">To be added.</param>
+        <param name="error">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

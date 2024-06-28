@@ -1,0 +1,69 @@
+<Type Name="IDDUITouchRUMActionsPredicate" FullName="Datadog.iOS.IDDUITouchRUMActionsPredicate">
+  <TypeSignature Language="C#" Value="public interface IDDUITouchRUMActionsPredicate : IDisposable, ObjCRuntime.INativeObject" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IDDUITouchRUMActionsPredicate implements class ObjCRuntime.INativeObject, class System.IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>ios</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>ObjCRuntime.INativeObject</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>Foundation.Protocol(Name="_TtP11DatadogObjc28DDUITouchRUMActionsPredicate_", WrapperType=typeof(Datadog.iOS.DDUITouchRUMActionsPredicateWrapper))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.ProtocolMember(IsProperty=false, IsRequired=true, IsStatic=false, Name="RumAction", ParameterByRef=new System.Boolean[] { false }, ParameterType=new System.Type[] { typeof(UIKit.UIView) }, ReturnType=typeof(Datadog.iOS.DDRUMAction), Selector="rumActionWithTargetView:")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="RumAction">
+      <MemberSignature Language="C#" Value="public Datadog.iOS.DDRUMAction RumAction (UIKit.UIView targetView);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Datadog.iOS.DDRUMAction RumAction(class UIKit.UIView targetView) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("rumActionWithTargetView:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.NullableContext(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.DDRUMAction</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetView" Type="UIKit.UIView" />
+      </Parameters>
+      <Docs>
+        <param name="targetView">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

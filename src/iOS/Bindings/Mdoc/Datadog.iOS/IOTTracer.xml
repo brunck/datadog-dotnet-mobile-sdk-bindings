@@ -1,0 +1,342 @@
+<Type Name="IOTTracer" FullName="Datadog.iOS.IOTTracer">
+  <TypeSignature Language="C#" Value="public interface IOTTracer : IDisposable, ObjCRuntime.INativeObject" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IOTTracer implements class ObjCRuntime.INativeObject, class System.IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>ios</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>ObjCRuntime.INativeObject</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>Foundation.Protocol(Name="_TtP11DatadogObjc8OTTracer_", WrapperType=typeof(Datadog.iOS.OTTracerWrapper))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.ProtocolMember(IsProperty=false, IsRequired=true, IsStatic=false, Name="StartSpan", ParameterByRef=new System.Boolean[] { false }, ParameterType=new System.Type[] { typeof(System.String) }, ReturnType=typeof(Datadog.iOS.IOTSpan), Selector="startSpan:")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.ProtocolMember(IsProperty=false, IsRequired=true, IsStatic=false, Name="StartSpan", ParameterByRef=new System.Boolean[] { false, false }, ParameterType=new System.Type[] { typeof(System.String), typeof(Foundation.NSDictionary) }, ReturnType=typeof(Datadog.iOS.IOTSpan), Selector="startSpan:tags:")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.ProtocolMember(IsProperty=false, IsRequired=true, IsStatic=false, Name="StartSpan", ParameterByRef=new System.Boolean[] { false, false }, ParameterType=new System.Type[] { typeof(System.String), typeof(Datadog.iOS.IOTSpanContext) }, ReturnType=typeof(Datadog.iOS.IOTSpan), Selector="startSpan:childOf:")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.ProtocolMember(IsProperty=false, IsRequired=true, IsStatic=false, Name="StartSpan", ParameterByRef=new System.Boolean[] { false, false, false }, ParameterType=new System.Type[] { typeof(System.String), typeof(Datadog.iOS.IOTSpanContext), typeof(Foundation.NSDictionary) }, ReturnType=typeof(Datadog.iOS.IOTSpan), Selector="startSpan:childOf:tags:")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.ProtocolMember(IsProperty=false, IsRequired=true, IsStatic=false, Name="StartSpan", ParameterByRef=new System.Boolean[] { false, false, false, false }, ParameterType=new System.Type[] { typeof(System.String), typeof(Datadog.iOS.IOTSpanContext), typeof(Foundation.NSDictionary), typeof(Foundation.NSDate) }, ReturnType=typeof(Datadog.iOS.IOTSpan), Selector="startSpan:childOf:tags:startTime:")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.ProtocolMember(IsProperty=false, IsRequired=true, IsStatic=false, Name="Inject", ParameterByRef=new System.Boolean[] { false, false, false, true }, ParameterType=new System.Type[] { typeof(Datadog.iOS.IOTSpanContext), typeof(System.String), typeof(Foundation.NSObject), typeof(Foundation.NSError) }, ReturnType=typeof(System.Boolean), Selector="inject:format:carrier:error:")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.ProtocolMember(IsProperty=false, IsRequired=true, IsStatic=false, Name="Extract", ParameterByRef=new System.Boolean[] { false, false, true }, ParameterType=new System.Type[] { typeof(System.String), typeof(Foundation.NSObject), typeof(Foundation.NSError) }, ReturnType=typeof(System.Boolean), Selector="extractWithFormat:carrier:error:")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.NullableContext(1)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Extract">
+      <MemberSignature Language="C#" Value="public bool Extract (string format, Foundation.NSObject carrier, out Foundation.NSError error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Extract(string format, class Foundation.NSObject carrier, [out] class Foundation.NSError&amp; error) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("extractWithFormat:carrier:error:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="carrier" Type="Foundation.NSObject" />
+        <Parameter Name="error" Type="Foundation.NSError" RefType="out">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="format">To be added.</param>
+        <param name="carrier">To be added.</param>
+        <param name="error">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inject">
+      <MemberSignature Language="C#" Value="public bool Inject (Datadog.iOS.IOTSpanContext spanContext, string format, Foundation.NSObject carrier, out Foundation.NSError error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Inject(class Datadog.iOS.IOTSpanContext spanContext, string format, class Foundation.NSObject carrier, [out] class Foundation.NSError&amp; error) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("inject:format:carrier:error:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="spanContext" Type="Datadog.iOS.IOTSpanContext" />
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="carrier" Type="Foundation.NSObject" />
+        <Parameter Name="error" Type="Foundation.NSError" RefType="out">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="spanContext">To be added.</param>
+        <param name="format">To be added.</param>
+        <param name="carrier">To be added.</param>
+        <param name="error">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartSpan">
+      <MemberSignature Language="C#" Value="public Datadog.iOS.IOTSpan StartSpan (string operationName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Datadog.iOS.IOTSpan StartSpan(string operationName) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("startSpan:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.IOTSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="operationName">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartSpan">
+      <MemberSignature Language="C#" Value="public Datadog.iOS.IOTSpan StartSpan (string operationName, Datadog.iOS.IOTSpanContext parent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Datadog.iOS.IOTSpan StartSpan(string operationName, class Datadog.iOS.IOTSpanContext parent) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("startSpan:childOf:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.IOTSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationName" Type="System.String" />
+        <Parameter Name="parent" Type="Datadog.iOS.IOTSpanContext">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="operationName">To be added.</param>
+        <param name="parent">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartSpan">
+      <MemberSignature Language="C#" Value="public Datadog.iOS.IOTSpan StartSpan (string operationName, Foundation.NSDictionary tags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Datadog.iOS.IOTSpan StartSpan(string operationName, class Foundation.NSDictionary tags) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("startSpan:tags:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.IOTSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationName" Type="System.String" />
+        <Parameter Name="tags" Type="Foundation.NSDictionary">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="operationName">To be added.</param>
+        <param name="tags">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartSpan">
+      <MemberSignature Language="C#" Value="public Datadog.iOS.IOTSpan StartSpan (string operationName, Datadog.iOS.IOTSpanContext parent, Foundation.NSDictionary tags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Datadog.iOS.IOTSpan StartSpan(string operationName, class Datadog.iOS.IOTSpanContext parent, class Foundation.NSDictionary tags) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("startSpan:childOf:tags:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.IOTSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationName" Type="System.String" />
+        <Parameter Name="parent" Type="Datadog.iOS.IOTSpanContext">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="tags" Type="Foundation.NSDictionary">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="operationName">To be added.</param>
+        <param name="parent">To be added.</param>
+        <param name="tags">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartSpan">
+      <MemberSignature Language="C#" Value="public Datadog.iOS.IOTSpan StartSpan (string operationName, Datadog.iOS.IOTSpanContext parent, Foundation.NSDictionary tags, Foundation.NSDate startTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Datadog.iOS.IOTSpan StartSpan(string operationName, class Datadog.iOS.IOTSpanContext parent, class Foundation.NSDictionary tags, class Foundation.NSDate startTime) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("startSpan:childOf:tags:startTime:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.NullableContext(2)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.IOTSpan</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName>System.Runtime.CompilerServices.Nullable(1)</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationName" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(1)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="parent" Type="Datadog.iOS.IOTSpanContext" />
+        <Parameter Name="tags" Type="Foundation.NSDictionary" />
+        <Parameter Name="startTime" Type="Foundation.NSDate" />
+      </Parameters>
+      <Docs>
+        <param name="operationName">To be added.</param>
+        <param name="parent">To be added.</param>
+        <param name="tags">To be added.</param>
+        <param name="startTime">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
