@@ -59,10 +59,9 @@
         <Parameter Name="viewController" Type="UIKit.UIViewController" />
       </Parameters>
       <Docs>
-        <param name="viewController">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="viewController">An instance of the view controller noticed by the SDK.</param>
+        <summary>The predicate deciding if the RUM View should be started or ended for given instance of the <c>UIViewController</c>.</summary>
+        <returns>RUM View parameters if received view controller should start/end the RUM View, <c>NULL</c> otherwise.</returns>
       </Docs>
     </Member>
   </Members>

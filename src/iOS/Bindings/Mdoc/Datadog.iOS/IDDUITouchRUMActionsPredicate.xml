@@ -59,10 +59,9 @@
         <Parameter Name="targetView" Type="UIKit.UIView" />
       </Parameters>
       <Docs>
-        <param name="targetView">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="targetView">An instance of the <c>UIView</c> which received the action.</param>
+        <summary>The predicate deciding if the RUM Action should be recorded.</summary>
+        <returns>RUM Action if it should be recorded, <code>NULL</code> otherwise.</returns>
       </Docs>
     </Member>
   </Members>

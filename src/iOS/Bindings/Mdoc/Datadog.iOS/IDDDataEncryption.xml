@@ -64,11 +64,16 @@
         <Parameter Name="error" Type="Foundation.NSError" RefType="out" />
       </Parameters>
       <Docs>
-        <param name="data">To be added.</param>
-        <param name="error">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="data">Data to decrypt.</param>
+        <param name="error"></param>
+        <summary>Decrypts given <c>Data</c> with user-chosen encryption.</summary>
+        <returns>The decrypted data.</returns>
+        <remarks>
+        Beware that data to decrypt could be encrypted in a previous 
+        app launch, so implementation should be aware of the case when decryption could 
+        fail (for example, key used for encryption is different from key used for decryption, 
+        if they are unique for every app launch).
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Encrypt">
@@ -106,11 +111,10 @@
         <Parameter Name="error" Type="Foundation.NSError" RefType="out" />
       </Parameters>
       <Docs>
-        <param name="data">To be added.</param>
-        <param name="error">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="data">Data to encrypt.</param>
+        <param name="error"></param>
+        <summary>Encrypts given <c>Data</c> with user-chosen encryption.</summary>
+        <returns>The encrypted data.</returns>
       </Docs>
     </Member>
   </Members>

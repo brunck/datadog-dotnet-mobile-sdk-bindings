@@ -73,6 +73,7 @@ namespace Datadog.iOS
 
 		// @property (copy, nonatomic) NSDictionary<NSString *,id> * _Nonnull additionalConfiguration;
 		[Export ("additionalConfiguration", ArgumentSemantic.Copy)]
+		[Internal]
 		NSDictionary<NSString, NSObject> AdditionalConfiguration { get; set; }
 
 		// -(instancetype _Nonnull)initWithClientToken:(NSString * _Nonnull)clientToken env:(NSString * _Nonnull)env __attribute__((objc_designated_initializer));

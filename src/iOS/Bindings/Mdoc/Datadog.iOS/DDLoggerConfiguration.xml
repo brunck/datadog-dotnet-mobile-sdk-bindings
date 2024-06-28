@@ -21,8 +21,6 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -44,9 +42,6 @@
         <Parameter Name="t" Type="Foundation.NSObjectFlag" />
       </Parameters>
       <Docs>
-        <param name="t">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -68,9 +63,6 @@
         <Parameter Name="handle" Type="ObjCRuntime.NativeHandle" />
       </Parameters>
       <Docs>
-        <param name="handle">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -120,16 +112,15 @@
         <Parameter Name="printLogsToConsole" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="service">To be added.</param>
-        <param name="name">To be added.</param>
-        <param name="networkInfoEnabled">To be added.</param>
-        <param name="bundleWithRumEnabled">To be added.</param>
-        <param name="bundleWithTraceEnabled">To be added.</param>
-        <param name="remoteSampleRate">To be added.</param>
-        <param name="remoteLogThreshold">To be added.</param>
-        <param name="printLogsToConsole">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="service">The service name (default value is set to the application bundle identifier).</param>
+        <param name="name">The logger custom name (default value is set to the main bundle identifier).</param>
+        <param name="networkInfoEnabled">Enriches logs with network connection info. <c>false</c> by default.</param>
+        <param name="bundleWithRumEnabled">Enables the logs integration with RUM. <c>true</c> by default.</param>
+        <param name="bundleWithTraceEnabled">Enables the logs integration with the active span API from Tracing. <c>true</c> by default.</param>
+        <param name="remoteSampleRate">The sample rate for remote logging. <i>When set to <c>0</c>, no log entries will be sent to Datadog servers.</i></param>
+        <param name="remoteLogThreshold">Set the minimum log level reported to Datadog servers. <c>Debug</c> by default.</param>
+        <param name="printLogsToConsole">Format to use when printing logs to the console - either <c>Short</c> or <c>Json</c>.</param>
+        <summary>Creates a Logger Configuration.</summary>
       </Docs>
     </Member>
     <Member MemberName="BundleWithRumEnabled">
@@ -154,9 +145,12 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>
+        Enables the logs integration with RUM. 
+        If enabled all the logs will be enriched with the current RUM View information and 
+        it will be possible to see all the logs sent during a specific View lifespan in the RUM Explorer. 
+        <c>true</c> by default.
+        </summary>
       </Docs>
     </Member>
     <Member MemberName="BundleWithTraceEnabled">
@@ -181,9 +175,12 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>
+        Enables the logs integration with active span API from Tracing. 
+        If enabled all the logs will be bundled with the <c>DDTracer.Shared.activeSpan</c> trace and 
+        it will be possible to see all the logs sent during that specific trace. 
+        <c>true</c> by default.
+        </summary>
       </Docs>
     </Member>
     <Member MemberName="ClassHandle">
@@ -197,9 +194,6 @@
         <ReturnType>ObjCRuntime.NativeHandle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -224,9 +218,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>The logger custom name (default value is set to the main bundle identifier).</summary>
       </Docs>
     </Member>
     <Member MemberName="NetworkInfoEnabled">
@@ -251,9 +243,12 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>
+        Enriches logs with network connection info. 
+        This means: reachability status, connection type, mobile carrier name and many more will be added to each log. 
+        For full list of network info attributes see <c>NetworkConnectionInfo</c> and <c>CarrierInfo</c>. 
+        <c>false</c> by default.
+        </summary>
       </Docs>
     </Member>
     <Member MemberName="PrintLogsToConsole">
@@ -278,9 +273,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>
+        Enables logs to be printed to the debugger console. 
+        <c>false</c> by default.
+        </summary>
       </Docs>
     </Member>
     <Member MemberName="RemoteLogThreshold">
@@ -305,9 +301,13 @@
         <ReturnType>Datadog.iOS.DDLogLevel</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>
+        Set the minimum log level reported to Datadog servers. 
+        Any log with a level equal or above the threshold will be sent. 
+        Note: this setting doesn't impact logs printed to the console if <see cref="PrintLogsToConsole" /> 
+        is used - all logs will be printed, no matter their level. 
+        <c>DDLogLevel.Debug</c> by default.
+        </summary>
       </Docs>
     </Member>
     <Member MemberName="RemoteSampleRate">
@@ -332,9 +332,12 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>
+        Sets the sampling rate for logging. 
+        The sampling rate must be a value between <c>0</c> and <c>100</c>. 
+        A value of <c>0</c> means no logs will be processed, <c>100</c> means all logs will be processed. 
+        By default sampling is disabled, meaning that all logs are being processed.
+        </summary>
       </Docs>
     </Member>
     <Member MemberName="Service">
@@ -359,9 +362,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>The service name (default value is set to the application bundle identifier).</summary>
       </Docs>
     </Member>
   </Members>
