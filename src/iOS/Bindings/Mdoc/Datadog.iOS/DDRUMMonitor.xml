@@ -21,8 +21,22 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>
+    A class for manual interaction with the RUM feature. It records RUM events that are sent to Datadog RUM.
+    </summary>
+    <remarks>
+      <para>There can be only one active RUM monitor for certain instance of Datadog SDK. It gets enabled along with 
+      the call to <c>DDRUM.Enable (DDRUMConfiguration configuration)</c>:</para>
+      <para>
+        <c>
+          // Enable RUM feature:
+          RUM.Enable (DDRUMConfiguration configuration)
+
+          // Use RUM monitor:
+          DDRUMMonitor.Shared.StartView(...)
+        </c>
+    </para>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">

@@ -5343,6 +5343,7 @@ namespace Datadog.iOS
 
 	// @interface DatadogURLSessionDelegate : NSObject <NSURLSessionDataDelegate>
 	[BaseType (typeof(NSObject), Name = "_TtC15DatadogInternal25DatadogURLSessionDelegate")]
+	[Obsolete("Use DDURLSessionInstrumentation.Enable() instead.")]
 	interface DatadogURLSessionDelegate : INSUrlSessionDataDelegate
 	{
 		// -(instancetype _Nonnull)initWithAdditionalFirstPartyHosts:(NSSet<NSString *> * _Nonnull)additionalFirstPartyHosts;
@@ -5372,6 +5373,7 @@ namespace Datadog.iOS
   protocol, then [Model] is redundant and will generate code that will never
   be used.
 */[Protocol (Name = "_TtP15DatadogInternal29__URLSessionDelegateProviding_")]
+	[Obsolete("Use DDURLSessionInstrumentation.Enable() instead.")]
 	interface URLSessionDelegateProviding : INSUrlSessionDelegate
 	{
 		[Wrap ("WeakDDURLSessionDelegate"), Abstract]

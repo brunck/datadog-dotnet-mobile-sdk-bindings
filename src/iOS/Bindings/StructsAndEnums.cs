@@ -974,4 +974,21 @@ namespace Datadog.iOS
 		Average = 1,
 		Rare = 2
 	}
+
+	/// <summary>
+	/// Defines whether the trace context should be injected into all requests or only sampled ones.
+	/// </summary>
+	[Native]
+	public enum DDTraceContextInjection
+	{
+		/// <summary>
+		/// Injects trace context into all requests irrespective of the sampling decision.
+		/// </summary>
+		DDTraceContextInjectionAll = 0,
+
+		/// <summary>
+		/// Injects trace context only into sampled requests.
+		/// </summary>
+		DDTraceContextInjectionSampled = 1
+	}
 }

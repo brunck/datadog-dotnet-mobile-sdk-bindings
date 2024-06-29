@@ -21,8 +21,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Configuration of URLSession instrumentation.</summary>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -138,9 +137,7 @@
         <ReturnType>Foundation.INSUrlSessionDataDelegate</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>The delegate class to be used to swizzle URLSessionTaskDelegate &amp; URLSessionDataDelegate methods.</summary>
       </Docs>
     </Member>
     <Member MemberName="Dispose">
@@ -190,8 +187,7 @@
       </Parameters>
       <Docs>
         <param name="firstPartyHostsTracing">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Sets additional first party hosts to consider in the interception.</summary>
       </Docs>
     </Member>
   </Members>

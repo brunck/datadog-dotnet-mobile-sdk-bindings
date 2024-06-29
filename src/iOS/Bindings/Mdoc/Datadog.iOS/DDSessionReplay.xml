@@ -15,8 +15,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>An entry point to the Datadog Session Replay feature.</summary>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -108,9 +107,12 @@
         <Parameter Name="configuration" Type="Datadog.iOS.DDSessionReplayConfiguration" />
       </Parameters>
       <Docs>
-        <param name="configuration">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="configuration">TConfiguration of the feature.</param>
+        <summary>
+        Enables Datadog Session Replay feature.
+        Recording will start automatically after enabling Session Replay.
+        Note: Session Replay requires the RUM feature to be enabled.
+        </summary>
       </Docs>
     </Member>
   </Members>

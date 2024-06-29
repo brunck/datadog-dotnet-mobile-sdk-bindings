@@ -30,7 +30,7 @@
       </ReturnValue>
       <MemberValue>3</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Error originated in a web console (used by bridges).</summary>
       </Docs>
     </Member>
     <Member MemberName="Custom">
@@ -45,7 +45,7 @@
       </ReturnValue>
       <MemberValue>4</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Custom error source.</summary>
       </Docs>
     </Member>
     <Member MemberName="Network">
@@ -60,7 +60,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Error originated in the network layer.</summary>
       </Docs>
     </Member>
     <Member MemberName="Source">
@@ -75,7 +75,7 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Error originated in the source code.</summary>
       </Docs>
     </Member>
     <Member MemberName="Webview">
@@ -90,7 +90,7 @@
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Error originated in a webview.</summary>
       </Docs>
     </Member>
   </Members>

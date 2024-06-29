@@ -96,10 +96,9 @@
         <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
-        <param name="attributes">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="name">The RUM Action name, appearing as <c>ACTION NAME</c> in RUM Explorer.</param>
+        <param name="attributes">Additional attributes to associate with the RUM Action.</param>
+        <summary>Initializes the RUM Action description.</summary>
       </Docs>
     </Member>
     <Member MemberName="Attributes">

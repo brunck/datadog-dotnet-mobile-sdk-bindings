@@ -31,8 +31,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>
+      The <c>URLSession</c> delegate object which enables network requests instrumentation. <i>It must be
+      used together with</i> <c>DatadogRUM</c> or <c>DatadogTrace</c>.
+      All requests made with the <c>URLSession</c> instrumented with this delegate will be intercepted by the SDK.
+    </summary>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -105,8 +108,15 @@
         <Parameter Name="additionalFirstPartyHosts" Type="Foundation.NSSet&lt;Foundation.NSString&gt;" />
       </Parameters>
       <Docs>
-        <param name="additionalFirstPartyHosts">To be added.</param>
-        <summary>To be added.</summary>
+        <param name="additionalFirstPartyHosts">
+          These hosts are tracked <i>in addition to</i> what was
+          passed to <c>DatadogConfiguration.Builder</c> via <c>trackURLSession(firstPartyHosts:)</c>
+        </param>
+        <summary>
+         Automatically tracked hosts can be customized per instance with this initializer.
+          <i>NOTE:</i> If <c>trackURLSession(firstPartyHosts:)</c> is never called, 
+          automatic tracking will <i>not</i> take place.
+        </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

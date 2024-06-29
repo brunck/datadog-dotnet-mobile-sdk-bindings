@@ -21,8 +21,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Defines configuration for first-party hosts in distributed tracing.</summary>
   </Docs>
   <Members>
     <Member MemberName=".ctor">

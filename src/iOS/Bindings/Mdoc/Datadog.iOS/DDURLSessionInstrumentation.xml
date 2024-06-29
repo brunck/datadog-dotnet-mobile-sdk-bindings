@@ -126,9 +126,11 @@
       </TypeParameters>
       <Parameters />
       <Docs>
-        <typeparam name="T">To be added.</typeparam>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <typeparam name="T">
+        An instance of <c>INSUrlSessionDataDelegate</c>. 
+        The delegate class to unbind.
+        </typeparam>
+        <summary>Disables URLSession instrumentation.</summary>
       </Docs>
     </Member>
     <Member MemberName="Enable">
@@ -156,9 +158,8 @@
         <Parameter Name="configuration" Type="Datadog.iOS.DDURLSessionInstrumentationConfiguration" />
       </Parameters>
       <Docs>
-        <param name="configuration">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="configuration">Configuration of the feature.</param>
+        <summary>Enables URLSession instrumentation.</summary>
       </Docs>
     </Member>
   </Members>
