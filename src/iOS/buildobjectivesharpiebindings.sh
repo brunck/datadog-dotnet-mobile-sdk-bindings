@@ -18,18 +18,19 @@ if ! mkdir $HEADER_FILES_TARGET_PATH; then
     exit 1
 fi
 
+echo
 echo "Copying Swift header files to target directory ${HEADER_FILES_TARGET_PATH} for Objective Sharpie."
 echo
 
-for INDEX in "${HEADER_FILE_PREFIXES[@]}"; do
-  FRAMEWORK_NAME="${HEADER_FILE_PREFIXES[$INDEX]}"
-  XCFRAMEWORK_PATH="${OUTPUT_FOLDER}/${XCFRAMEWORK_NAMES[$INDEX]}.xcframework"
+for ((i=0; i<${#HEADER_FILE_PREFIXES[@]}; i++)); do
+  FRAMEWORK_NAME="${HEADER_FILE_PREFIXES[i]}"
+  XCFRAMEWORK_PATH="${OUTPUT_FOLDER}/${XCFRAMEWORK_NAMES[i]}.xcframework"
   HEADER_FILE_PATH=$(find "${XCFRAMEWORK_PATH}" -name "${FRAMEWORK_NAME}-Swift.h" | head -n 1)
   if [ -z "${HEADER_FILE_PATH}" ]; then
-
     echo "Failed to find ${FRAMEWORK_NAME}-Swift.h in ${XCFRAMEWORK_PATH}. Exiting."
     exit 1
   fi
+  echo "Copying ${HEADER_FILE_PATH} to ${HEADER_FILES_TARGET_PATH}"
   cp -f "${HEADER_FILE_PATH}" "${HEADER_FILES_TARGET_PATH}"
   if [ $? -ne 0 ]; then
     echo "Failed to copy ${HEADER_FILE_PATH} to ${HEADER_FILES_TARGET_PATH}. Exiting."
