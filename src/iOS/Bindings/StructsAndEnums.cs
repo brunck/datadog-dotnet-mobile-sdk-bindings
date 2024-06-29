@@ -200,6 +200,14 @@ namespace Datadog.iOS
 	}
 
 	[Native]
+	public enum DDRUMErrorEventErrorCSPDisposition : long
+	{
+		None = 0,
+		Enforce = 1,
+		Report = 2
+	}
+
+	[Native]
 	public enum DDRUMErrorEventErrorCategory : long
 	{
 		None = 0,
@@ -474,7 +482,10 @@ namespace Datadog.iOS
 		Head = 2,
 		Put = 3,
 		Delete = 4,
-		Patch = 5
+		Patch = 5,
+		Connect = 6,
+		Trace = 7,
+		Options = 8
 	}
 
 	[Native]
@@ -596,6 +607,14 @@ namespace Datadog.iOS
 		Trace = 7,
 		Options = 8,
 		Connect = 9
+	}
+
+	[Native]
+	public enum DDRUMResourceEventResourceRenderBlockingStatus : long
+	{
+		None = 0,
+		Blocking = 1,
+		NonBlocking = 2
 	}
 
 	[Native]
@@ -936,6 +955,23 @@ namespace Datadog.iOS
 	}
 
 	[Native]
+	public enum DDTelemetryConfigurationEventTelemetryConfigurationTraceContextInjection : long
+	{
+		None = 0,
+		All = 1,
+		Sampled = 2
+	}
+
+	[Native]
+	public enum DDTelemetryConfigurationEventTelemetryConfigurationTrackingConsent : long
+	{
+		None = 0,
+		Granted = 1,
+		NotGranted = 2,
+		Pending = 3
+	}
+
+	[Native]
 	public enum DDTelemetryConfigurationEventTelemetryConfigurationViewTrackingStrategy : long
 	{
 		None = 0,
@@ -967,28 +1003,27 @@ namespace Datadog.iOS
 		Unity = 5
 	}
 
+	/// <summary>
+	/// Defines whether the trace context should be injected into all requests or only sampled ones.
+	/// </summary>
+	[Native]
+	public enum DDTraceContextInjection : long
+	{
+		/// <summary>
+		/// Injects trace context into all requests irrespective of the sampling decision.
+		/// </summary>
+		All = 0,
+		/// <summary>
+		/// Injects trace context only into sampled requests.
+		/// </summary>
+		Sampled = 1
+	}
+
 	[Native]
 	public enum DDUploadFrequency : long
 	{
 		Frequent = 0,
 		Average = 1,
 		Rare = 2
-	}
-
-	/// <summary>
-	/// Defines whether the trace context should be injected into all requests or only sampled ones.
-	/// </summary>
-	[Native]
-	public enum DDTraceContextInjection
-	{
-		/// <summary>
-		/// Injects trace context into all requests irrespective of the sampling decision.
-		/// </summary>
-		DDTraceContextInjectionAll = 0,
-
-		/// <summary>
-		/// Injects trace context only into sampled requests.
-		/// </summary>
-		DDTraceContextInjectionSampled = 1
 	}
 }
