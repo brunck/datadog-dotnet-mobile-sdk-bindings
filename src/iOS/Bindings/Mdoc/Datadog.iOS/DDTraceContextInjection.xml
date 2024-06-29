@@ -14,7 +14,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>Defines whether the trace context should be injected into all requests or only sampled ones.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -30,7 +30,7 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Injects trace context into all requests irrespective of the sampling decision.</summary>
       </Docs>
     </Member>
     <Member MemberName="Sampled">
@@ -45,7 +45,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Injects trace context only into sampled requests.</summary>
       </Docs>
     </Member>
   </Members>
