@@ -44,6 +44,7 @@
   </Attributes>
   <Docs>
     <summary>Corresponds to: https://github.com/opentracing/opentracing-objc/blob/master/Pod/Classes/OTTracer.h</summary>
+    <remarks>To be added.</remarks>
   </Docs>
   <Members>
     <Member MemberName="Extract">

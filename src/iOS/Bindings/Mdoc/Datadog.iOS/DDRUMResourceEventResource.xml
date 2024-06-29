@@ -113,6 +113,30 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="DecodedBodySize">
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSNumber DecodedBodySize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSNumber DecodedBodySize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("decodedBodySize", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSNumber</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="DNS">
       <MemberSignature Language="C#" Value="public virtual Datadog.iOS.DDRUMResourceEventResourceDNS DNS { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Datadog.iOS.DDRUMResourceEventResourceDNS DNS" />
@@ -174,6 +198,30 @@
         </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("duration", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSNumber</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncodedBodySize">
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSNumber EncodedBodySize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSNumber EncodedBodySize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("encodedBodySize", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -329,6 +377,30 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="RenderBlockingStatus">
+      <MemberSignature Language="C#" Value="public virtual Datadog.iOS.DDRUMResourceEventResourceRenderBlockingStatus RenderBlockingStatus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Datadog.iOS.DDRUMResourceEventResourceRenderBlockingStatus RenderBlockingStatus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("renderBlockingStatus")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.DDRUMResourceEventResourceRenderBlockingStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Size">
       <MemberSignature Language="C#" Value="public virtual Foundation.NSNumber Size { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSNumber Size" />
@@ -390,6 +462,30 @@
         </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("statusCode", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSNumber</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransferSize">
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSNumber TransferSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSNumber TransferSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("transferSize", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

@@ -281,6 +281,30 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="CompressIntakeRequests">
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSNumber CompressIntakeRequests { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSNumber CompressIntakeRequests" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("compressIntakeRequests", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSNumber</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="DartVersion">
       <MemberSignature Language="C#" Value="public virtual string DartVersion { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string DartVersion" />
@@ -328,6 +352,33 @@
       </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnablePrivacyForActionName">
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSNumber EnablePrivacyForActionName { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSNumber EnablePrivacyForActionName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("enablePrivacyForActionName", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setEnablePrivacyForActionName:", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSNumber</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>To be added.</summary>
@@ -590,6 +641,33 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="SendLogsAfterSessionExpiration">
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSNumber SendLogsAfterSessionExpiration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSNumber SendLogsAfterSessionExpiration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("sendLogsAfterSessionExpiration", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setSendLogsAfterSessionExpiration:", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSNumber</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="SessionReplaySampleRate">
       <MemberSignature Language="C#" Value="public virtual Foundation.NSNumber SessionReplaySampleRate { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSNumber SessionReplaySampleRate" />
@@ -764,6 +842,111 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="TelemetryUsageSampleRate">
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSNumber TelemetryUsageSampleRate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSNumber TelemetryUsageSampleRate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("telemetryUsageSampleRate", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSNumber</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TraceContextInjection">
+      <MemberSignature Language="C#" Value="public virtual Datadog.iOS.DDTelemetryConfigurationEventTelemetryConfigurationTraceContextInjection TraceContextInjection { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Datadog.iOS.DDTelemetryConfigurationEventTelemetryConfigurationTraceContextInjection TraceContextInjection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("traceContextInjection", ObjCRuntime.ArgumentSemantic.UnsafeUnretained)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setTraceContextInjection:", ObjCRuntime.ArgumentSemantic.UnsafeUnretained)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.DDTelemetryConfigurationEventTelemetryConfigurationTraceContextInjection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TracerApi">
+      <MemberSignature Language="C#" Value="public virtual string TracerApi { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TracerApi" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("tracerApi")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setTracerApi:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TracerApiVersion">
+      <MemberSignature Language="C#" Value="public virtual string TracerApiVersion { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TracerApiVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("tracerApiVersion")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setTracerApiVersion:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="TraceSampleRate">
       <MemberSignature Language="C#" Value="public virtual Foundation.NSNumber TraceSampleRate { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSNumber TraceSampleRate" />
@@ -916,6 +1099,30 @@
       </Attributes>
       <ReturnValue>
         <ReturnType>Foundation.NSNumber</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrackingConsent">
+      <MemberSignature Language="C#" Value="public virtual Datadog.iOS.DDTelemetryConfigurationEventTelemetryConfigurationTrackingConsent TrackingConsent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Datadog.iOS.DDTelemetryConfigurationEventTelemetryConfigurationTrackingConsent TrackingConsent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("trackingConsent")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.DDTelemetryConfigurationEventTelemetryConfigurationTrackingConsent</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>To be added.</summary>
@@ -1401,6 +1608,33 @@
         </Attribute>
         <Attribute>
           <AttributeName>get: Foundation.Export("usePartitionedCrossSiteSessionCookie", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSNumber</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsePCIIntake">
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSNumber UsePCIIntake { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSNumber UsePCIIntake" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("usePciIntake", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setUsePciIntake:", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

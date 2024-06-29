@@ -99,6 +99,7 @@
         <param name="name">The RUM Action name, appearing as <c>ACTION NAME</c> in RUM Explorer.</param>
         <param name="attributes">Additional attributes to associate with the RUM Action.</param>
         <summary>Initializes the RUM Action description.</summary>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Attributes">

@@ -99,15 +99,13 @@
         <param name="clientToken">Either the RUM client token (which supports RUM, Logging and APM) or regular client token, only for Logging and APM.</param>
         <param name="env">The environment name which will be sent to Datadog. This can be used to filter events on different environments (e.g. “staging” or “production”).</param>
         <summary>Creates a Datadog SDK Configuration object.</summary>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="AdditionalConfiguration">
       <MemberSignature Language="C#" Value="public virtual Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; AdditionalConfiguration { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt; AdditionalConfiguration" />
       <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
       <Attributes>
         <Attribute>
           <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
@@ -177,6 +175,8 @@
       </ReturnValue>
       <Docs>
         <summary>The preferred size of batched data uploaded to Datadog servers. This value impacts the size and number of requests performed by the SDK. <c>Medium</c> by default.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Bundle">
@@ -202,6 +202,8 @@
       </ReturnValue>
       <Docs>
         <summary>The bundle object that contains the current executable.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="ClassHandle">
@@ -243,6 +245,8 @@
       </ReturnValue>
       <Docs>
         <summary>Either the RUM client token (which supports RUM, Logging and APM) or regular client token, only for Logging and APM.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Env">
@@ -268,6 +272,8 @@
       </ReturnValue>
       <Docs>
         <summary>The environment name which will be sent to Datadog. This can be used to filter events on different environments (e.g. “staging” or “production”).</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="ProxyConfiguration">
@@ -302,6 +308,8 @@
       </ReturnValue>
       <Docs>
         <summary>Proxy configuration attributes. This can be used to a enable a custom proxy for uploading tracked data to Datadog's intake.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Service">
@@ -336,6 +344,8 @@
       </ReturnValue>
       <Docs>
         <summary>The service name associated with data send to Datadog. Default value is set to application bundle identifier.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="SetEncryption">
@@ -360,8 +370,10 @@
         <Parameter Name="encryption" Type="Datadog.iOS.IDDDataEncryption" />
       </Parameters>
       <Docs>
-        <param name="encryption"></param>
+        <param name="encryption">
+        </param>
         <summary>Sets Data encryption to use for on-disk data persistency by providing an object complying with <c>DataEncryption</c> protocol.</summary>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="SetServerDateProvider">
@@ -386,7 +398,8 @@
         <Parameter Name="serverDateProvider" Type="Datadog.iOS.IDDServerDateProvider" />
       </Parameters>
       <Docs>
-        <param name="serverDateProvider"></param>
+        <param name="serverDateProvider">
+        </param>
         <summary>A custom NTP synchronization interface. 
         By default, the Datadog SDK synchronizes with dedicated NTP pools provided by the 
         https://www.ntppool.org/ . Using different pools or setting a no-op <c>ServerDateProvider</c> 
@@ -418,6 +431,8 @@
       </ReturnValue>
       <Docs>
         <summary>The Datadog server site where data is sent. Default value is <c>US1</c>.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="UploadFrequency">
@@ -443,6 +458,8 @@
       </ReturnValue>
       <Docs>
         <summary>The preferred frequency of uploading data to Datadog servers. This value impacts the frequency of performing network requests by the SDK. <c>Average</c> by default.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
   </Members>

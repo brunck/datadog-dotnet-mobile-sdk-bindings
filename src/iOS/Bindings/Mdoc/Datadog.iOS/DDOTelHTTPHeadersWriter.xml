@@ -92,38 +92,6 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public DDOTelHTTPHeadersWriter (Datadog.iOS.DDTraceSamplingStrategy samplingStrategy, Datadog.iOS.DDInjectEncoding injectEncoding);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Datadog.iOS.DDTraceSamplingStrategy samplingStrategy, valuetype Datadog.iOS.DDInjectEncoding injectEncoding) cil managed" />
-      <MemberType>Constructor</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>Foundation.Export("initWithSamplingStrategy:injectEncoding:")</AttributeName>
-        </Attribute>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
-        </Attribute>
-        <Attribute>
-          <AttributeName>ObjCRuntime.DesignatedInitializer</AttributeName>
-        </Attribute>
-        <Attribute>
-          <AttributeName>System.Runtime.CompilerServices.NullableContext(1)</AttributeName>
-        </Attribute>
-      </Attributes>
-      <Parameters>
-        <Parameter Name="samplingStrategy" Type="Datadog.iOS.DDTraceSamplingStrategy" />
-        <Parameter Name="injectEncoding" Type="Datadog.iOS.DDInjectEncoding" />
-      </Parameters>
-      <Docs>
-        <param name="samplingStrategy">To be added.</param>
-        <param name="injectEncoding">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public DDOTelHTTPHeadersWriter (float sampleRate, Datadog.iOS.DDInjectEncoding injectEncoding);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float32 sampleRate, valuetype Datadog.iOS.DDInjectEncoding injectEncoding) cil managed" />
       <MemberType>Constructor</MemberType>
@@ -148,6 +116,40 @@
       <Docs>
         <param name="sampleRate">To be added.</param>
         <param name="injectEncoding">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DDOTelHTTPHeadersWriter (Datadog.iOS.DDTraceSamplingStrategy samplingStrategy, Datadog.iOS.DDInjectEncoding injectEncoding, Datadog.iOS.DDTraceContextInjection traceContextInjection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Datadog.iOS.DDTraceSamplingStrategy samplingStrategy, valuetype Datadog.iOS.DDInjectEncoding injectEncoding, valuetype Datadog.iOS.DDTraceContextInjection traceContextInjection) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("initWithSamplingStrategy:injectEncoding:traceContextInjection:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.DesignatedInitializer</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.NullableContext(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="samplingStrategy" Type="Datadog.iOS.DDTraceSamplingStrategy" />
+        <Parameter Name="injectEncoding" Type="Datadog.iOS.DDInjectEncoding" />
+        <Parameter Name="traceContextInjection" Type="Datadog.iOS.DDTraceContextInjection" />
+      </Parameters>
+      <Docs>
+        <param name="samplingStrategy">To be added.</param>
+        <param name="injectEncoding">To be added.</param>
+        <param name="traceContextInjection">To be added.</param>
         <summary>To be added.</summary>
         <remarks>To be added.</remarks>
       </Docs>

@@ -45,7 +45,7 @@
           <AttributeName>System.Reflection.AssemblyFileVersion("1.0.0.0")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Reflection.AssemblyInformationalVersion("1.0.0+e56449cb3b792d6ba2f8e66ed50c7365d7378059")</AttributeName>
+          <AttributeName>System.Reflection.AssemblyInformationalVersion("1.0.0+30af8b7d1b3d7b2d61d4e45ea41f96680ba93986")</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Reflection.AssemblyProduct("ios")</AttributeName>
@@ -156,6 +156,8 @@
       <Type Name="DDRUMErrorEventErrorCategory" Kind="Enumeration" />
       <Type Name="DDRUMErrorEventErrorCauses" Kind="Class" />
       <Type Name="DDRUMErrorEventErrorCausesSource" Kind="Enumeration" />
+      <Type Name="DDRUMErrorEventErrorCSP" Kind="Class" />
+      <Type Name="DDRUMErrorEventErrorCSPDisposition" Kind="Enumeration" />
       <Type Name="DDRUMErrorEventErrorHandling" Kind="Enumeration" />
       <Type Name="DDRUMErrorEventErrorMeta" Kind="Class" />
       <Type Name="DDRUMErrorEventErrorResource" Kind="Class" />
@@ -242,6 +244,7 @@
       <Type Name="DDRUMResourceEventResourceProvider" Kind="Class" />
       <Type Name="DDRUMResourceEventResourceProviderProviderType" Kind="Enumeration" />
       <Type Name="DDRUMResourceEventResourceRedirect" Kind="Class" />
+      <Type Name="DDRUMResourceEventResourceRenderBlockingStatus" Kind="Enumeration" />
       <Type Name="DDRUMResourceEventResourceResourceType" Kind="Enumeration" />
       <Type Name="DDRUMResourceEventResourceRUMMethod" Kind="Enumeration" />
       <Type Name="DDRUMResourceEventResourceSSL" Kind="Class" />
@@ -321,6 +324,7 @@
       <Type Name="DDRUMVitalEventDDSession" Kind="Class" />
       <Type Name="DDRUMVitalEventDDSessionPlan" Kind="Enumeration" />
       <Type Name="DDRUMVitalEventDDSessionRUMSessionPrecondition" Kind="Enumeration" />
+      <Type Name="DDRUMVitalEventDDVital" Kind="Class" />
       <Type Name="DDRUMVitalEventDisplay" Kind="Class" />
       <Type Name="DDRUMVitalEventDisplayViewport" Kind="Class" />
       <Type Name="DDRUMVitalEventRUMCITest" Kind="Class" />
@@ -358,7 +362,11 @@
       <Type Name="DDTelemetryConfigurationEventTelemetryConfigurationForwardConsoleLogs" Kind="Class" />
       <Type Name="DDTelemetryConfigurationEventTelemetryConfigurationForwardReports" Kind="Class" />
       <Type Name="DDTelemetryConfigurationEventTelemetryConfigurationSelectedTracingPropagators" Kind="Enumeration" />
+      <Type Name="DDTelemetryConfigurationEventTelemetryConfigurationTraceContextInjection" Kind="Enumeration" />
+      <Type Name="DDTelemetryConfigurationEventTelemetryConfigurationTrackingConsent" Kind="Enumeration" />
       <Type Name="DDTelemetryConfigurationEventTelemetryConfigurationViewTrackingStrategy" Kind="Enumeration" />
+      <Type Name="DDTelemetryConfigurationEventTelemetryRUMTelemetryDevice" Kind="Class" />
+      <Type Name="DDTelemetryConfigurationEventTelemetryRUMTelemetryOperatingSystem" Kind="Class" />
       <Type Name="DDTelemetryConfigurationEventView" Kind="Class" />
       <Type Name="DDTelemetryDebugEvent" Kind="Class" />
       <Type Name="DDTelemetryDebugEventAction" Kind="Class" />
@@ -367,6 +375,8 @@
       <Type Name="DDTelemetryDebugEventSession" Kind="Class" />
       <Type Name="DDTelemetryDebugEventSource" Kind="Enumeration" />
       <Type Name="DDTelemetryDebugEventTelemetry" Kind="Class" />
+      <Type Name="DDTelemetryDebugEventTelemetryRUMTelemetryDevice" Kind="Class" />
+      <Type Name="DDTelemetryDebugEventTelemetryRUMTelemetryOperatingSystem" Kind="Class" />
       <Type Name="DDTelemetryDebugEventView" Kind="Class" />
       <Type Name="DDTelemetryErrorEvent" Kind="Class" />
       <Type Name="DDTelemetryErrorEventAction" Kind="Class" />
@@ -376,9 +386,12 @@
       <Type Name="DDTelemetryErrorEventSource" Kind="Enumeration" />
       <Type Name="DDTelemetryErrorEventTelemetry" Kind="Class" />
       <Type Name="DDTelemetryErrorEventTelemetryError" Kind="Class" />
+      <Type Name="DDTelemetryErrorEventTelemetryRUMTelemetryDevice" Kind="Class" />
+      <Type Name="DDTelemetryErrorEventTelemetryRUMTelemetryOperatingSystem" Kind="Class" />
       <Type Name="DDTelemetryErrorEventView" Kind="Class" />
       <Type Name="DDTrace" Kind="Class" />
       <Type Name="DDTraceConfiguration" Kind="Class" />
+      <Type Name="DDTraceContextInjection" Kind="Enumeration" />
       <Type Name="DDTraceFirstPartyHostsTracing" Kind="Class" />
       <Type Name="DDTracer" Kind="Class" />
       <Type Name="DDTraceSamplingStrategy" Kind="Class" />

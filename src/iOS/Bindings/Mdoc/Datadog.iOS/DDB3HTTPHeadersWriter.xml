@@ -74,15 +74,15 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public DDB3HTTPHeadersWriter (Datadog.iOS.DDTraceSamplingStrategy samplingStrategy, Datadog.iOS.DDInjectEncoding injectEncoding);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Datadog.iOS.DDTraceSamplingStrategy samplingStrategy, valuetype Datadog.iOS.DDInjectEncoding injectEncoding) cil managed" />
+      <MemberSignature Language="C#" Value="public DDB3HTTPHeadersWriter (Datadog.iOS.DDTraceSamplingStrategy samplingStrategy, Datadog.iOS.DDInjectEncoding injectEncoding, Datadog.iOS.DDTraceContextInjection traceContextInjection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Datadog.iOS.DDTraceSamplingStrategy samplingStrategy, valuetype Datadog.iOS.DDInjectEncoding injectEncoding, valuetype Datadog.iOS.DDTraceContextInjection traceContextInjection) cil managed" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Foundation.Export("initWithSamplingStrategy:injectEncoding:")</AttributeName>
+          <AttributeName>Foundation.Export("initWithSamplingStrategy:injectEncoding:traceContextInjection:")</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
@@ -94,10 +94,12 @@
       <Parameters>
         <Parameter Name="samplingStrategy" Type="Datadog.iOS.DDTraceSamplingStrategy" />
         <Parameter Name="injectEncoding" Type="Datadog.iOS.DDInjectEncoding" />
+        <Parameter Name="traceContextInjection" Type="Datadog.iOS.DDTraceContextInjection" />
       </Parameters>
       <Docs>
         <param name="samplingStrategy">To be added.</param>
         <param name="injectEncoding">To be added.</param>
+        <param name="traceContextInjection">To be added.</param>
         <summary>To be added.</summary>
         <remarks>To be added.</remarks>
       </Docs>

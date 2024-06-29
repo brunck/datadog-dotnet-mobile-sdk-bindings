@@ -101,6 +101,7 @@
         <summary>
         Initializes the RUM View description.
         </summary>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Attributes">

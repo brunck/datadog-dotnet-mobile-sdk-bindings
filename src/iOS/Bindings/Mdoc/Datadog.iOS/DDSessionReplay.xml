@@ -16,6 +16,7 @@
   </Attributes>
   <Docs>
     <summary>An entry point to the Datadog Session Replay feature.</summary>
+    <remarks>To be added.</remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -113,6 +114,7 @@
         Recording will start automatically after enabling Session Replay.
         Note: Session Replay requires the RUM feature to be enabled.
         </summary>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
   </Members>

@@ -22,6 +22,7 @@
   </Attributes>
   <Docs>
     <summary>Available strategies for sampling trace propagation headers.</summary>
+    <remarks>To be added.</remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -116,6 +117,8 @@
         Use this option to apply the provided <c>SampleRate</c> for determining the decision to keep or drop the trace 
         in downstream services independently of sampling their parent span.
         </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="HeadBased">
@@ -143,6 +146,8 @@
         is determined from the first span of the trace, the head, when the trace is created. With the <c>HeadBased</c> 
         strategy, this decision is propagated through the request context to downstream services.
         </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
   </Members>

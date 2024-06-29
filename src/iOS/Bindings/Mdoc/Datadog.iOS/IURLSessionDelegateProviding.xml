@@ -26,9 +26,10 @@
   </Attributes>
   <Docs>
     <summary>
-      An interface for forwarding <c>URLSessionDelegate</cocde> calls to <c>DDURLSessionDelegate</c>.
+      An interface for forwarding <c>URLSessionDelegate</c> calls to <c>DDURLSessionDelegate</c>.
       The implementation must ensure that required methods are called on the <c>ddURLSessionDelegate</c>.
     </summary>
+    <remarks>To be added.</remarks>
   </Docs>
   <Members>
     <Member MemberName="WeakDDURLSessionDelegate">
@@ -59,21 +60,25 @@
         <summary>
         Datadog delegate object.
         </summary>
+        <value>To be added.</value>
         <remarks>
-        <para>
+          <para>
         The class implementing <c>DDURLSessionDelegateProviding</c> must ensure that the following method calls are forwarded to <c>DDURLSessionDelegate</c>:
-        <list type="bullet">
-          <item>
-            <c>void URLSessionTaskDidFinishCollecingMetrics()</c>
-          </item>
-          <item>
-            <c>void URLSessionTaskDidCompleteWithError()</c>
-          </item>
-          <item>
-            <c>void URLSessionDataTaskDidReceiveData()</c>
-          </item>
-        </list>
-        </remarks
+        </para>
+          <para>
+            <list type="bullet">
+              <item>
+                <c>void URLSessionTaskDidFinishCollecingMetrics()</c>
+              </item>
+              <item>
+                <c>void URLSessionTaskDidCompleteWithError()</c>
+              </item>
+              <item>
+                <c>void URLSessionDataTaskDidReceiveData()</c>
+              </item>
+            </list>
+          </para>
+        </remarks>
       </Docs>
     </Member>
   </Members>

@@ -170,6 +170,30 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="CSP">
+      <MemberSignature Language="C#" Value="public virtual Datadog.iOS.DDRUMErrorEventErrorCSP CSP { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Datadog.iOS.DDRUMErrorEventErrorCSP CSP" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("csp", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.DDRUMErrorEventErrorCSP</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Fingerprint">
       <MemberSignature Language="C#" Value="public virtual string Fingerprint { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string Fingerprint" />
@@ -472,6 +496,30 @@
       </Attributes>
       <ReturnValue>
         <ReturnType>Datadog.iOS.DDRUMErrorEventErrorThreads[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeSinceAppStart">
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSNumber TimeSinceAppStart { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSNumber TimeSinceAppStart" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("timeSinceAppStart", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSNumber</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>To be added.</summary>

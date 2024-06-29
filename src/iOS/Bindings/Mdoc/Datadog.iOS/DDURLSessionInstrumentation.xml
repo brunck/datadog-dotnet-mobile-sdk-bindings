@@ -131,6 +131,7 @@
         The delegate class to unbind.
         </typeparam>
         <summary>Disables URLSession instrumentation.</summary>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Enable">
@@ -160,6 +161,7 @@
       <Docs>
         <param name="configuration">Configuration of the feature.</param>
         <summary>Enables URLSession instrumentation.</summary>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
   </Members>

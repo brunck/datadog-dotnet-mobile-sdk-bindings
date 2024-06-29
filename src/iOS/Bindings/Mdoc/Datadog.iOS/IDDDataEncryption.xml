@@ -65,7 +65,8 @@
       </Parameters>
       <Docs>
         <param name="data">Data to decrypt.</param>
-        <param name="error"></param>
+        <param name="error">
+        </param>
         <summary>Decrypts given <c>Data</c> with user-chosen encryption.</summary>
         <returns>The decrypted data.</returns>
         <remarks>
@@ -112,9 +113,11 @@
       </Parameters>
       <Docs>
         <param name="data">Data to encrypt.</param>
-        <param name="error"></param>
+        <param name="error">
+        </param>
         <summary>Encrypts given <c>Data</c> with user-chosen encryption.</summary>
         <returns>The encrypted data.</returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
   </Members>

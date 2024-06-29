@@ -89,6 +89,36 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="Device">
+      <MemberSignature Language="C#" Value="public virtual Datadog.iOS.DDTelemetryDebugEventTelemetryRUMTelemetryDevice Device { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Datadog.iOS.DDTelemetryDebugEventTelemetryRUMTelemetryDevice Device" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("device", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.CompilerServices.NullableContext(2)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.DDTelemetryDebugEventTelemetryRUMTelemetryDevice</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Message">
       <MemberSignature Language="C#" Value="public virtual string Message { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string Message" />
@@ -106,6 +136,36 @@
       </Attributes>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OS">
+      <MemberSignature Language="C#" Value="public virtual Datadog.iOS.DDTelemetryDebugEventTelemetryRUMTelemetryOperatingSystem OS { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Datadog.iOS.DDTelemetryDebugEventTelemetryRUMTelemetryOperatingSystem OS" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("os", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.CompilerServices.NullableContext(2)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.DDTelemetryDebugEventTelemetryRUMTelemetryOperatingSystem</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>To be added.</summary>

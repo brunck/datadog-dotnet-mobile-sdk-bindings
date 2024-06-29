@@ -21,6 +21,8 @@
     </Attribute>
   </Attributes>
   <Docs>
+    <summary>To be added.</summary>
+    <remarks>To be added.</remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -42,6 +44,9 @@
         <Parameter Name="t" Type="Foundation.NSObjectFlag" />
       </Parameters>
       <Docs>
+        <param name="t">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -63,6 +68,9 @@
         <Parameter Name="handle" Type="ObjCRuntime.NativeHandle" />
       </Parameters>
       <Docs>
+        <param name="handle">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -121,6 +129,7 @@
         <param name="remoteLogThreshold">Set the minimum log level reported to Datadog servers. <c>Debug</c> by default.</param>
         <param name="printLogsToConsole">Format to use when printing logs to the console - either <c>Short</c> or <c>Json</c>.</param>
         <summary>Creates a Logger Configuration.</summary>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="BundleWithRumEnabled">
@@ -151,6 +160,8 @@
         it will be possible to see all the logs sent during a specific View lifespan in the RUM Explorer. 
         <c>true</c> by default.
         </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="BundleWithTraceEnabled">
@@ -181,6 +192,8 @@
         it will be possible to see all the logs sent during that specific trace. 
         <c>true</c> by default.
         </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="ClassHandle">
@@ -194,6 +207,9 @@
         <ReturnType>ObjCRuntime.NativeHandle</ReturnType>
       </ReturnValue>
       <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -219,6 +235,8 @@
       </ReturnValue>
       <Docs>
         <summary>The logger custom name (default value is set to the main bundle identifier).</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="NetworkInfoEnabled">
@@ -249,6 +267,8 @@
         For full list of network info attributes see <c>NetworkConnectionInfo</c> and <c>CarrierInfo</c>. 
         <c>false</c> by default.
         </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="PrintLogsToConsole">
@@ -277,6 +297,8 @@
         Enables logs to be printed to the debugger console. 
         <c>false</c> by default.
         </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="RemoteLogThreshold">
@@ -308,6 +330,8 @@
         is used - all logs will be printed, no matter their level. 
         <c>DDLogLevel.Debug</c> by default.
         </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="RemoteSampleRate">
@@ -338,6 +362,8 @@
         A value of <c>0</c> means no logs will be processed, <c>100</c> means all logs will be processed. 
         By default sampling is disabled, meaning that all logs are being processed.
         </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Service">
@@ -363,6 +389,8 @@
       </ReturnValue>
       <Docs>
         <summary>The service name (default value is set to the application bundle identifier).</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
   </Members>

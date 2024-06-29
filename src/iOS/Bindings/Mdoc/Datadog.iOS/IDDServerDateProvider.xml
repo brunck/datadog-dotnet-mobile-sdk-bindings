@@ -18,7 +18,7 @@
       <AttributeName>Foundation.Protocol(Name="_TtP11DatadogObjc20DDServerDateProvider_", WrapperType=typeof(Datadog.iOS.DDServerDateProviderWrapper))</AttributeName>
     </Attribute>
     <Attribute>
-      <AttributeName>Foundation.ProtocolMember(IsProperty=false, IsRequired=true, IsStatic=false, Name="Synchronize", ParameterBlockProxy=new System.Type[] { typeof(ObjCRuntime.Trampolines/NIDActionArity1V0) }, ParameterByRef=new System.Boolean[] { false }, ParameterType=new System.Type[] { typeof(System.Action`1&lt;System.Double&gt;) }, Selector="synchronizeWithUpdate:")</AttributeName>
+      <AttributeName>Foundation.ProtocolMember(IsProperty=false, IsRequired=true, IsStatic=false, Name="Synchronize", ParameterBlockProxy=new System.Type[] { typeof(ObjCRuntime.Trampolines/NIDActionArity1V1) }, ParameterByRef=new System.Boolean[] { false }, ParameterType=new System.Type[] { typeof(System.Action`1&lt;System.Double&gt;) }, Selector="synchronizeWithUpdate:")</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -54,17 +54,19 @@
         <Parameter Name="update" Type="System.Action&lt;System.Double&gt;">
           <Attributes>
             <Attribute>
-              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDActionArity1V0))</AttributeName>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDActionArity1V1))</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="update"></param>
+        <param name="update">
+        </param>
         <summary>
   Start the clock synchronization with NTP server. 
   Calls the <c>Action</c> by passing it the server time offset when the synchronization succeeds or<c>NULL</c> if it fails.
         </summary>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
   </Members>

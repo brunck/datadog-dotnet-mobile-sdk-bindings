@@ -33,9 +33,10 @@
   <Docs>
     <summary>
       The <c>URLSession</c> delegate object which enables network requests instrumentation. <i>It must be
-      used together with</i> <c>DatadogRUM</c> or <c>DatadogTrace</c>.
+      used together with</i><c>DatadogRUM</c> or <c>DatadogTrace</c>.
       All requests made with the <c>URLSession</c> instrumented with this delegate will be intercepted by the SDK.
     </summary>
+    <remarks>To be added.</remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -110,8 +111,7 @@
       <Docs>
         <param name="additionalFirstPartyHosts">
           These hosts are tracked <i>in addition to</i> what was
-          passed to <c>DatadogConfiguration.Builder</c> via <c>trackURLSession(firstPartyHosts:)</c>
-        </param>
+          passed to <c>DatadogConfiguration.Builder</c> via <c>trackURLSession(firstPartyHosts:)</c></param>
         <summary>
          Automatically tracked hosts can be customized per instance with this initializer.
           <i>NOTE:</i> If <c>trackURLSession(firstPartyHosts:)</c> is never called, 

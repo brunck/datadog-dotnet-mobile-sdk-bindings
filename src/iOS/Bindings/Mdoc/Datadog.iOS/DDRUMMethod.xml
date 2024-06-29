@@ -18,6 +18,21 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <Member MemberName="Connect">
+      <MemberSignature Language="C#" Value="Connect" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.DDRUMMethod Connect = int64(6)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.DDRUMMethod</ReturnType>
+      </ReturnValue>
+      <MemberValue>6</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
     <Member MemberName="Delete">
       <MemberSignature Language="C#" Value="Delete" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.DDRUMMethod Delete = int64(4)" />
@@ -63,6 +78,21 @@
         <summary>To be added.</summary>
       </Docs>
     </Member>
+    <Member MemberName="Options">
+      <MemberSignature Language="C#" Value="Options" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.DDRUMMethod Options = int64(8)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.DDRUMMethod</ReturnType>
+      </ReturnValue>
+      <MemberValue>8</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
     <Member MemberName="Patch">
       <MemberSignature Language="C#" Value="Patch" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.DDRUMMethod Patch = int64(5)" />
@@ -104,6 +134,21 @@
         <ReturnType>Datadog.iOS.DDRUMMethod</ReturnType>
       </ReturnValue>
       <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Trace">
+      <MemberSignature Language="C#" Value="Trace" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.DDRUMMethod Trace = int64(7)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.DDRUMMethod</ReturnType>
+      </ReturnValue>
+      <MemberValue>7</MemberValue>
       <Docs>
         <summary>To be added.</summary>
       </Docs>
