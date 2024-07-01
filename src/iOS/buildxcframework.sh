@@ -24,7 +24,12 @@ OUTPUT_FOLDER="${PWD}/build"
 
 echo
 echo "Cleaning up old .xcframework files at ${OUTPUT_FOLDER}."
-find "${OUTPUT_FOLDER}" -name "*.xcframework" -type d -exec rm -rf {} \;
+if find "${OUTPUT_FOLDER}" -name "*.xcframework" -type d | read; then
+  find "${OUTPUT_FOLDER}" -name "*.xcframework" -type d -exec rm -rf {} \;
+  echo "Removed existing .xcframework files."
+else
+  echo "No existing .xcframework files to remove at."
+fi
 
 for INDEX in "${!FRAMEWORK_NAMES[@]}"; do
   FRAMEWORK_NAME="${FRAMEWORK_NAMES[$INDEX]}"
@@ -102,7 +107,12 @@ TARGET_DIR="./Bindings/Libs"
 
 echo "Cleaning up old .xcframework files at ${TARGET_DIR}."
 echo
-find "${TARGET_DIR}" -name "*.xcframework" -type d -exec rm -rf {} \;
+if find "${TARGET_DIR}" -name "*.xcframework" -type d | read; then
+  find "${TARGET_DIR}" -name "*.xcframework" -type d -exec rm -rf {} \;
+  echo "Removed existing .xcframework files."
+else
+  echo "No existing .xcframework files to remove."
+fi
 
 # Find .xcframework files in the source directory
 echo

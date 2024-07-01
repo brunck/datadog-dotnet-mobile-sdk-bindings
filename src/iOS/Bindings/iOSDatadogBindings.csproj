@@ -16,7 +16,7 @@
       Enable trim analyzers for class libraries.
       To learn more, see: https://learn.microsoft.com/dotnet/core/deploying/trimming/prepare-libraries-for-trimming
     -->
-		<!-- <IsTrimmable>true</IsTrimmable> -->
+		<IsTrimmable>true</IsTrimmable>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -74,7 +74,7 @@
 		</NativeReference>
 		<NativeReference Include="Libs/DDT.xcframework">
 			<Kind>Framework</Kind>
-			<Frameworks>Foundation OpenTelemetryApi</Frameworks>
+			<Frameworks>Foundation</Frameworks>
 			<SmartLink>False</SmartLink>
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
