@@ -13,8 +13,7 @@ CARTHAGE_OUTPUT="${CARTFILE_DIRECTORY}/Carthage/Build"
 
 echo
 echo "Building XCFrameworks for Datadog SDK."
-carthage update --platform iOS --use-xcframeworks --project-directory "${CARTFILE_DIRECTORY}"
-if [ $? -ne 0 ]; then
+if ! carthage update --platform iOS --use-xcframeworks --project-directory "${CARTFILE_DIRECTORY}"; then
   echo "Carthage update failed. Exiting."
   exit 1
 fi
@@ -24,7 +23,7 @@ OUTPUT_FOLDER="${PWD}/build"
 
 echo
 echo "Cleaning up old .xcframework files at ${OUTPUT_FOLDER}."
-if find "${OUTPUT_FOLDER}" -name "*.xcframework" -type d | read; then
+if find "${OUTPUT_FOLDER}" -name "*.xcframework" -type d | read -r; then
   find "${OUTPUT_FOLDER}" -name "*.xcframework" -type d -exec rm -rf {} \;
   echo "Removed existing .xcframework files."
 else
@@ -107,8 +106,8 @@ TARGET_DIR="./Bindings/Libs"
 
 echo "Cleaning up old .xcframework files at ${TARGET_DIR}."
 echo
-if find "${TARGET_DIR}" -name "*.xcframework" -type d | read; then
-  find "${TARGET_DIR}" -name "*.xcframework" -type d -exec rm -rf {} \;
+if find "${TARGET_DIR}" -name "*.xcframework" -type d | grep -q .; then
+  find "${TARGET_DIR}" -name "*.xcframework" -type d -exec rm -rf {} +
   echo "Removed existing .xcframework files."
 else
   echo "No existing .xcframework files to remove."
@@ -121,8 +120,7 @@ echo
 find "$SOURCE_DIR" -name "*.xcframework" -type d | while read -r framework
 do
   # Copy the framework to the target directory
-  cp -R "$framework" "$TARGET_DIR"
-  if [ $? -ne 0 ]; then
+  if ! cp -R "$framework" "$TARGET_DIR"; then
     echo "Failed to copy $framework. Exiting."
     exit 1
   fi
@@ -130,8 +128,7 @@ done
 
 echo "Copying OpenTelemetryApi.xcframework to target directory ${TARGET_DIR}."
 echo
-cp -R "${CARTHAGE_OUTPUT}/OpenTelemetryApi.xcframework" "${TARGET_DIR}"
-if [ $? -ne 0 ]; then
+if ! cp -R "${CARTHAGE_OUTPUT}/OpenTelemetryApi.xcframework" "${TARGET_DIR}"; then
   echo "Failed to copy OpenTelemetryApi.xcframework. Exiting."
   exit 1
 fi
