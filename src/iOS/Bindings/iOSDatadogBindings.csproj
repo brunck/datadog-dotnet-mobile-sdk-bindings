@@ -30,6 +30,12 @@
 			<SmartLink>False</SmartLink>
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
+		<NativeReference Include="Libs/CrashReporter.xcframework">
+			<Kind>Framework</Kind>
+			<Frameworks></Frameworks>
+			<SmartLink>False</SmartLink>
+			<ForceLoad>True</ForceLoad>
+		</NativeReference>
 		<NativeReference Include="Libs/DDObjc.xcframework">
 			<Kind>Framework</Kind>
 			<Frameworks>Foundation</Frameworks>
@@ -73,6 +79,12 @@
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
 		<NativeReference Include="Libs/DDT.xcframework">
+			<Kind>Framework</Kind>
+			<Frameworks>Foundation</Frameworks>
+			<SmartLink>False</SmartLink>
+			<ForceLoad>True</ForceLoad>
+		</NativeReference>
+		<NativeReference Include="Libs/DWVT.xcframework">
 			<Kind>Framework</Kind>
 			<Frameworks>Foundation</Frameworks>
 			<SmartLink>False</SmartLink>
