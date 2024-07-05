@@ -78,6 +78,21 @@
         <summary>To be added.</summary>
       </Docs>
     </Member>
+    <Member MemberName="KotlinMultiplatform">
+      <MemberSignature Language="C#" Value="KotlinMultiplatform" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.DDRUMLongTaskEventContainerSource KotlinMultiplatform = int64(7)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.DDRUMLongTaskEventContainerSource</ReturnType>
+      </ReturnValue>
+      <MemberValue>7</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+      </Docs>
+    </Member>
     <Member MemberName="ReactNative">
       <MemberSignature Language="C#" Value="ReactNative" />
       <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.DDRUMLongTaskEventContainerSource ReactNative = int64(4)" />

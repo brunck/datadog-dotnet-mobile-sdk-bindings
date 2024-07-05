@@ -560,6 +560,33 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="TrackWatchdogTerminations">
+      <MemberSignature Language="C#" Value="public virtual bool TrackWatchdogTerminations { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TrackWatchdogTerminations" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("trackWatchdogTerminations")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setTrackWatchdogTerminations:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="UiKitActionsPredicate">
       <MemberSignature Language="C#" Value="public virtual Datadog.iOS.IDDUIKitRUMActionsPredicate UiKitActionsPredicate { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Datadog.iOS.IDDUIKitRUMActionsPredicate UiKitActionsPredicate" />

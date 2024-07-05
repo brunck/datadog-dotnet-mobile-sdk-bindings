@@ -1,6 +1,6 @@
-<Type Name="DDW3CHTTPHeadersWriter" FullName="Datadog.iOS.DDW3CHTTPHeadersWriter">
-  <TypeSignature Language="C#" Value="public class DDW3CHTTPHeadersWriter : Foundation.NSObject" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DDW3CHTTPHeadersWriter extends Foundation.NSObject" />
+<Type Name="DDTelemetryConfigurationEventTelemetryConfigurationPlugins" FullName="Datadog.iOS.DDTelemetryConfigurationEventTelemetryConfigurationPlugins">
+  <TypeSignature Language="C#" Value="public class DDTelemetryConfigurationEventTelemetryConfigurationPlugins : Foundation.NSObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DDTelemetryConfigurationEventTelemetryConfigurationPlugins extends Foundation.NSObject" />
   <AssemblyInfo>
     <AssemblyName>ios</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -11,7 +11,7 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>Foundation.Register("_TtC11DatadogObjc22DDW3CHTTPHeadersWriter", true)</AttributeName>
+      <AttributeName>Foundation.Register("_TtC11DatadogObjc58DDTelemetryConfigurationEventTelemetryConfigurationPlugins", true)</AttributeName>
     </Attribute>
     <Attribute>
       <AttributeName>System.Runtime.CompilerServices.Nullable(0)</AttributeName>
@@ -26,7 +26,7 @@
   </Docs>
   <Members>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="protected DDW3CHTTPHeadersWriter (Foundation.NSObjectFlag t);" />
+      <MemberSignature Language="C#" Value="protected DDTelemetryConfigurationEventTelemetryConfigurationPlugins (Foundation.NSObjectFlag t);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(valuetype Foundation.NSObjectFlag t) cil managed" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
@@ -50,7 +50,7 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="protected internal DDW3CHTTPHeadersWriter (ObjCRuntime.NativeHandle handle);" />
+      <MemberSignature Language="C#" Value="protected internal DDTelemetryConfigurationEventTelemetryConfigurationPlugins (ObjCRuntime.NativeHandle handle);" />
       <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(valuetype ObjCRuntime.NativeHandle handle) cil managed" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
@@ -73,35 +73,6 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public DDW3CHTTPHeadersWriter (Datadog.iOS.DDTraceSamplingStrategy samplingStrategy, Datadog.iOS.DDTraceContextInjection traceContextInjection);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Datadog.iOS.DDTraceSamplingStrategy samplingStrategy, valuetype Datadog.iOS.DDTraceContextInjection traceContextInjection) cil managed" />
-      <MemberType>Constructor</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>Foundation.Export("initWithSamplingStrategy:traceContextInjection:")</AttributeName>
-        </Attribute>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
-        </Attribute>
-        <Attribute>
-          <AttributeName>ObjCRuntime.DesignatedInitializer</AttributeName>
-        </Attribute>
-      </Attributes>
-      <Parameters>
-        <Parameter Name="samplingStrategy" Type="Datadog.iOS.DDTraceSamplingStrategy" />
-        <Parameter Name="traceContextInjection" Type="Datadog.iOS.DDTraceContextInjection" />
-      </Parameters>
-      <Docs>
-        <param name="samplingStrategy">To be added.</param>
-        <param name="traceContextInjection">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="ClassHandle">
       <MemberSignature Language="C#" Value="public override ObjCRuntime.NativeHandle ClassHandle { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype ObjCRuntime.NativeHandle ClassHandle" />
@@ -118,9 +89,9 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="TraceHeaderFields">
-      <MemberSignature Language="C#" Value="public virtual Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSString&gt; TraceHeaderFields { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSString&gt; TraceHeaderFields" />
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public virtual string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -130,11 +101,35 @@
           <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>get: Foundation.Export("traceHeaderFields", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
+          <AttributeName>get: Foundation.Export("name")</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType>Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSString&gt;</ReturnType>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PluginsInfo">
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; PluginsInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt; PluginsInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("pluginsInfo", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>To be added.</summary>

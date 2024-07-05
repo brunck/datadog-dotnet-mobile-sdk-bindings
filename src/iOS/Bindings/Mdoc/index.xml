@@ -6,6 +6,9 @@
           <AttributeName>ObjCRuntime.LinkWith("OpenTelemetryApi.xcframework", ForceLoad=true)</AttributeName>
         </Attribute>
         <Attribute>
+          <AttributeName>ObjCRuntime.LinkWith("CrashReporter.xcframework", ForceLoad=true)</AttributeName>
+        </Attribute>
+        <Attribute>
           <AttributeName>ObjCRuntime.LinkWith("DDObjc.xcframework", ForceLoad=true, Frameworks="Foundation")</AttributeName>
         </Attribute>
         <Attribute>
@@ -27,7 +30,10 @@
           <AttributeName>ObjCRuntime.LinkWith("DDSR.xcframework", ForceLoad=true, Frameworks="Foundation CoreGraphics SafariServices SwiftUI WebKit CryptoKit")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>ObjCRuntime.LinkWith("DDT.xcframework", ForceLoad=true, Frameworks="Foundation OpenTelemetryApi")</AttributeName>
+          <AttributeName>ObjCRuntime.LinkWith("DDT.xcframework", ForceLoad=true, Frameworks="Foundation")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.LinkWith("DWVT.xcframework", ForceLoad=true, Frameworks="Foundation")</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Diagnostics.Debuggable(System.Diagnostics.DebuggableAttribute+DebuggingModes.Default | System.Diagnostics.DebuggableAttribute+DebuggingModes.DisableOptimizations | System.Diagnostics.DebuggableAttribute+DebuggingModes.IgnoreSymbolStoreSequencePoints | System.Diagnostics.DebuggableAttribute+DebuggingModes.EnableEditAndContinue)</AttributeName>
@@ -45,7 +51,10 @@
           <AttributeName>System.Reflection.AssemblyFileVersion("1.0.0.0")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Reflection.AssemblyInformationalVersion("1.0.0+30af8b7d1b3d7b2d61d4e45ea41f96680ba93986")</AttributeName>
+          <AttributeName>System.Reflection.AssemblyInformationalVersion("1.0.0+4c4b3df979fcb5b8fb706cc011545e49633c476f")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyMetadata("IsTrimmable", "True")</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Reflection.AssemblyProduct("ios")</AttributeName>
@@ -361,6 +370,7 @@
       <Type Name="DDTelemetryConfigurationEventTelemetryConfiguration" Kind="Class" />
       <Type Name="DDTelemetryConfigurationEventTelemetryConfigurationForwardConsoleLogs" Kind="Class" />
       <Type Name="DDTelemetryConfigurationEventTelemetryConfigurationForwardReports" Kind="Class" />
+      <Type Name="DDTelemetryConfigurationEventTelemetryConfigurationPlugins" Kind="Class" />
       <Type Name="DDTelemetryConfigurationEventTelemetryConfigurationSelectedTracingPropagators" Kind="Enumeration" />
       <Type Name="DDTelemetryConfigurationEventTelemetryConfigurationTraceContextInjection" Kind="Enumeration" />
       <Type Name="DDTelemetryConfigurationEventTelemetryConfigurationTrackingConsent" Kind="Enumeration" />
@@ -403,6 +413,7 @@
       <Type Name="DDURLSessionInstrumentationConfiguration" Kind="Class" />
       <Type Name="DDURLSessionInstrumentationFirstPartyHostsTracing" Kind="Class" />
       <Type Name="DDW3CHTTPHeadersWriter" Kind="Class" />
+      <Type Name="DDWebViewTracking" Kind="Class" />
       <Type Name="IDDDataEncryption" Kind="Interface" />
       <Type Name="IDDServerDateProvider" Kind="Interface" />
       <Type Name="IDDUIKitRUMActionsPredicate" Kind="Interface" />
