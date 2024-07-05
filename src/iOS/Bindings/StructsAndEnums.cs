@@ -67,7 +67,8 @@ namespace Datadog.iOS
 		Flutter = 3,
 		ReactNative = 4,
 		Roku = 5,
-		Unity = 6
+		Unity = 6,
+		KotlinMultiplatform = 7
 	}
 
 	[Native]
@@ -154,7 +155,8 @@ namespace Datadog.iOS
 		Flutter = 4,
 		ReactNative = 5,
 		Roku = 6,
-		Unity = 7
+		Unity = 7,
+		KotlinMultiplatform = 8
 	}
 
 	[Native]
@@ -175,7 +177,8 @@ namespace Datadog.iOS
 		Flutter = 3,
 		ReactNative = 4,
 		Roku = 5,
-		Unity = 6
+		Unity = 6,
+		KotlinMultiplatform = 7
 	}
 
 	[Native]
@@ -213,7 +216,8 @@ namespace Datadog.iOS
 		None = 0,
 		Anr = 1,
 		AppHang = 2,
-		Exception = 3
+		Exception = 3,
+		WatchdogTermination = 4
 	}
 
 	[Native]
@@ -362,7 +366,8 @@ namespace Datadog.iOS
 		Flutter = 4,
 		ReactNative = 5,
 		Roku = 6,
-		Unity = 7
+		Unity = 7,
+		KotlinMultiplatform = 8
 	}
 
 	[Native]
@@ -384,7 +389,8 @@ namespace Datadog.iOS
 		Flutter = 3,
 		ReactNative = 4,
 		Roku = 5,
-		Unity = 6
+		Unity = 6,
+		KotlinMultiplatform = 7
 	}
 
 	[Native]
@@ -471,7 +477,8 @@ namespace Datadog.iOS
 		Flutter = 4,
 		ReactNative = 5,
 		Roku = 6,
-		Unity = 7
+		Unity = 7,
+		KotlinMultiplatform = 8
 	}
 
 	[Native]
@@ -497,7 +504,8 @@ namespace Datadog.iOS
 		Flutter = 3,
 		ReactNative = 4,
 		Roku = 5,
-		Unity = 6
+		Unity = 6,
+		KotlinMultiplatform = 7
 	}
 
 	[Native]
@@ -651,7 +659,8 @@ namespace Datadog.iOS
 		Flutter = 4,
 		ReactNative = 5,
 		Roku = 6,
-		Unity = 7
+		Unity = 7,
+		KotlinMultiplatform = 8
 	}
 
 	[Native]
@@ -679,7 +688,8 @@ namespace Datadog.iOS
 		Flutter = 3,
 		ReactNative = 4,
 		Roku = 5,
-		Unity = 6
+		Unity = 6,
+		KotlinMultiplatform = 7
 	}
 
 	[Native]
@@ -784,7 +794,8 @@ namespace Datadog.iOS
 		Flutter = 4,
 		ReactNative = 5,
 		Roku = 6,
-		Unity = 7
+		Unity = 7,
+		KotlinMultiplatform = 8
 	}
 
 	[Native]
@@ -810,7 +821,8 @@ namespace Datadog.iOS
 		Flutter = 3,
 		ReactNative = 4,
 		Roku = 5,
-		Unity = 6
+		Unity = 6,
+		KotlinMultiplatform = 7
 	}
 
 	[Native]
@@ -897,7 +909,8 @@ namespace Datadog.iOS
 		Flutter = 4,
 		ReactNative = 5,
 		Roku = 6,
-		Unity = 7
+		Unity = 7,
+		KotlinMultiplatform = 8
 	}
 
 	[Native]
@@ -941,7 +954,8 @@ namespace Datadog.iOS
 		Browser = 2,
 		Flutter = 3,
 		ReactNative = 4,
-		Unity = 5
+		Unity = 5,
+		KotlinMultiplatform = 6
 	}
 
 	[Native]
@@ -989,7 +1003,8 @@ namespace Datadog.iOS
 		Browser = 2,
 		Flutter = 3,
 		ReactNative = 4,
-		Unity = 5
+		Unity = 5,
+		KotlinMultiplatform = 6
 	}
 
 	[Native]
@@ -1000,7 +1015,8 @@ namespace Datadog.iOS
 		Browser = 2,
 		Flutter = 3,
 		ReactNative = 4,
-		Unity = 5
+		Unity = 5,
+		KotlinMultiplatform = 6
 	}
 
 	[Native]

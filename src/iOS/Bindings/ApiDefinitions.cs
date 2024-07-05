@@ -1067,6 +1067,10 @@ namespace Datadog.iOS
 		[Export ("trackBackgroundEvents")]
 		bool TrackBackgroundEvents { get; set; }
 
+		// @property (nonatomic) BOOL trackWatchdogTerminations;
+		[Export ("trackWatchdogTerminations")]
+		bool TrackWatchdogTerminations { get; set; }
+
 		// @property (nonatomic) NSTimeInterval longTaskThreshold;
 		[Export ("longTaskThreshold")]
 		double LongTaskThreshold { get; set; }
@@ -4222,6 +4226,14 @@ namespace Datadog.iOS
 		[NullAllowed, Export ("custom", ArgumentSemantic.Copy)]
 		NSDictionary<NSString, NSNumber> Custom { get; }
 
+		// @property (readonly, copy, nonatomic) NSString * _Nullable details;
+		[NullAllowed, Export ("details")]
+		string Details { get; }
+
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable duration;
+		[NullAllowed, Export ("duration", ArgumentSemantic.Strong)]
+		NSNumber Duration { get; }
+
 		// @property (readonly, copy, nonatomic) NSString * _Nonnull id;
 		[Export ("id")]
 		string Id { get; }
@@ -4510,6 +4522,10 @@ namespace Datadog.iOS
 		[NullAllowed, Export ("mobileVitalsUpdatePeriod", ArgumentSemantic.Strong)]
 		NSNumber MobileVitalsUpdatePeriod { get; set; }
 
+		// @property (readonly, copy, nonatomic) NSArray<DDTelemetryConfigurationEventTelemetryConfigurationPlugins *> * _Nullable plugins;
+		[NullAllowed, Export ("plugins", ArgumentSemantic.Copy)]
+		DDTelemetryConfigurationEventTelemetryConfigurationPlugins[] Plugins { get; }
+
 		// @property (readonly, nonatomic, strong) NSNumber * _Nullable premiumSampleRate;
 		[NullAllowed, Export ("premiumSampleRate", ArgumentSemantic.Strong)]
 		NSNumber PremiumSampleRate { get; }
@@ -4733,6 +4749,20 @@ namespace Datadog.iOS
 		// @property (readonly, copy, nonatomic) NSString * _Nullable string;
 		[NullAllowed, Export ("string")]
 		string String { get; }
+	}
+
+	// @interface DDTelemetryConfigurationEventTelemetryConfigurationPlugins : NSObject
+	[BaseType (typeof(NSObject), Name = "_TtC11DatadogObjc58DDTelemetryConfigurationEventTelemetryConfigurationPlugins")]
+	[DisableDefaultCtor]
+	interface DDTelemetryConfigurationEventTelemetryConfigurationPlugins
+	{
+		// @property (readonly, copy, nonatomic) NSString * _Nonnull name;
+		[Export ("name")]
+		string Name { get; }
+
+		// @property (readonly, copy, nonatomic) NSDictionary<NSString *,id> * _Nonnull pluginsInfo;
+		[Export ("pluginsInfo", ArgumentSemantic.Copy)]
+		NSDictionary<NSString, NSObject> PluginsInfo { get; }
 	}
 
 	// @interface DDTelemetryConfigurationEventTelemetryRUMTelemetryDevice : NSObject
@@ -5460,10 +5490,10 @@ namespace Datadog.iOS
 
 		// removed deprecated constructors causing build errors
 
-		// -(instancetype _Nonnull)initWithSamplingStrategy:(DDTraceSamplingStrategy * _Nonnull)samplingStrategy __attribute__((objc_designated_initializer));
-		[Export ("initWithSamplingStrategy:")]
+		// -(instancetype _Nonnull)initWithSamplingStrategy:(DDTraceSamplingStrategy * _Nonnull)samplingStrategy traceContextInjection:(enum DDTraceContextInjection)traceContextInjection __attribute__((objc_designated_initializer));
+		[Export ("initWithSamplingStrategy:traceContextInjection:")]
 		[DesignatedInitializer]
-		NativeHandle Constructor (DDTraceSamplingStrategy samplingStrategy);
+		NativeHandle Constructor (DDTraceSamplingStrategy samplingStrategy, DDTraceContextInjection traceContextInjection);
 	}
 
 	// @interface OT : NSObject
