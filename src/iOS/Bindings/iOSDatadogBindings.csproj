@@ -20,6 +20,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<None Include="Mdoc/ios.xml" Pack="true" PackagePath="lib/net8.0-ios/" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
 		<ObjcBindingCoreSource Include="StructsAndEnums.cs" />
 	</ItemGroup>
