@@ -134,13 +134,6 @@ if ! cp -R "${CARTHAGE_OUTPUT}/OpenTelemetryApi.xcframework" "${TARGET_DIR}"; th
   exit 1
 fi
 
-echo "Copying CrashReporter.xcframework to target directory ${TARGET_DIR}."
-echo
-if ! cp -R "${CARTHAGE_OUTPUT}/CrashReporter.xcframework" "${TARGET_DIR}"; then
-  echo "Failed to copy CrashReporter.xcframework. Exiting."
-  exit 1
-fi
-
 echo
 echo "Done."
 echo

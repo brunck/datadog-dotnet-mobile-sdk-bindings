@@ -19,9 +19,9 @@
 		<IsTrimmable>true</IsTrimmable>
 	</PropertyGroup>
 
-	<ItemGroup>
+	<!-- <ItemGroup>
 		<None Include="Mdoc/ios.xml" Pack="true" PackagePath="lib/net8.0-ios/" />
-	</ItemGroup>
+	</ItemGroup> -->
 
 	<ItemGroup>
 		<ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
@@ -29,12 +29,6 @@
 	</ItemGroup>
 	<ItemGroup>
 		<NativeReference Include="Libs/OpenTelemetryApi.xcframework">
-			<Kind>Framework</Kind>
-			<Frameworks></Frameworks>
-			<SmartLink>False</SmartLink>
-			<ForceLoad>True</ForceLoad>
-		</NativeReference>
-		<NativeReference Include="Libs/CrashReporter.xcframework">
 			<Kind>Framework</Kind>
 			<Frameworks></Frameworks>
 			<SmartLink>False</SmartLink>
