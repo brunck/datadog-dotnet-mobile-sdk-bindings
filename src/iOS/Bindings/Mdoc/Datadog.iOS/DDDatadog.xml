@@ -21,8 +21,23 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>
+    An entry point to the Datadog SDK.
+    </summary>
+    <remarks>
+      <para>Initialize the core instance of the Datadog SDK prior to enabling any product.</para>
+      <code lang="C#">
+      DDDatadog.Initialize(
+          new DDConfiguration("&lt;client token&gt;", "&lt;environment&gt;"),
+          DDTrackingConsent.Pending
+      </code>
+      <para>Once the Datadog SDK is initialized, you can enable products such as RUM:</para>
+      <code lang="C#">
+      DDRUMMonitor.Enable(
+          new DDRUMConfiguration("&lt;application&gt;")
+      );
+      </code>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -119,9 +134,12 @@
         <Parameter Name="extraInfo" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
       </Parameters>
       <Docs>
-        <param name="extraInfo">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="extraInfo">User's additional custom attributes.</param>
+        <summary>Add custom attributes to the current user information.</summary>
+        <remarks>
+        <para>This extra info will be added to already existing extra info that is added to logs traces and RUM events automatically. 
+      </para>
+      </remarks>
       </Docs>
     </Member>
     <Member MemberName="ClassHandle">
@@ -160,8 +178,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>xClears all data that has not already been sent to the Datadog servers.</summary>
       </Docs>
     </Member>
     <Member MemberName="Initialize">
@@ -187,10 +204,23 @@
         <Parameter Name="trackingConsent" Type="Datadog.iOS.DDTrackingConsent" />
       </Parameters>
       <Docs>
-        <param name="configuration">To be added.</param>
-        <param name="trackingConsent">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="configuration">The SDK configuration of type <see cref="DDConfiguration" />.</param>
+        <param name="trackingConsent">The initial state of the Data Tracking Consent (<see cref="DDTrackingConsent" />) given by the user of the app. </param>
+        <summary>Initializes the Datadog SDK.</summary>
+        <remarks>
+          <para>You <i>must</i> initialize the core instance of the Datadog SDK prior to enabling any product.</para>
+          <code lang="C#">
+          DDDatadog.Initialize(
+              new DDConfiguration("&lt;client token&gt;", "&lt;environment&gt;"),
+              DDTrackingConsent.Pending
+          </code>
+          <para>Once the Datadog SDK is initialized, you can enable products such as RUM:</para>
+          <code lang="C#">
+          DDRUM.Enable(
+              new DDRUMConfiguration("&lt;applicationId&gt;")
+          );
+          </code>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="IsInitialized">
@@ -239,9 +269,8 @@
         <Parameter Name="consent" Type="Datadog.iOS.DDTrackingConsent" />
       </Parameters>
       <Docs>
-        <param name="consent">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="consent">The new consent value, which will be applied for all data collected from now on.</param>
+        <summary>Sets the tracking consent regarding the data collection for the Datadog SDK.</summary>
       </Docs>
     </Member>
     <Member MemberName="SetUserInfo">
@@ -278,12 +307,12 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="id">To be added.</param>
-        <param name="name">To be added.</param>
-        <param name="email">To be added.</param>
-        <param name="extraInfo">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="id">User ID, if any.</param>
+        <param name="name">Name representing the user, if any.</param>
+        <param name="email">User's e-mail address, if any.</param>
+        <param name="extraInfo">User's custom attributes, if any.</param>
+        <summary>Sets current user information.</summary>
+        <remarks><para>Those will be added to logs, traces and RUM events automatically.</para></remarks>
       </Docs>
     </Member>
     <Member MemberName="StopInstance">
@@ -306,8 +335,13 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Stops the initialized SDK instance.</summary>
+        <remarks>
+        <para>
+        Stopping a core instance will stop all current processes by deallocating all Features registered 
+        in the core as well as their storage &amp; upload units.
+     </para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="VerbosityLevel">
@@ -332,9 +366,17 @@
         <ReturnType>Datadog.iOS.DDSDKVerbosityLevel</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>
+            Verbosity level of the Datadog SDK. Can be used for debugging purposes.
+        </summary>
+        <remarks>
+        <para>
+        If set, internal events occuring inside the SDK will be printed to the debugger console if their level is equal or greater than <c>VerbosityLevel</c>.
+        </para>
+        <para>
+         Default is <c>null</c>.
+        </para>
+        </remarks>
       </Docs>
     </Member>
   </Members>
