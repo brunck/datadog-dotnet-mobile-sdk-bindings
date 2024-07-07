@@ -28,6 +28,8 @@ namespace T
             DDDatadog.VerbosityLevel = DDSDKVerbosityLevel.Debug;
             DDLogs.Enable(new DDLogsConfiguration(null));
 
+            DDCrashReporter.Enable();
+
             // init the logger
             DDLoggerConfiguration logConfig = new DDLoggerConfiguration();
             logConfig.Service = "intermatic-connect";
