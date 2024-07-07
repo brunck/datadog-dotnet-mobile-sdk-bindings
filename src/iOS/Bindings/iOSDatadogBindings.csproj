@@ -19,9 +19,9 @@
 		<IsTrimmable>true</IsTrimmable>
 	</PropertyGroup>
 
-	<!-- <ItemGroup>
-		<None Include="Mdoc/ios.xml" Pack="true" PackagePath="lib/net8.0-ios/" />
-	</ItemGroup> -->
+	<ItemGroup>
+		<None Include="Mdoc/ios.xml" Pack="true" PackagePath="lib/net8.0-ios17.2/" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
