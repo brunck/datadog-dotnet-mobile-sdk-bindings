@@ -44,7 +44,13 @@
   </Attributes>
   <Docs>
     <summary>Corresponds to: https://github.com/opentracing/opentracing-objc/blob/master/Pod/Classes/OTTracer.h</summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+    <para>
+    Tracer is the starting point for all OpenTracing instrumentation. Use it 
+    to create OTSpans, inject/extract them between processes, and so on.
+ </para>
+    <para>Tracer should be thread-safe.</para>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="Extract">

@@ -26,13 +26,13 @@
     </summary>
     <remarks>
       <para>Initialize the core instance of the Datadog SDK prior to enabling any product.</para>
-      <code lang="C#">
+      <code lang="csharp">
       DDDatadog.Initialize(
           new DDConfiguration("&lt;client token&gt;", "&lt;environment&gt;"),
           DDTrackingConsent.Pending
       </code>
       <para>Once the Datadog SDK is initialized, you can enable products such as RUM:</para>
-      <code lang="C#">
+      <code lang="csharp">
       DDRUMMonitor.Enable(
           new DDRUMConfiguration("&lt;application&gt;")
       );
@@ -209,13 +209,13 @@
         <summary>Initializes the Datadog SDK.</summary>
         <remarks>
           <para>You <i>must</i> initialize the core instance of the Datadog SDK prior to enabling any product.</para>
-          <code lang="C#">
+          <code lang="csharp">
           DDDatadog.Initialize(
               new DDConfiguration("&lt;client token&gt;", "&lt;environment&gt;"),
               DDTrackingConsent.Pending
           </code>
           <para>Once the Datadog SDK is initialized, you can enable products such as RUM:</para>
-          <code lang="C#">
+          <code lang="csharp">
           DDRUM.Enable(
               new DDRUMConfiguration("&lt;applicationId&gt;")
           );

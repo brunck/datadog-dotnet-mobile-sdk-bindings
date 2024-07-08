@@ -5357,9 +5357,8 @@ namespace Datadog.iOS
 		[Export ("inject:format:carrier:error:")]
 		bool Inject (IOTSpanContext spanContext, string format, NSObject carrier, [NullAllowed] out NSError error);
 
-		// -(BOOL)extractWithFormat:(NSString * _Nonnull)format carrier:(id _Nonnull)carrier error:(NSError * _Nullable * _Nullable)error;
-		[Export ("extractWithFormat:carrier:error:")]
-		bool Extract(string format, NSObject carrier, [NullAllowed] out NSError error);
+		// removed Extract() due to comment in Swift code:
+		// TODO: RUMM-385 - we don't need to support it now
 	}
 #pragma warning restore CS0108
 

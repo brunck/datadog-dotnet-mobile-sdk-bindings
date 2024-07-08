@@ -31,8 +31,20 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>A class for manual interaction with the Trace feature. It records spans that are sent to Datadog APM.</summary>
+    <remarks>
+    <para>
+      There can be only one active DDTracer for a certain instance of the Datadog SDK. 
+      It gets enabled along with the call to <c>DDTrace.Enable(DDTraceConfiguration)</c>:
+      </para>
+      <code lang="csharp">
+        // Enable Trace feature:
+        DDTrace.Enable(DDTraceConfiguration);
+  
+        // Use Tracer:
+        DDTracer.Shared.StartSpan(...);
+      </code>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -99,47 +111,6 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="Extract">
-      <MemberSignature Language="C#" Value="public virtual bool Extract (string format, Foundation.NSObject carrier, out Foundation.NSError error);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Extract(string format, class Foundation.NSObject carrier, [out] class Foundation.NSError&amp; error) cil managed" />
-      <MemberType>Method</MemberType>
-      <Implements>
-        <InterfaceMember>M:Datadog.iOS.IOTTracer.Extract(System.String,Foundation.NSObject,Foundation.NSError@)</InterfaceMember>
-      </Implements>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>Foundation.Export("extractWithFormat:carrier:error:")</AttributeName>
-        </Attribute>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="format" Type="System.String" />
-        <Parameter Name="carrier" Type="Foundation.NSObject" />
-        <Parameter Name="error" Type="Foundation.NSError" RefType="out">
-          <Attributes>
-            <Attribute>
-              <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
-            </Attribute>
-          </Attributes>
-        </Parameter>
-      </Parameters>
-      <Docs>
-        <param name="format">To be added.</param>
-        <param name="carrier">To be added.</param>
-        <param name="error">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="Inject">
       <MemberSignature Language="C#" Value="public virtual bool Inject (Datadog.iOS.IOTSpanContext spanContext, string format, Foundation.NSObject carrier, out Foundation.NSError error);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Inject(class Datadog.iOS.IOTSpanContext spanContext, string format, class Foundation.NSObject carrier, [out] class Foundation.NSError&amp; error) cil managed" />
@@ -174,13 +145,17 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="spanContext">To be added.</param>
-        <param name="format">To be added.</param>
-        <param name="carrier">To be added.</param>
-        <param name="error">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="spanContext">The <see cref="IOTSpanContext" /> instance to inject.</param>
+        <param name="format">Must be the string returned by <see cref="OT.FormatTextMap" />.</param>
+        <param name="carrier">
+          An instance of one of the following types: <see cref="DDHTTPHeadersWriter" />, <see cref="DDB3HTTPHeadersWriter" />, or <see cref="DDW3CHTTPHeadersWriter" />.
+        </param>
+        <param name="error">In the event of an error, the <see cref="NSError" /> instance.</param>
+        <summary>Transfer the span information into the carrier of the given format.</summary>
+        <returns><c>true</c> if successful, <c>false</c> otherwise.</returns>
+        <remarks>
+          <para>See Also: <a href="http://opentracing.io/propagation/">propagation</a></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Shared">
@@ -202,9 +177,9 @@
         <ReturnType>Datadog.iOS.IOTTracer</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Obtains the IOTTracer for manual tracing instrumentation.</summary>
+        <remarks>It requires <c>DDTrace.Enable(DDTraceConfiguration)</c> to be called first - otherwise it will return a no-op implementation.</remarks>
+        <returns>The IOTTracer that conforms to the Open Tracing API (<see cref="IOTTracer") /></returns>
       </Docs>
     </Member>
     <Member MemberName="StartSpan">
@@ -231,11 +206,10 @@
       <Parameters>
         <Parameter Name="operationName" Type="System.String" />
       </Parameters>
-      <Docs>
-        <param name="operationName">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+      <Docs>               
+        <param name="operationName">the operation name for the newly-started span.</param>
+        <summary>Start a new span with the given operation name.</summary>
+        <returns>A valid Span instance; it is the caller's responsibility to call <see cref="IOTSpan.Finish" />.</returns>
       </Docs>
     </Member>
     <Member MemberName="StartSpan">
@@ -270,11 +244,14 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="operationName">To be added.</param>
-        <param name="parent">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="parent">
+        Span context that will be a parent reference. If no 
+        reference is provided, and an active span exists in the current execution context 
+        the active span will be used as the parent.
+        </param>
+        <param name="operationName">the operation name for the newly-started span.</param>
+        <summary>Start a new span with the given operation name.</summary>
+        <returns>A valid Span instance; it is the caller's responsibility to call <see cref="IOTSpan.Finish" />.</returns>
       </Docs>
     </Member>
     <Member MemberName="StartSpan">
@@ -309,11 +286,13 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="operationName">To be added.</param>
-        <param name="tags">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="operationName">the operation name for the newly-started span.</param>
+        <summary>Start a new span with the given operation name.</summary>
+        <returns>A valid Span instance; it is the caller's responsibility to call <see cref="IOTSpan.Finish" />.</returns>
+        <param name="tags">
+        A set of tag keys and values per <see cref="IOTSpan.SetTag" />, or <c>NULL</c> to start with 
+        an empty tag map.
+        </param>
       </Docs>
     </Member>
     <Member MemberName="StartSpan">
@@ -355,12 +334,18 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="operationName">To be added.</param>
-        <param name="parent">To be added.</param>
-        <param name="tags">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+          <param name="operationName">the operation name for the newly-started span.</param>
+          <param name="parent">
+        Span context that will be a parent reference. If no 
+        reference is provided, and an active span exists in the current execution context 
+        the active span will be used as the parent.
+        </param>
+        <param name="tags">
+        A set of tag keys and values per <see cref="IOTSpan.SetTag" />, or <c>NULL</c> to start with 
+        an empty tag map.
+        </param>
+        <summary>Start a new span with the given operation name.</summary>
+        <returns>A valid Span instance; it is the caller's responsibility to call <see cref="IOTSpan.Finish" />.</returns>
       </Docs>
     </Member>
     <Member MemberName="StartSpan">
@@ -405,13 +390,21 @@
         <Parameter Name="startTime" Type="Foundation.NSDate" />
       </Parameters>
       <Docs>
-        <param name="operationName">To be added.</param>
-        <param name="parent">To be added.</param>
-        <param name="tags">To be added.</param>
-        <param name="startTime">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+          <param name="operationName">the operation name for the newly-started span.</param>
+          <param name="parent">
+        Span context that will be a parent reference. If no 
+        reference is provided, and an active span exists in the current execution context 
+        the active span will be used as the parent.
+        </param>
+        <param name="tags">
+        A set of tag keys and values per <see cref="IOTSpan.SetTag" />, or <c>NULL</c> to start with 
+        an empty tag map.
+        </param>
+        <param name="startTime">
+        An explicitly specified start timestamp for the <see cref="IOTSpan" />, or <c>>NULL</c> to use the current walltime.
+        </param>
+        <summary>Start a new span with the given operation name.</summary>
+        <returns>A valid Span instance; it is the caller's responsibility to call <see cref="IOTSpan.Finish" />.</returns>
       </Docs>
     </Member>
   </Members>

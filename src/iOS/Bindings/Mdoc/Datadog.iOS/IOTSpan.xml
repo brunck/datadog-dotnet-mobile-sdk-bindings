@@ -68,7 +68,7 @@
   </Attributes>
   <Docs>
     <summary>Corresponds to: https://github.com/opentracing/opentracing-objc/blob/master/Pod/Classes/OTSpan.h</summary>
-    <remarks>To be added.</remarks>
+    <remarks>Represents information related to an event with a timespan.</remarks>
   </Docs>
   <Members>
     <Member MemberName="Context">
@@ -90,9 +90,7 @@
         <ReturnType>Datadog.iOS.IOTSpanContext</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>The span context that refers to this span.</summary>
       </Docs>
     </Member>
     <Member MemberName="Finish">
@@ -150,9 +148,8 @@
         <Parameter Name="finishTime" Type="Foundation.NSDate" />
       </Parameters>
       <Docs>
-        <param name="finishTime">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="finishTime">If non-null, time at which to finish the span; default time is used if null.</param>
+        <summary>Finish the span at the specified time, or at some default time if <c>null</c>.</summary>
       </Docs>
     </Member>
     <Member MemberName="GetBaggageItem">

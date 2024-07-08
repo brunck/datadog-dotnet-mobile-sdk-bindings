@@ -21,8 +21,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Trace feature configuration.</summary>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -119,9 +118,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>
+        Enables the integration of traces with RUM. 
+        When enabled, all spans will be enriched with the current RUM view information.
+        </summary>
+        <remarks>Default: <c>true</c>.</remarks>
       </Docs>
     </Member>
     <Member MemberName="ClassHandle">
@@ -135,9 +136,8 @@
         <ReturnType>ObjCRuntime.NativeHandle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Custom server url for sending traces.</summary>
+        <remarks>Default: <c>nil</c>.</remarks>
       </Docs>
     </Member>
     <Member MemberName="CustomEndpoint">
@@ -162,9 +162,8 @@
         <ReturnType>Foundation.NSUrl</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Custom server url for sending traces.</summary>
+        <remarks>Default: <c>NULL</c>.</remarks>
       </Docs>
     </Member>
     <Member MemberName="NetworkInfoEnabled">
@@ -189,9 +188,15 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>
+        Enriches traces with network connection information.
+        </summary>
+        <remarks> 
+        <para>
+        This includes reachability status, connection type, mobile carrier name, and more, which will be added to every span and span log.
+        </para>
+        <para>Default: <c>false</c>.</para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SampleRate">
@@ -216,9 +221,11 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>
+        The sampling rate for spans created with the default tracer. 
+        It must be a number between 0.0 and 100.0, where 0 means no spans will be collected.
+        </summary>
+        <remarks>Default: <c>100.0</c>.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Service">
@@ -243,9 +250,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>
+        The <c>service</c> value for spans. 
+        If not specified, the SDK default <c>service</c> will be used.
+        </summary>
       </Docs>
     </Member>
     <Member MemberName="SetURLSessionTracking">
@@ -273,9 +281,21 @@
         <Parameter Name="tracking" Type="Datadog.iOS.DDTraceURLSessionTracking" />
       </Parameters>
       <Docs>
-        <param name="tracking">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="tracking"><see cref="DDTraceURLSessionTracking" /></param>
+        <summary>
+        <para>
+        The configuration for automatic network requests tracing.
+        </para>
+        <para>
+        RUM resources tracking requires enabling <c>DDURLSessionInstrumentation</c>. See
+       <see cref="DDURLSessionInstrumentation.Enable">.
+        </para>
+        <para>
+        Note: Automatic RUM resources tracking involves swizzling the <c>URLSession</c>, <c>URLSessionTask</c> and
+       <c>URLSessionDataDelegate</c> methods.
+        </para>
+        </summary>
+        <remarks>Default: <c>NULL</c> - which means automatic tracing is not enabled by default.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Tags">
@@ -303,9 +323,7 @@
         <ReturnType>Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Global tags associated with each span created with the default tracer.</summary>
       </Docs>
     </Member>
   </Members>
