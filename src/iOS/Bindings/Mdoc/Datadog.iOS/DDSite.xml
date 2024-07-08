@@ -92,9 +92,8 @@
         <ReturnType>Datadog.iOS.DDSite</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Asia-based servers.</summary>
+        <remarks>Sends data to <a href="https://ap1.datadoghq.com/">ap1.datadoghq.com</a>.</remarks>
       </Docs>
     </Member>
     <Member MemberName="ClassHandle">
@@ -132,9 +131,8 @@
         <ReturnType>Datadog.iOS.DDSite</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Europe-based servers.</summary>
+        <remarks>Sends data to <a href="https://app.datadoghq.eu/">app.datadoghq.eu</a>.</remarks>
       </Docs>
     </Member>
     <Member MemberName="US1">
@@ -156,9 +154,8 @@
         <ReturnType>Datadog.iOS.DDSite</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>US-based servers.</summary>
+        <remarks>Sends data to <a href="https://app.datadoghq.com/">app.datadoghq.com</a>.</remarks>
       </Docs>
     </Member>
     <Member MemberName="US1_Fed">
@@ -180,9 +177,8 @@
         <ReturnType>Datadog.iOS.DDSite</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>US-based servers, FedRAMP compatible.</summary>
+        <remarks>Sends data to <a href="https://app.ddog-gov.com/">app.ddog-gov.com</a>.</remarks>
       </Docs>
     </Member>
     <Member MemberName="US3">
@@ -204,9 +200,8 @@
         <ReturnType>Datadog.iOS.DDSite</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>US-based servers.</summary>
+        <remarks>Sends data to <a href="https://us3.datadoghq.com/">app.datadoghq.com</a>.</remarks>
       </Docs>
     </Member>
     <Member MemberName="US5">
@@ -228,9 +223,8 @@
         <ReturnType>Datadog.iOS.DDSite</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>US-based servers.</summary>
+        <remarks>Sends data to <a href="https://us5.datadoghq.com/">app.datadoghq.com</a>.</remarks>
       </Docs>
     </Member>
   </Members>

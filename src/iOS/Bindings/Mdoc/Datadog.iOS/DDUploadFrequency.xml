@@ -14,8 +14,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Defines the frequency at which the Datadog SDK will try to upload data batches.</summary>
   </Docs>
   <Members>
     <Member MemberName="Average">
@@ -30,7 +29,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Try to upload batched data with a medium frequency.</summary>
       </Docs>
     </Member>
     <Member MemberName="Frequent">
@@ -45,7 +44,7 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Try to upload batched data frequently.</summary>
       </Docs>
     </Member>
     <Member MemberName="Rare">
@@ -60,7 +59,7 @@
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Try to upload batched data rarely.</summary>
       </Docs>
     </Member>
   </Members>

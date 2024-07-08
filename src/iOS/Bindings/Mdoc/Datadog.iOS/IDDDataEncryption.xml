@@ -25,8 +25,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>
+    Interface that allows storing data in encrypted format. Encryption/decryption round should 
+    return exactly the same data as it given for the encryption originally (even if decryption 
+    happens in another process/app launch).
+    </summary>
   </Docs>
   <Members>
     <Member MemberName="Decrypt">

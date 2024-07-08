@@ -21,8 +21,14 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Datadog Logger.</summary>
+    <remarks>
+    <para>Usage:</para>
+    <code lang="C#">
+    // logger reference
+    var logger = DDLogger.Create();
+    </code>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -95,9 +101,28 @@
         <Parameter Name="tag" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="tag">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="tag">Value of the tag.</param>
+        <summary>Adds the tag to all future logs sent by this logger.</summary>
+        <remarks>
+        <para>Tags must start with a letter and:</para>
+          <list type="bullet">
+              <item>
+                  <description>may contain: alphanumerics, underscores, minuses, colons, periods, and slashes;</description>
+              </item>
+              <item>
+                  <description>other special characters are converted to underscores;</description>
+              </item>
+              <item>
+                  <description>must be lowercase;</description>
+              </item>
+              <item>
+                  <description>and can be at most 200 characters long (tags exceeding this limit will be truncated to first 200 characters).</description>
+              </item>
+          </list>
+          <para>
+          See also: <a href="https://docs.datadoghq.com/tagging/#defining-tags">Defining Tags</a>
+          </para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="AddAttribute">
@@ -125,7 +150,7 @@
       <Docs>
         <param name="key">To be added.</param>
         <param name="value">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>Adds a custom attribute to all future logs sent by this logger.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -659,9 +684,11 @@
         <Parameter Name="tag" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="tag">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="tag">The value of the tag to remove.</param>
+        <summary>
+        Removes the tag from all future logs sent by this logger. 
+        Previous logs won't lose the this tag if created prior to this call.
+        </summary>
       </Docs>
     </Member>
     <Member MemberName="RemoveAttribute">
@@ -687,7 +714,10 @@
       </Parameters>
       <Docs>
         <param name="key">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>
+        Removes the custom attribute from all future logs sent by this logger. 
+        Previous logs won't lose this attribute if sent prior to this call.
+        </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

@@ -31,8 +31,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Configuration of URLSession instrumentation.</summary>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -84,7 +83,8 @@
         <Parameter Name="additionalFirstPartyHostsWithHeaderTypes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSSet&lt;Datadog.iOS.DDTracingHeaderType&gt;&gt;" />
       </Parameters>
       <Docs>
-        <param name="additionalFirstPartyHostsWithHeaderTypes">To be added.</param>
+        <param name="additionalFirstPartyHostsWithHeaderTypes">
+        Dictionary of hosts and tracing header types to use. Note: Hosts must not include "http(s)://" prefix.</param>
         <summary>To be added.</summary>
         <remarks>To be added.</remarks>
       </Docs>

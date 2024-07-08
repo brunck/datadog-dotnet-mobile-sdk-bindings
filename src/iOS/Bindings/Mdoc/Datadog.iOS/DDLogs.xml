@@ -21,8 +21,24 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>iOS Log Collection</summary>
+    <remarks>
+      <para>Send logs to Datadog from your iOS applications with Datadog's client-side logging library and leverage the following features:</para>
+      <list type="bullet">
+        <item>
+          <term>Log to Datadog in JSON format natively.</term>
+        </item>
+        <item>
+          <term>Use default and add custom attributes to each log sent.</term>
+        </item>
+        <item>
+          <term>Record real client IP addresses and User-Agents.</term>
+        </item>
+        <item>
+          <term>Leverage optimized network usage with automatic bulk posts.</term>
+        </item>
+      </list>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -122,7 +138,7 @@
       <Docs>
         <param name="key">To be added.</param>
         <param name="value">To be added.</param>
-        <summary>To be added.</summary>
+        <summary>Adds a custom attribute to all future logs sent by any logger created from the provided Core.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -191,9 +207,11 @@
         <Parameter Name="key" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="key">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="key">The key of an attribute that will be removed.</param>
+        <summary>
+       Removes the custom attribute from all future logs sent. 
+       Previous logs won't lose this attribute if sent prior to this call.
+        </summary>
       </Docs>
     </Member>
   </Members>

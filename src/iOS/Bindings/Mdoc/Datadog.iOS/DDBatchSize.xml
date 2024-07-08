@@ -14,8 +14,8 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Defines the Datadog SDK policy when batching data together before uploading it to Datadog servers.</summary>
+    <remarks>Smaller batches mean smaller but more network requests, whereas larger batches mean fewer but larger network requests.</remarks>
   </Docs>
   <Members>
     <Member MemberName="Large">
@@ -30,7 +30,7 @@
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Prefer large-sized data batches.</summary>
       </Docs>
     </Member>
     <Member MemberName="Medium">
@@ -45,7 +45,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Prefer medium-sized data batches.</summary>
       </Docs>
     </Member>
     <Member MemberName="Small">
@@ -60,7 +60,7 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Prefer small-sized data batches.</summary>
       </Docs>
     </Member>
   </Members>

@@ -21,8 +21,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>
+    The Logs general configuration.
+    </summary>
+    <remarks>This configuration will be applied to all DDLogs instances.</remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">

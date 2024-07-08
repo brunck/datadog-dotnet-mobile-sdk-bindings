@@ -21,7 +21,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
+    <summary>The type of the tracing header injected to requests.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -92,9 +92,7 @@
         <ReturnType>Datadog.iOS.DDTracingHeaderType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summaryOpen Telemetry B3 ><a href="https://github.com/openzipkin/b3-propagation#single-headers">Single header</a>.</summary>
       </Docs>
     </Member>
     <Member MemberName="B3Multi">
@@ -116,9 +114,9 @@
         <ReturnType>Datadog.iOS.DDTracingHeaderType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>
+        Open Telemetry B3 <a href="https://github.com/openzipkin/b3-propagation#multiple-headers">Multiple headers</a>.
+        </summary>
       </Docs>
     </Member>
     <Member MemberName="ClassHandle">
@@ -156,9 +154,7 @@
         <ReturnType>Datadog.iOS.DDTracingHeaderType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary><a href="https://docs.datadoghq.com/real_user_monitoring/connect_rum_and_traces/?tab=browserrum#how-are-rum-resources-linked-to-traces">Datadog's <c>x-datadog-*</c>header.</summary>
       </Docs>
     </Member>
     <Member MemberName="TraceContext">
@@ -180,9 +176,9 @@
         <ReturnType>Datadog.iOS.DDTracingHeaderType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>
+        W3C <a href="https://www.w3.org/TR/trace-context/#tracestate-header">Trace Context header<a>.
+        </summary>
       </Docs>
     </Member>
   </Members>

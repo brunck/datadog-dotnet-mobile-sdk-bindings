@@ -21,8 +21,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Datadog logger.</summary>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
