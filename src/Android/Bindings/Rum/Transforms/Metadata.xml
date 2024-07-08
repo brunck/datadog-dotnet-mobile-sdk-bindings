@@ -554,6 +554,7 @@
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewContainerSchema.View.Companion']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewContainerSchema.View']/method[@name='component1']" />
 	
+	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Companion']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent']/method[@name='component1']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent']/method[@name='component2']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent']/method[@name='component3']" />
@@ -583,13 +584,11 @@
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Cellular']/method[@name='component1']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Cellular']/method[@name='component2']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.CiTest.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.CiTest']/method[@name='component1']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Configuration.Companion']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Configuration']/method[@name='component1']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Configuration']/method[@name='component2']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Configuration']/method[@name='component3']" />
-	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Connect.Companion']" />
-	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Connect']/method[@name='component1']" />
-	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Connect']/method[@name='component2']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Connectivity.Companion']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Connectivity']/method[@name='component1']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Connectivity']/method[@name='component2']" />
@@ -602,10 +601,8 @@
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.ContainerView']/method[@name='component1']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Context.Companion']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Context']/method[@name='component1']" />
-	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Crash']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Crash.Companion']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Crash']/method[@name='component1']" />
-	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.CustomTimings']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.CustomTimings.Companion']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.CustomTimings']/method[@name='component1']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Dd.Companion']" />
@@ -642,7 +639,7 @@
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.InForegroundPeriod']/method[@name='component2']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Interface.Companion']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.LoadingType.Companion']" />
-	<remove-node  path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.LongTask.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.LongTask.Companion']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.LongTask']/method[@name='component1']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Os.Companion']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Os']/method[@name='component1']" />
@@ -670,10 +667,10 @@
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.SessionPrecondition.Companion']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.State.Companion']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Status.Companion']" />
-	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Synthetic.Companion']" />
-	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Synthetic']/method[@name='component1']" />
-	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Synthetic']/method[@name='component2']" />
-	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Synthetic']/method[@name='component3']" />
+	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Synthetics.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Synthetics']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Synthetics']/method[@name='component2']" />
+	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Synthetics']/method[@name='component3']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Usr.Companion']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Usr']/method[@name='component1']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Usr']/method[@name='component2']" />
@@ -738,14 +735,149 @@
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Viewport']/method[@name='component2']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum']/class[@name='RumPerformanceMetric']/field[@name='FLUTTER_BUILD_TIME']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum']/class[@name='RumPerformanceMetric']/field[@name='FLUTTER_RASTER_TIME']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent']/method[@name='component2']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent']/method[@name='component3']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent']/method[@name='component4']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent']/method[@name='component5']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent']/method[@name='component6']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent']/method[@name='component7']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent']/method[@name='component8']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent']/method[@name='component9']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent']/method[@name='component10']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent']/method[@name='component11']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Action.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Action']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Application.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Application']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component2']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component3']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component4']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component5']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component6']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component7']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component8']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component9']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component10']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component11']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component12']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component13']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component14']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component15']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component16']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component17']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component18']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component19']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component20']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component21']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component22']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component23']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component24']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component25']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component26']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component27']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component28']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component29']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component30']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component31']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component32']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component33']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component34']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component35']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component36']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component37']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component38']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component39']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component40']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component41']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component42']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component43']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component44']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component45']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component46']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component47']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component48']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component49']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component50']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component51']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component52']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component53']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component54']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component55']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component56']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component57']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component58']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component59']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component60']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component61']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component62']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component63']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component64']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Configuration']/method[@name='component65']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Device.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Device']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Device']/method[@name='component2']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Device']/method[@name='component3']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Os.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Os']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Os']/method[@name='component2']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Os']/method[@name='component3']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.SelectedTracingPropagator.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Session.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Session']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Source.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Telemetry.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Telemetry']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Telemetry']/method[@name='component2']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Telemetry']/method[@name='component3']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Telemetry']/method[@name='component4']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.TraceContextInjection.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.TrackingConsent.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.View.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.View']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.ViewTrackingStrategy.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent']/method[@name='component2']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent']/method[@name='component3']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent']/method[@name='component4']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent']/method[@name='component5']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent']/method[@name='component6']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent']/method[@name='component7']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent']/method[@name='component8']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent']/method[@name='component9']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent']/method[@name='component10']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent']/method[@name='component11']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent.Action.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent.Application.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent.Application']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent.Device.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent.Device']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent.Device']/method[@name='component2']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent.Device']/method[@name='component3']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent.Os.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent.Os']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent.Os']/method[@name='component2']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent.Os']/method[@name='component3']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent.Session.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent.Session']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent.Source.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent.Telemetry.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent.Telemetry']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent.Telemetry']/method[@name='component2']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent.Telemetry']/method[@name='component3']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent.Telemetry']/method[@name='component4']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent.View.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent.View']/method[@name='component1']" />
 	
 	
 	
 	
 	
-	
-	
-	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Companion']" />
+
 	
 	
 	
@@ -803,13 +935,37 @@
 	<attr path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ResourceEvent.Usr']" name="managedName">User</attr>
 	<attr path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.CiTest']" name="managedName">CITest</attr>
 	<attr path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Dd']" name="managedName">DD</attr>
+	<attr path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.DdSession']" name="managedName">DDSession</attr>
+	<attr path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.DeviceType']/field[@name='TV']" name="managedName">TV</attr>
+	<attr path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.EffectiveType']/field[@name='2G']" name="managedName">EffectiveType2G</attr>
+	<attr path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.EffectiveType']/field[@name='3G']" name="managedName">EffectiveType3G</attr>
+	<attr path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.EffectiveType']/field[@name='4G']" name="managedName">EffectiveType4G</attr>
+	<attr path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.EffectiveType']/field[@name='SLOW_2G']" name="managedName">EffectiveTypeSlow2G</attr>
+	<attr path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Interface']/field[@name='WIFI']" name="managedName">WiFi</attr>
+	<attr path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Interface']/field[@name='WIMAX']" name="managedName">WiMax</attr>
 	<attr path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Os']" name="managedName">OS</attr>
 	<attr path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.SessionPrecondition']/field[@name='PREWARM']" name="managedName">PreWarm</attr>
 	<attr path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent.Usr']" name="managedName">User</attr>
 	<attr path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent']/method[@name='getCiTest']" name="managedName">GetCITest</attr>
 	<attr path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent']/method[@name='getDd']" name="managedName">GetDD</attr>
 	<attr path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent']/method[@name='getOs']" name="managedName">GetOS</attr>
-	<attr path="/api/package[@name='com.datadog.android.rum']/class[@name='RumResourceKind.Companion']" name="visibility">internal</attr>
 
+	<attr path="/api/package[@name='com.datadog.android.rum']/class[@name='RumResourceKind.Companion']" name="visibility">internal</attr>
+	<attr
+		path="/api/package[@name='com.datadog.android.sqlite']/class[@name='DatadogDatabaseErrorHandler']/method[@name='onCorruption']/parameter[@type='android.database.sqlite.SQLiteDatabase']"
+		name="managedType">Android.Database.Sqlite.SQLiteDatabase?</attr>
+	<attr path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Dd']" name="managedName">DD</attr>
+	<attr path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Os']" name="managedName">OS</attr>
+	<attr path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent']/method[@name='getDd']" name="managedName">GetDD</attr>
+	<attr path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.SelectedTracingPropagator']/field[@name='B3MULTI']" name="managedName">B3Multi</attr>
+	<attr path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.SelectedTracingPropagator']/field[@name='TRACECONTEXT']" name="managedName">TraceContext</attr>
+	<attr path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.Os']" name="managedName">OS</attr>
+	<attr path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.ViewTrackingStrategy']/field[@name='ACTIVITYVIEWTRACKINGSTRATEGY']" name="managedName">ActivityViewTrackingStrategy</attr>
+	<attr path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.ViewTrackingStrategy']/field[@name='FRAGMENTVIEWTRACKINGSTRATEGY']" name="managedName">FragmentViewTrackingStrategy</attr>
+	<attr path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.ViewTrackingStrategy']/field[@name='MIXEDVIEWTRACKINGSTRATEGY']" name="managedName">MixedViewTrackingStrategy</attr>
+	<attr path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryConfigurationEvent.ViewTrackingStrategy']/field[@name='NAVIGATIONVIEWTRACKINGSTRATEGY']" name="managedName">NavigationViewTrackingStrategy</attr>
+	<attr path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent.Dd']" name="managedName">DD</attr>
+	<attr path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent.Os']" name="managedName">OS</attr>
+	<attr path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryDebugEvent']/method[@name='getDd']" name="managedName">GetDD</attr>
 
 </metadata>
