@@ -21,8 +21,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>RUM feature configuration.</summary>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -95,9 +94,7 @@
         <Parameter Name="applicationId" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="applicationId">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="applicationId"><see cref="ApplicationId" /></param>
       </Docs>
     </Member>
     <Member MemberName="AppHangThreshold">
@@ -122,9 +119,22 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Enables App Hangs monitoring with the given threshold (in seconds).</summary>
+        <remarks>
+          <para>
+            Only App Hangs that last more than this threshold will be reported. The minimal allowed value for this option is <c>0.1</c> seconds.
+            To disable hangs monitoring, set this parameter to <c>nil</c>.
+          </para>
+          <para>
+            Note: Be cautious when setting the threshold to very small values, as it may lead to excessive reporting of hangs.
+            The SDK implements a secondary thread for monitoring App Hangs. To reduce CPU utilization, it tracks hangs with a tolerance of 2.5%, meaning that
+            some hangs lasting very close to this threshold may not be reported.
+          </para>
+          <para>
+            Note: App Hangs monitoring requires Datadog Crash Reporting to be enabled. Otherwise stack trace will be not reported in App Hang errors.
+          </para>
+          <para>Default: <c>NULL</c> (hangs monitoring disabled).</para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ApplicationId">
@@ -146,9 +156,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>An unique identifier of the RUM application in Datadog.</summary>
       </Docs>
     </Member>
     <Member MemberName="ClassHandle">
@@ -225,9 +233,14 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Enables RUM long tasks tracking with the given threshold (in seconds).</summary>
+        <remarks>
+          <para>
+            Any operation on the main thread that exceeds this threshold will be reported as a RUM long task.
+            To disable RUM long tasks tracking, set <c>null</c> or <c>0</c>.
+          </para>
+          <para>Default: <c>0.1</c>.</para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="OnSessionStart">
@@ -281,10 +294,15 @@
       <ReturnValue>
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
-      <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+      <Docs>      
+        <summary>The sampling rate for RUM sessions.</summary>
+        <remarks>
+        <para>
+          It must be a number between 0.0 and 100.0, where 0 means no sessions will be sent
+          and 100 means all will be uploaded.
+        </para>
+         <para>Default: <c>100.0</c>.</para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SetActionEventMapper">
@@ -441,9 +459,16 @@
         <Parameter Name="tracking" Type="Datadog.iOS.DDRUMURLSessionTracking" />
       </Parameters>
       <Docs>
-        <param name="tracking">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="tracking"></param>
+        <summary>The configuration for automatic RUM resources tracking.</summary>
+        <remarks>
+          <para>
+              RUM resources tracking requires enabling <see cref="DDURLSessionInstrumentation" />. See <see cref="URLSessionInstrumentation.Enable()" />.
+           </para>
+           <para>
+              Default: <c>null</c> - which means automatic RUM resource tracking is not enabled by default.
+            </para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SetViewEventMapper">
@@ -474,9 +499,20 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="mapper">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="mapper"></param>
+        <summary>Sets a custom mapper for RUM view events.</summary>
+        <remarks>
+          <para>
+            It can be used to modify view events before they are sent. The implementation of the mapper should
+            obtain a mutable copy of <see cref="DDRUMViewEvent" />, modify it, and return it. Keep the implementation fast
+            and do not make any assumptions on the thread used to run it.
+          </para>
+          <para>
+            Note: This mapper ensures that all views are sent by preventing the return of <c>null</c>. To drop certain automatically
+            collected RUM views, adjust the implementation of the view predicate (see the <see cref="UIKitViewsPredicate" /> option).
+          </para>
+          <para>Default: <c>null</c>.</para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="TelemetrySampleRate">
@@ -501,9 +537,12 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>The sampling rate for SDK internal telemetry utilized by Datadog.</summary>
+        <remarks>
+        <para>This telemetry is used to monitor the internal workings of the entire Datadog iOS SDK.</para>
+        <para>It must be a number between 0.0 and 100.0, where 0 means no telemetry will be sent, and 100 means all will be uploaded.</para>
+        <para>The default value is 20.0.</para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="TrackBackgroundEvents">
@@ -528,9 +567,16 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Determines whether RUM events should be tracked when no view is active (including when the app is in the background).</summary>
+        <remarks>
+          <para>
+            If enabled, RUM will attach events to an automatically created "background" view.
+          </para>
+          <para>
+            Note: Enabling this option may increase the number of sessions tracked and result in higher billing.
+          </para>
+          <para>Default: <c>false</c>.</para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="TrackFrustrations">
@@ -555,9 +601,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Determines whether automatic tracking of user frustrations should be enabled.</summary>
+        <remarks>
+          <para>RUM detects "error taps"  when an error follows a RUM tap action.</para>
+          <para>Default: <c>true</c>.</para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="TrackWatchdogTerminations">
@@ -582,14 +630,18 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Determines whether the SDK should track application termination by the watchdog.</summary>
+        <remarks>
+          <para>
+           Read more about watchdog terminations at https://developer.apple.com/documentation/xcode/addressing-watchdog-terminations
+          </para>
+          <para>Default: <c>false</c>.</para>
+        </remarks>
       </Docs>
     </Member>
-    <Member MemberName="UiKitActionsPredicate">
-      <MemberSignature Language="C#" Value="public virtual Datadog.iOS.IDDUIKitRUMActionsPredicate UiKitActionsPredicate { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Datadog.iOS.IDDUIKitRUMActionsPredicate UiKitActionsPredicate" />
+    <Member MemberName="UIKitActionsPredicate">
+      <MemberSignature Language="C#" Value="public virtual Datadog.iOS.IDDUIKitRUMActionsPredicate UIKitActionsPredicate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Datadog.iOS.IDDUIKitRUMActionsPredicate UIKitActionsPredicate" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -618,14 +670,27 @@
         <ReturnType>Datadog.iOS.IDDUIKitRUMActionsPredicate</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>The predicate for automatically tracking <see cref="UITouch" /> events as RUM actions.</summary>
+        <remarks>
+          <para>
+            RUM will query this predicate for each <see cref="UIView" /> that the user interacts with. The predicate implementation
+            should return RUM action parameters if the given interaction should be accepted, or <c>null</c> to ignore it.
+            Touch events on the keyboard are ignored for privacy reasons.
+          </para>
+          <para>
+            You can use <see cref="DDDefaultUIKitRUMActionsPredicate" /> or create your own predicate by
+            implementing <see cref="IDDUIKitRUMActionsPredicate" />.
+          </para>
+          <para>
+            Note: Automatic RUM action tracking involves swizzling the <c>UIApplication.SendEvent()</c> method.
+          </para>
+          <para>Default: <c>null</c> - which means automatic RUM action tracking is not enabled by default.</para>
+        </remarks>
       </Docs>
     </Member>
-    <Member MemberName="UiKitViewsPredicate">
-      <MemberSignature Language="C#" Value="public virtual Datadog.iOS.IDDUIKitRUMViewsPredicate UiKitViewsPredicate { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Datadog.iOS.IDDUIKitRUMViewsPredicate UiKitViewsPredicate" />
+    <Member MemberName="UIKitViewsPredicate">
+      <MemberSignature Language="C#" Value="public virtual Datadog.iOS.IDDUIKitRUMViewsPredicate UIKitViewsPredicate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Datadog.iOS.IDDUIKitRUMViewsPredicate UIKitViewsPredicate" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -654,9 +719,21 @@
         <ReturnType>Datadog.iOS.IDDUIKitRUMViewsPredicate</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>The predicate for automatically tracking <c>UIViewControllers</c> as RUM views.</summary>
+        <remarks>
+        <para>
+          RUM will query this predicate for each <c>UIViewController</c> presented in the app. The predicate implementation
+          should return RUM view parameters if the given controller should start a view, or <c>null</c> to ignore it.
+        </para>
+        <para>
+          You can use <see cref="Datadog.iOS.DDDefaultUIKitRUMViewsPredicate"/> 
+          or create your own predicate by implementing <see cref="Datadog.iOS.IDDUIKitRUMViewsPredicate"/>.
+        </para>
+        <para>
+          Note: Automatic RUM views tracking involves swizzling the <c>UIViewController</c> lifecycle methods.
+        </para>
+        <para>Default: <c>null</c> - which means automatic RUM view tracking is not enabled by default.</para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="VitalsUpdateFrequency">
@@ -681,9 +758,11 @@
         <ReturnType>Datadog.iOS.DDRUMVitalsFrequency</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>Sets the preferred frequency for collecting RUM vitals.</summary>
+        <remarks>
+          <para>To disable RUM vitals monitoring, set <c>null</c>.</para>
+          <para>Default: <c>Average</c>.</para>
+        </remarks>
       </Docs>
     </Member>
   </Members>

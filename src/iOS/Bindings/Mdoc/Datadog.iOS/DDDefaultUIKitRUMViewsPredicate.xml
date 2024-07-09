@@ -25,8 +25,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>
+      Default implementation of <see cref="DDUIKitRUMViewsPredicate" />.
+      It names RUM Views by the names of their <see cref="UIViewController" /> subclasses.
+    </summary>
   </Docs>
   <Members>
     <Member MemberName=".ctor">

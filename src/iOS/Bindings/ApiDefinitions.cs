@@ -1050,11 +1050,11 @@ namespace Datadog.iOS
 
 		// @property (nonatomic, strong) id<DDUIKitRUMViewsPredicate> _Nullable uiKitViewsPredicate;
 		[NullAllowed, Export ("uiKitViewsPredicate", ArgumentSemantic.Strong)]
-		IDDUIKitRUMViewsPredicate UiKitViewsPredicate { get; set; }
+		IDDUIKitRUMViewsPredicate UIKitViewsPredicate { get; set; }
 
 		// @property (nonatomic, strong) id<DDUIKitRUMActionsPredicate> _Nullable uiKitActionsPredicate;
 		[NullAllowed, Export ("uiKitActionsPredicate", ArgumentSemantic.Strong)]
-		IDDUIKitRUMActionsPredicate UiKitActionsPredicate { get; set; }
+		IDDUIKitRUMActionsPredicate UIKitActionsPredicate { get; set; }
 
 		// -(void)setURLSessionTracking:(DDRUMURLSessionTracking * _Nonnull)tracking;
 		[Export ("setURLSessionTracking:")]

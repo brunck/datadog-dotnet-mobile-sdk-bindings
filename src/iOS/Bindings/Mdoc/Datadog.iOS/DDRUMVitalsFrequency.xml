@@ -14,8 +14,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>Frequency for collecting RUM vitals.</summary>
   </Docs>
   <Members>
     <Member MemberName="Average">
@@ -30,7 +29,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Every <c>500ms</c>.</summary>
       </Docs>
     </Member>
     <Member MemberName="Frequent">
@@ -45,7 +44,7 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary><summary>Every <c>100ms</c>.</summary></summary>
       </Docs>
     </Member>
     <Member MemberName="Never">
@@ -60,7 +59,7 @@
       </ReturnValue>
       <MemberValue>3</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Never.</summary>
       </Docs>
     </Member>
     <Member MemberName="Rare">
@@ -75,7 +74,7 @@
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Every <c>1000ms</c>.</summary>
       </Docs>
     </Member>
   </Members>

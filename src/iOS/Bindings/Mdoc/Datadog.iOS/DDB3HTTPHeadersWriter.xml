@@ -21,8 +21,28 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+   <summary>
+      The <c>DDB3HTTPHeadersWriter</c> class facilitates the injection of trace propagation headers into network requests 
+      targeted at a backend expecting B3 propagation format.
+   </summary>
+  <remarks>
+    <para>See <a href="https://github.com/openzipkin/b3-propagation">B3 propagation format</a> for more details.</para>
+    <para>Usage:</para>
+    <code lang="csharp">
+        var request = new HttpRequestMessage(...);
+
+        var writer = new DDB3HTTPHeadersWriter();
+        var span = DDTracer.Shared.StartSpan("network request");
+        DDTracer.Shared.Inject(span.Context, OT.FormatTextMap, writer);
+
+        foreach (var (field, value) in writer.TraceHeaderFields)
+        {
+            request.Headers.Add(field, value);
+        }
+
+        // call span.Finish() when the request completes
+      </code>
+  </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -139,9 +159,17 @@
         <ReturnType>Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSString&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>A dictionary containing the required HTTP Headers for propagating trace information.</summary>
         <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <remarks>
+         <para>Usage:</para>
+          <code lang="csharp">
+            foreach (var (field, value) in writer.TraceHeaderFields)
+            {
+                request.Headers.Add(field, value);
+            }
+          </code>
+        </remarks>
       </Docs>
     </Member>
   </Members>
