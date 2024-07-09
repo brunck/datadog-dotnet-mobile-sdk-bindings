@@ -21,8 +21,27 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>
+      The <c>HTTPHeadersWriter</c> class facilitates the injection of trace propagation headers into network requests 
+      targeted at a backend instrumented with Datadog and expecting <c>x-datadog-*</c> headers.
+    </summary>
+    <remarks>
+      <para>Usage:</para>
+      <code lang="csharp">
+        var request = new HttpRequestMessage(...);
+
+        var writer = new DDHTTPHeadersWriter();
+        var span = DDTracer.Shared.StartSpan("network request");
+        DDTracer.Shared.Inject(span.Context, OT.FormatTextMap, writer);
+
+        foreach (var (field, value) in writer.TraceHeaderFields)
+        {
+            request.Headers.Add(field, value);
+        }
+
+        // call span.Finish() when the request completes
+      </code>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
