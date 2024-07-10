@@ -2265,7 +2265,7 @@ namespace Datadog.iOS
 
 		// -(void)currentSessionIDWithCompletion:(void (^ _Nonnull)(NSString * _Nullable))completion;
 		[Export ("currentSessionIDWithCompletion:")]
-		void CurrentSessionIDWithCompletion (Action<NSString> completion);
+		void GetCurrentSessionIdViaCallback (Action<NSString> callback);
 
 		// -(void)stopSession;
 		[Export ("stopSession")]

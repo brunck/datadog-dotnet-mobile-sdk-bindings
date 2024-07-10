@@ -15,8 +15,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary>An entry point to the Datadog RUM feature.</summary>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -132,9 +131,9 @@
         <Parameter Name="configuration" Type="Datadog.iOS.DDRUMConfiguration" />
       </Parameters>
       <Docs>
-        <param name="configuration">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="configuration">Configuration of the feature.</param>
+        <summary>Enables the Datadog RUM feature.</summary>
+        <remarks>After RUM is enabled, use <see cref="DDRUMMonitor.Shared" /> to collect RUM events.</remarks>
       </Docs>
     </Member>
   </Members>

@@ -25,16 +25,16 @@
     A class for manual interaction with the RUM feature. It records RUM events that are sent to Datadog RUM.
     </summary>
     <remarks>
-      <para>There can be only one active RUM monitor for certain instance of Datadog SDK. It gets enabled along with 
+      <para>There can be only one active RUM monitor for a particular instance of the Datadog SDK. It gets enabled along with 
       the call to <c>DDRUM.Enable (DDRUMConfiguration configuration)</c>:</para>
       <para>
-        <c>
-          // Enable RUM feature:
-          RUM.Enable (DDRUMConfiguration configuration)
+        <code lang="csharp">
+          // Enable the RUM feature:
+          DDRUM.Enable (DDRUMConfiguration configuration)
 
           // Use RUM monitor:
           DDRUMMonitor.Shared.StartView(...)
-        </c>
+        </code>
       </para>
     </remarks>
   </Docs>
@@ -58,9 +58,9 @@
         <Parameter Name="t" Type="Foundation.NSObjectFlag" />
       </Parameters>
       <Docs>
-        <param name="t">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="t"></param>
+        <summary></summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -82,9 +82,9 @@
         <Parameter Name="handle" Type="ObjCRuntime.NativeHandle" />
       </Parameters>
       <Docs>
-        <param name="handle">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="handle"></param>
+        <summary></summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="AddAction">
@@ -111,11 +111,19 @@
         <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
       </Parameters>
       <Docs>
-        <param name="type">To be added.</param>
-        <param name="name">To be added.</param>
-        <param name="attributes">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="type">
+        The type of the action.
+        </param>
+        <param name="name">
+        The name of the action.
+        </param>
+        <param name="attributes">
+        Custom attributes to attach to this action.
+        </param>
+        <summary>
+        Adds a RUM action that has no duration.
+        </summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="AddAttribute">
@@ -141,10 +149,18 @@
         <Parameter Name="value" Type="Foundation.NSObject" />
       </Parameters>
       <Docs>
-        <param name="key">To be added.</param>
-        <param name="value">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="key">
+        The key for this attribute.
+        See <see cref="AttributeKey" /> documentation for information about nesting attribute values using dot <c>.</c> syntax.
+        </param>
+        <param name="value">
+        Any value.
+        See <see cref="AttributeValue" /> documentation for information about nested encoding containers limitation.
+        </param>
+        <summary>
+        Adds a custom attribute to next RUM events.
+        </summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="AddError">
@@ -171,11 +187,19 @@
         <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
       </Parameters>
       <Docs>
-        <param name="error">To be added.</param>
-        <param name="source">To be added.</param>
-        <param name="attributes">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="error">
+        The <see cref="NSError" /> object. It will be used to infer error details.
+        </param>
+        <param name="source">
+        The origin of the error.
+        </param>
+        <param name="attributes">
+        Custom attributes to attach to this error.
+        </param>
+        <summary>
+        Adds a RUM error to the current RUM view.
+        </summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="AddError">
@@ -209,12 +233,21 @@
         <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
       </Parameters>
       <Docs>
-        <param name="message">To be added.</param>
-        <param name="stack">To be added.</param>
-        <param name="source">To be added.</param>
-        <param name="attributes">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="message">
+        The error message.
+        </param>
+        <param name="stack">
+        The stack trace of the error. No specific format is required. If not specified, it will be inferred from `file` and `line`.
+        </param>
+        <param name="source">
+        The origin of the error.
+        </param>
+        <param name="attributes">
+        Custom attributes to attach to this error.
+        </param>
+        <summary>
+        Adds a RUM error to the current RUM view.
+        </summary>
       </Docs>
     </Member>
     <Member MemberName="AddFeatureFlagEvaluationWithName">
@@ -240,10 +273,18 @@
         <Parameter Name="value" Type="Foundation.NSObject" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
-        <param name="value">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="name">
+        The name of the feature flag.
+        </param>
+        <param name="value">
+        The result of the evaluation.
+        </param>
+        <summary>
+        Adds the result of evaluating a feature flag to the current RUM view.
+        </summary>
+        <remarks>
+        Feature flag evaluations are local to the active view and are cleared when the view is stopped.
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="AddResourceMetrics">
@@ -270,11 +311,19 @@
         <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
       </Parameters>
       <Docs>
-        <param name="resourceKey">To be added.</param>
-        <param name="metrics">To be added.</param>
-        <param name="attributes">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="resourceKey">
+        The key representing the resource. It must match the one used to start the resource.
+        </param>
+        <param name="metrics">
+        The <c>NSUrlSessionTaskMetrics</c> for this resource.
+        </param>
+        <param name="attributes">
+        Custom attributes to attach to this resource.
+        </param>
+        <summary>
+        Adds temporal metrics to given RUM resource.
+        </summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="AddTiming">
@@ -299,9 +348,11 @@
         <Parameter Name="name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="name">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="name">
+        The name of the custom timing attribute. It must be unique for each timing.
+        </param>
+        <summary>Records a specific timing within the current RUM view.</summary>
+        <remarks>The duration of the timing is calculated as the number of nanoseconds elapsed between the start of the view and the addition of the timing.</remarks>
       </Docs>
     </Member>
     <Member MemberName="ClassHandle">
@@ -315,14 +366,14 @@
         <ReturnType>ObjCRuntime.NativeHandle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary></summary>
+        <value></value>
+        <remarks></remarks>
       </Docs>
     </Member>
-    <Member MemberName="CurrentSessionIDWithCompletion">
-      <MemberSignature Language="C#" Value="public virtual void CurrentSessionIDWithCompletion (Action&lt;Foundation.NSString&gt; completion);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CurrentSessionIDWithCompletion(class System.Action`1&lt;class Foundation.NSString&gt; completion) cil managed" />
+    <Member MemberName="GetCurrentSessionIdViaCallback">
+      <MemberSignature Language="C#" Value="public virtual void GetCurrentSessionIdViaCallback (Action&lt;Foundation.NSString&gt; callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetCurrentSessionIdViaCallback(class System.Action`1&lt;class Foundation.NSString&gt; callback) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -339,7 +390,7 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="completion" Type="System.Action&lt;Foundation.NSString&gt;">
+        <Parameter Name="callback" Type="System.Action&lt;Foundation.NSString&gt;">
           <Attributes>
             <Attribute>
               <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDActionArity1V0))</AttributeName>
@@ -348,9 +399,17 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="completion">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="callback">The callback that will recieve the current session ID. This will be called from a background thread.</param>
+        <summary>
+          Get the currently active session ID. Returns <c>null</c> if no sessions are currently active or if
+          the current session is sampled out.
+        </summary>
+        <remarks>
+        <para>
+          This method uses an asynchronous callback to ensure all pending RUM events have been processed
+          up to the moment of the call.
+        </para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Debug">
@@ -375,9 +434,16 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>
+        Enable a debug utility to inspect the active RUM view. Use it only when debugging.
+        </summary>
+        <value>
+        The default value is false.
+        </value>
+        <remarks>
+        If enabled, a debugging outline will be displayed on top of the application, indicating the name of the active RUM view.
+        This can be helpful for debugging RUM instrumentation issues in your app.
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="RemoveAttribute">
@@ -402,9 +468,15 @@
         <Parameter Name="key" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="key">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="key">
+        The key for the attribute that will be removed.
+        </param>
+        <summary>
+        Removes an attribute from next RUM events.
+        </summary>
+        <remarks>
+        Events created prior to this call will not lose this attribute.
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Shared">
@@ -426,9 +498,12 @@
         <ReturnType>Datadog.iOS.DDRUMMonitor</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>
+        Obtains the RUM monitor for manual interaction with the RUM feature.
+        </summary>
+        <remarks>
+        It requires <see cref="DDRUM.Enable" /> to be called first - otherwise it will return a no-op implementation.
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="StartAction">
@@ -455,11 +530,21 @@
         <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
       </Parameters>
       <Docs>
-        <param name="type">To be added.</param>
-        <param name="name">To be added.</param>
-        <param name="attributes">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="type">
+        The type of the action.
+        </param>
+        <param name="name">
+        The name of the action.
+        </param>
+        <param name="attributes">
+        Custom attributes to attach to this action.
+        </param>
+        <summary>
+        Starts a RUM action.
+        </summary>
+        <remarks>
+        If the action is not stopped with <see cref="StopAction(Datadog.iOS.DDRUMActionType)" />, it will be stopped automatically after 10 seconds.
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="StartResource">
@@ -486,11 +571,19 @@
         <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
       </Parameters>
       <Docs>
-        <param name="resourceKey">To be added.</param>
-        <param name="url">To be added.</param>
-        <param name="attributes">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="resourceKey">
+        The key representing the resource. It must be unique among all resources being currently tracked.
+        </param>
+        <param name="url">
+        The <c>NSUrl</c> of this resource.
+        </param>
+        <param name="attributes">
+        Custom attributes to attach to this resource.
+        </param>
+        <summary>
+        Starts a RUM resource.
+        </summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="StartResource">
@@ -517,11 +610,19 @@
         <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
       </Parameters>
       <Docs>
-        <param name="resourceKey">To be added.</param>
-        <param name="request">To be added.</param>
-        <param name="attributes">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="resourceKey">
+        The key representing the resource. It must be unique among all resources being currently tracked.
+        </param>
+        <param name="request">
+        The <c>NSUrlRequest</c> of this resource.
+        </param>
+        <param name="attributes">
+        Custom attributes to attach to this resource.
+        </param>
+        <summary>
+        Starts a RUM resource.
+        </summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="StartResource">
@@ -549,12 +650,22 @@
         <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
       </Parameters>
       <Docs>
-        <param name="resourceKey">To be added.</param>
-        <param name="httpMethod">To be added.</param>
-        <param name="urlString">To be added.</param>
-        <param name="attributes">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="resourceKey">
+        The key representing the resource. It must be unique among all resources being currently tracked.
+        </param>
+        <param name="httpMethod">
+        A <see cref="DDRUMMethod" /> representing the HTTP method of this resource.
+        </param>
+        <param name="urlString">
+        The URL string of this resource.
+        </param>
+        <param name="attributes">
+        Custom attributes to attach to this resource.
+        </param>
+        <summary>
+        Starts a RUM resource.
+        </summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="StartView">
@@ -587,11 +698,18 @@
         <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
       </Parameters>
       <Docs>
-        <param name="key">To be added.</param>
-        <param name="name">To be added.</param>
-        <param name="attributes">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="key">
+          A <c>string</c> value identifying this view. It must match the key passed later to <see cref="StopView(string,Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;)" />.
+        </param>
+        <param name="name">
+          The name of the view. If not provided, the <see cref="key" /> name will be used.
+        </param>
+        <param name="attributes">
+          Custom attributes to attach to this view.
+        </param>
+        <summary>
+          Starts the RUM view.
+        </summary>
       </Docs>
     </Member>
     <Member MemberName="StartView">
@@ -624,11 +742,18 @@
         <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
       </Parameters>
       <Docs>
-        <param name="viewController">To be added.</param>
-        <param name="name">To be added.</param>
-        <param name="attributes">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="viewController">
+          The instance of <c>UIViewController</c> representing this view.
+        </param>
+        <param name="name">
+          The name of the view. If not provided, the <see cref="viewController" /> class name will be used.
+        </param>
+        <param name="attributes">
+          Custom attributes to attach to this view.
+        </param>
+        <summary>
+          Starts the RUM view.
+        </summary>
       </Docs>
     </Member>
     <Member MemberName="StopAction">
@@ -661,11 +786,21 @@
         <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
       </Parameters>
       <Docs>
-        <param name="type">To be added.</param>
-        <param name="name">To be added.</param>
-        <param name="attributes">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="type">
+        The type of the action. It should match the type passed when starting this action.
+        </param>
+        <param name="name">
+        The name of the action. If not provided, it will use the name the action was started with.
+        </param>
+        <param name="attributes">
+        Custom attributes to attach to this action.
+        </param>
+        <summary>
+        Stops a RUM action.
+        </summary>
+        <remarks>
+        The action must be first started with <see cref="StartAction(Datadog.iOS.DDRUMActionType)" />.
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="StopResource">
@@ -699,12 +834,22 @@
         <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
       </Parameters>
       <Docs>
-        <param name="resourceKey">To be added.</param>
-        <param name="error">To be added.</param>
-        <param name="response">To be added.</param>
-        <param name="attributes">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="resourceKey">
+        The key representing the resource. It must match the one used to start the resource.
+        </param>
+        <param name="error">
+        The <c>NSError</c> object. It will be used to infer error details.
+        </param>
+        <param name="response">
+         An optional <c>NSUrlResponse</c> received for the resource.
+        </param>
+        <param name="attributes">
+        Custom attributes to attach to this resource.
+        </param>
+        <summary>
+        Stops a RUM resource and reports an error.
+        </summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="StopResource">
@@ -738,12 +883,21 @@
         <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
       </Parameters>
       <Docs>
-        <param name="resourceKey">To be added.</param>
-        <param name="response">To be added.</param>
-        <param name="size">To be added.</param>
-        <param name="attributes">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="resourceKey">The key representing the resource. It must match the one used to start the resource.</param>
+        <param name="response">
+        The <c>NSUrlResponse</c> received for the resource.
+        </param>
+        <param name="size">
+        An optional size of the data received for the resource (in bytes). 
+        If not provided, it will be inferred from the "Content-Length" header of the <c>response</c>.
+        </param>
+        <param name="attributes">
+        Custom attributes to attach to this resource.
+        </param>
+        <summary>
+        Stops a RUM resource.
+        </summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="StopResource">
@@ -777,12 +931,22 @@
         <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
       </Parameters>
       <Docs>
-        <param name="resourceKey">To be added.</param>
-        <param name="message">To be added.</param>
-        <param name="response">To be added.</param>
-        <param name="attributes">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="resourceKey">
+        The key representing the resource. It must match the one used to start the resource.
+        </param>
+        <param name="message">
+        The message explaining the Resource failure.
+        </param>
+        <param name="response">
+        An optional <c>NSUrlResponse</c> received for the resource.
+        </param>
+        <param name="attributes">
+        Custom attributes to attach to this resource.
+        </param>
+        <summary>
+        Stops a RUM resource and reports an error.
+        </summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="StopResource">
@@ -823,13 +987,25 @@
         <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
       </Parameters>
       <Docs>
-        <param name="resourceKey">To be added.</param>
-        <param name="statusCode">To be added.</param>
-        <param name="kind">To be added.</param>
-        <param name="size">To be added.</param>
-        <param name="attributes">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="resourceKey">
+        The key representing the resource. It must match the one used to start the resource.
+        </param>
+        <param name="statusCode">
+        HTTP code of the response.
+        </param>
+        <param name="kind">
+        Type of the resource.
+        </param>
+        <param name="size">
+        An optional size of the data received for the resource (in bytes).
+        </param>
+        <param name="attributes">
+        Custom attributes to attach to this resource.
+        </param>
+        <summary>
+        Stops a RUM resource.
+        </summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="StopSession">
@@ -852,8 +1028,13 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>
+        Stops the current RUM session.
+        </summary>
+        <remarks>
+        A new session will start in response to a call to <see cref="StartView" /> or <see cref="AddAction" />.
+        If the session is started because of a call to <c>AddAction</c>, the last known view is restarted in the new session.
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="StopView">
@@ -879,10 +1060,15 @@
         <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
       </Parameters>
       <Docs>
-        <param name="key">To be added.</param>
-        <param name="attributes">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="key">
+          A <c>string</c> value identifying this view. It must match the <c>key</c> passed earlier to <see cref="StartView(string,string,Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;)" />.
+        </param>
+        <param name="attributes">
+          Custom attributes to attach to this view.
+        </param>
+        <summary>
+          Stops the RUM view.
+        </summary>
       </Docs>
     </Member>
     <Member MemberName="StopView">
@@ -908,10 +1094,15 @@
         <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
       </Parameters>
       <Docs>
-        <param name="viewController">To be added.</param>
-        <param name="attributes">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+      <param name="viewController">
+          The instance of <c>UIViewController</c> representing this view.
+        </param>
+        <param name="attributes">
+          Custom attributes to attach to this view.
+        </param>
+        <summary>
+          Stops the RUM view.
+        </summary>
       </Docs>
     </Member>
   </Members>

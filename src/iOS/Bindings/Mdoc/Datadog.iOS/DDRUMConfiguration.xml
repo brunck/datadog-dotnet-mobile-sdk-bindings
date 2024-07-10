@@ -206,9 +206,14 @@
         <ReturnType>Foundation.NSUrl</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>
+          Custom server URL for sending RUM data.
+        </summary>
+        <remarks>
+          <para>
+            Default: <c>null</c>.
+          </para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="LongTaskThreshold">
@@ -268,9 +273,20 @@
         <ReturnType>System.Action&lt;Foundation.NSString,System.Boolean&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary>
+          RUM session start callback.
+        </summary>
+        <remarks>
+          <para>
+            It takes 2 arguments:
+            - Newly started session ID.
+            - Flag indicating whether or not the session was discarded due to the sampling rate.
+          </para>
+          <para>
+            Keep the implementation fast and do not make any assumptions on the thread that runs this callback.
+          </para>
+          <para>Default: <c>null</c>.</para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SessionSampleRate">
@@ -333,9 +349,18 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="mapper">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="mapper"></param>
+        <summary>
+          Sets a custom mapper for RUM action events.
+        </summary>
+        <remarks>
+          <para>
+            It can be used to modify action events before they are sent. The implementation of the mapper should
+            obtain a mutable copy of <see cref="DDRUMActionEvent" />, modify it, and return it. Returning <c>null</c> will drop the event.
+            Keep the implementation fast and do not make any assumptions on the thread used to run it.
+          </para>
+          <para>Default: <c>null</c>.</para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SetErrorEventMapper">
@@ -366,9 +391,18 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="mapper">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="mapper"></param>
+        <summary>
+          Sets a custom mapper for RUM error events.
+        </summary>
+        <remarks>
+          <para>
+            It can be used to modify error events before they are sent. The implementation of the mapper should
+            obtain a mutable copy of <see cref="DDRUMErrorEvent" />, modify it, and return it. Returning <c>null</c> will drop the event.
+            Keep the implementation fast and do not make any assumptions on the thread used to run it.
+          </para>
+          <para>Default: <c>null</c>.</para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SetLongTaskEventMapper">
@@ -399,9 +433,18 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="mapper">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="mapper"></param>
+        <summary>
+          Sets a custom mapper for RUM long task events.
+        </summary>
+        <remarks>
+          <para>
+            It can be used to modify long task events before they are sent. The implementation of the mapper should
+            obtain a mutable copy of <see cref="DDRUMLongTaskEvent" />, modify it, and return it. Returning <c>null</c> will drop the event.
+            Keep the implementation fast and do not make any assumptions on the thread used to run it.
+          </para>
+          <para>Default: <c>null</c>.</para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SetResourceEventMapper">
@@ -433,8 +476,15 @@
       </Parameters>
       <Docs>
         <param name="mapper">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <summary>Custom mapper for RUM resource events.</summary>
+        <remarks>
+          <para>
+            It can be used to modify resource events before they are sent. The implementation of the mapper should
+            obtain a mutable copy of <see cref="DDRUMResourceEvent" />, modify it, and return it. Returning <c>null</c> will drop the event.
+            Keep the implementation fast and do not make any assumptions on the thread used to run it.
+          </para>
+          <para>Default: <c>null</c>.</para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SetURLSessionTracking">
