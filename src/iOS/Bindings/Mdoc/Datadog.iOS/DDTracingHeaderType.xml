@@ -92,7 +92,7 @@
         <ReturnType>Datadog.iOS.DDTracingHeaderType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summaryOpen Telemetry B3 ><a href="https://github.com/openzipkin/b3-propagation#single-headers">Single header</a>.</summary>
+        <summary>Open Telemetry B3 ><a href="https://github.com/openzipkin/b3-propagation#single-headers">Single header</a>.</summary>
       </Docs>
     </Member>
     <Member MemberName="B3Multi">
@@ -154,7 +154,7 @@
         <ReturnType>Datadog.iOS.DDTracingHeaderType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><a href="https://docs.datadoghq.com/real_user_monitoring/connect_rum_and_traces/?tab=browserrum#how-are-rum-resources-linked-to-traces">Datadog's <c>x-datadog-*</c>header.</summary>
+        <summary><a href="https://docs.datadoghq.com/real_user_monitoring/connect_rum_and_traces/?tab=browserrum#how-are-rum-resources-linked-to-traces">Datadog's <c>x-datadog-*</c>header.</a></summary>
       </Docs>
     </Member>
     <Member MemberName="TraceContext">
@@ -177,7 +177,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-        W3C <a href="https://www.w3.org/TR/trace-context/#tracestate-header">Trace Context header<a>.
+        W3C <a href="https://www.w3.org/TR/trace-context/#tracestate-header">Trace Context header</a>.
         </summary>
       </Docs>
     </Member>

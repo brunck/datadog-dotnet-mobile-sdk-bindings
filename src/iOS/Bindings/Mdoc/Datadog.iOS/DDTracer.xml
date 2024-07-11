@@ -179,7 +179,7 @@
       <Docs>
         <summary>Obtains the IOTTracer for manual tracing instrumentation.</summary>
         <remarks>It requires <c>DDTrace.Enable(DDTraceConfiguration)</c> to be called first - otherwise it will return a no-op implementation.</remarks>
-        <returns>The IOTTracer that conforms to the Open Tracing API (<see cref="IOTTracer") /></returns>
+        <returns>The IOTTracer that conforms to the Open Tracing API (<see cref="IOTTracer" />)</returns>
       </Docs>
     </Member>
     <Member MemberName="StartSpan">
