@@ -63,8 +63,28 @@
             <remarks></remarks>
         </member>
         <member name="T:Datadog.iOS.DDB3HTTPHeadersWriter">
-            <summary></summary>
-            <remarks></remarks>
+            <summary>
+      The <c>DDB3HTTPHeadersWriter</c> class facilitates the injection of trace propagation headers into network requests 
+      targeted at a backend expecting B3 propagation format.
+   </summary>
+            <remarks>
+                <para>See B3 propagation format (https://github.com/openzipkin/b3-propagation) for more details.</para>
+                <para>Usage:</para>
+                <code>
+        var request = new HttpRequestMessage(...);
+
+        var writer = new DDB3HTTPHeadersWriter();
+        var span = DDTracer.Shared.StartSpan("network request");
+        DDTracer.Shared.Inject(span.Context, OT.FormatTextMap, writer);
+
+        foreach (var (field, value) in writer.TraceHeaderFields)
+        {
+            request.Headers.Add(field, value);
+        }
+
+        // call span.Finish() when the request completes
+      </code>
+            </remarks>
         </member>
         <member name="C:Datadog.iOS.DDB3HTTPHeadersWriter(Foundation.NSObjectFlag)">
             <param name="t"></param>
@@ -89,12 +109,20 @@
             <remarks></remarks>
         </member>
         <member name="P:Datadog.iOS.DDB3HTTPHeadersWriter.TraceHeaderFields">
-            <summary></summary>
+            <summary>A dictionary containing the required HTTP Headers for propagating trace information.</summary>
             <value></value>
-            <remarks></remarks>
+            <remarks>
+                <para>Usage:</para>
+                <code>
+            foreach (var (field, value) in writer.TraceHeaderFields)
+            {
+                request.Headers.Add(field, value);
+            }
+          </code>
+            </remarks>
         </member>
         <member name="T:Datadog.iOS.DDBatchProcessingLevel">
-            <summary></summary>
+            <summary>Defines the maximum amount of batches processed sequentially without a delay within one reading/uploading cycle.</summary>
             <remarks></remarks>
         </member>
         <member name="F:Datadog.iOS.DDBatchProcessingLevel.High">
@@ -107,20 +135,20 @@
             <summary></summary>
         </member>
         <member name="T:Datadog.iOS.DDBatchSize">
-            <summary></summary>
-            <remarks></remarks>
+            <summary>Defines the Datadog SDK policy when batching data together before uploading it to Datadog servers.</summary>
+            <remarks>Smaller batches mean smaller but more network requests, whereas larger batches mean fewer but larger network requests.</remarks>
         </member>
         <member name="F:Datadog.iOS.DDBatchSize.Large">
-            <summary></summary>
+            <summary>Prefer large-sized data batches.</summary>
         </member>
         <member name="F:Datadog.iOS.DDBatchSize.Medium">
-            <summary></summary>
+            <summary>Prefer medium-sized data batches.</summary>
         </member>
         <member name="F:Datadog.iOS.DDBatchSize.Small">
-            <summary></summary>
+            <summary>Prefer small-sized data batches.</summary>
         </member>
         <member name="T:Datadog.iOS.DDConfiguration">
-            <summary></summary>
+            <summary>Configuration of the Datadog SDK.</summary>
             <remarks></remarks>
         </member>
         <member name="C:Datadog.iOS.DDConfiguration(Foundation.NSObjectFlag)">
@@ -139,14 +167,11 @@
             <summary>Creates a Datadog SDK Configuration object.</summary>
             <remarks></remarks>
         </member>
-        <member name="P:Datadog.iOS.DDConfiguration.AdditionalConfiguration">
-            <summary>Sets additional configuration attributes. 
-        This can be used to tweak internal features of the SDK and shouldn't be considered as a part of public API.</summary>
-        </member>
         <member name="P:Datadog.iOS.DDConfiguration.BatchProcessingLevel">
-            <summary></summary>
+            <summary>Batch processing level, defining the maximum number of batches processed sequentially without a delay within one reading/uploading cycle.</summary>
             <value></value>
-            <remarks></remarks>
+            <remarks>
+                <see cref="Medium" /> by default.</remarks>
         </member>
         <member name="P:Datadog.iOS.DDConfiguration.BatchSize">
             <summary>The preferred size of batched data uploaded to Datadog servers. This value impacts the size and number of requests performed by the SDK. <c>Medium</c> by default.</summary>
@@ -228,7 +253,7 @@
                 <para>
     In order to symbolicate your stack traces, find and upload your .dSYM files to Datadog. 
     Then, verify your configuration by running a test crash and restarting your application. 
-    Your crash reports appear in <a href="https://app.datadoghq.com/rum/error-tracking">Error Tracking</a>.
+    Your crash reports appear in Error Tracking (https://app.datadoghq.com/rum/error-tracking).
     </para>
             </remarks>
         </member>
@@ -256,8 +281,23 @@
             <remarks></remarks>
         </member>
         <member name="T:Datadog.iOS.DDDatadog">
-            <summary></summary>
-            <remarks></remarks>
+            <summary>
+    An entry point to the Datadog SDK.
+    </summary>
+            <remarks>
+                <para>Initialize the core instance of the Datadog SDK prior to enabling any product.</para>
+                <code>
+      DDDatadog.Initialize(
+          new DDConfiguration("&lt;client token&gt;", "&lt;environment&gt;"),
+          DDTrackingConsent.Pending
+      </code>
+                <para>Once the Datadog SDK is initialized, you can enable products such as RUM:</para>
+                <code>
+      DDRUMMonitor.Enable(
+          new DDRUMConfiguration("&lt;application&gt;")
+      );
+      </code>
+            </remarks>
         </member>
         <member name="C:Datadog.iOS.DDDatadog">
             <summary></summary>
@@ -274,9 +314,12 @@
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDDatadog.AddUserExtraInfo(Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject})">
-            <param name="extraInfo"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="extraInfo">User's additional custom attributes.</param>
+            <summary>Add custom attributes to the current user information.</summary>
+            <remarks>
+                <para>This extra info will be added to already existing extra info that is added to logs traces and RUM events automatically. 
+      </para>
+            </remarks>
         </member>
         <member name="P:Datadog.iOS.DDDatadog.ClassHandle">
             <summary></summary>
@@ -284,14 +327,27 @@
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDDatadog.ClearAllData">
-            <summary></summary>
+            <summary>xClears all data that has not already been sent to the Datadog servers.</summary>
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDDatadog.Initialize(Datadog.iOS.DDConfiguration,Datadog.iOS.DDTrackingConsent)">
-            <param name="configuration"></param>
-            <param name="trackingConsent"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="configuration">The SDK configuration of type <see cref="DDConfiguration" />.</param>
+            <param name="trackingConsent">The initial state of the Data Tracking Consent (<see cref="DDTrackingConsent" />) given by the user of the app. </param>
+            <summary>Initializes the Datadog SDK.</summary>
+            <remarks>
+                <para>You <i>must</i> initialize the core instance of the Datadog SDK prior to enabling any product.</para>
+                <code>
+          DDDatadog.Initialize(
+              new DDConfiguration("&lt;client token&gt;", "&lt;environment&gt;"),
+              DDTrackingConsent.Pending
+          </code>
+                <para>Once the Datadog SDK is initialized, you can enable products such as RUM:</para>
+                <code>
+          DDRUM.Enable(
+              new DDRUMConfiguration("&lt;applicationId&gt;")
+          );
+          </code>
+            </remarks>
         </member>
         <member name="P:Datadog.iOS.DDDatadog.IsInitialized">
             <summary></summary>
@@ -299,26 +355,42 @@
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDDatadog.SetTrackingConsent(Datadog.iOS.DDTrackingConsent)">
-            <param name="consent"></param>
-            <summary></summary>
+            <param name="consent">The new consent value, which will be applied for all data collected from now on.</param>
+            <summary>Sets the tracking consent regarding the data collection for the Datadog SDK.</summary>
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDDatadog.SetUserInfo(System.String,System.String,System.String,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject})">
-            <param name="id"></param>
-            <param name="name"></param>
-            <param name="email"></param>
-            <param name="extraInfo"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="id">User ID, if any.</param>
+            <param name="name">Name representing the user, if any.</param>
+            <param name="email">User's e-mail address, if any.</param>
+            <param name="extraInfo">User's custom attributes, if any.</param>
+            <summary>Sets current user information.</summary>
+            <remarks>
+                <para>Those will be added to logs, traces and RUM events automatically.</para>
+            </remarks>
         </member>
         <member name="M:Datadog.iOS.DDDatadog.StopInstance">
-            <summary></summary>
-            <remarks></remarks>
+            <summary>Stops the initialized SDK instance.</summary>
+            <remarks>
+                <para>
+        Stopping a core instance will stop all current processes by deallocating all Features registered 
+        in the core as well as their storage &amp; upload units.
+     </para>
+            </remarks>
         </member>
         <member name="P:Datadog.iOS.DDDatadog.VerbosityLevel">
-            <summary></summary>
+            <summary>
+            Verbosity level of the Datadog SDK. Can be used for debugging purposes.
+        </summary>
             <value></value>
-            <remarks></remarks>
+            <remarks>
+                <para>
+        If set, internal events occuring inside the SDK will be printed to the debugger console if their level is equal or greater than <c>VerbosityLevel</c>.
+        </para>
+                <para>
+         Default is <c>null</c>.
+        </para>
+            </remarks>
         </member>
         <member name="T:Datadog.iOS.DDDefaultUIKitRUMActionsPredicate">
             <summary></summary>
@@ -350,7 +422,10 @@
             <remarks></remarks>
         </member>
         <member name="T:Datadog.iOS.DDDefaultUIKitRUMViewsPredicate">
-            <summary></summary>
+            <summary>
+      Default implementation of <see cref="DDUIKitRUMViewsPredicate" />.
+      It names RUM Views by the names of their <see cref="UIViewController" /> subclasses.
+    </summary>
             <remarks></remarks>
         </member>
         <member name="C:Datadog.iOS.DDDefaultUIKitRUMViewsPredicate">
@@ -379,8 +454,27 @@
             <remarks></remarks>
         </member>
         <member name="T:Datadog.iOS.DDHTTPHeadersWriter">
-            <summary></summary>
-            <remarks></remarks>
+            <summary>
+      The <c>HTTPHeadersWriter</c> class facilitates the injection of trace propagation headers into network requests 
+      targeted at a backend instrumented with Datadog and expecting <c>x-datadog-*</c> headers.
+    </summary>
+            <remarks>
+                <para>Usage:</para>
+                <code>
+        var request = new HttpRequestMessage(...);
+
+        var writer = new DDHTTPHeadersWriter();
+        var span = DDTracer.Shared.StartSpan("network request");
+        DDTracer.Shared.Inject(span.Context, OT.FormatTextMap, writer);
+
+        foreach (var (field, value) in writer.TraceHeaderFields)
+        {
+            request.Headers.Add(field, value);
+        }
+
+        // call span.Finish() when the request completes
+      </code>
+            </remarks>
         </member>
         <member name="C:Datadog.iOS.DDHTTPHeadersWriter(Foundation.NSObjectFlag)">
             <param name="t"></param>
@@ -404,9 +498,19 @@
             <remarks></remarks>
         </member>
         <member name="P:Datadog.iOS.DDHTTPHeadersWriter.TraceHeaderFields">
-            <summary></summary>
+            <summary>
+            A dictionary containing the required HTTP Headers for propagating trace information.
+        </summary>
             <value></value>
-            <remarks></remarks>
+            <remarks>
+                <para>Usage:</para>
+                <code>
+            foreach (var (field, value) in writer.TraceHeaderFields)
+            {
+                request.Headers.Add(field, value);
+            }
+          </code>
+            </remarks>
         </member>
         <member name="T:Datadog.iOS.DDInjectEncoding">
             <summary></summary>
@@ -419,8 +523,14 @@
             <summary></summary>
         </member>
         <member name="T:Datadog.iOS.DDLogger">
-            <summary></summary>
-            <remarks></remarks>
+            <summary>Datadog Logger.</summary>
+            <remarks>
+                <para>Usage:</para>
+                <code>
+    // logger reference
+    var logger = DDLogger.Create();
+    </code>
+            </remarks>
         </member>
         <member name="C:Datadog.iOS.DDLogger(Foundation.NSObjectFlag)">
             <param name="t"></param>
@@ -433,21 +543,57 @@
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDLogger.Add(System.String)">
-            <param name="tag"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="tag">Value of the tag.</param>
+            <summary>Adds the tag to all future logs sent by this logger.</summary>
+            <remarks>
+                <para>Tags must start with a letter and:</para>
+                <list type="bullet">
+                    <item>
+                        <description>may contain: alphanumerics, underscores, minuses, colons, periods, and slashes;</description>
+                    </item>
+                    <item>
+                        <description>other special characters are converted to underscores;</description>
+                    </item>
+                    <item>
+                        <description>must be lowercase;</description>
+                    </item>
+                    <item>
+                        <description>and can be at most 200 characters long (tags exceeding this limit will be truncated to first 200 characters).</description>
+                    </item>
+                </list>
+                <para>
+          See also: Defining Tags (https://docs.datadoghq.com/tagging/#defining-tags)</para>
+            </remarks>
         </member>
         <member name="M:Datadog.iOS.DDLogger.AddAttribute(System.String,Foundation.NSObject)">
             <param name="key"></param>
             <param name="value"></param>
-            <summary></summary>
+            <summary>Adds a custom attribute to all future logs sent by this logger.</summary>
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDLogger.AddTag(System.String,System.String)">
             <param name="key"></param>
             <param name="value"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <summary>Adds a <c>"key:value"</c> tag to all future logs sent by this logger.</summary>
+            <remarks>
+                <para>Tags must start with a letter and:</para>
+                <list type="bullet">
+                    <item>
+                        <description>may contain: alphanumerics, underscores, minuses, colons, periods, and slashes;</description>
+                    </item>
+                    <item>
+                        <description>other special characters are converted to underscores;</description>
+                    </item>
+                    <item>
+                        <description>must be lowercase;</description>
+                    </item>
+                    <item>
+                        <description>and can be at most 200 characters long (tags exceeding this limit will be truncated to first 200 characters).</description>
+                    </item>
+                </list>
+                <para>
+          See also: Defining Tags (https://docs.datadoghq.com/tagging/#defining-tags)</para>
+            </remarks>
         </member>
         <member name="P:Datadog.iOS.DDLogger.ClassHandle">
             <summary></summary>
@@ -461,57 +607,63 @@
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDLogger.Critical(System.String)">
-            <param name="message"></param>
-            <summary></summary>
+            <param name="message">The message to be logged.</param>
+            <summary>Sends a CRITICAL log message.</summary>
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDLogger.Critical(System.String,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject})">
-            <param name="message"></param>
-            <param name="attributes"></param>
-            <summary></summary>
+            <param name="message">The message to be logged.</param>
+            <param name="attributes">A dictionary of attributes to add for this message. If an attribute with 
+        the same key already exists in this logger, it will be overridden (only for this message).</param>
+            <summary>Sends a CRITICAL log message.</summary>
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDLogger.Critical(System.String,Foundation.NSError,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject})">
-            <param name="message"></param>
-            <param name="error"></param>
-            <param name="attributes"></param>
-            <summary></summary>
+            <param name="message">The message to be logged.</param>
+            <param name="error">The error information.</param>
+            <param name="attributes">A dictionary of attributes to add for this message. If an attribute with 
+        the same key already exists in this logger, it will be overridden (only for this message).</param>
+            <summary>Sends a CRITICAL log message.</summary>
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDLogger.Debug(System.String)">
-            <param name="message"></param>
-            <summary></summary>
+            <param name="message">The message to be logged.</param>
+            <summary>Sends a DEBUG log message.</summary>
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDLogger.Debug(System.String,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject})">
-            <param name="message"></param>
-            <param name="attributes"></param>
-            <summary></summary>
+            <param name="message">The message to be logged.</param>
+            <param name="attributes">A dictionary of attributes to add for this message. If an attribute with 
+        the same key already exist in this logger, it will be overridden (only for this message).</param>
+            <summary>Sends a DEBUG log message.</summary>
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDLogger.Debug(System.String,Foundation.NSError,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject})">
-            <param name="message"></param>
-            <param name="error"></param>
-            <param name="attributes"></param>
-            <summary></summary>
+            <param name="message">The message to be logged.</param>
+            <param name="error">The error information.</param>
+            <param name="attributes">A dictionary of attributes to add for this message. If an attribute with 
+        the same key already exist in this logger, it will be overridden (only for this message).</param>
+            <summary>Sends a DEBUG log message.</summary>
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDLogger.Error(System.String)">
-            <param name="message"></param>
-            <summary></summary>
+            <param name="message">The message to be logged.</param>
+            <summary>Sends an ERROR log message.</summary>
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDLogger.Error(System.String,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject})">
-            <param name="message"></param>
-            <param name="attributes"></param>
-            <summary></summary>
+            <param name="message">The message to be logged.</param>
+            <param name="attributes">A dictionary of attributes to add for this message. If an attribute with 
+        the same key already exist in this logger, it will be overridden (only for this message).</param>
+            <summary>Sends an ERROR log message.</summary>
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDLogger.Error(System.String,Foundation.NSError,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject})">
-            <param name="message"></param>
-            <param name="error"></param>
-            <param name="attributes"></param>
-            <summary></summary>
+            <param name="message">The message to be logged.</param>
+            <param name="error">The error information.</param>
+            <param name="attributes">A dictionary of attributes to add for this message. If an attribute with 
+        the same key already exist in this logger, it will be overridden (only for this message).</param>
+            <summary>Sends a ERROR log message.</summary>
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDLogger.Info(System.String)">
@@ -551,18 +703,27 @@
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDLogger.Remove(System.String)">
-            <param name="tag"></param>
-            <summary></summary>
+            <param name="tag">The value of the tag to remove.</param>
+            <summary>
+        Removes the tag from all future logs sent by this logger. 
+        Previous logs won't lose the this tag if created prior to this call.
+        </summary>
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDLogger.RemoveAttribute(System.String)">
             <param name="key"></param>
-            <summary></summary>
+            <summary>
+        Removes the custom attribute from all future logs sent by this logger. 
+        Previous logs won't lose this attribute if sent prior to this call.
+        </summary>
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDLogger.RemoveTag(System.String)">
-            <param name="key"></param>
-            <summary></summary>
+            <param name="key">The key of the tag to remove.</param>
+            <summary>
+        Remove all tags with the given key from all future logs sent by this logger. 
+        Previous logs won't lose this tag if created prior to this call.
+        </summary>
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDLogger.Warn(System.String)">
@@ -584,7 +745,7 @@
             <remarks></remarks>
         </member>
         <member name="T:Datadog.iOS.DDLoggerConfiguration">
-            <summary></summary>
+            <summary>Datadog logger.</summary>
             <remarks></remarks>
         </member>
         <member name="C:Datadog.iOS.DDLoggerConfiguration(Foundation.NSObjectFlag)">
@@ -690,7 +851,10 @@
             <remarks></remarks>
         </member>
         <member name="T:Datadog.iOS.DDLogLevel">
-            <summary></summary>
+            <summary>
+    Log levels ordered by their severity, with <c>Debug</c> being the least severe and 
+    <c>Critical</c> being the most severe.
+    </summary>
             <remarks></remarks>
         </member>
         <member name="F:Datadog.iOS.DDLogLevel.Critical">
@@ -712,8 +876,24 @@
             <summary></summary>
         </member>
         <member name="T:Datadog.iOS.DDLogs">
-            <summary></summary>
-            <remarks></remarks>
+            <summary>iOS Log Collection</summary>
+            <remarks>
+                <para>Send logs to Datadog from your iOS applications with Datadog's client-side logging library and leverage the following features:</para>
+                <list type="bullet">
+                    <item>
+                        <term>Log to Datadog in JSON format natively.</term>
+                    </item>
+                    <item>
+                        <term>Use default and add custom attributes to each log sent.</term>
+                    </item>
+                    <item>
+                        <term>Record real client IP addresses and User-Agents.</term>
+                    </item>
+                    <item>
+                        <term>Leverage optimized network usage with automatic bulk posts.</term>
+                    </item>
+                </list>
+            </remarks>
         </member>
         <member name="C:Datadog.iOS.DDLogs">
             <summary></summary>
@@ -732,7 +912,7 @@
         <member name="M:Datadog.iOS.DDLogs.AddAttribute(System.String,Foundation.NSObject)">
             <param name="key"></param>
             <param name="value"></param>
-            <summary></summary>
+            <summary>Adds a custom attribute to all future logs sent by any logger created from the provided Core.</summary>
             <remarks></remarks>
         </member>
         <member name="P:Datadog.iOS.DDLogs.ClassHandle">
@@ -746,13 +926,18 @@
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDLogs.RemoveAttribute(System.String)">
-            <param name="key"></param>
-            <summary></summary>
+            <param name="key">The key of an attribute that will be removed.</param>
+            <summary>
+       Removes the custom attribute from all future logs sent. 
+       Previous logs won't lose this attribute if sent prior to this call.
+        </summary>
             <remarks></remarks>
         </member>
         <member name="T:Datadog.iOS.DDLogsConfiguration">
-            <summary></summary>
-            <remarks></remarks>
+            <summary>
+    The Logs general configuration.
+    </summary>
+            <remarks>This configuration will be applied to all DDLogs instances.</remarks>
         </member>
         <member name="C:Datadog.iOS.DDLogsConfiguration(Foundation.NSObjectFlag)">
             <param name="t"></param>
@@ -780,7 +965,7 @@
             <remarks></remarks>
         </member>
         <member name="T:Datadog.iOS.DDNSURLSessionDelegate">
-            <summary></summary>
+            <summary>Configuration of URLSession instrumentation.</summary>
             <remarks></remarks>
         </member>
         <member name="C:Datadog.iOS.DDNSURLSessionDelegate">
@@ -788,7 +973,8 @@
             <remarks></remarks>
         </member>
         <member name="C:Datadog.iOS.DDNSURLSessionDelegate(Foundation.NSDictionary{Foundation.NSString,Foundation.NSSet{Datadog.iOS.DDTracingHeaderType}})">
-            <param name="additionalFirstPartyHostsWithHeaderTypes"></param>
+            <param name="additionalFirstPartyHostsWithHeaderTypes">
+        Dictionary of hosts and tracing header types to use. Note: Hosts must not include "http(s)://" prefix.</param>
             <summary></summary>
             <remarks></remarks>
         </member>
@@ -849,7 +1035,7 @@
             <remarks></remarks>
         </member>
         <member name="T:Datadog.iOS.DDRUM">
-            <summary></summary>
+            <summary>An entry point to the Datadog RUM feature.</summary>
             <remarks></remarks>
         </member>
         <member name="C:Datadog.iOS.DDRUM">
@@ -872,9 +1058,9 @@
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDRUM.Enable(Datadog.iOS.DDRUMConfiguration)">
-            <param name="configuration"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="configuration">Configuration of the feature.</param>
+            <summary>Enables the Datadog RUM feature.</summary>
+            <remarks>After RUM is enabled, use <see cref="DDRUMMonitor.Shared" /> to collect RUM events.</remarks>
         </member>
         <member name="T:Datadog.iOS.DDRUMAction">
             <summary></summary>
@@ -2182,7 +2368,7 @@
             <summary></summary>
         </member>
         <member name="T:Datadog.iOS.DDRUMConfiguration">
-            <summary></summary>
+            <summary>RUM feature configuration.</summary>
             <remarks></remarks>
         </member>
         <member name="C:Datadog.iOS.DDRUMConfiguration(Foundation.NSObjectFlag)">
@@ -2196,17 +2382,33 @@
             <remarks></remarks>
         </member>
         <member name="C:Datadog.iOS.DDRUMConfiguration(System.String)">
-            <param name="applicationId"></param>
+            <param name="applicationId">
+                <see cref="ApplicationId" />
+            </param>
             <summary></summary>
             <remarks></remarks>
         </member>
         <member name="P:Datadog.iOS.DDRUMConfiguration.AppHangThreshold">
-            <summary></summary>
+            <summary>Enables App Hangs monitoring with the given threshold (in seconds).</summary>
             <value></value>
-            <remarks></remarks>
+            <remarks>
+                <para>
+            Only App Hangs that last more than this threshold will be reported. The minimal allowed value for this option is <c>0.1</c> seconds.
+            To disable hangs monitoring, set this parameter to <c>nil</c>.
+          </para>
+                <para>
+            Note: Be cautious when setting the threshold to very small values, as it may lead to excessive reporting of hangs.
+            The SDK implements a secondary thread for monitoring App Hangs. To reduce CPU utilization, it tracks hangs with a tolerance of 2.5%, meaning that
+            some hangs lasting very close to this threshold may not be reported.
+          </para>
+                <para>
+            Note: App Hangs monitoring requires Datadog Crash Reporting to be enabled. Otherwise stack trace will be not reported in App Hang errors.
+          </para>
+                <para>Default: <c>NULL</c> (hangs monitoring disabled).</para>
+            </remarks>
         </member>
         <member name="P:Datadog.iOS.DDRUMConfiguration.ApplicationId">
-            <summary></summary>
+            <summary>An unique identifier of the RUM application in Datadog.</summary>
             <value></value>
             <remarks></remarks>
         </member>
@@ -2216,89 +2418,221 @@
             <remarks></remarks>
         </member>
         <member name="P:Datadog.iOS.DDRUMConfiguration.CustomEndpoint">
-            <summary></summary>
+            <summary>
+          Custom server URL for sending RUM data.
+        </summary>
             <value></value>
-            <remarks></remarks>
+            <remarks>
+                <para>
+            Default: <c>null</c>.
+          </para>
+            </remarks>
         </member>
         <member name="P:Datadog.iOS.DDRUMConfiguration.LongTaskThreshold">
-            <summary></summary>
+            <summary>Enables RUM long tasks tracking with the given threshold (in seconds).</summary>
             <value></value>
-            <remarks></remarks>
+            <remarks>
+                <para>
+            Any operation on the main thread that exceeds this threshold will be reported as a RUM long task.
+            To disable RUM long tasks tracking, set <c>null</c> or <c>0</c>.
+          </para>
+                <para>Default: <c>0.1</c>.</para>
+            </remarks>
         </member>
         <member name="P:Datadog.iOS.DDRUMConfiguration.OnSessionStart">
-            <summary></summary>
+            <summary>
+          RUM session start callback.
+        </summary>
             <value></value>
-            <remarks></remarks>
+            <remarks>
+                <para>
+            It takes 2 arguments:
+            - Newly started session ID.
+            - Flag indicating whether or not the session was discarded due to the sampling rate.
+          </para>
+                <para>
+            Keep the implementation fast and do not make any assumptions on the thread that runs this callback.
+          </para>
+                <para>Default: <c>null</c>.</para>
+            </remarks>
         </member>
         <member name="P:Datadog.iOS.DDRUMConfiguration.SessionSampleRate">
-            <summary></summary>
+            <summary>The sampling rate for RUM sessions.</summary>
             <value></value>
-            <remarks></remarks>
+            <remarks>
+                <para>
+          It must be a number between 0.0 and 100.0, where 0 means no sessions will be sent
+          and 100 means all will be uploaded.
+        </para>
+                <para>Default: <c>100.0</c>.</para>
+            </remarks>
         </member>
         <member name="M:Datadog.iOS.DDRUMConfiguration.SetActionEventMapper(System.Func{Datadog.iOS.DDRUMActionEvent,Datadog.iOS.DDRUMActionEvent})">
-            <param name="mapper"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="mapper" />
+            <summary>
+          Sets a custom mapper for RUM action events.
+        </summary>
+            <remarks>
+                <para>
+            It can be used to modify action events before they are sent. The implementation of the mapper should
+            obtain a mutable copy of <see cref="DDRUMActionEvent" />, modify it, and return it. Returning <c>null</c> will drop the event.
+            Keep the implementation fast and do not make any assumptions on the thread used to run it.
+          </para>
+                <para>Default: <c>null</c>.</para>
+            </remarks>
         </member>
         <member name="M:Datadog.iOS.DDRUMConfiguration.SetErrorEventMapper(System.Func{Datadog.iOS.DDRUMErrorEvent,Datadog.iOS.DDRUMErrorEvent})">
-            <param name="mapper"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="mapper" />
+            <summary>
+          Sets a custom mapper for RUM error events.
+        </summary>
+            <remarks>
+                <para>
+            It can be used to modify error events before they are sent. The implementation of the mapper should
+            obtain a mutable copy of <see cref="DDRUMErrorEvent" />, modify it, and return it. Returning <c>null</c> will drop the event.
+            Keep the implementation fast and do not make any assumptions on the thread used to run it.
+          </para>
+                <para>Default: <c>null</c>.</para>
+            </remarks>
         </member>
         <member name="M:Datadog.iOS.DDRUMConfiguration.SetLongTaskEventMapper(System.Func{Datadog.iOS.DDRUMLongTaskEvent,Datadog.iOS.DDRUMLongTaskEvent})">
-            <param name="mapper"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="mapper" />
+            <summary>
+          Sets a custom mapper for RUM long task events.
+        </summary>
+            <remarks>
+                <para>
+            It can be used to modify long task events before they are sent. The implementation of the mapper should
+            obtain a mutable copy of <see cref="DDRUMLongTaskEvent" />, modify it, and return it. Returning <c>null</c> will drop the event.
+            Keep the implementation fast and do not make any assumptions on the thread used to run it.
+          </para>
+                <para>Default: <c>null</c>.</para>
+            </remarks>
         </member>
         <member name="M:Datadog.iOS.DDRUMConfiguration.SetResourceEventMapper(System.Func{Datadog.iOS.DDRUMResourceEvent,Datadog.iOS.DDRUMResourceEvent})">
             <param name="mapper"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <summary>Custom mapper for RUM resource events.</summary>
+            <remarks>
+                <para>
+            It can be used to modify resource events before they are sent. The implementation of the mapper should
+            obtain a mutable copy of <see cref="DDRUMResourceEvent" />, modify it, and return it. Returning <c>null</c> will drop the event.
+            Keep the implementation fast and do not make any assumptions on the thread used to run it.
+          </para>
+                <para>Default: <c>null</c>.</para>
+            </remarks>
         </member>
         <member name="M:Datadog.iOS.DDRUMConfiguration.SetURLSessionTracking(Datadog.iOS.DDRUMURLSessionTracking)">
-            <param name="tracking"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="tracking" />
+            <summary>The configuration for automatic RUM resources tracking.</summary>
+            <remarks>
+                <para>
+              RUM resources tracking requires enabling <see cref="DDURLSessionInstrumentation" />. See <see cref="URLSessionInstrumentation.Enable()" />.
+           </para>
+                <para>
+              Default: <c>null</c> - which means automatic RUM resource tracking is not enabled by default.
+            </para>
+            </remarks>
         </member>
         <member name="M:Datadog.iOS.DDRUMConfiguration.SetViewEventMapper(System.Func{Datadog.iOS.DDRUMViewEvent,Datadog.iOS.DDRUMViewEvent})">
-            <param name="mapper"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="mapper" />
+            <summary>Sets a custom mapper for RUM view events.</summary>
+            <remarks>
+                <para>
+            It can be used to modify view events before they are sent. The implementation of the mapper should
+            obtain a mutable copy of <see cref="DDRUMViewEvent" />, modify it, and return it. Keep the implementation fast
+            and do not make any assumptions on the thread used to run it.
+          </para>
+                <para>
+            Note: This mapper ensures that all views are sent by preventing the return of <c>null</c>. To drop certain automatically
+            collected RUM views, adjust the implementation of the view predicate (see the <see cref="UIKitViewsPredicate" /> option).
+          </para>
+                <para>Default: <c>null</c>.</para>
+            </remarks>
         </member>
         <member name="P:Datadog.iOS.DDRUMConfiguration.TelemetrySampleRate">
-            <summary></summary>
+            <summary>The sampling rate for SDK internal telemetry utilized by Datadog.</summary>
             <value></value>
-            <remarks></remarks>
+            <remarks>
+                <para>This telemetry is used to monitor the internal workings of the entire Datadog iOS SDK.</para>
+                <para>It must be a number between 0.0 and 100.0, where 0 means no telemetry will be sent, and 100 means all will be uploaded.</para>
+                <para>The default value is 20.0.</para>
+            </remarks>
         </member>
         <member name="P:Datadog.iOS.DDRUMConfiguration.TrackBackgroundEvents">
-            <summary></summary>
+            <summary>Determines whether RUM events should be tracked when no view is active (including when the app is in the background).</summary>
             <value></value>
-            <remarks></remarks>
+            <remarks>
+                <para>
+            If enabled, RUM will attach events to an automatically created "background" view.
+          </para>
+                <para>
+            Note: Enabling this option may increase the number of sessions tracked and result in higher billing.
+          </para>
+                <para>Default: <c>false</c>.</para>
+            </remarks>
         </member>
         <member name="P:Datadog.iOS.DDRUMConfiguration.TrackFrustrations">
-            <summary></summary>
+            <summary>Determines whether automatic tracking of user frustrations should be enabled.</summary>
             <value></value>
-            <remarks></remarks>
+            <remarks>
+                <para>RUM detects "error taps"  when an error follows a RUM tap action.</para>
+                <para>Default: <c>true</c>.</para>
+            </remarks>
         </member>
         <member name="P:Datadog.iOS.DDRUMConfiguration.TrackWatchdogTerminations">
-            <summary></summary>
+            <summary>Determines whether the SDK should track application termination by the watchdog.</summary>
             <value></value>
-            <remarks></remarks>
+            <remarks>
+                <para>
+           Read more about watchdog terminations at https://developer.apple.com/documentation/xcode/addressing-watchdog-terminations
+          </para>
+                <para>Default: <c>false</c>.</para>
+            </remarks>
         </member>
-        <member name="P:Datadog.iOS.DDRUMConfiguration.UiKitActionsPredicate">
-            <summary></summary>
+        <member name="P:Datadog.iOS.DDRUMConfiguration.UIKitActionsPredicate">
+            <summary>The predicate for automatically tracking <see cref="UITouch" /> events as RUM actions.</summary>
             <value></value>
-            <remarks></remarks>
+            <remarks>
+                <para>
+            RUM will query this predicate for each <see cref="UIView" /> that the user interacts with. The predicate implementation
+            should return RUM action parameters if the given interaction should be accepted, or <c>null</c> to ignore it.
+            Touch events on the keyboard are ignored for privacy reasons.
+          </para>
+                <para>
+            You can use <see cref="DDDefaultUIKitRUMActionsPredicate" /> or create your own predicate by
+            implementing <see cref="IDDUIKitRUMActionsPredicate" />.
+          </para>
+                <para>
+            Note: Automatic RUM action tracking involves swizzling the <c>UIApplication.SendEvent()</c> method.
+          </para>
+                <para>Default: <c>null</c> - which means automatic RUM action tracking is not enabled by default.</para>
+            </remarks>
         </member>
-        <member name="P:Datadog.iOS.DDRUMConfiguration.UiKitViewsPredicate">
-            <summary></summary>
+        <member name="P:Datadog.iOS.DDRUMConfiguration.UIKitViewsPredicate">
+            <summary>The predicate for automatically tracking <c>UIViewControllers</c> as RUM views.</summary>
             <value></value>
-            <remarks></remarks>
+            <remarks>
+                <para>
+          RUM will query this predicate for each <c>UIViewController</c> presented in the app. The predicate implementation
+          should return RUM view parameters if the given controller should start a view, or <c>null</c> to ignore it.
+        </para>
+                <para>
+          You can use <see cref="Datadog.iOS.DDDefaultUIKitRUMViewsPredicate" /> 
+          or create your own predicate by implementing <see cref="Datadog.iOS.IDDUIKitRUMViewsPredicate" />.
+        </para>
+                <para>
+          Note: Automatic RUM views tracking involves swizzling the <c>UIViewController</c> lifecycle methods.
+        </para>
+                <para>Default: <c>null</c> - which means automatic RUM view tracking is not enabled by default.</para>
+            </remarks>
         </member>
         <member name="P:Datadog.iOS.DDRUMConfiguration.VitalsUpdateFrequency">
-            <summary></summary>
+            <summary>Sets the preferred frequency for collecting RUM vitals.</summary>
             <value></value>
-            <remarks></remarks>
+            <remarks>
+                <para>To disable RUM vitals monitoring, set <c>null</c>.</para>
+                <para>Default: <c>Average</c>.</para>
+            </remarks>
         </member>
         <member name="T:Datadog.iOS.DDRUMErrorEvent">
             <summary></summary>
@@ -3948,7 +4282,7 @@
             <summary>Error originated in a webview.</summary>
         </member>
         <member name="T:Datadog.iOS.DDRUMFirstPartyHostsTracing">
-            <summary></summary>
+            <summary>Defines configuration for first-party hosts in distributed tracing.</summary>
             <remarks></remarks>
         </member>
         <member name="C:Datadog.iOS.DDRUMFirstPartyHostsTracing(Foundation.NSDictionary{Foundation.NSString,Foundation.NSSet{Datadog.iOS.DDTracingHeaderType}})">
@@ -5021,197 +5355,394 @@
     A class for manual interaction with the RUM feature. It records RUM events that are sent to Datadog RUM.
     </summary>
             <remarks>
-                <para>There can be only one active RUM monitor for certain instance of Datadog SDK. It gets enabled along with 
+                <para>There can be only one active RUM monitor for a particular instance of the Datadog SDK. It gets enabled along with 
       the call to <c>DDRUM.Enable (DDRUMConfiguration configuration)</c>:</para>
                 <para>
-                    <c>
-          // Enable RUM feature:
-          RUM.Enable (DDRUMConfiguration configuration)
+                    <code>
+          // Enable the RUM feature:
+          DDRUM.Enable (DDRUMConfiguration configuration)
 
           // Use RUM monitor:
           DDRUMMonitor.Shared.StartView(...)
-        </c>
+        </code>
                 </para>
             </remarks>
         </member>
         <member name="C:Datadog.iOS.DDRUMMonitor(Foundation.NSObjectFlag)">
-            <param name="t"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="t" />
+            <summary />
+            <remarks />
         </member>
         <member name="C:Datadog.iOS.DDRUMMonitor(ObjCRuntime.NativeHandle)">
-            <param name="handle"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="handle" />
+            <summary />
+            <remarks />
         </member>
         <member name="M:Datadog.iOS.DDRUMMonitor.AddAction(Datadog.iOS.DDRUMActionType,System.String,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject})">
-            <param name="type"></param>
-            <param name="name"></param>
-            <param name="attributes"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="type">
+        The type of the action.
+        </param>
+            <param name="name">
+        The name of the action.
+        </param>
+            <param name="attributes">
+        Custom attributes to attach to this action.
+        </param>
+            <summary>
+        Adds a RUM action that has no duration.
+        </summary>
+            <remarks />
         </member>
         <member name="M:Datadog.iOS.DDRUMMonitor.AddAttribute(System.String,Foundation.NSObject)">
-            <param name="key"></param>
-            <param name="value"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="key">
+        The key for this attribute.
+        See <see cref="AttributeKey" /> documentation for information about nesting attribute values using dot <c>.</c> syntax.
+        </param>
+            <param name="value">
+        Any value.
+        See <see cref="AttributeValue" /> documentation for information about nested encoding containers limitation.
+        </param>
+            <summary>
+        Adds a custom attribute to next RUM events.
+        </summary>
+            <remarks />
         </member>
         <member name="M:Datadog.iOS.DDRUMMonitor.AddError(Foundation.NSError,Datadog.iOS.DDRUMErrorSource,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject})">
-            <param name="error"></param>
-            <param name="source"></param>
-            <param name="attributes"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="error">
+        The <see cref="NSError" /> object. It will be used to infer error details.
+        </param>
+            <param name="source">
+        The origin of the error.
+        </param>
+            <param name="attributes">
+        Custom attributes to attach to this error.
+        </param>
+            <summary>
+        Adds a RUM error to the current RUM view.
+        </summary>
+            <remarks />
         </member>
         <member name="M:Datadog.iOS.DDRUMMonitor.AddError(System.String,System.String,Datadog.iOS.DDRUMErrorSource,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject})">
-            <param name="message"></param>
-            <param name="stack"></param>
-            <param name="source"></param>
-            <param name="attributes"></param>
-            <summary></summary>
+            <param name="message">
+        The error message.
+        </param>
+            <param name="stack">
+        The stack trace of the error. No specific format is required. If not specified, it will be inferred from `file` and `line`.
+        </param>
+            <param name="source">
+        The origin of the error.
+        </param>
+            <param name="attributes">
+        Custom attributes to attach to this error.
+        </param>
+            <summary>
+        Adds a RUM error to the current RUM view.
+        </summary>
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDRUMMonitor.AddFeatureFlagEvaluationWithName(System.String,Foundation.NSObject)">
-            <param name="name"></param>
-            <param name="value"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="name">
+        The name of the feature flag.
+        </param>
+            <param name="value">
+        The result of the evaluation.
+        </param>
+            <summary>
+        Adds the result of evaluating a feature flag to the current RUM view.
+        </summary>
+            <remarks>
+        Feature flag evaluations are local to the active view and are cleared when the view is stopped.
+        </remarks>
         </member>
         <member name="M:Datadog.iOS.DDRUMMonitor.AddResourceMetrics(System.String,Foundation.NSUrlSessionTaskMetrics,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject})">
-            <param name="resourceKey"></param>
-            <param name="metrics"></param>
-            <param name="attributes"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="resourceKey">
+        The key representing the resource. It must match the one used to start the resource.
+        </param>
+            <param name="metrics">
+        The <c>NSUrlSessionTaskMetrics</c> for this resource.
+        </param>
+            <param name="attributes">
+        Custom attributes to attach to this resource.
+        </param>
+            <summary>
+        Adds temporal metrics to given RUM resource.
+        </summary>
+            <remarks />
         </member>
         <member name="M:Datadog.iOS.DDRUMMonitor.AddTiming(System.String)">
-            <param name="name"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="name">
+        The name of the custom timing attribute. It must be unique for each timing.
+        </param>
+            <summary>Records a specific timing within the current RUM view.</summary>
+            <remarks>The duration of the timing is calculated as the number of nanoseconds elapsed between the start of the view and the addition of the timing.</remarks>
         </member>
         <member name="P:Datadog.iOS.DDRUMMonitor.ClassHandle">
-            <summary></summary>
-            <value></value>
-            <remarks></remarks>
-        </member>
-        <member name="M:Datadog.iOS.DDRUMMonitor.CurrentSessionIDWithCompletion(System.Action{Foundation.NSString})">
-            <param name="completion"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <summary />
+            <value />
+            <remarks />
         </member>
         <member name="P:Datadog.iOS.DDRUMMonitor.Debug">
-            <summary></summary>
-            <value></value>
-            <remarks></remarks>
+            <summary>
+        Enable a debug utility to inspect the active RUM view. Use it only when debugging.
+        </summary>
+            <value>
+        The default value is false.
+        </value>
+            <remarks>
+        If enabled, a debugging outline will be displayed on top of the application, indicating the name of the active RUM view.
+        This can be helpful for debugging RUM instrumentation issues in your app.
+        </remarks>
+        </member>
+        <member name="M:Datadog.iOS.DDRUMMonitor.GetCurrentSessionIdViaCallback(System.Action{Foundation.NSString})">
+            <param name="callback">The callback that will recieve the current session ID. This will be called from a background thread.</param>
+            <summary>
+          Get the currently active session ID. Returns <c>null</c> if no sessions are currently active or if
+          the current session is sampled out.
+        </summary>
+            <remarks>
+                <para>
+          This method uses an asynchronous callback to ensure all pending RUM events have been processed
+          up to the moment of the call.
+        </para>
+            </remarks>
         </member>
         <member name="M:Datadog.iOS.DDRUMMonitor.RemoveAttribute(System.String)">
-            <param name="key"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="key">
+        The key for the attribute that will be removed.
+        </param>
+            <summary>
+        Removes an attribute from next RUM events.
+        </summary>
+            <remarks>
+        Events created prior to this call will not lose this attribute.
+        </remarks>
         </member>
         <member name="P:Datadog.iOS.DDRUMMonitor.Shared">
-            <summary></summary>
+            <summary>
+        Obtains the RUM monitor for manual interaction with the RUM feature.
+        </summary>
             <value></value>
-            <remarks></remarks>
+            <remarks>
+        It requires <see cref="DDRUM.Enable" /> to be called first - otherwise it will return a no-op implementation.
+        </remarks>
         </member>
         <member name="M:Datadog.iOS.DDRUMMonitor.StartAction(Datadog.iOS.DDRUMActionType,System.String,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject})">
-            <param name="type"></param>
-            <param name="name"></param>
-            <param name="attributes"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="type">
+        The type of the action.
+        </param>
+            <param name="name">
+        The name of the action.
+        </param>
+            <param name="attributes">
+        Custom attributes to attach to this action.
+        </param>
+            <summary>
+        Starts a RUM action.
+        </summary>
+            <remarks>
+        If the action is not stopped with <see cref="StopAction(Datadog.iOS.DDRUMActionType)" />, it will be stopped automatically after 10 seconds.
+        </remarks>
         </member>
         <member name="M:Datadog.iOS.DDRUMMonitor.StartResource(System.String,Foundation.NSUrl,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject})">
-            <param name="resourceKey"></param>
-            <param name="url"></param>
-            <param name="attributes"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="resourceKey">
+        The key representing the resource. It must be unique among all resources being currently tracked.
+        </param>
+            <param name="url">
+        The <c>NSUrl</c> of this resource.
+        </param>
+            <param name="attributes">
+        Custom attributes to attach to this resource.
+        </param>
+            <summary>
+        Starts a RUM resource.
+        </summary>
+            <remarks />
         </member>
         <member name="M:Datadog.iOS.DDRUMMonitor.StartResource(System.String,Foundation.NSUrlRequest,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject})">
-            <param name="resourceKey"></param>
-            <param name="request"></param>
-            <param name="attributes"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="resourceKey">
+        The key representing the resource. It must be unique among all resources being currently tracked.
+        </param>
+            <param name="request">
+        The <c>NSUrlRequest</c> of this resource.
+        </param>
+            <param name="attributes">
+        Custom attributes to attach to this resource.
+        </param>
+            <summary>
+        Starts a RUM resource.
+        </summary>
+            <remarks />
         </member>
         <member name="M:Datadog.iOS.DDRUMMonitor.StartResource(System.String,Datadog.iOS.DDRUMMethod,System.String,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject})">
-            <param name="resourceKey"></param>
-            <param name="httpMethod"></param>
-            <param name="urlString"></param>
-            <param name="attributes"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="resourceKey">
+        The key representing the resource. It must be unique among all resources being currently tracked.
+        </param>
+            <param name="httpMethod">
+        A <see cref="DDRUMMethod" /> representing the HTTP method of this resource.
+        </param>
+            <param name="urlString">
+        The URL string of this resource.
+        </param>
+            <param name="attributes">
+        Custom attributes to attach to this resource.
+        </param>
+            <summary>
+        Starts a RUM resource.
+        </summary>
+            <remarks />
         </member>
         <member name="M:Datadog.iOS.DDRUMMonitor.StartView(System.String,System.String,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject})">
-            <param name="key"></param>
-            <param name="name"></param>
-            <param name="attributes"></param>
-            <summary></summary>
+            <param name="key">
+          A <c>string</c> value identifying this view. It must match the key passed later to <see cref="StopView(string,Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;)" />.
+        </param>
+            <param name="name">
+          The name of the view. If not provided, the <see cref="key" /> name will be used.
+        </param>
+            <param name="attributes">
+          Custom attributes to attach to this view.
+        </param>
+            <summary>
+          Starts the RUM view.
+        </summary>
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDRUMMonitor.StartView(UIKit.UIViewController,System.String,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject})">
-            <param name="viewController"></param>
-            <param name="name"></param>
-            <param name="attributes"></param>
-            <summary></summary>
+            <param name="viewController">
+          The instance of <c>UIViewController</c> representing this view.
+        </param>
+            <param name="name">
+          The name of the view. If not provided, the <see cref="viewController" /> class name will be used.
+        </param>
+            <param name="attributes">
+          Custom attributes to attach to this view.
+        </param>
+            <summary>
+          Starts the RUM view.
+        </summary>
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDRUMMonitor.StopAction(Datadog.iOS.DDRUMActionType,System.String,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject})">
-            <param name="type"></param>
-            <param name="name"></param>
-            <param name="attributes"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="type">
+        The type of the action. It should match the type passed when starting this action.
+        </param>
+            <param name="name">
+        The name of the action. If not provided, it will use the name the action was started with.
+        </param>
+            <param name="attributes">
+        Custom attributes to attach to this action.
+        </param>
+            <summary>
+        Stops a RUM action.
+        </summary>
+            <remarks>
+        The action must be first started with <see cref="StartAction(Datadog.iOS.DDRUMActionType)" />.
+        </remarks>
         </member>
         <member name="M:Datadog.iOS.DDRUMMonitor.StopResource(System.String,Foundation.NSError,Foundation.NSUrlResponse,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject})">
-            <param name="resourceKey"></param>
-            <param name="error"></param>
-            <param name="response"></param>
-            <param name="attributes"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="resourceKey">
+        The key representing the resource. It must match the one used to start the resource.
+        </param>
+            <param name="error">
+        The <c>NSError</c> object. It will be used to infer error details.
+        </param>
+            <param name="response">
+         An optional <c>NSUrlResponse</c> received for the resource.
+        </param>
+            <param name="attributes">
+        Custom attributes to attach to this resource.
+        </param>
+            <summary>
+        Stops a RUM resource and reports an error.
+        </summary>
+            <remarks />
         </member>
         <member name="M:Datadog.iOS.DDRUMMonitor.StopResource(System.String,Foundation.NSUrlResponse,Foundation.NSNumber,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject})">
-            <param name="resourceKey"></param>
-            <param name="response"></param>
-            <param name="size"></param>
-            <param name="attributes"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="resourceKey">The key representing the resource. It must match the one used to start the resource.</param>
+            <param name="response">
+        The <c>NSUrlResponse</c> received for the resource.
+        </param>
+            <param name="size">
+        An optional size of the data received for the resource (in bytes). 
+        If not provided, it will be inferred from the "Content-Length" header of the <c>response</c>.
+        </param>
+            <param name="attributes">
+        Custom attributes to attach to this resource.
+        </param>
+            <summary>
+        Stops a RUM resource.
+        </summary>
+            <remarks />
         </member>
         <member name="M:Datadog.iOS.DDRUMMonitor.StopResource(System.String,System.String,Foundation.NSUrlResponse,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject})">
-            <param name="resourceKey"></param>
-            <param name="message"></param>
-            <param name="response"></param>
-            <param name="attributes"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="resourceKey">
+        The key representing the resource. It must match the one used to start the resource.
+        </param>
+            <param name="message">
+        The message explaining the Resource failure.
+        </param>
+            <param name="response">
+        An optional <c>NSUrlResponse</c> received for the resource.
+        </param>
+            <param name="attributes">
+        Custom attributes to attach to this resource.
+        </param>
+            <summary>
+        Stops a RUM resource and reports an error.
+        </summary>
+            <remarks />
         </member>
         <member name="M:Datadog.iOS.DDRUMMonitor.StopResource(System.String,Foundation.NSNumber,Datadog.iOS.DDRUMResourceType,Foundation.NSNumber,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject})">
-            <param name="resourceKey"></param>
-            <param name="statusCode"></param>
-            <param name="kind"></param>
-            <param name="size"></param>
-            <param name="attributes"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="resourceKey">
+        The key representing the resource. It must match the one used to start the resource.
+        </param>
+            <param name="statusCode">
+        HTTP code of the response.
+        </param>
+            <param name="kind">
+        Type of the resource.
+        </param>
+            <param name="size">
+        An optional size of the data received for the resource (in bytes).
+        </param>
+            <param name="attributes">
+        Custom attributes to attach to this resource.
+        </param>
+            <summary>
+        Stops a RUM resource.
+        </summary>
+            <remarks />
         </member>
         <member name="M:Datadog.iOS.DDRUMMonitor.StopSession">
-            <summary></summary>
-            <remarks></remarks>
+            <summary>
+        Stops the current RUM session.
+        </summary>
+            <remarks>
+        A new session will start in response to a call to <see cref="StartView" /> or <see cref="AddAction" />.
+        If the session is started because of a call to <c>AddAction</c>, the last known view is restarted in the new session.
+        </remarks>
         </member>
         <member name="M:Datadog.iOS.DDRUMMonitor.StopView(System.String,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject})">
-            <param name="key"></param>
-            <param name="attributes"></param>
-            <summary></summary>
+            <param name="key">
+          A <c>string</c> value identifying this view. It must match the <c>key</c> passed earlier to <see cref="StartView(string,string,Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;)" />.
+        </param>
+            <param name="attributes">
+          Custom attributes to attach to this view.
+        </param>
+            <summary>
+          Stops the RUM view.
+        </summary>
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDRUMMonitor.StopView(UIKit.UIViewController,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject})">
-            <param name="viewController"></param>
-            <param name="attributes"></param>
-            <summary></summary>
+            <param name="viewController">
+          The instance of <c>UIViewController</c> representing this view.
+        </param>
+            <param name="attributes">
+          Custom attributes to attach to this view.
+        </param>
+            <summary>
+          Stops the RUM view.
+        </summary>
             <remarks></remarks>
         </member>
         <member name="T:Datadog.iOS.DDRUMResourceEvent">
@@ -6737,7 +7268,7 @@
             <summary></summary>
         </member>
         <member name="T:Datadog.iOS.DDRUMURLSessionTracking">
-            <summary></summary>
+            <summary>Configuration of automatic RUM resources tracking.</summary>
             <remarks></remarks>
         </member>
         <member name="C:Datadog.iOS.DDRUMURLSessionTracking">
@@ -6760,17 +7291,63 @@
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDRUMURLSessionTracking.SetFirstPartyHostsTracing(Datadog.iOS.DDRUMFirstPartyHostsTracing)">
-            <param name="firstPartyHostsTracing"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="firstPartyHostsTracing" />
+            <summary>Determines distributed tracing configuration for particular first-party hosts.</summary>
+            <remarks>
+                <para>
+            Each request is classified as first-party or third-party based on the first-party hosts configured.
+          </para>
+                <para>For example:</para>
+                <list type="bullet">
+                    <item>
+                        <description>If "example.com" is defined as a first-party host:</description>
+                        <list type="bullet">
+                            <item>
+                                <description>First-party URL examples: https://example.com/ and https://api.example.com/v2/users</description>
+                            </item>
+                            <item>
+                                <description>Third-party URL example: https://foo.com/</description>
+                            </item>
+                        </list>
+                    </item>
+                    <item>
+                        <description>If "api.example.com" is defined as a first-party host:</description>
+                        <list type="bullet">
+                            <item>
+                                <description>First-party URL examples: https://api.example.com/ and https://api.example.com/v2/users</description>
+                            </item>
+                            <item>
+                                <description>Third-party URL examples: https://example.com/ and https://foo.com/</description>
+                            </item>
+                        </list>
+                    </item>
+                </list>
+                <para>
+            RUM will create a trace for each first-party resource by injecting HTTP trace headers and creating an APM span.
+            If your backend is also instrumented with Datadog, you will see the full trace (app → backend).
+          </para>
+                <para>Default: <c>NULL</c> - which means distributed tracing is not enabled by default.</para>
+            </remarks>
         </member>
         <member name="M:Datadog.iOS.DDRUMURLSessionTracking.SetResourceAttributesProvider(System.Func{Foundation.NSUrlRequest,Foundation.NSUrlResponse,Foundation.NSData,Foundation.NSError,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject}})">
-            <param name="provider"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="provider">Delegate for each network request.</param>
+            <summary>Custom attributes provider for intercepted RUM resources.</summary>
+            <remarks>
+                <para>
+            This delegate gets called for each network request intercepted by RUM. Use it to return additional
+            attributes for RUM resource based on the provided request, response, data, and error.
+            Keep the implementation fast and do not make any assumptions on the thread used to run it.
+          </para>
+                <para>
+            Note: This is not supported for (Swift) async-await APIs.
+          </para>
+                <para>
+            Default: <c>NULL</c>.
+          </para>
+            </remarks>
         </member>
         <member name="T:Datadog.iOS.DDRUMView">
-            <summary></summary>
+            <summary>A description of the RUM View returned from the <c>DDUIKitRUMViewsPredicate</c>.</summary>
             <remarks></remarks>
         </member>
         <member name="C:Datadog.iOS.DDRUMView(Foundation.NSObjectFlag)">
@@ -6792,7 +7369,7 @@
             <remarks></remarks>
         </member>
         <member name="P:Datadog.iOS.DDRUMView.Attributes">
-            <summary></summary>
+            <summary>Additional attributes to associate with the RUM View.</summary>
             <value></value>
             <remarks></remarks>
         </member>
@@ -6802,7 +7379,7 @@
             <remarks></remarks>
         </member>
         <member name="P:Datadog.iOS.DDRUMView.Name">
-            <summary></summary>
+            <summary>The RUM View name, appearing as <c>VIEW NAME</c> in RUM Explorer.</summary>
             <value></value>
             <remarks></remarks>
         </member>
@@ -9459,20 +10036,22 @@
             <summary></summary>
         </member>
         <member name="T:Datadog.iOS.DDRUMVitalsFrequency">
-            <summary></summary>
+            <summary>Frequency for collecting RUM vitals.</summary>
             <remarks></remarks>
         </member>
         <member name="F:Datadog.iOS.DDRUMVitalsFrequency.Average">
-            <summary></summary>
+            <summary>Every <c>500ms</c>.</summary>
         </member>
         <member name="F:Datadog.iOS.DDRUMVitalsFrequency.Frequent">
-            <summary></summary>
+            <summary>
+                <summary>Every <c>100ms</c>.</summary>
+            </summary>
         </member>
         <member name="F:Datadog.iOS.DDRUMVitalsFrequency.Never">
-            <summary></summary>
+            <summary>Never.</summary>
         </member>
         <member name="F:Datadog.iOS.DDRUMVitalsFrequency.Rare">
-            <summary></summary>
+            <summary>Every <c>1000ms</c>.</summary>
         </member>
         <member name="T:Datadog.iOS.DDSDKVerbosityLevel">
             <summary></summary>
@@ -9516,10 +10095,11 @@
             <param name="configuration">TConfiguration of the feature.</param>
             <summary>
         Enables Datadog Session Replay feature.
-        Recording will start automatically after enabling Session Replay.
-        Note: Session Replay requires the RUM feature to be enabled.
         </summary>
-            <remarks></remarks>
+            <remarks>
+                <para>Recording will start automatically after enabling Session Replay.</para>
+                <para>Note: Session Replay requires the RUM feature to be enabled.</para>
+            </remarks>
         </member>
         <member name="T:Datadog.iOS.DDSessionReplayConfiguration">
             <summary>Session Replay feature configuration.</summary>
@@ -9606,9 +10186,9 @@ and within those sessions, only 20% will have replays.
             <remarks></remarks>
         </member>
         <member name="P:Datadog.iOS.DDSite.AP1">
-            <summary></summary>
+            <summary>Asia-based servers.</summary>
             <value></value>
-            <remarks></remarks>
+            <remarks>Sends data to https://ap1.datadoghq.com/</remarks>
         </member>
         <member name="P:Datadog.iOS.DDSite.ClassHandle">
             <summary></summary>
@@ -9616,29 +10196,29 @@ and within those sessions, only 20% will have replays.
             <remarks></remarks>
         </member>
         <member name="P:Datadog.iOS.DDSite.EU1">
-            <summary></summary>
+            <summary>Europe-based servers.</summary>
             <value></value>
-            <remarks></remarks>
+            <remarks>Sends data to https://app.datadoghq.eu/</remarks>
         </member>
         <member name="P:Datadog.iOS.DDSite.US1">
-            <summary></summary>
+            <summary>US-based servers.</summary>
             <value></value>
-            <remarks></remarks>
+            <remarks>Sends data to https://app.datadoghq.com/</remarks>
         </member>
         <member name="P:Datadog.iOS.DDSite.US1_Fed">
-            <summary></summary>
+            <summary>US-based servers, FedRAMP compatible.</summary>
             <value></value>
-            <remarks></remarks>
+            <remarks>Sends data to https://app.ddog-gov.com/</remarks>
         </member>
         <member name="P:Datadog.iOS.DDSite.US3">
-            <summary></summary>
+            <summary>US-based servers.</summary>
             <value></value>
-            <remarks></remarks>
+            <remarks>Sends data to https://us3.datadoghq.com/</remarks>
         </member>
         <member name="P:Datadog.iOS.DDSite.US5">
-            <summary></summary>
+            <summary>US-based servers.</summary>
             <value></value>
-            <remarks></remarks>
+            <remarks>Sends data to https://us5.datadoghq.com/</remarks>
         </member>
         <member name="T:Datadog.iOS.DDTelemetryConfigurationEvent">
             <summary></summary>
@@ -11224,12 +11804,12 @@ and within those sessions, only 20% will have replays.
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDTrace.Enable(Datadog.iOS.DDTraceConfiguration)">
-            <param name="configuration"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="configuration">Configuration of the feature.</param>
+            <summary>Enables Datadog Trace feature.</summary>
+            <remarks>After Trace is enabled, use <c>DDTracer.Shared()</c> to collect spans.</remarks>
         </member>
         <member name="T:Datadog.iOS.DDTraceConfiguration">
-            <summary></summary>
+            <summary>Trace feature configuration.</summary>
             <remarks></remarks>
         </member>
         <member name="C:Datadog.iOS.DDTraceConfiguration">
@@ -11247,42 +11827,72 @@ and within those sessions, only 20% will have replays.
             <remarks></remarks>
         </member>
         <member name="P:Datadog.iOS.DDTraceConfiguration.BundleWithRumEnabled">
-            <summary></summary>
+            <summary>
+        Enables the integration of traces with RUM. 
+        When enabled, all spans will be enriched with the current RUM view information.
+        </summary>
             <value></value>
-            <remarks></remarks>
+            <remarks>Default: <c>true</c>.</remarks>
         </member>
         <member name="P:Datadog.iOS.DDTraceConfiguration.ClassHandle">
-            <summary></summary>
+            <summary>Custom server url for sending traces.</summary>
             <value></value>
-            <remarks></remarks>
+            <remarks>Default: <c>nil</c>.</remarks>
         </member>
         <member name="P:Datadog.iOS.DDTraceConfiguration.CustomEndpoint">
-            <summary></summary>
+            <summary>Custom server url for sending traces.</summary>
             <value></value>
-            <remarks></remarks>
+            <remarks>Default: <c>NULL</c>.</remarks>
         </member>
         <member name="P:Datadog.iOS.DDTraceConfiguration.NetworkInfoEnabled">
-            <summary></summary>
+            <summary>
+        Enriches traces with network connection information.
+        </summary>
             <value></value>
-            <remarks></remarks>
+            <remarks>
+                <para>
+        This includes reachability status, connection type, mobile carrier name, and more, which will be added to every span and span log.
+        </para>
+                <para>Default: <c>false</c>.</para>
+            </remarks>
         </member>
         <member name="P:Datadog.iOS.DDTraceConfiguration.SampleRate">
-            <summary></summary>
+            <summary>
+        The sampling rate for spans created with the default tracer. 
+        It must be a number between 0.0 and 100.0, where 0 means no spans will be collected.
+        </summary>
             <value></value>
-            <remarks></remarks>
+            <remarks>Default: <c>100.0</c>.</remarks>
         </member>
         <member name="P:Datadog.iOS.DDTraceConfiguration.Service">
-            <summary></summary>
+            <summary>
+        The <c>service</c> value for spans. 
+        If not specified, the SDK default <c>service</c> will be used.
+        </summary>
             <value></value>
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDTraceConfiguration.SetURLSessionTracking(Datadog.iOS.DDTraceURLSessionTracking)">
-            <param name="tracking"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="tracking">
+                <see cref="DDTraceURLSessionTracking" />
+            </param>
+            <summary>
+                <para>
+        The configuration for automatic network requests tracing.
+        </para>
+                <para>
+        RUM resources tracking requires enabling <c>DDURLSessionInstrumentation</c>. See
+       <see cref="DDURLSessionInstrumentation.Enable" />.
+        </para>
+                <para>
+        Note: Automatic RUM resources tracking involves swizzling the <c>URLSession</c>, <c>URLSessionTask</c> and
+       <c>URLSessionDataDelegate</c> methods.
+        </para>
+            </summary>
+            <remarks>Default: <c>NULL</c> - which means automatic tracing is not enabled by default.</remarks>
         </member>
         <member name="P:Datadog.iOS.DDTraceConfiguration.Tags">
-            <summary></summary>
+            <summary>Global tags associated with each span created with the default tracer.</summary>
             <value></value>
             <remarks></remarks>
         </member>
@@ -11297,12 +11907,12 @@ and within those sessions, only 20% will have replays.
             <summary>Injects trace context only into sampled requests.</summary>
         </member>
         <member name="T:Datadog.iOS.DDTraceFirstPartyHostsTracing">
-            <summary></summary>
+            <summary>Defines configuration for first-party hosts in distributed tracing.</summary>
             <remarks></remarks>
         </member>
         <member name="C:Datadog.iOS.DDTraceFirstPartyHostsTracing(Foundation.NSDictionary{Foundation.NSString,Foundation.NSSet{Datadog.iOS.DDTracingHeaderType}})">
-            <param name="hostsWithHeaderTypes"></param>
-            <summary></summary>
+            <param name="hostsWithHeaderTypes">Dictionary of hosts and tracing header types to use. Note: Hosts must not include <c>http(s)://</c> prefix.</param>
+            <summary>Trace given hosts with using custom tracing headers.</summary>
             <remarks></remarks>
         </member>
         <member name="C:Datadog.iOS.DDTraceFirstPartyHostsTracing(Foundation.NSObjectFlag)">
@@ -11311,8 +11921,8 @@ and within those sessions, only 20% will have replays.
             <remarks></remarks>
         </member>
         <member name="C:Datadog.iOS.DDTraceFirstPartyHostsTracing(Foundation.NSSet{Foundation.NSString})">
-            <param name="hosts"></param>
-            <summary></summary>
+            <param name="hosts">The set of hosts to inject tracing headers. Note: Hosts must not include the <c>http(s)://</c> prefix.</param>
+            <summary>Trace the specified hosts using Datadog and W3C <c>tracecontext</c> tracing headers.</summary>
             <remarks></remarks>
         </member>
         <member name="C:Datadog.iOS.DDTraceFirstPartyHostsTracing(ObjCRuntime.NativeHandle)">
@@ -11321,15 +11931,17 @@ and within those sessions, only 20% will have replays.
             <remarks></remarks>
         </member>
         <member name="C:Datadog.iOS.DDTraceFirstPartyHostsTracing(Foundation.NSDictionary{Foundation.NSString,Foundation.NSSet{Datadog.iOS.DDTracingHeaderType}},System.Single)">
-            <param name="hostsWithHeaderTypes"></param>
-            <param name="sampleRate"></param>
-            <summary></summary>
+            <param name="hostsWithHeaderTypes">Dictionary of hosts and tracing header types to use. Note: Hosts must not include <c>http(s)://</c> prefix.</param>
+            <param name="sampleRate">The sampling rate for tracing. Must be a value between <c>0.0</c> and <c>100.0</c>. Default: <c>20</c>.</param>
+            <summary>Trace given hosts with using custom tracing headers.</summary>
             <remarks></remarks>
         </member>
         <member name="C:Datadog.iOS.DDTraceFirstPartyHostsTracing(Foundation.NSSet{Foundation.NSString},System.Single)">
-            <param name="hosts"></param>
-            <param name="sampleRate"></param>
-            <summary></summary>
+            <param name="hosts">The set of hosts to inject tracing headers. Note: Hosts must not include the <c>http(s)://</c> prefix.</param>
+            <param name="sampleRate">
+        The sampling rate for tracing. Must be a value between <c>0.0</c> and <c>100.0</c>. Default: <c>20</c>.
+        </param>
+            <summary>Trace the specified hosts using Datadog and W3C <c>tracecontext</c> tracing headers.</summary>
             <remarks></remarks>
         </member>
         <member name="P:Datadog.iOS.DDTraceFirstPartyHostsTracing.ClassHandle">
@@ -11338,8 +11950,20 @@ and within those sessions, only 20% will have replays.
             <remarks></remarks>
         </member>
         <member name="T:Datadog.iOS.DDTracer">
-            <summary></summary>
-            <remarks></remarks>
+            <summary>A class for manual interaction with the Trace feature. It records spans that are sent to Datadog APM.</summary>
+            <remarks>
+                <para>
+      There can be only one active DDTracer for a certain instance of the Datadog SDK. 
+      It gets enabled along with the call to <c>DDTrace.Enable(DDTraceConfiguration)</c>:
+      </para>
+                <code>
+        // Enable Trace feature:
+        DDTrace.Enable(DDTraceConfiguration);
+  
+        // Use Tracer:
+        DDTracer.Shared.StartSpan(...);
+      </code>
+            </remarks>
         </member>
         <member name="C:Datadog.iOS.DDTracer(Foundation.NSObjectFlag)">
             <param name="t"></param>
@@ -11365,54 +11989,82 @@ and within those sessions, only 20% will have replays.
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDTracer.Inject(Datadog.iOS.IOTSpanContext,System.String,Foundation.NSObject,Foundation.NSError@)">
-            <param name="spanContext"></param>
-            <param name="format"></param>
-            <param name="carrier"></param>
-            <param name="error"></param>
-            <summary></summary>
-            <returns></returns>
-            <remarks></remarks>
+            <param name="spanContext">The <see cref="IOTSpanContext" /> instance to inject.</param>
+            <param name="format">Must be the string returned by <see cref="OT.FormatTextMap" />.</param>
+            <param name="carrier">
+          An instance of one of the following types: <see cref="DDHTTPHeadersWriter" />, <see cref="DDB3HTTPHeadersWriter" />, or <see cref="DDW3CHTTPHeadersWriter" />.
+        </param>
+            <param name="error">In the event of an error, the <see cref="NSError" /> instance.</param>
+            <summary>Transfer the span information into the carrier of the given format.</summary>
+            <returns>
+                <c>true</c> if successful, <c>false</c> otherwise.</returns>
+            <remarks>
+                <para>See Also: propagation (http://opentracing.io/propagation/)</para>
+            </remarks>
         </member>
         <member name="P:Datadog.iOS.DDTracer.Shared">
-            <summary></summary>
-            <value></value>
-            <remarks></remarks>
+            <summary>Obtains the IOTTracer for manual tracing instrumentation.</summary>
+            <value>The IOTTracer that conforms to the Open Tracing API (<see cref="IOTTracer" />)</value>
+            <remarks>It requires <c>DDTrace.Enable(DDTraceConfiguration)</c> to be called first - otherwise it will return a no-op implementation.</remarks>
         </member>
         <member name="M:Datadog.iOS.DDTracer.StartSpan(System.String)">
-            <param name="operationName"></param>
-            <summary></summary>
-            <returns></returns>
+            <param name="operationName">the operation name for the newly-started span.</param>
+            <summary>Start a new span with the given operation name.</summary>
+            <returns>A valid Span instance; it is the caller's responsibility to call <see cref="IOTSpan.Finish" />.</returns>
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDTracer.StartSpan(System.String,Datadog.iOS.IOTSpanContext)">
-            <param name="operationName"></param>
-            <param name="parent"></param>
-            <summary></summary>
-            <returns></returns>
+            <param name="operationName">the operation name for the newly-started span.</param>
+            <param name="parent">
+        Span context that will be a parent reference. If no 
+        reference is provided, and an active span exists in the current execution context 
+        the active span will be used as the parent.
+        </param>
+            <summary>Start a new span with the given operation name.</summary>
+            <returns>A valid Span instance; it is the caller's responsibility to call <see cref="IOTSpan.Finish" />.</returns>
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDTracer.StartSpan(System.String,Foundation.NSDictionary)">
-            <param name="operationName"></param>
-            <param name="tags"></param>
-            <summary></summary>
-            <returns></returns>
+            <param name="operationName">the operation name for the newly-started span.</param>
+            <param name="tags">
+        A set of tag keys and values per <see cref="IOTSpan.SetTag" />, or <c>NULL</c> to start with 
+        an empty tag map.
+        </param>
+            <summary>Start a new span with the given operation name.</summary>
+            <returns>A valid Span instance; it is the caller's responsibility to call <see cref="IOTSpan.Finish" />.</returns>
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDTracer.StartSpan(System.String,Datadog.iOS.IOTSpanContext,Foundation.NSDictionary)">
-            <param name="operationName"></param>
-            <param name="parent"></param>
-            <param name="tags"></param>
-            <summary></summary>
-            <returns></returns>
+            <param name="operationName">the operation name for the newly-started span.</param>
+            <param name="parent">
+        Span context that will be a parent reference. If no 
+        reference is provided, and an active span exists in the current execution context 
+        the active span will be used as the parent.
+        </param>
+            <param name="tags">
+        A set of tag keys and values per <see cref="IOTSpan.SetTag" />, or <c>NULL</c> to start with 
+        an empty tag map.
+        </param>
+            <summary>Start a new span with the given operation name.</summary>
+            <returns>A valid Span instance; it is the caller's responsibility to call <see cref="IOTSpan.Finish" />.</returns>
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDTracer.StartSpan(System.String,Datadog.iOS.IOTSpanContext,Foundation.NSDictionary,Foundation.NSDate)">
-            <param name="operationName"></param>
-            <param name="parent"></param>
-            <param name="tags"></param>
-            <param name="startTime"></param>
-            <summary></summary>
-            <returns></returns>
+            <param name="operationName">the operation name for the newly-started span.</param>
+            <param name="parent">
+        Span context that will be a parent reference. If no 
+        reference is provided, and an active span exists in the current execution context 
+        the active span will be used as the parent.
+        </param>
+            <param name="tags">
+        A set of tag keys and values per <see cref="IOTSpan.SetTag" />, or <c>NULL</c> to start with 
+        an empty tag map.
+        </param>
+            <param name="startTime">
+        An explicitly specified start timestamp for the <see cref="IOTSpan" />, or <c>&gt;NULL</c> to use the current walltime.
+        </param>
+            <summary>Start a new span with the given operation name.</summary>
+            <returns>A valid Span instance; it is the caller's responsibility to call <see cref="IOTSpan.Finish" />.</returns>
             <remarks></remarks>
         </member>
         <member name="T:Datadog.iOS.DDTraceSamplingStrategy">
@@ -11455,7 +12107,7 @@ and within those sessions, only 20% will have replays.
             <remarks></remarks>
         </member>
         <member name="T:Datadog.iOS.DDTraceURLSessionTracking">
-            <summary></summary>
+            <summary>Configuration of automatic network requests tracing.</summary>
             <remarks></remarks>
         </member>
         <member name="C:Datadog.iOS.DDTraceURLSessionTracking(Datadog.iOS.DDTraceFirstPartyHostsTracing)">
@@ -11479,12 +12131,43 @@ and within those sessions, only 20% will have replays.
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.DDTraceURLSessionTracking.SetFirstPartyHostsTracing(Datadog.iOS.DDTraceFirstPartyHostsTracing)">
-            <param name="firstPartyHostsTracing"></param>
-            <summary></summary>
-            <remarks></remarks>
+            <param name="firstPartyHostsTracing" />
+            <summary>Determines distributed tracing configuration for particular first-party hosts.</summary>
+            <remarks>
+                <para>Each request is classified as first-party or third-party based on the first-party hosts configured.</para>
+                <para>For example:</para>
+                <list type="bullet">
+                    <item>
+                        <description>If <c>example.com</c> is defined as a first-party host:</description>
+                        <list type="bullet">
+                            <item>
+                                <description>First-party URL examples include <c>https://example.com/</c> and <c>https://api.example.com/v2/users</c>.</description>
+                            </item>
+                            <item>
+                                <description>Third-party URL example: <c>https://foo.com/</c>.</description>
+                            </item>
+                        </list>
+                    </item>
+                    <item>
+                        <description>If <c>api.example.com</c> is defined as a first-party host:</description>
+                        <list type="bullet">
+                            <item>
+                                <description>First-party URL examples include <c>https://api.example.com/</c> and <c>&gt;https://api.example.com/v2/users</c>.</description>
+                            </item>
+                            <item>
+                                <description>Third-party URL examples include <c>https://example.com/</c> and <c>https://foo.com/</c>.</description>
+                            </item>
+                        </list>
+                    </item>
+                </list>
+                <para>
+    A trace will be created for each first-party request by injecting HTTP trace headers and creating an APM span. 
+    If your backend is also instrumented with Datadog, you will see the full trace (app → backend).
+    </para>
+            </remarks>
         </member>
         <member name="T:Datadog.iOS.DDTracingHeaderType">
-            <summary></summary>
+            <summary>The type of the tracing header injected to requests.</summary>
             <remarks></remarks>
         </member>
         <member name="C:Datadog.iOS.DDTracingHeaderType(Foundation.NSObjectFlag)">
@@ -11498,12 +12181,14 @@ and within those sessions, only 20% will have replays.
             <remarks></remarks>
         </member>
         <member name="P:Datadog.iOS.DDTracingHeaderType.B3">
-            <summary></summary>
+            <summary>Open Telemetry B3 Single header (https://github.com/openzipkin/b3-propagation#single-headers)</summary>
             <value></value>
             <remarks></remarks>
         </member>
         <member name="P:Datadog.iOS.DDTracingHeaderType.B3Multi">
-            <summary></summary>
+            <summary>
+        Open Telemetry B3 Multiple headers (https://github.com/openzipkin/b3-propagation#multiple-headers)
+        </summary>
             <value></value>
             <remarks></remarks>
         </member>
@@ -11513,12 +12198,16 @@ and within those sessions, only 20% will have replays.
             <remarks></remarks>
         </member>
         <member name="P:Datadog.iOS.DDTracingHeaderType.Datadog">
-            <summary></summary>
+            <summary>
+         Datadog's <c>x-datadog-*</c>header. (https://docs.datadoghq.com/real_user_monitoring/connect_rum_and_traces/?tab=browserrum#how-are-rum-resources-linked-to-traces)
+        </summary>
             <value></value>
             <remarks></remarks>
         </member>
         <member name="P:Datadog.iOS.DDTracingHeaderType.TraceContext">
-            <summary></summary>
+            <summary>
+        W3C Trace Context header (https://www.w3.org/TR/trace-context/#tracestate-header)
+        </summary>
             <value></value>
             <remarks></remarks>
         </member>
@@ -11557,17 +12246,17 @@ and within those sessions, only 20% will have replays.
             <remarks></remarks>
         </member>
         <member name="T:Datadog.iOS.DDUploadFrequency">
-            <summary></summary>
+            <summary>Defines the frequency at which the Datadog SDK will try to upload data batches.</summary>
             <remarks></remarks>
         </member>
         <member name="F:Datadog.iOS.DDUploadFrequency.Average">
-            <summary></summary>
+            <summary>Try to upload batched data with a medium frequency.</summary>
         </member>
         <member name="F:Datadog.iOS.DDUploadFrequency.Frequent">
-            <summary></summary>
+            <summary>Try to upload batched data frequently.</summary>
         </member>
         <member name="F:Datadog.iOS.DDUploadFrequency.Rare">
-            <summary></summary>
+            <summary>Try to upload batched data rarely.</summary>
         </member>
         <member name="T:Datadog.iOS.DDURLSessionInstrumentation">
             <summary></summary>
@@ -11674,8 +12363,28 @@ and within those sessions, only 20% will have replays.
             <remarks></remarks>
         </member>
         <member name="T:Datadog.iOS.DDW3CHTTPHeadersWriter">
-            <summary></summary>
-            <remarks></remarks>
+            <summary>
+        The <c>DDW3CHTTPHeadersWriter</c> class facilitates the injection of trace propagation headers into network requests 
+        targeted at a backend expecting W3C propagation format.
+      </summary>
+            <remarks>
+                <para>See W3C Trace Context (https://www.w3.org/TR/trace-context/) for more details on the W3C propagation format.</para>
+                <para>Usage:</para>
+                <code>
+          var request = new HttpRequestMessage(...);
+
+          var writer = new DDW3CHTTPHeadersWriter();
+          var span = DDTracer.Shared.StartSpan("network request");
+          DDTracer.Shared.Inject(span.Context, OT.FormatTextMap, writer);
+
+          foreach (var (field, value) in writer.TraceHeaderFields)
+          {
+              request.Headers.Add(field, value);
+          }
+
+          // call span.Finish() when the request completes
+      </code>
+            </remarks>
         </member>
         <member name="C:Datadog.iOS.DDW3CHTTPHeadersWriter(Foundation.NSObjectFlag)">
             <param name="t"></param>
@@ -11699,11 +12408,20 @@ and within those sessions, only 20% will have replays.
             <remarks></remarks>
         </member>
         <member name="P:Datadog.iOS.DDW3CHTTPHeadersWriter.TraceHeaderFields">
-            <summary></summary>
+            <summary>A dictionary containing the required HTTP Headers for propagating trace information.</summary>
             <value></value>
-            <remarks></remarks>
+            <remarks>
+                <para>Usage:</para>
+                <code>
+              foreach (var (field, value) in writer.TraceHeaderFields)
+              {
+                  request.Headers.Add(field, value);
+              }
+            </code>
+            </remarks>
         </member>
         <member name="T:Datadog.iOS.DDWebViewTracking">
+            <summary></summary>
             <remarks></remarks>
         </member>
         <member name="C:Datadog.iOS.DDWebViewTracking(Foundation.NSObjectFlag)">
@@ -11739,7 +12457,11 @@ and within those sessions, only 20% will have replays.
             <remarks></remarks>
         </member>
         <member name="T:Datadog.iOS.IDDDataEncryption">
-            <summary></summary>
+            <summary>
+    Interface that allows storing data in encrypted format. Encryption/decryption round should 
+    return exactly the same data as it given for the encryption originally (even if decryption 
+    happens in another process/app launch).
+    </summary>
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.IDDDataEncryption.Decrypt(Foundation.NSData,Foundation.NSError@)">
@@ -11762,7 +12484,7 @@ and within those sessions, only 20% will have replays.
             <remarks></remarks>
         </member>
         <member name="T:Datadog.iOS.IDDServerDateProvider">
-            <summary></summary>
+            <summary>Abstract the monotonic clock synchronized with the server using NTP.</summary>
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.IDDServerDateProvider.Synchronize(System.Action{System.Double})">
@@ -11810,10 +12532,10 @@ and within those sessions, only 20% will have replays.
         </member>
         <member name="T:Datadog.iOS.IOTSpan">
             <summary>Corresponds to: https://github.com/opentracing/opentracing-objc/blob/master/Pod/Classes/OTSpan.h</summary>
-            <remarks></remarks>
+            <remarks>Represents information related to an event with a timespan.</remarks>
         </member>
         <member name="P:Datadog.iOS.IOTSpan.Context">
-            <summary></summary>
+            <summary>The span context that refers to this span.</summary>
             <value></value>
             <remarks></remarks>
         </member>
@@ -11822,8 +12544,8 @@ and within those sessions, only 20% will have replays.
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.IOTSpan.Finish(Foundation.NSDate)">
-            <param name="finishTime"></param>
-            <summary></summary>
+            <param name="finishTime">If non-null, time at which to finish the span; default time is used if null.</param>
+            <summary>Finish the span at the specified time, or at some default time if <c>null</c>.</summary>
             <remarks></remarks>
         </member>
         <member name="M:Datadog.iOS.IOTSpan.GetBaggageItem(System.String)">
@@ -11906,7 +12628,13 @@ and within those sessions, only 20% will have replays.
         </member>
         <member name="T:Datadog.iOS.IOTTracer">
             <summary>Corresponds to: https://github.com/opentracing/opentracing-objc/blob/master/Pod/Classes/OTTracer.h</summary>
-            <remarks></remarks>
+            <remarks>
+                <para>
+    Tracer is the starting point for all OpenTracing instrumentation. Use it 
+    to create OTSpans, inject/extract them between processes, and so on.
+ </para>
+                <para>Tracer should be thread-safe.</para>
+            </remarks>
         </member>
         <member name="M:Datadog.iOS.IOTTracer.Extract(System.String,Foundation.NSObject,Foundation.NSError@)">
             <param name="format"></param>

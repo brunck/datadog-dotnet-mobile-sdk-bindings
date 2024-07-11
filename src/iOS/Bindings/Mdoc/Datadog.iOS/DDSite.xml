@@ -94,7 +94,7 @@
       <Docs>
         <summary>Asia-based servers.</summary>
         <value>To be added.</value>
-        <remarks>Sends data to <a href="https://ap1.datadoghq.com/">ap1.datadoghq.com</a>.</remarks>
+        <remarks>Sends data to https://ap1.datadoghq.com/</remarks>
       </Docs>
     </Member>
     <Member MemberName="ClassHandle">
@@ -134,7 +134,7 @@
       <Docs>
         <summary>Europe-based servers.</summary>
         <value>To be added.</value>
-        <remarks>Sends data to <a href="https://app.datadoghq.eu/">app.datadoghq.eu</a>.</remarks>
+        <remarks>Sends data to https://app.datadoghq.eu/</remarks>
       </Docs>
     </Member>
     <Member MemberName="US1">
@@ -158,7 +158,7 @@
       <Docs>
         <summary>US-based servers.</summary>
         <value>To be added.</value>
-        <remarks>Sends data to <a href="https://app.datadoghq.com/">app.datadoghq.com</a>.</remarks>
+        <remarks>Sends data to https://app.datadoghq.com/</remarks>
       </Docs>
     </Member>
     <Member MemberName="US1_Fed">
@@ -182,7 +182,7 @@
       <Docs>
         <summary>US-based servers, FedRAMP compatible.</summary>
         <value>To be added.</value>
-        <remarks>Sends data to <a href="https://app.ddog-gov.com/">app.ddog-gov.com</a>.</remarks>
+        <remarks>Sends data to https://app.ddog-gov.com/</remarks>
       </Docs>
     </Member>
     <Member MemberName="US3">
@@ -206,7 +206,7 @@
       <Docs>
         <summary>US-based servers.</summary>
         <value>To be added.</value>
-        <remarks>Sends data to <a href="https://us3.datadoghq.com/">app.datadoghq.com</a>.</remarks>
+        <remarks>Sends data to https://us3.datadoghq.com/</remarks>
       </Docs>
     </Member>
     <Member MemberName="US5">
@@ -230,7 +230,7 @@
       <Docs>
         <summary>US-based servers.</summary>
         <value>To be added.</value>
-        <remarks>Sends data to <a href="https://us5.datadoghq.com/">app.datadoghq.com</a>.</remarks>
+        <remarks>Sends data to https://us5.datadoghq.com/</remarks>
       </Docs>
     </Member>
   </Members>

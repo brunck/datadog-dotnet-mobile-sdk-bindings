@@ -196,7 +196,7 @@
         <returns>
           <c>true</c> if successful, <c>false</c> otherwise.</returns>
         <remarks>
-          <para>See Also: <a href="http://opentracing.io/propagation/">propagation</a></para>
+          <para>See Also: propagation (http://opentracing.io/propagation/)</para>
         </remarks>
       </Docs>
     </Member>

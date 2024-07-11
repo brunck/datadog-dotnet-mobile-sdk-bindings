@@ -26,7 +26,7 @@
         targeted at a backend expecting W3C propagation format.
       </summary>
     <remarks>
-      <para>See <a href="https://www.w3.org/TR/trace-context/">W3C Trace Context</a> for more details on the W3C propagation format.</para>
+      <para>See W3C Trace Context (https://www.w3.org/TR/trace-context/) for more details on the W3C propagation format.</para>
       <para>Usage:</para>
       <code>
           var request = new HttpRequestMessage(...);

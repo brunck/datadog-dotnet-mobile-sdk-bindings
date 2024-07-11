@@ -120,7 +120,7 @@
             </item>
           </list>
           <para>
-          See also: <a href="https://docs.datadoghq.com/tagging/#defining-tags">Defining Tags</a></para>
+          See also: Defining Tags (https://docs.datadoghq.com/tagging/#defining-tags)</para>
         </remarks>
       </Docs>
     </Member>
@@ -196,7 +196,7 @@
             </item>
           </list>
           <para>
-          See also: <a href="https://docs.datadoghq.com/tagging/#defining-tags">Defining Tags</a></para>
+          See also: Defining Tags (https://docs.datadoghq.com/tagging/#defining-tags)</para>
         </remarks>
       </Docs>
     </Member>

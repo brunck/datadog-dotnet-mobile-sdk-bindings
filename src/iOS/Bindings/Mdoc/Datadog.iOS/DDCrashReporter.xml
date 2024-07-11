@@ -35,7 +35,7 @@
       <para>
     In order to symbolicate your stack traces, find and upload your .dSYM files to Datadog. 
     Then, verify your configuration by running a test crash and restarting your application. 
-    Your crash reports appear in <a href="https://app.datadoghq.com/rum/error-tracking">Error Tracking</a>.
+    Your crash reports appear in Error Tracking (https://app.datadoghq.com/rum/error-tracking).
     </para>
     </remarks>
   </Docs>
