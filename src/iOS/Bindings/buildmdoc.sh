@@ -7,3 +7,12 @@ DLL_PATH="/Users/brian/Documents/SourceCode/datadog-dotnet-mobile-sdk-bindings/s
 
 # Execute the mdoc update command with sudo
 sudo mdoc update -L "$LIBRARY_PATH" --out "$OUTPUT_DIR" "$DLL_PATH" --debug
+
+output=$(sudo chown -R brian Mdoc/Datadog.iOS 2>&1)
+echo "$output"
+
+output=$(sudo chown -R brian Mdoc/index.xml 2>&1)
+echo "$output"
+
+output=$(sudo chown -R brian Mdoc/ns-Datadog.iOS.xml 2>&1)
+echo "$output"
