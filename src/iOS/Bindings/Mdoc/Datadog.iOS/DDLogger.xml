@@ -24,7 +24,7 @@
     <summary>Datadog Logger.</summary>
     <remarks>
       <para>Usage:</para>
-      <code lang="csharp">
+      <code>
     // logger reference
     var logger = DDLogger.Create();
     </code>

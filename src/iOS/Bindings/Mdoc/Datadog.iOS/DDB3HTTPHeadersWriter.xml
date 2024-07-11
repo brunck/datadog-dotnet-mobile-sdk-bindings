@@ -28,7 +28,7 @@
     <remarks>
       <para>See <a href="https://github.com/openzipkin/b3-propagation">B3 propagation format</a> for more details.</para>
       <para>Usage:</para>
-      <code lang="csharp">
+      <code>
         var request = new HttpRequestMessage(...);
 
         var writer = new DDB3HTTPHeadersWriter();
@@ -163,7 +163,7 @@
         <value>To be added.</value>
         <remarks>
           <para>Usage:</para>
-          <code lang="csharp">
+          <code>
             foreach (var (field, value) in writer.TraceHeaderFields)
             {
                 request.Headers.Add(field, value);

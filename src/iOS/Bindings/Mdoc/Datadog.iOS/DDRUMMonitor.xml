@@ -28,7 +28,7 @@
       <para>There can be only one active RUM monitor for a particular instance of the Datadog SDK. It gets enabled along with 
       the call to <c>DDRUM.Enable (DDRUMConfiguration configuration)</c>:</para>
       <para>
-        <code lang="csharp">
+        <code>
           // Enable the RUM feature:
           DDRUM.Enable (DDRUMConfiguration configuration)
 

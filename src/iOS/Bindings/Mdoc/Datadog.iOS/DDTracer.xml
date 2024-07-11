@@ -37,7 +37,7 @@
       There can be only one active DDTracer for a certain instance of the Datadog SDK. 
       It gets enabled along with the call to <c>DDTrace.Enable(DDTraceConfiguration)</c>:
       </para>
-      <code lang="csharp">
+      <code>
         // Enable Trace feature:
         DDTrace.Enable(DDTraceConfiguration);
   

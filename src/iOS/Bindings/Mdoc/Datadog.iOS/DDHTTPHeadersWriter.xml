@@ -27,7 +27,7 @@
     </summary>
     <remarks>
       <para>Usage:</para>
-      <code lang="csharp">
+      <code>
         var request = new HttpRequestMessage(...);
 
         var writer = new DDHTTPHeadersWriter();
@@ -162,7 +162,7 @@
         <value>To be added.</value>
         <remarks>
           <para>Usage:</para>
-          <code lang="csharp">
+          <code>
             foreach (var (field, value) in writer.TraceHeaderFields)
             {
                 request.Headers.Add(field, value);
