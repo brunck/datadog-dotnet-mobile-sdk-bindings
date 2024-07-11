@@ -21,14 +21,14 @@
     </Attribute>
   </Attributes>
   <Docs>
-   <summary>
+    <summary>
       The <c>DDB3HTTPHeadersWriter</c> class facilitates the injection of trace propagation headers into network requests 
       targeted at a backend expecting B3 propagation format.
    </summary>
-  <remarks>
-    <para>See <a href="https://github.com/openzipkin/b3-propagation">B3 propagation format</a> for more details.</para>
-    <para>Usage:</para>
-    <code lang="csharp">
+    <remarks>
+      <para>See <a href="https://github.com/openzipkin/b3-propagation">B3 propagation format</a> for more details.</para>
+      <para>Usage:</para>
+      <code lang="csharp">
         var request = new HttpRequestMessage(...);
 
         var writer = new DDB3HTTPHeadersWriter();
@@ -42,7 +42,7 @@
 
         // call span.Finish() when the request completes
       </code>
-  </remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -162,7 +162,7 @@
         <summary>A dictionary containing the required HTTP Headers for propagating trace information.</summary>
         <value>To be added.</value>
         <remarks>
-         <para>Usage:</para>
+          <para>Usage:</para>
           <code lang="csharp">
             foreach (var (field, value) in writer.TraceHeaderFields)
             {

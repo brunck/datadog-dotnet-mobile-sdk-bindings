@@ -15,6 +15,7 @@
   </Attributes>
   <Docs>
     <summary>Frequency for collecting RUM vitals.</summary>
+    <remarks>To be added.</remarks>
   </Docs>
   <Members>
     <Member MemberName="Average">
@@ -44,7 +45,9 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary><summary>Every <c>100ms</c>.</summary></summary>
+        <summary>
+          <summary>Every <c>100ms</c>.</summary>
+        </summary>
       </Docs>
     </Member>
     <Member MemberName="Never">

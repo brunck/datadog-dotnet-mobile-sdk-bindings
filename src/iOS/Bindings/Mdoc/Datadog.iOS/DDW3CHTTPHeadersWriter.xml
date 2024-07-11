@@ -21,14 +21,14 @@
     </Attribute>
   </Attributes>
   <Docs>
-      <summary>
+    <summary>
         The <c>DDW3CHTTPHeadersWriter</c> class facilitates the injection of trace propagation headers into network requests 
         targeted at a backend expecting W3C propagation format.
       </summary>
-      <remarks>
-        <para>See <a href="https://www.w3.org/TR/trace-context/">W3C Trace Context</a> for more details on the W3C propagation format.</para>
-        <para>Usage:</para>
-        <code lang="csharp">
+    <remarks>
+      <para>See <a href="https://www.w3.org/TR/trace-context/">W3C Trace Context</a> for more details on the W3C propagation format.</para>
+      <para>Usage:</para>
+      <code lang="csharp">
           var request = new HttpRequestMessage(...);
 
           var writer = new DDW3CHTTPHeadersWriter();
@@ -42,7 +42,7 @@
 
           // call span.Finish() when the request completes
       </code>
-      </remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -157,10 +157,11 @@
         <ReturnType>Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSString&gt;</ReturnType>
       </ReturnValue>
       <Docs>
-      <summary>A dictionary containing the required HTTP Headers for propagating trace information.</summary>
-      <remarks>
+        <summary>A dictionary containing the required HTTP Headers for propagating trace information.</summary>
+        <value>To be added.</value>
+        <remarks>
           <para>Usage:</para>
-            <code lang="csharp">
+          <code lang="csharp">
               foreach (var (field, value) in writer.TraceHeaderFields)
               {
                   request.Headers.Add(field, value);

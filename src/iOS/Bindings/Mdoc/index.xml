@@ -6,9 +6,6 @@
           <AttributeName>ObjCRuntime.LinkWith("OpenTelemetryApi.xcframework", ForceLoad=true)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>ObjCRuntime.LinkWith("CrashReporter.xcframework", ForceLoad=true)</AttributeName>
-        </Attribute>
-        <Attribute>
           <AttributeName>ObjCRuntime.LinkWith("DDObjc.xcframework", ForceLoad=true, Frameworks="Foundation")</AttributeName>
         </Attribute>
         <Attribute>
@@ -51,7 +48,7 @@
           <AttributeName>System.Reflection.AssemblyFileVersion("1.0.0.0")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Reflection.AssemblyInformationalVersion("1.0.0+4c4b3df979fcb5b8fb706cc011545e49633c476f")</AttributeName>
+          <AttributeName>System.Reflection.AssemblyInformationalVersion("1.0.0+d1806a42c81e770a06949c0ea53a7590dc1ba477")</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Reflection.AssemblyMetadata("IsTrimmable", "True")</AttributeName>
@@ -80,8 +77,10 @@
       </Attributes>
     </Assembly>
   </Assemblies>
-  <Remarks>To be added.</Remarks>
-  <Copyright>To be added.</Copyright>
+  <Remarks>
+  </Remarks>
+  <Copyright>
+  </Copyright>
   <Types>
     <Namespace Name="Datadog.iOS">
       <Type Name="DatadogURLSessionDelegate" Kind="Class" />

@@ -16,6 +16,7 @@
   </Attributes>
   <Docs>
     <summary>An entry point to the Datadog RUM feature.</summary>
+    <remarks>To be added.</remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">

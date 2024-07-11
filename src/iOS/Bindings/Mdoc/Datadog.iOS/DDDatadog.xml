@@ -137,9 +137,9 @@
         <param name="extraInfo">User's additional custom attributes.</param>
         <summary>Add custom attributes to the current user information.</summary>
         <remarks>
-        <para>This extra info will be added to already existing extra info that is added to logs traces and RUM events automatically. 
+          <para>This extra info will be added to already existing extra info that is added to logs traces and RUM events automatically. 
       </para>
-      </remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ClassHandle">
@@ -179,6 +179,7 @@
       <Parameters />
       <Docs>
         <summary>xClears all data that has not already been sent to the Datadog servers.</summary>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Initialize">
@@ -271,6 +272,7 @@
       <Docs>
         <param name="consent">The new consent value, which will be applied for all data collected from now on.</param>
         <summary>Sets the tracking consent regarding the data collection for the Datadog SDK.</summary>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="SetUserInfo">
@@ -312,7 +314,9 @@
         <param name="email">User's e-mail address, if any.</param>
         <param name="extraInfo">User's custom attributes, if any.</param>
         <summary>Sets current user information.</summary>
-        <remarks><para>Those will be added to logs, traces and RUM events automatically.</para></remarks>
+        <remarks>
+          <para>Those will be added to logs, traces and RUM events automatically.</para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="StopInstance">
@@ -337,7 +341,7 @@
       <Docs>
         <summary>Stops the initialized SDK instance.</summary>
         <remarks>
-        <para>
+          <para>
         Stopping a core instance will stop all current processes by deallocating all Features registered 
         in the core as well as their storage &amp; upload units.
      </para>
@@ -369,11 +373,12 @@
         <summary>
             Verbosity level of the Datadog SDK. Can be used for debugging purposes.
         </summary>
+        <value>To be added.</value>
         <remarks>
-        <para>
+          <para>
         If set, internal events occuring inside the SDK will be printed to the debugger console if their level is equal or greater than <c>VerbosityLevel</c>.
         </para>
-        <para>
+          <para>
          Default is <c>null</c>.
         </para>
         </remarks>

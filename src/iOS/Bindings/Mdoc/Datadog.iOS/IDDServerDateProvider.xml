@@ -23,6 +23,7 @@
   </Attributes>
   <Docs>
     <summary>Abstract the monotonic clock synchronized with the server using NTP.</summary>
+    <remarks>To be added.</remarks>
   </Docs>
   <Members>
     <Member MemberName="Synchronize">

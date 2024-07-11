@@ -93,6 +93,7 @@
       </ReturnValue>
       <Docs>
         <summary>Asia-based servers.</summary>
+        <value>To be added.</value>
         <remarks>Sends data to <a href="https://ap1.datadoghq.com/">ap1.datadoghq.com</a>.</remarks>
       </Docs>
     </Member>
@@ -132,6 +133,7 @@
       </ReturnValue>
       <Docs>
         <summary>Europe-based servers.</summary>
+        <value>To be added.</value>
         <remarks>Sends data to <a href="https://app.datadoghq.eu/">app.datadoghq.eu</a>.</remarks>
       </Docs>
     </Member>
@@ -155,6 +157,7 @@
       </ReturnValue>
       <Docs>
         <summary>US-based servers.</summary>
+        <value>To be added.</value>
         <remarks>Sends data to <a href="https://app.datadoghq.com/">app.datadoghq.com</a>.</remarks>
       </Docs>
     </Member>
@@ -178,6 +181,7 @@
       </ReturnValue>
       <Docs>
         <summary>US-based servers, FedRAMP compatible.</summary>
+        <value>To be added.</value>
         <remarks>Sends data to <a href="https://app.ddog-gov.com/">app.ddog-gov.com</a>.</remarks>
       </Docs>
     </Member>
@@ -201,6 +205,7 @@
       </ReturnValue>
       <Docs>
         <summary>US-based servers.</summary>
+        <value>To be added.</value>
         <remarks>Sends data to <a href="https://us3.datadoghq.com/">app.datadoghq.com</a>.</remarks>
       </Docs>
     </Member>
@@ -224,6 +229,7 @@
       </ReturnValue>
       <Docs>
         <summary>US-based servers.</summary>
+        <value>To be added.</value>
         <remarks>Sends data to <a href="https://us5.datadoghq.com/">app.datadoghq.com</a>.</remarks>
       </Docs>
     </Member>

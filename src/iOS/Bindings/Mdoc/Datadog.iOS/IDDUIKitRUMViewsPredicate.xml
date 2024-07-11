@@ -62,6 +62,7 @@
         <param name="viewController">An instance of the view controller noticed by the SDK.</param>
         <summary>The predicate deciding if the RUM View should be started or ended for given instance of the <c>UIViewController</c>.</summary>
         <returns>RUM View parameters if received view controller should start/end the RUM View, <c>NULL</c> otherwise.</returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
   </Members>

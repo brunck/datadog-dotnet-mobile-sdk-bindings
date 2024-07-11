@@ -32,6 +32,7 @@
   </Attributes>
   <Docs>
     <summary>Configuration of URLSession instrumentation.</summary>
+    <remarks>To be added.</remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">

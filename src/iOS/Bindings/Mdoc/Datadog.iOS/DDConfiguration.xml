@@ -22,6 +22,7 @@
   </Attributes>
   <Docs>
     <summary>Configuration of the Datadog SDK.</summary>
+    <remarks>To be added.</remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -98,29 +99,7 @@
         <param name="clientToken">Either the RUM client token (which supports RUM, Logging and APM) or regular client token, only for Logging and APM.</param>
         <param name="env">The environment name which will be sent to Datadog. This can be used to filter events on different environments (e.g. “staging” or “production”).</param>
         <summary>Creates a Datadog SDK Configuration object.</summary>
-      </Docs>
-    </Member>
-    <Member MemberName="AdditionalConfiguration">
-      <MemberSignature Language="C#" Value="public virtual Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; AdditionalConfiguration { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt; AdditionalConfiguration" />
-      <MemberType>Property</MemberType>
-      <Attributes>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
-        </Attribute>
-        <Attribute>
-          <AttributeName>get: Foundation.Export("additionalConfiguration", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
-        </Attribute>
-        <Attribute>
-          <AttributeName>set: Foundation.Export("setAdditionalConfiguration:", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>Sets additional configuration attributes. 
-        This can be used to tweak internal features of the SDK and shouldn't be considered as a part of public API.</summary>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="BatchProcessingLevel">
@@ -147,7 +126,8 @@
       <Docs>
         <summary>Batch processing level, defining the maximum number of batches processed sequentially without a delay within one reading/uploading cycle.</summary>
         <value>To be added.</value>
-        <remarks><see cref="Medium"/> by default.</remarks>
+        <remarks>
+          <see cref="Medium" /> by default.</remarks>
       </Docs>
     </Member>
     <Member MemberName="BatchSize">

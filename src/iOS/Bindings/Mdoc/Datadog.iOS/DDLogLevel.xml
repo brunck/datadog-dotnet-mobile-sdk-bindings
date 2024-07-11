@@ -18,6 +18,7 @@
     Log levels ordered by their severity, with <c>Debug</c> being the least severe and 
     <c>Critical</c> being the most severe.
     </summary>
+    <remarks>To be added.</remarks>
   </Docs>
   <Members>
     <Member MemberName="Critical">

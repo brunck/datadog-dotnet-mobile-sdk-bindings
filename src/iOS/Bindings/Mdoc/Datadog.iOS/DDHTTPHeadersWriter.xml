@@ -159,8 +159,9 @@
         <summary>
             A dictionary containing the required HTTP Headers for propagating trace information.
         </summary>
+        <value>To be added.</value>
         <remarks>
-         <para>Usage:</para>
+          <para>Usage:</para>
           <code lang="csharp">
             foreach (var (field, value) in writer.TraceHeaderFields)
             {

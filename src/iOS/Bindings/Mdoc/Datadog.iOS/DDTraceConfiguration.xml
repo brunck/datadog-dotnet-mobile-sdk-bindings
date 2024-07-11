@@ -22,6 +22,7 @@
   </Attributes>
   <Docs>
     <summary>Trace feature configuration.</summary>
+    <remarks>To be added.</remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -122,6 +123,7 @@
         Enables the integration of traces with RUM. 
         When enabled, all spans will be enriched with the current RUM view information.
         </summary>
+        <value>To be added.</value>
         <remarks>Default: <c>true</c>.</remarks>
       </Docs>
     </Member>
@@ -137,6 +139,7 @@
       </ReturnValue>
       <Docs>
         <summary>Custom server url for sending traces.</summary>
+        <value>To be added.</value>
         <remarks>Default: <c>nil</c>.</remarks>
       </Docs>
     </Member>
@@ -163,6 +166,7 @@
       </ReturnValue>
       <Docs>
         <summary>Custom server url for sending traces.</summary>
+        <value>To be added.</value>
         <remarks>Default: <c>NULL</c>.</remarks>
       </Docs>
     </Member>
@@ -191,11 +195,12 @@
         <summary>
         Enriches traces with network connection information.
         </summary>
-        <remarks> 
-        <para>
+        <value>To be added.</value>
+        <remarks>
+          <para>
         This includes reachability status, connection type, mobile carrier name, and more, which will be added to every span and span log.
         </para>
-        <para>Default: <c>false</c>.</para>
+          <para>Default: <c>false</c>.</para>
         </remarks>
       </Docs>
     </Member>
@@ -225,6 +230,7 @@
         The sampling rate for spans created with the default tracer. 
         It must be a number between 0.0 and 100.0, where 0 means no spans will be collected.
         </summary>
+        <value>To be added.</value>
         <remarks>Default: <c>100.0</c>.</remarks>
       </Docs>
     </Member>
@@ -254,6 +260,8 @@
         The <c>service</c> value for spans. 
         If not specified, the SDK default <c>service</c> will be used.
         </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="SetURLSessionTracking">
@@ -281,16 +289,18 @@
         <Parameter Name="tracking" Type="Datadog.iOS.DDTraceURLSessionTracking" />
       </Parameters>
       <Docs>
-        <param name="tracking"><see cref="DDTraceURLSessionTracking" /></param>
+        <param name="tracking">
+          <see cref="DDTraceURLSessionTracking" />
+        </param>
         <summary>
-        <para>
+          <para>
         The configuration for automatic network requests tracing.
         </para>
-        <para>
+          <para>
         RUM resources tracking requires enabling <c>DDURLSessionInstrumentation</c>. See
        <see cref="DDURLSessionInstrumentation.Enable" />.
         </para>
-        <para>
+          <para>
         Note: Automatic RUM resources tracking involves swizzling the <c>URLSession</c>, <c>URLSessionTask</c> and
        <c>URLSessionDataDelegate</c> methods.
         </para>
@@ -324,6 +334,8 @@
       </ReturnValue>
       <Docs>
         <summary>Global tags associated with each span created with the default tracer.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
   </Members>

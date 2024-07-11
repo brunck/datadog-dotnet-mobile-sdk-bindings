@@ -212,6 +212,7 @@
        Removes the custom attribute from all future logs sent. 
        Previous logs won't lose this attribute if sent prior to this call.
         </summary>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
   </Members>

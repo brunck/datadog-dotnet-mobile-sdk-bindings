@@ -58,9 +58,12 @@
         <Parameter Name="t" Type="Foundation.NSObjectFlag" />
       </Parameters>
       <Docs>
-        <param name="t"></param>
-        <summary></summary>
-        <remarks></remarks>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -82,9 +85,12 @@
         <Parameter Name="handle" Type="ObjCRuntime.NativeHandle" />
       </Parameters>
       <Docs>
-        <param name="handle"></param>
-        <summary></summary>
-        <remarks></remarks>
+        <param name="handle">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="AddAction">
@@ -123,7 +129,8 @@
         <summary>
         Adds a RUM action that has no duration.
         </summary>
-        <remarks></remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="AddAttribute">
@@ -160,7 +167,8 @@
         <summary>
         Adds a custom attribute to next RUM events.
         </summary>
-        <remarks></remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="AddError">
@@ -199,7 +207,8 @@
         <summary>
         Adds a RUM error to the current RUM view.
         </summary>
-        <remarks></remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="AddError">
@@ -248,6 +257,7 @@
         <summary>
         Adds a RUM error to the current RUM view.
         </summary>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="AddFeatureFlagEvaluationWithName">
@@ -323,7 +333,8 @@
         <summary>
         Adds temporal metrics to given RUM resource.
         </summary>
-        <remarks></remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="AddTiming">
@@ -366,9 +377,46 @@
         <ReturnType>ObjCRuntime.NativeHandle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Debug">
+      <MemberSignature Language="C#" Value="public virtual bool Debug { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Debug" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("debug")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setDebug:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Enable a debug utility to inspect the active RUM view. Use it only when debugging.
+        </summary>
+        <value>
+        The default value is false.
+        </value>
+        <remarks>
+        If enabled, a debugging outline will be displayed on top of the application, indicating the name of the active RUM view.
+        This can be helpful for debugging RUM instrumentation issues in your app.
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetCurrentSessionIdViaCallback">
@@ -405,44 +453,10 @@
           the current session is sampled out.
         </summary>
         <remarks>
-        <para>
+          <para>
           This method uses an asynchronous callback to ensure all pending RUM events have been processed
           up to the moment of the call.
         </para>
-        </remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Debug">
-      <MemberSignature Language="C#" Value="public virtual bool Debug { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance bool Debug" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Attributes>
-        <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
-        </Attribute>
-        <Attribute>
-          <AttributeName>get: Foundation.Export("debug")</AttributeName>
-        </Attribute>
-        <Attribute>
-          <AttributeName>set: Foundation.Export("setDebug:")</AttributeName>
-        </Attribute>
-      </Attributes>
-      <ReturnValue>
-        <ReturnType>System.Boolean</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-        Enable a debug utility to inspect the active RUM view. Use it only when debugging.
-        </summary>
-        <value>
-        The default value is false.
-        </value>
-        <remarks>
-        If enabled, a debugging outline will be displayed on top of the application, indicating the name of the active RUM view.
-        This can be helpful for debugging RUM instrumentation issues in your app.
         </remarks>
       </Docs>
     </Member>
@@ -501,6 +515,7 @@
         <summary>
         Obtains the RUM monitor for manual interaction with the RUM feature.
         </summary>
+        <value>To be added.</value>
         <remarks>
         It requires <see cref="DDRUM.Enable" /> to be called first - otherwise it will return a no-op implementation.
         </remarks>
@@ -583,7 +598,8 @@
         <summary>
         Starts a RUM resource.
         </summary>
-        <remarks></remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="StartResource">
@@ -622,7 +638,8 @@
         <summary>
         Starts a RUM resource.
         </summary>
-        <remarks></remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="StartResource">
@@ -665,7 +682,8 @@
         <summary>
         Starts a RUM resource.
         </summary>
-        <remarks></remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="StartView">
@@ -710,6 +728,7 @@
         <summary>
           Starts the RUM view.
         </summary>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="StartView">
@@ -754,6 +773,7 @@
         <summary>
           Starts the RUM view.
         </summary>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="StopAction">
@@ -849,7 +869,8 @@
         <summary>
         Stops a RUM resource and reports an error.
         </summary>
-        <remarks></remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="StopResource">
@@ -897,7 +918,8 @@
         <summary>
         Stops a RUM resource.
         </summary>
-        <remarks></remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="StopResource">
@@ -946,7 +968,8 @@
         <summary>
         Stops a RUM resource and reports an error.
         </summary>
-        <remarks></remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="StopResource">
@@ -1005,7 +1028,8 @@
         <summary>
         Stops a RUM resource.
         </summary>
-        <remarks></remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="StopSession">
@@ -1069,6 +1093,7 @@
         <summary>
           Stops the RUM view.
         </summary>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="StopView">
@@ -1094,7 +1119,7 @@
         <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
       </Parameters>
       <Docs>
-      <param name="viewController">
+        <param name="viewController">
           The instance of <c>UIViewController</c> representing this view.
         </param>
         <param name="attributes">
@@ -1103,6 +1128,7 @@
         <summary>
           Stops the RUM view.
         </summary>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
   </Members>

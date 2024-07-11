@@ -132,9 +132,9 @@
         <Parameter Name="configuration" Type="Datadog.iOS.DDTraceConfiguration" />
       </Parameters>
       <Docs>
-      <summary>Enables Datadog Trace feature.</summary>
-    <remarks>After Trace is enabled, use <c>DDTracer.Shared()</c> to collect spans.</remarks>
         <param name="configuration">Configuration of the feature.</param>
+        <summary>Enables Datadog Trace feature.</summary>
+        <remarks>After Trace is enabled, use <c>DDTracer.Shared()</c> to collect spans.</remarks>
       </Docs>
     </Member>
   </Members>

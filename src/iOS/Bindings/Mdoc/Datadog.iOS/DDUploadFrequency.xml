@@ -15,6 +15,7 @@
   </Attributes>
   <Docs>
     <summary>Defines the frequency at which the Datadog SDK will try to upload data batches.</summary>
+    <remarks>To be added.</remarks>
   </Docs>
   <Members>
     <Member MemberName="Average">

@@ -22,6 +22,7 @@
   </Attributes>
   <Docs>
     <summary>Configuration of automatic network requests tracing.</summary>
+    <remarks>To be added.</remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -137,40 +138,41 @@
         <Parameter Name="firstPartyHostsTracing" Type="Datadog.iOS.DDTraceFirstPartyHostsTracing" />
       </Parameters>
       <Docs>
-        <param name="firstPartyHostsTracing"></param>
+        <param name="firstPartyHostsTracing">
+        </param>
         <summary>Determines distributed tracing configuration for particular first-party hosts.</summary>
         <remarks>
-    <para>Each request is classified as first-party or third-party based on the first-party hosts configured.</para>
-    <para>For example:</para>
-    <list type="bullet">
-        <item>
-            <description>If <c>example.com</c> is defined as a first-party host:</description>
-            <list type="bullet">
+          <para>Each request is classified as first-party or third-party based on the first-party hosts configured.</para>
+          <para>For example:</para>
+          <list type="bullet">
+            <item>
+              <description>If <c>example.com</c> is defined as a first-party host:</description>
+              <list type="bullet">
                 <item>
-                    <description>First-party URL examples include <c>https://example.com/</c> and <c>https://api.example.com/v2/users</c>.</description>
+                  <description>First-party URL examples include <c>https://example.com/</c> and <c>https://api.example.com/v2/users</c>.</description>
                 </item>
                 <item>
-                    <description>Third-party URL example: <c>https://foo.com/</c>.</description>
+                  <description>Third-party URL example: <c>https://foo.com/</c>.</description>
                 </item>
-            </list>
-        </item>
-        <item>
-            <description>If <c>api.example.com</c> is defined as a first-party host:</description>
-            <list type="bullet">
+              </list>
+            </item>
+            <item>
+              <description>If <c>api.example.com</c> is defined as a first-party host:</description>
+              <list type="bullet">
                 <item>
-                    <description>First-party URL examples include <c>https://api.example.com/</c> and <c>>https://api.example.com/v2/users</c>.</description>
+                  <description>First-party URL examples include <c>https://api.example.com/</c> and <c>&gt;https://api.example.com/v2/users</c>.</description>
                 </item>
                 <item>
-                    <description>Third-party URL examples include <c>https://example.com/</c> and <c>https://foo.com/</c>.</description>
+                  <description>Third-party URL examples include <c>https://example.com/</c> and <c>https://foo.com/</c>.</description>
                 </item>
-            </list>
-        </item>
-    </list>
-    <para>
+              </list>
+            </item>
+          </list>
+          <para>
     A trace will be created for each first-party request by injecting HTTP trace headers and creating an APM span. 
     If your backend is also instrumented with Datadog, you will see the full trace (app → backend).
     </para>
-</remarks>
+        </remarks>
       </Docs>
     </Member>
   </Members>
