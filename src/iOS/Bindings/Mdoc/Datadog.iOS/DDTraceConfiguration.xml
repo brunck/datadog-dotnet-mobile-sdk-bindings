@@ -288,7 +288,7 @@
         </para>
         <para>
         RUM resources tracking requires enabling <c>DDURLSessionInstrumentation</c>. See
-       <see cref="DDURLSessionInstrumentation.Enable">.
+       <see cref="DDURLSessionInstrumentation.Enable" />.
         </para>
         <para>
         Note: Automatic RUM resources tracking involves swizzling the <c>URLSession</c>, <c>URLSessionTask</c> and
