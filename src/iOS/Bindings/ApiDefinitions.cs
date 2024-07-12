@@ -419,6 +419,7 @@ namespace Datadog.iOS
 
 	// @interface DDOTelHTTPHeadersWriter : DDB3HTTPHeadersWriter
 	[BaseType (typeof(DDB3HTTPHeadersWriter), Name = "_TtC11DatadogObjc23DDOTelHTTPHeadersWriter")]
+	[Obsolete("Deprecated, renamed: DDB3HTTPHeadersWriter")]
 	interface DDOTelHTTPHeadersWriter
 	{
 		// -(instancetype _Nonnull)initWithSampleRate:(float)sampleRate injectEncoding:(enum DDInjectEncoding)injectEncoding __attribute__((objc_designated_initializer)) __attribute__((deprecated("This will be removed in future versions of the SDK. Use `init(samplingStrategy: .custom(sampleRate:))` instead.", "DDB3HTTPHeadersWriter")));
