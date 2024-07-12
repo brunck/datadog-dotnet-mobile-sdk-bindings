@@ -73,9 +73,8 @@
         <Parameter Name="customEndpoint" Type="Foundation.NSUrl" />
       </Parameters>
       <Docs>
-        <param name="customEndpoint"></param>
-        <summary></summary>
-        <remarks></remarks>
+        <param name="customEndpoint">Overrides the custom server endpoint where Logs are sent.</param>
+        <summary>Creates a Logs configuration object.</summary>
       </Docs>
     </Member>
     <Member MemberName=".ctor">

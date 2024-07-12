@@ -30,7 +30,10 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary></summary>
+        <summary>
+          <para>Encoding that employs <c>X-B3-*</c> prefixed headers per item in the trace context.</para>
+          <para>See: Multiple Header (https://github.com/openzipkin/b3-propagation#multiple-headers).</para>
+        </summary>
       </Docs>
     </Member>
     <Member MemberName="Single">
@@ -45,7 +48,10 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary></summary>
+        <summary>
+          <para>Encoding that uses a single <c>B3</c> header to transport the trace context.</para>
+          <para>See: Single Header (https://github.com/openzipkin/b3-propagation#single-header).</para>
+        </summary>
       </Docs>
     </Member>
   </Members>

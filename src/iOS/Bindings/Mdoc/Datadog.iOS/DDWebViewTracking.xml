@@ -21,8 +21,26 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary></summary>
-    <remarks></remarks>
+    <summary>Real User Monitoring allows you to monitor web views and eliminate blind spots in your hybrid iOS applications.</summary>
+    <remarks>
+      <para>Prerequisites:</para>
+      <para>
+        Set up the web page you want rendered on your mobile iOS and tvOS application with the RUM Browser SDK first. 
+        For more information, see the RUM Browser Monitoring documentation at https://docs.datadoghq.com/real_user_monitoring/browser/#npm.
+      </para>
+      <para>You can perform the following:</para>
+      <list type="bullet">
+        <item>
+          <description>Track user journeys across web and native components in mobile applications.</description>
+        </item>
+        <item>
+          <description>Scope the root cause of latency to web pages or native components in mobile applications.</description>
+        </item>
+        <item>
+          <description>Support users that have difficulty loading web pages on mobile devices.</description>
+        </item>
+      </list>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -111,9 +129,12 @@
         <Parameter Name="webView" Type="WebKit.WKWebView" />
       </Parameters>
       <Docs>
-        <param name="webView"></param>
-        <summary></summary>
-        <remarks></remarks>
+        <param name="webView">The web-view to stop tracking.</param>
+        <summary>Disables Datadog iOS SDK and Datadog Browser SDK integration.</summary>
+        <remarks>
+          <para>Removes Datadog's ScriptMessageHandler and UserScript from the caller.</para>
+          <para>Note: This method <i>must</i> be called when the webview can be deinitialized.</para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Enable">
@@ -142,12 +163,13 @@
       <Docs>
         <param name="webView">The web-view to track.</param>
         <param name="hosts">A set of hosts instrumented with Browser SDK to capture Datadog events from.</param>
-        <param name="logsSampleRate">The sampling rate for logs coming from the WebView. Must be a value between <c>0</c> and <c>100</c>,
-        where 0 means no logs will be sent and 100 means all will be uploaded. Default: <c>100</c>.</param>
+        <param name="logsSampleRate">
+          The sampling rate for logs coming from the WebView. Must be a value between <c>0</c> and <c>100</c>,
+          where 0 means no logs will be sent and 100 means all will be uploaded. Default: <c>100</c>.</param>
         <summary>
-        Enables SDK to correlate Datadog RUM events and Logs from the WebView with native RUM session.
-        If the content loaded in WebView uses Datadog Browser SDK (<c>v4.2.0+</c>) and matches specified
-        <c>hosts</c>, web events will be correlated with the RUM session from native SDK.
+          Enables SDK to correlate Datadog RUM events and Logs from the WebView with native RUM session.
+          If the content loaded in WebView uses Datadog Browser SDK (<c>v4.2.0+</c>) and matches specified
+          <c>hosts</c>, web events will be correlated with the RUM session from native SDK.
         </summary>
         <remarks></remarks>
       </Docs>

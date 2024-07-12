@@ -14,7 +14,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary></summary>
+    <summary>HTTP method of the resource.</summary>
     <remarks></remarks>
   </Docs>
   <Members>

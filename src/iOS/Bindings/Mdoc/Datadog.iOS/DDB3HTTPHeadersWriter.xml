@@ -117,11 +117,10 @@
         <Parameter Name="traceContextInjection" Type="Datadog.iOS.DDTraceContextInjection" />
       </Parameters>
       <Docs>
-        <param name="samplingStrategy"></param>
-        <param name="injectEncoding"></param>
-        <param name="traceContextInjection"></param>
-        <summary></summary>
-        <remarks></remarks>
+        <param name="samplingStrategy">The strategy for sampling trace propagation headers.</param>
+        <param name="injectEncoding">The B3 header encoding type, with <see cref="DDInjectEncoding.Single" /> as the default.</param>
+        <param name="traceContextInjection">The trace context injection strategy, with <see cref="DDTraceContextInjection.All" /> as the default.</param>
+        <summary>Initializes the headers writer.</summary>
       </Docs>
     </Member>
     <Member MemberName="ClassHandle">

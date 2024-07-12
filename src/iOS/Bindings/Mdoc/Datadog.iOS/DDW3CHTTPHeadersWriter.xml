@@ -116,10 +116,9 @@
         <Parameter Name="traceContextInjection" Type="Datadog.iOS.DDTraceContextInjection" />
       </Parameters>
       <Docs>
-        <param name="samplingStrategy"></param>
-        <param name="traceContextInjection"></param>
-        <summary></summary>
-        <remarks></remarks>
+        <param name="samplingStrategy">The strategy for sampling trace propagation headers.</param>
+        <param name="traceContextInjection">The strategy for injecting trace context into requests.</param>
+        <summary>Initializes the headers writer.</summary>
       </Docs>
     </Member>
     <Member MemberName="ClassHandle">

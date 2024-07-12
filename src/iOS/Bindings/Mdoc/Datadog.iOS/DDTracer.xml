@@ -34,8 +34,8 @@
     <summary>A class for manual interaction with the Trace feature. It records spans that are sent to Datadog APM.</summary>
     <remarks>
       <para>
-      There can be only one active DDTracer for a certain instance of the Datadog SDK. 
-      It gets enabled along with the call to <c>DDTrace.Enable(DDTraceConfiguration)</c>:
+        There can be only one active DDTracer for a certain instance of the Datadog SDK. 
+        It gets enabled along with the call to <c>DDTrace.Enable(DDTraceConfiguration)</c>:
       </para>
       <code>
         // Enable Trace feature:
@@ -289,9 +289,9 @@
       <Docs>
         <param name="operationName">the operation name for the newly-started span.</param>
         <param name="parent">
-        Span context that will be a parent reference. If no 
-        reference is provided, and an active span exists in the current execution context 
-        the active span will be used as the parent.
+          Span context that will be a parent reference. If no 
+          reference is provided, and an active span exists in the current execution context,  
+          the active span will be used as the parent.
         </param>
         <summary>Start a new span with the given operation name.</summary>
         <returns>A valid Span instance; it is the caller's responsibility to call <see cref="IOTSpan.Finish" />.</returns>
@@ -330,10 +330,10 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="operationName">the operation name for the newly-started span.</param>
+        <param name="operationName">The operation name for the newly-started span.</param>
         <param name="tags">
-        A set of tag keys and values per <see cref="IOTSpan.SetTag" />, or <c>NULL</c> to start with 
-        an empty tag map.
+          A set of tag keys and values per <see cref="IOTSpan.SetTag" />, or <c>NULL</c> to start with 
+          an empty tag map.
         </param>
         <summary>Start a new span with the given operation name.</summary>
         <returns>A valid Span instance; it is the caller's responsibility to call <see cref="IOTSpan.Finish" />.</returns>
@@ -379,15 +379,15 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="operationName">the operation name for the newly-started span.</param>
+        <param name="operationName">The operation name for the newly-started span.</param>
         <param name="parent">
-        Span context that will be a parent reference. If no 
-        reference is provided, and an active span exists in the current execution context 
-        the active span will be used as the parent.
+          Span context that will be a parent reference. If no 
+          reference is provided, and an active span exists in the current execution context 
+          the active span will be used as the parent.
         </param>
         <param name="tags">
-        A set of tag keys and values per <see cref="IOTSpan.SetTag" />, or <c>NULL</c> to start with 
-        an empty tag map.
+          A set of tag keys and values per <see cref="IOTSpan.SetTag" />, or <c>NULL</c> to start with 
+          an empty tag map.
         </param>
         <summary>Start a new span with the given operation name.</summary>
         <returns>A valid Span instance; it is the caller's responsibility to call <see cref="IOTSpan.Finish" />.</returns>

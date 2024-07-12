@@ -47,8 +47,8 @@
         <Parameter Name="hostsWithHeaderTypes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSSet&lt;Datadog.iOS.DDTracingHeaderType&gt;&gt;" />
       </Parameters>
       <Docs>
-        <param name="hostsWithHeaderTypes"></param>
-        <summary></summary>
+        <param name="hostsWithHeaderTypes">Dictionary of hosts and tracing header types to use. Note: Hosts must not include "http(s)://" prefix.</param>
+        <summary>Trace given hosts with using custom tracing headers.</summary>
         <remarks></remarks>
       </Docs>
     </Member>
@@ -98,8 +98,8 @@
         <Parameter Name="hosts" Type="Foundation.NSSet&lt;Foundation.NSString&gt;" />
       </Parameters>
       <Docs>
-        <param name="hosts"></param>
-        <summary></summary>
+        <param name="hosts">The set of hosts to inject tracing headers. Note: Hosts must not include the "http(s)://" prefix.</param>
+        <summary>Trace the specified hosts using Datadog and W3C <c>tracecontext</c> tracing headers.</summary>
         <remarks></remarks>
       </Docs>
     </Member>
@@ -150,9 +150,9 @@
         <Parameter Name="sampleRate" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="hostsWithHeaderTypes"></param>
-        <param name="sampleRate"></param>
-        <summary></summary>
+        <param name="hostsWithHeaderTypes">Dictionary of hosts and tracing header types to use. Note: Hosts must not include "http(s)://" prefix.</param>
+        <param name="sampleRate">The sampling rate for tracing. Must be a value between <c>0.0</c> and <c>100.0</c>. Default: <c>20</c>.</param>
+        <summary>Trace given hosts with using custom tracing headers.</summary>
         <remarks></remarks>
       </Docs>
     </Member>
@@ -179,9 +179,9 @@
         <Parameter Name="sampleRate" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="hosts"></param>
-        <param name="sampleRate"></param>
-        <summary></summary>
+        <param name="hosts">The set of hosts to inject tracing headers. Note: Hosts must not include the "http(s)://" prefix.</param>
+        <param name="sampleRate">The sampling rate for tracing. Must be a value between <c>0.0<c> and <c>100.0<c>. Default: <c>20<c>.</param>
+        <summary>Trace the specified hosts using Datadog and W3C <c>tracecontext</c> tracing headers.</summary>
         <remarks></remarks>
       </Docs>
     </Member>

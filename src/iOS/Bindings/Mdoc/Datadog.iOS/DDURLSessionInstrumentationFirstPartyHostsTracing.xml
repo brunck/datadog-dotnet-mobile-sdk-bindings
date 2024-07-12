@@ -97,12 +97,8 @@
         <Parameter Name="hosts" Type="Foundation.NSSet&lt;Foundation.NSString&gt;" />
       </Parameters>
       <Docs>
-      /// Trace the specified hosts using Datadog and W3C `tracecontext` tracing headers.
-        ///
-        /// - Parameters:
-        ///   - hosts: 
         <param name="hosts">The set of hosts to inject tracing headers. Note: Hosts must not include the "http(s)://" prefix.</param>
-        <summary></summary>
+        <summary>Trace the specified hosts using Datadog and W3C <c>tracecontext</c> tracing headers.</summary>
         <remarks></remarks>
       </Docs>
     </Member>

@@ -23,7 +23,10 @@
   </Attributes>
   <Docs>
     <summary>Corresponds to: https://github.com/opentracing/opentracing-objc/blob/master/Pod/Classes/OTSpanContext.h</summary>
-    <remarks></remarks>
+    <remarks>
+      Span context captures any implementation-dependent state such as trace ID and span ID, as well as the
+      baggage items.
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="ForEachBaggageItem">
@@ -59,10 +62,12 @@
           </Attributes>
         </Parameter>
       </Parameters>
-      <Docs>
-        <param name="callback"></param>
-        <summary></summary>
-        <remarks></remarks>
+      <Docs>                   
+        <param name="callback">
+          Lambda invoked with each baggage item key-value pair as the parameters. 
+          If the lambda returns true, iteration will stop.
+        </param>
+        <summary>Iterate through the baggage items.</summary>
       </Docs>
     </Member>
   </Members>

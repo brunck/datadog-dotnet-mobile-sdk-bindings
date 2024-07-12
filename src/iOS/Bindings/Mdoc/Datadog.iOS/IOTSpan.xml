@@ -118,7 +118,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary></summary>
+        <summary>Finish the span at the current time.</summary>
         <remarks></remarks>
       </Docs>
     </Member>
@@ -150,7 +150,7 @@
         <Parameter Name="finishTime" Type="Foundation.NSDate" />
       </Parameters>
       <Docs>
-        <param name="finishTime">If non-null, time at which to finish the span; default time is used if null.</param>
+        <param name="finishTime">If non-null, time at which to finish the span; default time is used if <c>null</c>.</param>
         <summary>Finish the span at the specified time, or at some default time if <c>null</c>.</summary>
         <remarks></remarks>
       </Docs>
@@ -185,10 +185,8 @@
         <Parameter Name="key" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="key"></param>
-        <summary></summary>
-        <returns></returns>
-        <remarks></remarks>
+        <param name="key">Key of the baggage item to get</param>
+        <summary>Get the baggage item corresponding to the given key; <c>null</c> if the baggage item does not exist</summary>
       </Docs>
     </Member>
     <Member MemberName="Log">
@@ -216,8 +214,8 @@
         <Parameter Name="fields" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
       </Parameters>
       <Docs>
-        <param name="fields"></param>
-        <summary></summary>
+        <param name="fields">Fields to set on the span log.</param>
+        <summary>Add a new log with the supplied fields and the current timestamp.</summary>
         <remarks></remarks>
       </Docs>
     </Member>
@@ -253,9 +251,9 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="fields"></param>
-        <param name="timestamp"></param>
-        <summary></summary>
+        <param name="fields">Fields to set on the span log.</param>
+        <param name="timestamp">Timestamp to use for the span log.</param>
+        <summary>Add a new log with the supplied fields and timestamp.</summary>
         <remarks></remarks>
       </Docs>
     </Member>
@@ -282,9 +280,26 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary></summary>
+        <summary>Sets this span as the active span in the current execution context.</summary>
         <returns></returns>
-        <remarks></remarks>
+        <remarks>
+          <para>
+            The active span becomes the parent of any other span created in the same execution context 
+            if the parent is not set explicitly. The span remains active until it finishes or another span is set as active.
+          </para>
+          <example>
+            Example:
+            <code>
+                // span1 becomes active in this thread:
+                var span1 = DDTracer.StartSpan(operationName: "root").SetActive();
+            
+                // As span2 has no explicit parent, it becomes the child of the active span1:
+                var span2 = DDTracer.StartSpan(operationName: "child of span1");
+            
+                // As span3 has the explicit parent (null) it won't become the child of the active span:
+                let span3 = tracer.startSpan(operationName: "another root", parent: null);
+            </code>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SetBaggageItem">
@@ -313,11 +328,9 @@
         <Parameter Name="value" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="key"></param>
-        <param name="value"></param>
-        <summary></summary>
-        <returns></returns>
-        <remarks></remarks>
+        <param name="key">Key of the baggage item to set.</param>
+        <param name="value">Value of the baggage item to set.</param>
+        <summary>Add a new baggage item or replace an existing baggage item value for the given key.</summary>
       </Docs>
     </Member>
     <Member MemberName="SetError">
@@ -345,9 +358,14 @@
         <Parameter Name="error" Type="Foundation.NSError" />
       </Parameters>
       <Docs>
-        <param name="error"></param>
-        <summary></summary>
-        <remarks></remarks>
+        <param name="error">An <c>NSError</c> object representing the error.</param>
+        <summary>Set or replace the error for the given span.</summary>
+        <remarks>
+          <para>
+            This is a convenience to set the proper tags with error details. 
+            Consider the <c>SetError(string kind, string message, string stacktrace)</c> variant for better control over the error details. 
+          </para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SetError">
@@ -383,11 +401,19 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="kind"></param>
-        <param name="message"></param>
-        <param name="stack"></param>
-        <summary></summary>
-        <remarks></remarks>
+        <param name="kind">The type of error to be logged.</param>
+        <param name="message">An error message to be logged.</param>
+        <param name="stack">
+          A string detailing the state of the stack when the error was caught. 
+          Note that it can also be any details that could help further triaging and investigation of the error downstream, 
+          it doesn't have to be an actual stack trace. Also note that an empty string means skipping the <c>stack</c> parameter.
+        </param>
+        <summary>Set or replace the error for the given span.</summary>
+        <remarks>
+          <para>
+            This is a convenience to set the proper tags with error details. 
+          </para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SetOperationName">
@@ -415,9 +441,8 @@
         <Parameter Name="operationName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="operationName"></param>
-        <summary></summary>
-        <remarks></remarks>
+        <param name="operationName">The name of the operation this span represents.</param>
+        <summary>Set the name of the operation this span represents.</summary>
       </Docs>
     </Member>
     <Member MemberName="SetTag">
@@ -446,10 +471,9 @@
         <Parameter Name="numberValue" Type="Foundation.NSNumber" />
       </Parameters>
       <Docs>
-        <param name="key"></param>
-        <param name="numberValue"></param>
-        <summary></summary>
-        <remarks></remarks>
+        <param name="key">Key of the tag to set.</param>
+        <param name="numberValue">Value of the tag to set.</param>
+        <summary>Add a new tag or replace an existing tag key with this value.</summary>
       </Docs>
     </Member>
     <Member MemberName="SetTag">
@@ -478,9 +502,9 @@
         <Parameter Name="boolValue" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="key"></param>
-        <param name="boolValue"></param>
-        <summary></summary>
+        <param name="key">Key of the tag to set.</param>
+        <param name="boolValue">Value of the tag to set.</param>
+        <summary>Add a new tag or replace an existing tag key with this value.</summary>
         <remarks></remarks>
       </Docs>
     </Member>
@@ -510,9 +534,9 @@
         <Parameter Name="value" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="key"></param>
-        <param name="value"></param>
-        <summary></summary>
+        <param name="key">Key of the tag to set.</param>
+        <param name="value">Value of the tag to set.</param>
+        <summary>Add a new tag or replace an existing tag key with this value.</summary>
         <remarks></remarks>
       </Docs>
     </Member>
@@ -535,9 +559,7 @@
         <ReturnType>Datadog.iOS.IOTTracer</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>The tracer that produced this span.</summary>
       </Docs>
     </Member>
   </Members>
