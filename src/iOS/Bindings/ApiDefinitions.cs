@@ -151,15 +151,7 @@ namespace Datadog.iOS
 	}
 
 	// @protocol DDUITouchRUMActionsPredicate
-	/*
-  Check whether adding [Model] to this declaration is appropriate.
-  [Model] is used to generate a C# class that implements this protocol,
-  and might be useful for protocols that consumers are supposed to implement,
-  since consumers can subclass the generated class instead of implementing
-  the generated interface. If consumers are not supposed to implement this
-  protocol, then [Model] is redundant and will generate code that will never
-  be used.
-*/[Protocol (Name = "_TtP11DatadogObjc28DDUITouchRUMActionsPredicate_")]
+	[Protocol (Name = "_TtP11DatadogObjc28DDUITouchRUMActionsPredicate_")]
 	interface DDUITouchRUMActionsPredicate
 	{
 		// @required -(DDRUMAction * _Nullable)rumActionWithTargetView:(UIView * _Nonnull)targetView __attribute__((warn_unused_result("")));
@@ -170,15 +162,7 @@ namespace Datadog.iOS
 	}
 
 	// @protocol DDUIKitRUMActionsPredicate <DDUITouchRUMActionsPredicate>
-	/*
-  Check whether adding [Model] to this declaration is appropriate.
-  [Model] is used to generate a C# class that implements this protocol,
-  and might be useful for protocols that consumers are supposed to implement,
-  since consumers can subclass the generated class instead of implementing
-  the generated interface. If consumers are not supposed to implement this
-  protocol, then [Model] is redundant and will generate code that will never
-  be used.
-*/[Protocol (Name = "_TtP11DatadogObjc26DDUIKitRUMActionsPredicate_")]
+	[Protocol (Name = "_TtP11DatadogObjc26DDUIKitRUMActionsPredicate_")]
 	interface DDUIKitRUMActionsPredicate : DDUITouchRUMActionsPredicate
 	{
 	}
@@ -195,15 +179,7 @@ namespace Datadog.iOS
 	}
 
 	// @protocol DDUIKitRUMViewsPredicate
-	/*
-  Check whether adding [Model] to this declaration is appropriate.
-  [Model] is used to generate a C# class that implements this protocol,
-  and might be useful for protocols that consumers are supposed to implement,
-  since consumers can subclass the generated class instead of implementing
-  the generated interface. If consumers are not supposed to implement this
-  protocol, then [Model] is redundant and will generate code that will never
-  be used.
-*/[Protocol (Name = "_TtP11DatadogObjc24DDUIKitRUMViewsPredicate_")]
+	[Protocol (Name = "_TtP11DatadogObjc24DDUIKitRUMViewsPredicate_")]
 	interface DDUIKitRUMViewsPredicate
 	{
 		// @required -(DDRUMView * _Nullable)rumViewFor:(UIViewController * _Nonnull)viewController __attribute__((warn_unused_result("")));
@@ -428,6 +404,7 @@ namespace Datadog.iOS
 
 	// @interface DDNSURLSessionDelegate : NSObject <NSURLSessionDataDelegate>
 	[BaseType (typeof(NSObject), Name = "_TtC11DatadogObjc22DDNSURLSessionDelegate")]
+	[Obsolete("Deprecated; use DDURLSessionInstrumentation.Enable() instead.", false)]
 	interface DDNSURLSessionDelegate : INSUrlSessionDataDelegate
 	{
 		// -(instancetype _Nonnull)initWithAdditionalFirstPartyHostsWithHeaderTypes:(NSDictionary<NSString *,NSSet<DDTracingHeaderType *> *> * _Nonnull)additionalFirstPartyHostsWithHeaderTypes __attribute__((objc_designated_initializer));
@@ -5271,15 +5248,7 @@ namespace Datadog.iOS
 	}
 
 	// @protocol OTTracer
-	/*
-  Check whether adding [Model] to this declaration is appropriate.
-  [Model] is used to generate a C# class that implements this protocol,
-  and might be useful for protocols that consumers are supposed to implement,
-  since consumers can subclass the generated class instead of implementing
-  the generated interface. If consumers are not supposed to implement this
-  protocol, then [Model] is redundant and will generate code that will never
-  be used.
-*/[Protocol (Name = "_TtP11DatadogObjc8OTTracer_")]
+	[Protocol (Name = "_TtP11DatadogObjc8OTTracer_")]
 	interface OTTracer
 	{
 		// @required -(id<OTSpan> _Nonnull)startSpan:(NSString * _Nonnull)operationName __attribute__((warn_unused_result("")));
@@ -5410,15 +5379,7 @@ namespace Datadog.iOS
 	}
 
 	// @protocol DDUIPressRUMActionsPredicate
-	/*
-  Check whether adding [Model] to this declaration is appropriate.
-  [Model] is used to generate a C# class that implements this protocol,
-  and might be useful for protocols that consumers are supposed to implement,
-  since consumers can subclass the generated class instead of implementing
-  the generated interface. If consumers are not supposed to implement this
-  protocol, then [Model] is redundant and will generate code that will never
-  be used.
-*/[Protocol (Name = "_TtP11DatadogObjc28DDUIPressRUMActionsPredicate_")]
+	[Protocol (Name = "_TtP11DatadogObjc28DDUIPressRUMActionsPredicate_")]
 	interface DDUIPressRUMActionsPredicate
 	{
 		// @required -(DDRUMAction * _Nullable)rumActionWithPress:(enum UIPressType)type targetView:(UIView * _Nonnull)targetView __attribute__((warn_unused_result("")));
@@ -5507,15 +5468,7 @@ namespace Datadog.iOS
 	}
 
 	// @protocol OTSpan
-	/*
-  Check whether adding [Model] to this declaration is appropriate.
-  [Model] is used to generate a C# class that implements this protocol,
-  and might be useful for protocols that consumers are supposed to implement,
-  since consumers can subclass the generated class instead of implementing
-  the generated interface. If consumers are not supposed to implement this
-  protocol, then [Model] is redundant and will generate code that will never
-  be used.
-*/[Protocol (Name = "_TtP11DatadogObjc6OTSpan_")]
+	[Protocol (Name = "_TtP11DatadogObjc6OTSpan_")]
 	interface OTSpan
 	{
 		// @required @property (readonly, nonatomic, strong) id<OTSpanContext> _Nonnull context;
@@ -5596,15 +5549,7 @@ namespace Datadog.iOS
 	}
 
 	// @protocol OTSpanContext
-	/*
-  Check whether adding [Model] to this declaration is appropriate.
-  [Model] is used to generate a C# class that implements this protocol,
-  and might be useful for protocols that consumers are supposed to implement,
-  since consumers can subclass the generated class instead of implementing
-  the generated interface. If consumers are not supposed to implement this
-  protocol, then [Model] is redundant and will generate code that will never
-  be used.
-*/[Protocol (Name = "_TtP11DatadogObjc13OTSpanContext_")]
+	[Protocol (Name = "_TtP11DatadogObjc13OTSpanContext_")]
 	interface OTSpanContext
 	{
 		// @required -(void)forEachBaggageItem:(BOOL (^ _Nonnull)(NSString * _Nonnull, NSString * _Nonnull))callback;
@@ -5641,7 +5586,7 @@ namespace Datadog.iOS
 
 	// @interface DatadogURLSessionDelegate : NSObject <NSURLSessionDataDelegate>
 	[BaseType (typeof(NSObject), Name = "_TtC15DatadogInternal25DatadogURLSessionDelegate")]
-	[Obsolete("Use DDURLSessionInstrumentation.Enable() instead.")]
+	[Obsolete("Deprecated; use DDURLSessionInstrumentation.Enable() instead.")]
 	interface DatadogURLSessionDelegate : INSUrlSessionDataDelegate
 	{
 		// -(instancetype _Nonnull)initWithAdditionalFirstPartyHosts:(NSSet<NSString *> * _Nonnull)additionalFirstPartyHosts;
@@ -5662,16 +5607,8 @@ namespace Datadog.iOS
 	}
 
 	// @protocol __URLSessionDelegateProviding <NSURLSessionDelegate>
-	/*
-  Check whether adding [Model] to this declaration is appropriate.
-  [Model] is used to generate a C# class that implements this protocol,
-  and might be useful for protocols that consumers are supposed to implement,
-  since consumers can subclass the generated class instead of implementing
-  the generated interface. If consumers are not supposed to implement this
-  protocol, then [Model] is redundant and will generate code that will never
-  be used.
-*/[Protocol (Name = "_TtP15DatadogInternal29__URLSessionDelegateProviding_")]
-	[Obsolete("Use DDURLSessionInstrumentation.Enable() instead.")]
+    [Protocol (Name = "_TtP15DatadogInternal29__URLSessionDelegateProviding_")]
+	[Obsolete("Deprecated; use DDURLSessionInstrumentation.Enable() instead.")]
 	interface URLSessionDelegateProviding : INSUrlSessionDelegate
 	{
 		[Wrap ("WeakDDURLSessionDelegate"), Abstract]
