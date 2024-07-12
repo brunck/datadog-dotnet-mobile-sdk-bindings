@@ -1,4 +1,7 @@
 ﻿<metadata>
+	
+	<!--******************* Removal *******************-->
+	
 	<remove-node path="/api/package[@name='com.datadog.android.rum']/class[@name='_RumInternalProxy']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum']/class[@name='CloseableExtKt']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum']/class[@name='DdRumContentProvider']" />
@@ -622,7 +625,7 @@
 	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryErrorEvent.View']/method[starts-with(@name,'component')]" />
 	
 	
-	
+	<!--******************* Renaming *******************-->
 	
 	<attr path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ActionEvent.Os']" name="managedName">OS</attr>
 	<attr path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ActionEvent.CiTest']" name="managedName">CITest</attr>
