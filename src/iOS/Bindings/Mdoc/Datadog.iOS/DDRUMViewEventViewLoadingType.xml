@@ -14,8 +14,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary></summary>
-    <remarks></remarks>
+    <summary>
+    </summary>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="ActivityDisplay">
@@ -30,7 +32,8 @@
       </ReturnValue>
       <MemberValue>3</MemberValue>
       <Docs>
-        <summary></summary>
+        <summary>
+        </summary>
       </Docs>
     </Member>
     <Member MemberName="ActivityRedisplay">
@@ -45,7 +48,8 @@
       </ReturnValue>
       <MemberValue>4</MemberValue>
       <Docs>
-        <summary></summary>
+        <summary>
+        </summary>
       </Docs>
     </Member>
     <Member MemberName="FragmentDisplay">
@@ -60,7 +64,8 @@
       </ReturnValue>
       <MemberValue>5</MemberValue>
       <Docs>
-        <summary></summary>
+        <summary>
+        </summary>
       </Docs>
     </Member>
     <Member MemberName="FragmentRedisplay">
@@ -75,7 +80,8 @@
       </ReturnValue>
       <MemberValue>6</MemberValue>
       <Docs>
-        <summary></summary>
+        <summary>
+        </summary>
       </Docs>
     </Member>
     <Member MemberName="InitialLoad">
@@ -90,7 +96,8 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary></summary>
+        <summary>
+        </summary>
       </Docs>
     </Member>
     <Member MemberName="None">
@@ -105,7 +112,8 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary></summary>
+        <summary>
+        </summary>
       </Docs>
     </Member>
     <Member MemberName="RouteChange">
@@ -120,7 +128,8 @@
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
-        <summary></summary>
+        <summary>
+        </summary>
       </Docs>
     </Member>
     <Member MemberName="ViewControllerDisplay">
@@ -135,7 +144,8 @@
       </ReturnValue>
       <MemberValue>7</MemberValue>
       <Docs>
-        <summary></summary>
+        <summary>
+        </summary>
       </Docs>
     </Member>
     <Member MemberName="ViewControllerRedisplay">
@@ -150,7 +160,8 @@
       </ReturnValue>
       <MemberValue>8</MemberValue>
       <Docs>
-        <summary></summary>
+        <summary>
+        </summary>
       </Docs>
     </Member>
   </Members>

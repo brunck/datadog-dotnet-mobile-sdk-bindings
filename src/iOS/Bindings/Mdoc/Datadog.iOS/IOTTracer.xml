@@ -86,12 +86,18 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="format"></param>
-        <param name="carrier"></param>
-        <param name="error"></param>
-        <summary></summary>
-        <returns></returns>
-        <remarks></remarks>
+        <param name="format">
+        </param>
+        <param name="carrier">
+        </param>
+        <param name="error">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Inject">
@@ -128,13 +134,20 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="spanContext"></param>
-        <param name="format"></param>
-        <param name="carrier"></param>
-        <param name="error"></param>
-        <summary></summary>
-        <returns></returns>
-        <remarks></remarks>
+        <param name="spanContext">
+        </param>
+        <param name="format">
+        </param>
+        <param name="carrier">
+        </param>
+        <param name="error">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="StartSpan">
@@ -162,10 +175,14 @@
         <Parameter Name="operationName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="operationName"></param>
-        <summary></summary>
-        <returns></returns>
-        <remarks></remarks>
+        <param name="operationName">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="StartSpan">
@@ -200,11 +217,16 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="operationName"></param>
-        <param name="parent"></param>
-        <summary></summary>
-        <returns></returns>
-        <remarks></remarks>
+        <param name="operationName">
+        </param>
+        <param name="parent">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="StartSpan">
@@ -239,11 +261,16 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="operationName"></param>
-        <param name="tags"></param>
-        <summary></summary>
-        <returns></returns>
-        <remarks></remarks>
+        <param name="operationName">
+        </param>
+        <param name="tags">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="StartSpan">
@@ -285,12 +312,18 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="operationName"></param>
-        <param name="parent"></param>
-        <param name="tags"></param>
-        <summary></summary>
-        <returns></returns>
-        <remarks></remarks>
+        <param name="operationName">
+        </param>
+        <param name="parent">
+        </param>
+        <param name="tags">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="StartSpan">
@@ -335,13 +368,20 @@
         <Parameter Name="startTime" Type="Foundation.NSDate" />
       </Parameters>
       <Docs>
-        <param name="operationName"></param>
-        <param name="parent"></param>
-        <param name="tags"></param>
-        <param name="startTime"></param>
-        <summary></summary>
-        <returns></returns>
-        <remarks></remarks>
+        <param name="operationName">
+        </param>
+        <param name="parent">
+        </param>
+        <param name="tags">
+        </param>
+        <param name="startTime">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
   </Members>

@@ -15,7 +15,8 @@
   </Attributes>
   <Docs>
     <summary>Frequency for collecting RUM vitals.</summary>
-    <remarks></remarks>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="Average">

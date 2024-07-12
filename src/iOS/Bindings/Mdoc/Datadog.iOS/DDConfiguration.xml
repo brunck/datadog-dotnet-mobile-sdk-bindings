@@ -22,7 +22,8 @@
   </Attributes>
   <Docs>
     <summary>Configuration of the Datadog SDK.</summary>
-    <remarks></remarks>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -44,9 +45,12 @@
         <Parameter Name="t" Type="Foundation.NSObjectFlag" />
       </Parameters>
       <Docs>
-        <param name="t"></param>
-        <summary></summary>
-        <remarks></remarks>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -68,9 +72,12 @@
         <Parameter Name="handle" Type="ObjCRuntime.NativeHandle" />
       </Parameters>
       <Docs>
-        <param name="handle"></param>
-        <summary></summary>
-        <remarks></remarks>
+        <param name="handle">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -99,7 +106,8 @@
         <param name="clientToken">Either the RUM client token (which supports RUM, Logging and APM) or regular client token, only for Logging and APM.</param>
         <param name="env">The environment name which will be sent to Datadog. This can be used to filter events on different environments (e.g. “staging” or “production”).</param>
         <summary>Creates a Datadog SDK Configuration object.</summary>
-        <remarks></remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="BatchProcessingLevel">
@@ -125,7 +133,8 @@
       </ReturnValue>
       <Docs>
         <summary>Batch processing level, defining the maximum number of batches processed sequentially without a delay within one reading/uploading cycle.</summary>
-        <value></value>
+        <value>
+        </value>
         <remarks>
           <see cref="Medium" /> by default.</remarks>
       </Docs>
@@ -153,8 +162,10 @@
       </ReturnValue>
       <Docs>
         <summary>The preferred size of batched data uploaded to Datadog servers. This value impacts the size and number of requests performed by the SDK. <c>Medium</c> by default.</summary>
-        <value></value>
-        <remarks></remarks>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Bundle">
@@ -180,8 +191,10 @@
       </ReturnValue>
       <Docs>
         <summary>The bundle object that contains the current executable.</summary>
-        <value></value>
-        <remarks></remarks>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ClassHandle">
@@ -195,9 +208,12 @@
         <ReturnType>ObjCRuntime.NativeHandle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ClientToken">
@@ -223,8 +239,10 @@
       </ReturnValue>
       <Docs>
         <summary>Either the RUM client token (which supports RUM, Logging and APM) or regular client token, only for Logging and APM.</summary>
-        <value></value>
-        <remarks></remarks>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Env">
@@ -250,8 +268,10 @@
       </ReturnValue>
       <Docs>
         <summary>The environment name which will be sent to Datadog. This can be used to filter events on different environments (e.g. “staging” or “production”).</summary>
-        <value></value>
-        <remarks></remarks>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ProxyConfiguration">
@@ -286,8 +306,10 @@
       </ReturnValue>
       <Docs>
         <summary>Proxy configuration attributes. This can be used to a enable a custom proxy for uploading tracked data to Datadog's intake.</summary>
-        <value></value>
-        <remarks></remarks>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Service">
@@ -322,8 +344,10 @@
       </ReturnValue>
       <Docs>
         <summary>The service name associated with data send to Datadog. Default value is set to application bundle identifier.</summary>
-        <value></value>
-        <remarks></remarks>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SetEncryption">
@@ -351,7 +375,8 @@
         <param name="encryption">
         </param>
         <summary>Sets Data encryption to use for on-disk data persistency by providing an object complying with <c>DataEncryption</c> protocol.</summary>
-        <remarks></remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SetServerDateProvider">
@@ -383,7 +408,8 @@
         https://www.ntppool.org/ . Using different pools or setting a no-op <c>ServerDateProvider</c> 
         implementation will result in desynchronization of the SDK instance and the Datadog servers. 
         This can lead to significant time shift in RUM sessions or distributed traces.</summary>
-        <remarks></remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Site">
@@ -409,8 +435,10 @@
       </ReturnValue>
       <Docs>
         <summary>The Datadog server site where data is sent. Default value is <c>US1</c>.</summary>
-        <value></value>
-        <remarks></remarks>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="UploadFrequency">
@@ -436,8 +464,10 @@
       </ReturnValue>
       <Docs>
         <summary>The preferred frequency of uploading data to Datadog servers. This value impacts the frequency of performing network requests by the SDK. <c>Average</c> by default.</summary>
-        <value></value>
-        <remarks></remarks>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
   </Members>

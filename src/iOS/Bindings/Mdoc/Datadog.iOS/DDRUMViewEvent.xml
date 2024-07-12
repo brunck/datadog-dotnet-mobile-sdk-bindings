@@ -21,8 +21,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary></summary>
-    <remarks></remarks>
+    <summary>
+    </summary>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -44,9 +46,12 @@
         <Parameter Name="t" Type="Foundation.NSObjectFlag" />
       </Parameters>
       <Docs>
-        <param name="t"></param>
-        <summary></summary>
-        <remarks></remarks>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -68,9 +73,12 @@
         <Parameter Name="handle" Type="ObjCRuntime.NativeHandle" />
       </Parameters>
       <Docs>
-        <param name="handle"></param>
-        <summary></summary>
-        <remarks></remarks>
+        <param name="handle">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -98,9 +106,12 @@
         <ReturnType>Datadog.iOS.DDRUMViewEventApplication</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="BuildId">
@@ -122,9 +133,12 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="BuildVersion">
@@ -146,9 +160,12 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="CITest">
@@ -170,9 +187,12 @@
         <ReturnType>Datadog.iOS.DDRUMViewEventRUMCITest</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ClassHandle">
@@ -186,9 +206,12 @@
         <ReturnType>ObjCRuntime.NativeHandle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Connectivity">
@@ -210,9 +233,12 @@
         <ReturnType>Datadog.iOS.DDRUMViewEventRUMConnectivity</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Container">
@@ -234,9 +260,12 @@
         <ReturnType>Datadog.iOS.DDRUMViewEventContainer</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Context">
@@ -258,9 +287,12 @@
         <ReturnType>Datadog.iOS.DDRUMViewEventRUMEventAttributes</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Date">
@@ -288,9 +320,12 @@
         <ReturnType>Foundation.NSNumber</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="DD">
@@ -318,9 +353,12 @@
         <ReturnType>Datadog.iOS.DDRUMViewEventDD</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Device">
@@ -342,9 +380,12 @@
         <ReturnType>Datadog.iOS.DDRUMViewEventRUMDevice</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Display">
@@ -366,9 +407,12 @@
         <ReturnType>Datadog.iOS.DDRUMViewEventDisplay</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="FeatureFlags">
@@ -390,9 +434,12 @@
         <ReturnType>Datadog.iOS.DDRUMViewEventFeatureFlags</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="OS">
@@ -414,9 +461,12 @@
         <ReturnType>Datadog.iOS.DDRUMViewEventRUMOperatingSystem</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Privacy">
@@ -438,9 +488,12 @@
         <ReturnType>Datadog.iOS.DDRUMViewEventPrivacy</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Service">
@@ -462,9 +515,12 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Session">
@@ -492,9 +548,12 @@
         <ReturnType>Datadog.iOS.DDRUMViewEventSession</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Source">
@@ -516,9 +575,12 @@
         <ReturnType>Datadog.iOS.DDRUMViewEventSource</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Synthetics">
@@ -540,9 +602,12 @@
         <ReturnType>Datadog.iOS.DDRUMViewEventRUMSyntheticsTest</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Type">
@@ -570,9 +635,12 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="User">
@@ -594,9 +662,12 @@
         <ReturnType>Datadog.iOS.DDRUMViewEventRUMUser</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Version">
@@ -618,9 +689,12 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="View">
@@ -648,9 +722,12 @@
         <ReturnType>Datadog.iOS.DDRUMViewEventView</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
   </Members>

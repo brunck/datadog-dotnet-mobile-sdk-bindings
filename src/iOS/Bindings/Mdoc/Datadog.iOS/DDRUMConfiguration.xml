@@ -22,7 +22,8 @@
   </Attributes>
   <Docs>
     <summary>RUM feature configuration.</summary>
-    <remarks></remarks>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -44,9 +45,12 @@
         <Parameter Name="t" Type="Foundation.NSObjectFlag" />
       </Parameters>
       <Docs>
-        <param name="t"></param>
-        <summary></summary>
-        <remarks></remarks>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -68,9 +72,12 @@
         <Parameter Name="handle" Type="ObjCRuntime.NativeHandle" />
       </Parameters>
       <Docs>
-        <param name="handle"></param>
-        <summary></summary>
-        <remarks></remarks>
+        <param name="handle">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -98,8 +105,10 @@
         <param name="applicationId">
           <see cref="ApplicationId" />
         </param>
-        <summary></summary>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="AppHangThreshold">
@@ -125,7 +134,8 @@
       </ReturnValue>
       <Docs>
         <summary>Enables App Hangs monitoring with the given threshold (in seconds).</summary>
-        <value></value>
+        <value>
+        </value>
         <remarks>
           <para>
             Only App Hangs that last more than this threshold will be reported. The minimal allowed value for this option is <c>0.1</c> seconds.
@@ -163,8 +173,10 @@
       </ReturnValue>
       <Docs>
         <summary>An unique identifier of the RUM application in Datadog.</summary>
-        <value></value>
-        <remarks></remarks>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ClassHandle">
@@ -178,9 +190,12 @@
         <ReturnType>ObjCRuntime.NativeHandle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="CustomEndpoint">
@@ -217,7 +232,8 @@
         <summary>
           Custom server URL for sending RUM data.
         </summary>
-        <value></value>
+        <value>
+        </value>
         <remarks>
           <para>
             Default: <c>null</c>.
@@ -248,7 +264,8 @@
       </ReturnValue>
       <Docs>
         <summary>Enables RUM long tasks tracking with the given threshold (in seconds).</summary>
-        <value></value>
+        <value>
+        </value>
         <remarks>
           <para>
             Any operation on the main thread that exceeds this threshold will be reported as a RUM long task.
@@ -286,7 +303,8 @@
         <summary>
           RUM session start callback.
         </summary>
-        <value></value>
+        <value>
+        </value>
         <remarks>
           <para>
             It takes 2 arguments:
@@ -323,7 +341,8 @@
       </ReturnValue>
       <Docs>
         <summary>The sampling rate for RUM sessions.</summary>
-        <value></value>
+        <value>
+        </value>
         <remarks>
           <para>
           It must be a number between 0.0 and 100.0, where 0 means no sessions will be sent
@@ -490,7 +509,8 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="mapper"></param>
+        <param name="mapper">
+        </param>
         <summary>Custom mapper for RUM resource events.</summary>
         <remarks>
           <para>
@@ -605,7 +625,8 @@
       </ReturnValue>
       <Docs>
         <summary>The sampling rate for SDK internal telemetry utilized by Datadog.</summary>
-        <value></value>
+        <value>
+        </value>
         <remarks>
           <para>This telemetry is used to monitor the internal workings of the entire Datadog iOS SDK.</para>
           <para>It must be a number between 0.0 and 100.0, where 0 means no telemetry will be sent, and 100 means all will be uploaded.</para>
@@ -636,7 +657,8 @@
       </ReturnValue>
       <Docs>
         <summary>Determines whether RUM events should be tracked when no view is active (including when the app is in the background).</summary>
-        <value></value>
+        <value>
+        </value>
         <remarks>
           <para>
             If enabled, RUM will attach events to an automatically created "background" view.
@@ -671,7 +693,8 @@
       </ReturnValue>
       <Docs>
         <summary>Determines whether automatic tracking of user frustrations should be enabled.</summary>
-        <value></value>
+        <value>
+        </value>
         <remarks>
           <para>RUM detects "error taps"  when an error follows a RUM tap action.</para>
           <para>Default: <c>true</c>.</para>
@@ -701,7 +724,8 @@
       </ReturnValue>
       <Docs>
         <summary>Determines whether the SDK should track application termination by the watchdog.</summary>
-        <value></value>
+        <value>
+        </value>
         <remarks>
           <para>
            Read more about watchdog terminations at https://developer.apple.com/documentation/xcode/addressing-watchdog-terminations
@@ -742,7 +766,8 @@
       </ReturnValue>
       <Docs>
         <summary>The predicate for automatically tracking <see cref="UITouch" /> events as RUM actions.</summary>
-        <value></value>
+        <value>
+        </value>
         <remarks>
           <para>
             RUM will query this predicate for each <see cref="UIView" /> that the user interacts with. The predicate implementation
@@ -792,7 +817,8 @@
       </ReturnValue>
       <Docs>
         <summary>The predicate for automatically tracking <c>UIViewControllers</c> as RUM views.</summary>
-        <value></value>
+        <value>
+        </value>
         <remarks>
           <para>
           RUM will query this predicate for each <c>UIViewController</c> presented in the app. The predicate implementation
@@ -832,7 +858,8 @@
       </ReturnValue>
       <Docs>
         <summary>Sets the preferred frequency for collecting RUM vitals.</summary>
-        <value></value>
+        <value>
+        </value>
         <remarks>
           <para>To disable RUM vitals monitoring, set <c>null</c>.</para>
           <para>Default: <c>Average</c>.</para>

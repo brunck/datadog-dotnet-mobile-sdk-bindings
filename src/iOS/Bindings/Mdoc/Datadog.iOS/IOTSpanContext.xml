@@ -62,12 +62,13 @@
           </Attributes>
         </Parameter>
       </Parameters>
-      <Docs>                   
+      <Docs>
         <param name="callback">
           Lambda invoked with each baggage item key-value pair as the parameters. 
           If the lambda returns true, iteration will stop.
         </param>
         <summary>Iterate through the baggage items.</summary>
+        <remarks></remarks>
       </Docs>
     </Member>
   </Members>

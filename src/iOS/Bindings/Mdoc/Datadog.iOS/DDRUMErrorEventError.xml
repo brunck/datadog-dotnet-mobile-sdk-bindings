@@ -21,8 +21,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary></summary>
-    <remarks></remarks>
+    <summary>
+    </summary>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -44,9 +46,12 @@
         <Parameter Name="t" Type="Foundation.NSObjectFlag" />
       </Parameters>
       <Docs>
-        <param name="t"></param>
-        <summary></summary>
-        <remarks></remarks>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -68,9 +73,12 @@
         <Parameter Name="handle" Type="ObjCRuntime.NativeHandle" />
       </Parameters>
       <Docs>
-        <param name="handle"></param>
-        <summary></summary>
-        <remarks></remarks>
+        <param name="handle">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="BinaryImages">
@@ -95,9 +103,12 @@
         <ReturnType>Datadog.iOS.DDRUMErrorEventErrorBinaryImages[]</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Category">
@@ -119,9 +130,12 @@
         <ReturnType>Datadog.iOS.DDRUMErrorEventErrorCategory</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Causes">
@@ -149,9 +163,12 @@
         <ReturnType>Datadog.iOS.DDRUMErrorEventErrorCauses[]</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ClassHandle">
@@ -165,9 +182,12 @@
         <ReturnType>ObjCRuntime.NativeHandle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="CSP">
@@ -189,9 +209,12 @@
         <ReturnType>Datadog.iOS.DDRUMErrorEventErrorCSP</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Fingerprint">
@@ -216,9 +239,12 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Handling">
@@ -240,9 +266,12 @@
         <ReturnType>Datadog.iOS.DDRUMErrorEventErrorHandling</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="HandlingStack">
@@ -264,9 +293,12 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Id">
@@ -288,9 +320,12 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="IsCrash">
@@ -312,9 +347,12 @@
         <ReturnType>Foundation.NSNumber</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Message">
@@ -348,9 +386,12 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Meta">
@@ -372,9 +413,12 @@
         <ReturnType>Datadog.iOS.DDRUMErrorEventErrorMeta</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Resource">
@@ -396,9 +440,12 @@
         <ReturnType>Datadog.iOS.DDRUMErrorEventErrorResource</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Source">
@@ -420,9 +467,12 @@
         <ReturnType>Datadog.iOS.DDRUMErrorEventErrorSource</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SourceType">
@@ -444,9 +494,12 @@
         <ReturnType>Datadog.iOS.DDRUMErrorEventErrorSourceType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Stack">
@@ -471,9 +524,12 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Threads">
@@ -498,9 +554,12 @@
         <ReturnType>Datadog.iOS.DDRUMErrorEventErrorThreads[]</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="TimeSinceAppStart">
@@ -522,9 +581,12 @@
         <ReturnType>Foundation.NSNumber</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Type">
@@ -546,9 +608,12 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="WasTruncated">
@@ -570,9 +635,12 @@
         <ReturnType>Foundation.NSNumber</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
   </Members>

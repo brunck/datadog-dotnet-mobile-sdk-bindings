@@ -14,8 +14,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary></summary>
-    <remarks></remarks>
+    <summary>
+    </summary>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="All">
@@ -30,7 +32,8 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary></summary>
+        <summary>
+        </summary>
       </Docs>
     </Member>
     <Member MemberName="None">
@@ -45,7 +48,8 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary></summary>
+        <summary>
+        </summary>
       </Docs>
     </Member>
     <Member MemberName="Sampled">
@@ -60,7 +64,8 @@
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
-        <summary></summary>
+        <summary>
+        </summary>
       </Docs>
     </Member>
   </Members>

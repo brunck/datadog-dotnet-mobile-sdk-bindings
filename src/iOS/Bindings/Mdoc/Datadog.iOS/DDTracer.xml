@@ -66,9 +66,12 @@
         <Parameter Name="t" Type="Foundation.NSObjectFlag" />
       </Parameters>
       <Docs>
-        <param name="t"></param>
-        <summary></summary>
-        <remarks></remarks>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -90,9 +93,12 @@
         <Parameter Name="handle" Type="ObjCRuntime.NativeHandle" />
       </Parameters>
       <Docs>
-        <param name="handle"></param>
-        <summary></summary>
-        <remarks></remarks>
+        <param name="handle">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ClassHandle">
@@ -106,9 +112,12 @@
         <ReturnType>ObjCRuntime.NativeHandle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary></summary>
-        <value></value>
-        <remarks></remarks>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Extract">
@@ -144,12 +153,18 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="format"></param>
-        <param name="carrier"></param>
-        <param name="error"></param>
-        <summary></summary>
-        <returns></returns>
-        <remarks></remarks>
+        <param name="format">
+        </param>
+        <param name="carrier">
+        </param>
+        <param name="error">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Inject">
@@ -252,7 +267,8 @@
         <param name="operationName">the operation name for the newly-started span.</param>
         <summary>Start a new span with the given operation name.</summary>
         <returns>A valid Span instance; it is the caller's responsibility to call <see cref="IOTSpan.Finish" />.</returns>
-        <remarks></remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="StartSpan">
@@ -295,7 +311,8 @@
         </param>
         <summary>Start a new span with the given operation name.</summary>
         <returns>A valid Span instance; it is the caller's responsibility to call <see cref="IOTSpan.Finish" />.</returns>
-        <remarks></remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="StartSpan">
@@ -337,7 +354,8 @@
         </param>
         <summary>Start a new span with the given operation name.</summary>
         <returns>A valid Span instance; it is the caller's responsibility to call <see cref="IOTSpan.Finish" />.</returns>
-        <remarks></remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="StartSpan">
@@ -391,7 +409,8 @@
         </param>
         <summary>Start a new span with the given operation name.</summary>
         <returns>A valid Span instance; it is the caller's responsibility to call <see cref="IOTSpan.Finish" />.</returns>
-        <remarks></remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="StartSpan">
@@ -451,7 +470,8 @@
         </param>
         <summary>Start a new span with the given operation name.</summary>
         <returns>A valid Span instance; it is the caller's responsibility to call <see cref="IOTSpan.Finish" />.</returns>
-        <remarks></remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
   </Members>

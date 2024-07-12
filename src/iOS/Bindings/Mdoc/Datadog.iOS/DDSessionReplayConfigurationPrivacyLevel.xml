@@ -15,7 +15,8 @@
   </Attributes>
   <Docs>
     <summary>Available privacy levels for content masking.</summary>
-    <remarks></remarks>
+    <remarks>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="Allow">
