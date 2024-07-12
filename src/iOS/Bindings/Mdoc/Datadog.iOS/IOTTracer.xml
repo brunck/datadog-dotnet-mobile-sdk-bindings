@@ -86,12 +86,12 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="format">To be added.</param>
-        <param name="carrier">To be added.</param>
-        <param name="error">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="format"></param>
+        <param name="carrier"></param>
+        <param name="error"></param>
+        <summary></summary>
+        <returns></returns>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="Inject">
@@ -128,13 +128,13 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="spanContext">To be added.</param>
-        <param name="format">To be added.</param>
-        <param name="carrier">To be added.</param>
-        <param name="error">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="spanContext"></param>
+        <param name="format"></param>
+        <param name="carrier"></param>
+        <param name="error"></param>
+        <summary></summary>
+        <returns></returns>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="StartSpan">
@@ -162,10 +162,10 @@
         <Parameter Name="operationName" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="operationName">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="operationName"></param>
+        <summary></summary>
+        <returns></returns>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="StartSpan">
@@ -200,11 +200,11 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="operationName">To be added.</param>
-        <param name="parent">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="operationName"></param>
+        <param name="parent"></param>
+        <summary></summary>
+        <returns></returns>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="StartSpan">
@@ -239,11 +239,11 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="operationName">To be added.</param>
-        <param name="tags">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="operationName"></param>
+        <param name="tags"></param>
+        <summary></summary>
+        <returns></returns>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="StartSpan">
@@ -285,12 +285,12 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="operationName">To be added.</param>
-        <param name="parent">To be added.</param>
-        <param name="tags">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="operationName"></param>
+        <param name="parent"></param>
+        <param name="tags"></param>
+        <summary></summary>
+        <returns></returns>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="StartSpan">
@@ -335,13 +335,13 @@
         <Parameter Name="startTime" Type="Foundation.NSDate" />
       </Parameters>
       <Docs>
-        <param name="operationName">To be added.</param>
-        <param name="parent">To be added.</param>
-        <param name="tags">To be added.</param>
-        <param name="startTime">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="operationName"></param>
+        <param name="parent"></param>
+        <param name="tags"></param>
+        <param name="startTime"></param>
+        <summary></summary>
+        <returns></returns>
+        <remarks></remarks>
       </Docs>
     </Member>
   </Members>

@@ -23,7 +23,7 @@
   </Attributes>
   <Docs>
     <summary>Abstract the monotonic clock synchronized with the server using NTP.</summary>
-    <remarks>To be added.</remarks>
+    <remarks></remarks>
   </Docs>
   <Members>
     <Member MemberName="Synchronize">
@@ -66,7 +66,7 @@
   Start the clock synchronization with NTP server. 
   Calls the <c>Action</c> by passing it the server time offset when the synchronization succeeds or<c>NULL</c> if it fails.
         </summary>
-        <remarks>To be added.</remarks>
+        <remarks></remarks>
       </Docs>
     </Member>
   </Members>

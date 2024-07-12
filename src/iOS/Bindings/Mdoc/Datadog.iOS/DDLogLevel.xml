@@ -18,7 +18,7 @@
     Log levels ordered by their severity, with <c>Debug</c> being the least severe and 
     <c>Critical</c> being the most severe.
     </summary>
-    <remarks>To be added.</remarks>
+    <remarks></remarks>
   </Docs>
   <Members>
     <Member MemberName="Critical">
@@ -33,7 +33,7 @@
       </ReturnValue>
       <MemberValue>5</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
     <Member MemberName="Debug">
@@ -48,7 +48,7 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
     <Member MemberName="Error">
@@ -63,7 +63,7 @@
       </ReturnValue>
       <MemberValue>4</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
     <Member MemberName="Info">
@@ -78,7 +78,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
     <Member MemberName="Notice">
@@ -93,7 +93,7 @@
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
     <Member MemberName="Warn">
@@ -108,7 +108,7 @@
       </ReturnValue>
       <MemberValue>3</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
   </Members>

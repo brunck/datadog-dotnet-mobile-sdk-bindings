@@ -50,9 +50,9 @@
         <Parameter Name="t" Type="Foundation.NSObjectFlag" />
       </Parameters>
       <Docs>
-        <param name="t">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="t"></param>
+        <summary></summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -74,9 +74,9 @@
         <Parameter Name="handle" Type="ObjCRuntime.NativeHandle" />
       </Parameters>
       <Docs>
-        <param name="handle">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="handle"></param>
+        <summary></summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="Add">
@@ -147,10 +147,10 @@
         <Parameter Name="value" Type="Foundation.NSObject" />
       </Parameters>
       <Docs>
-        <param name="key">To be added.</param>
-        <param name="value">To be added.</param>
+        <param name="key"></param>
+        <param name="value"></param>
         <summary>Adds a custom attribute to all future logs sent by this logger.</summary>
-        <remarks>To be added.</remarks>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="AddTag">
@@ -176,8 +176,8 @@
         <Parameter Name="value" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="key">To be added.</param>
-        <param name="value">To be added.</param>
+        <param name="key"></param>
+        <param name="value"></param>
         <summary>Adds a <c>"key:value"</c> tag to all future logs sent by this logger.</summary>
         <remarks>
           <para>Tags must start with a letter and:</para>
@@ -211,9 +211,9 @@
         <ReturnType>ObjCRuntime.NativeHandle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary></summary>
+        <value></value>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="Create">
@@ -238,10 +238,10 @@
         <Parameter Name="configuration" Type="Datadog.iOS.DDLoggerConfiguration" />
       </Parameters>
       <Docs>
-        <param name="configuration">To be added.</param>
-        <summary>To be added.</summary>
-        <returns>To be added.</returns>
-        <remarks>To be added.</remarks>
+        <param name="configuration"></param>
+        <summary></summary>
+        <returns></returns>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="Critical">
@@ -268,7 +268,7 @@
       <Docs>
         <param name="message">The message to be logged.</param>
         <summary>Sends a CRITICAL log message.</summary>
-        <remarks>To be added.</remarks>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="Critical">
@@ -298,7 +298,7 @@
         <param name="attributes">A dictionary of attributes to add for this message. If an attribute with 
         the same key already exists in this logger, it will be overridden (only for this message).</param>
         <summary>Sends a CRITICAL log message.</summary>
-        <remarks>To be added.</remarks>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="Critical">
@@ -330,7 +330,7 @@
         <param name="attributes">A dictionary of attributes to add for this message. If an attribute with 
         the same key already exists in this logger, it will be overridden (only for this message).</param>
         <summary>Sends a CRITICAL log message.</summary>
-        <remarks>To be added.</remarks>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="Debug">
@@ -357,7 +357,7 @@
       <Docs>
         <param name="message">The message to be logged.</param>
         <summary>Sends a DEBUG log message.</summary>
-        <remarks>To be added.</remarks>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="Debug">
@@ -387,7 +387,7 @@
         <param name="attributes">A dictionary of attributes to add for this message. If an attribute with 
         the same key already exist in this logger, it will be overridden (only for this message).</param>
         <summary>Sends a DEBUG log message.</summary>
-        <remarks>To be added.</remarks>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="Debug">
@@ -419,7 +419,7 @@
         <param name="attributes">A dictionary of attributes to add for this message. If an attribute with 
         the same key already exist in this logger, it will be overridden (only for this message).</param>
         <summary>Sends a DEBUG log message.</summary>
-        <remarks>To be added.</remarks>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="Error">
@@ -446,7 +446,7 @@
       <Docs>
         <param name="message">The message to be logged.</param>
         <summary>Sends an ERROR log message.</summary>
-        <remarks>To be added.</remarks>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="Error">
@@ -476,7 +476,7 @@
         <param name="attributes">A dictionary of attributes to add for this message. If an attribute with 
         the same key already exist in this logger, it will be overridden (only for this message).</param>
         <summary>Sends an ERROR log message.</summary>
-        <remarks>To be added.</remarks>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="Error">
@@ -508,7 +508,7 @@
         <param name="attributes">A dictionary of attributes to add for this message. If an attribute with 
         the same key already exist in this logger, it will be overridden (only for this message).</param>
         <summary>Sends a ERROR log message.</summary>
-        <remarks>To be added.</remarks>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="Info">
@@ -533,9 +533,9 @@
         <Parameter Name="message" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="message">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="message"></param>
+        <summary></summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="Info">
@@ -561,10 +561,10 @@
         <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
       </Parameters>
       <Docs>
-        <param name="message">To be added.</param>
-        <param name="attributes">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="message"></param>
+        <param name="attributes"></param>
+        <summary></summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="Info">
@@ -591,11 +591,11 @@
         <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
       </Parameters>
       <Docs>
-        <param name="message">To be added.</param>
-        <param name="error">To be added.</param>
-        <param name="attributes">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="message"></param>
+        <param name="error"></param>
+        <param name="attributes"></param>
+        <summary></summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="Notice">
@@ -620,9 +620,9 @@
         <Parameter Name="message" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="message">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="message"></param>
+        <summary></summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="Notice">
@@ -648,10 +648,10 @@
         <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
       </Parameters>
       <Docs>
-        <param name="message">To be added.</param>
-        <param name="attributes">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="message"></param>
+        <param name="attributes"></param>
+        <summary></summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="Notice">
@@ -678,11 +678,11 @@
         <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
       </Parameters>
       <Docs>
-        <param name="message">To be added.</param>
-        <param name="error">To be added.</param>
-        <param name="attributes">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="message"></param>
+        <param name="error"></param>
+        <param name="attributes"></param>
+        <summary></summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="Remove">
@@ -712,7 +712,7 @@
         Removes the tag from all future logs sent by this logger. 
         Previous logs won't lose the this tag if created prior to this call.
         </summary>
-        <remarks>To be added.</remarks>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="RemoveAttribute">
@@ -737,12 +737,12 @@
         <Parameter Name="key" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="key">To be added.</param>
+        <param name="key"></param>
         <summary>
         Removes the custom attribute from all future logs sent by this logger. 
         Previous logs won't lose this attribute if sent prior to this call.
         </summary>
-        <remarks>To be added.</remarks>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="RemoveTag">
@@ -772,7 +772,7 @@
         Remove all tags with the given key from all future logs sent by this logger. 
         Previous logs won't lose this tag if created prior to this call.
         </summary>
-        <remarks>To be added.</remarks>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="Warn">
@@ -797,9 +797,9 @@
         <Parameter Name="message" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="message">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="message"></param>
+        <summary></summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="Warn">
@@ -825,10 +825,10 @@
         <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
       </Parameters>
       <Docs>
-        <param name="message">To be added.</param>
-        <param name="attributes">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="message"></param>
+        <param name="attributes"></param>
+        <summary></summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="Warn">
@@ -855,11 +855,11 @@
         <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
       </Parameters>
       <Docs>
-        <param name="message">To be added.</param>
-        <param name="error">To be added.</param>
-        <param name="attributes">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="message"></param>
+        <param name="error"></param>
+        <param name="attributes"></param>
+        <summary></summary>
+        <remarks></remarks>
       </Docs>
     </Member>
   </Members>

@@ -29,7 +29,7 @@
       An interface for forwarding <c>URLSessionDelegate</c> calls to <c>DDURLSessionDelegate</c>.
       The implementation must ensure that required methods are called on the <c>ddURLSessionDelegate</c>.
     </summary>
-    <remarks>To be added.</remarks>
+    <remarks></remarks>
   </Docs>
   <Members>
     <Member MemberName="WeakDDURLSessionDelegate">
@@ -60,7 +60,7 @@
         <summary>
         Datadog delegate object.
         </summary>
-        <value>To be added.</value>
+        <value></value>
         <remarks>
           <para>
         The class implementing <c>DDURLSessionDelegateProviding</c> must ensure that the following method calls are forwarded to <c>DDURLSessionDelegate</c>:

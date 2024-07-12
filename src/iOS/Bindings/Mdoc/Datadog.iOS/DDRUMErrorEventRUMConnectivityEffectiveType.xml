@@ -14,8 +14,8 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary></summary>
+    <remarks></remarks>
   </Docs>
   <Members>
     <Member MemberName="EffectiveType2G">
@@ -30,7 +30,7 @@
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
     <Member MemberName="EffectiveType3G">
@@ -45,7 +45,7 @@
       </ReturnValue>
       <MemberValue>3</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
     <Member MemberName="EffectiveType4G">
@@ -60,7 +60,7 @@
       </ReturnValue>
       <MemberValue>4</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
     <Member MemberName="None">
@@ -75,7 +75,7 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
     <Member MemberName="Slow2G">
@@ -90,7 +90,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
   </Members>

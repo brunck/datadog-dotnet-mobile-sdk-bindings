@@ -21,8 +21,8 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary></summary>
+    <remarks></remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -44,9 +44,9 @@
         <Parameter Name="t" Type="Foundation.NSObjectFlag" />
       </Parameters>
       <Docs>
-        <param name="t">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="t"></param>
+        <summary></summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -68,9 +68,9 @@
         <Parameter Name="handle" Type="ObjCRuntime.NativeHandle" />
       </Parameters>
       <Docs>
-        <param name="handle">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="handle"></param>
+        <summary></summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="AP1">
@@ -93,7 +93,7 @@
       </ReturnValue>
       <Docs>
         <summary>Asia-based servers.</summary>
-        <value>To be added.</value>
+        <value></value>
         <remarks>Sends data to https://ap1.datadoghq.com/</remarks>
       </Docs>
     </Member>
@@ -108,9 +108,9 @@
         <ReturnType>ObjCRuntime.NativeHandle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary></summary>
+        <value></value>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="EU1">
@@ -133,7 +133,7 @@
       </ReturnValue>
       <Docs>
         <summary>Europe-based servers.</summary>
-        <value>To be added.</value>
+        <value></value>
         <remarks>Sends data to https://app.datadoghq.eu/</remarks>
       </Docs>
     </Member>
@@ -157,7 +157,7 @@
       </ReturnValue>
       <Docs>
         <summary>US-based servers.</summary>
-        <value>To be added.</value>
+        <value></value>
         <remarks>Sends data to https://app.datadoghq.com/</remarks>
       </Docs>
     </Member>
@@ -181,7 +181,7 @@
       </ReturnValue>
       <Docs>
         <summary>US-based servers, FedRAMP compatible.</summary>
-        <value>To be added.</value>
+        <value></value>
         <remarks>Sends data to https://app.ddog-gov.com/</remarks>
       </Docs>
     </Member>
@@ -205,7 +205,7 @@
       </ReturnValue>
       <Docs>
         <summary>US-based servers.</summary>
-        <value>To be added.</value>
+        <value></value>
         <remarks>Sends data to https://us3.datadoghq.com/</remarks>
       </Docs>
     </Member>
@@ -229,7 +229,7 @@
       </ReturnValue>
       <Docs>
         <summary>US-based servers.</summary>
-        <value>To be added.</value>
+        <value></value>
         <remarks>Sends data to https://us5.datadoghq.com/</remarks>
       </Docs>
     </Member>

@@ -22,8 +22,8 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary></summary>
+    <remarks></remarks>
   </Docs>
   <Members>
     <Member MemberName="RumAction">
@@ -64,7 +64,7 @@
         <param name="targetView">An instance of the <c>UIView</c> which received the action.</param>
         <summary>The predicate deciding if the RUM Action should be recorded.</summary>
         <returns>RUM Action if it should be recorded, <code>NULL</code> otherwise.</returns>
-        <remarks>To be added.</remarks>
+        <remarks></remarks>
       </Docs>
     </Member>
   </Members>

@@ -22,7 +22,7 @@
   </Attributes>
   <Docs>
     <summary>Configuration of URLSession instrumentation.</summary>
-    <remarks>To be added.</remarks>
+    <remarks></remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -47,9 +47,9 @@
         <Parameter Name="delegateClass" Type="Foundation.INSUrlSessionDataDelegate" />
       </Parameters>
       <Docs>
-        <param name="delegateClass">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="delegateClass"></param>
+        <summary></summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -71,9 +71,9 @@
         <Parameter Name="t" Type="Foundation.NSObjectFlag" />
       </Parameters>
       <Docs>
-        <param name="t">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="t"></param>
+        <summary></summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -95,9 +95,9 @@
         <Parameter Name="handle" Type="ObjCRuntime.NativeHandle" />
       </Parameters>
       <Docs>
-        <param name="handle">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="handle"></param>
+        <summary></summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="ClassHandle">
@@ -111,9 +111,9 @@
         <ReturnType>ObjCRuntime.NativeHandle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary></summary>
+        <value></value>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="DelegateClass">
@@ -139,8 +139,8 @@
       </ReturnValue>
       <Docs>
         <summary>The delegate class to be used to swizzle URLSessionTaskDelegate &amp; URLSessionDataDelegate methods.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <value></value>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="Dispose">
@@ -162,9 +162,9 @@
         <Parameter Name="disposing" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="disposing">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="disposing"></param>
+        <summary></summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="SetFirstPartyHostsTracing">
@@ -189,9 +189,9 @@
         <Parameter Name="firstPartyHostsTracing" Type="Datadog.iOS.DDURLSessionInstrumentationFirstPartyHostsTracing" />
       </Parameters>
       <Docs>
-        <param name="firstPartyHostsTracing">To be added.</param>
+        <param name="firstPartyHostsTracing"></param>
         <summary>Sets additional first party hosts to consider in the interception.</summary>
-        <remarks>To be added.</remarks>
+        <remarks></remarks>
       </Docs>
     </Member>
   </Members>

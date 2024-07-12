@@ -14,8 +14,8 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary></summary>
+    <remarks></remarks>
   </Docs>
   <Members>
     <Member MemberName="Bot">
@@ -30,7 +30,7 @@
       </ReturnValue>
       <MemberValue>5</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
     <Member MemberName="Desktop">
@@ -45,7 +45,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
     <Member MemberName="GamingConsole">
@@ -60,7 +60,7 @@
       </ReturnValue>
       <MemberValue>4</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
     <Member MemberName="Mobile">
@@ -75,7 +75,7 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
     <Member MemberName="Other">
@@ -90,7 +90,7 @@
       </ReturnValue>
       <MemberValue>6</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
     <Member MemberName="Tablet">
@@ -105,7 +105,7 @@
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
     <Member MemberName="TV">
@@ -120,7 +120,7 @@
       </ReturnValue>
       <MemberValue>3</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
   </Members>

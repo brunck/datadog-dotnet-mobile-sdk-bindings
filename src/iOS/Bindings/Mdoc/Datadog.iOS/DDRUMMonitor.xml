@@ -257,7 +257,7 @@
         <summary>
         Adds a RUM error to the current RUM view.
         </summary>
-        <remarks>To be added.</remarks>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="AddFeatureFlagEvaluationWithName">
@@ -515,7 +515,7 @@
         <summary>
         Obtains the RUM monitor for manual interaction with the RUM feature.
         </summary>
-        <value>To be added.</value>
+        <value></value>
         <remarks>
         It requires <see cref="DDRUM.Enable" /> to be called first - otherwise it will return a no-op implementation.
         </remarks>
@@ -728,7 +728,7 @@
         <summary>
           Starts the RUM view.
         </summary>
-        <remarks>To be added.</remarks>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="StartView">
@@ -773,7 +773,7 @@
         <summary>
           Starts the RUM view.
         </summary>
-        <remarks>To be added.</remarks>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="StopAction">
@@ -1093,7 +1093,7 @@
         <summary>
           Stops the RUM view.
         </summary>
-        <remarks>To be added.</remarks>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="StopView">
@@ -1128,7 +1128,7 @@
         <summary>
           Stops the RUM view.
         </summary>
-        <remarks>To be added.</remarks>
+        <remarks></remarks>
       </Docs>
     </Member>
   </Members>

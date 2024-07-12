@@ -23,7 +23,7 @@
   </Attributes>
   <Docs>
     <summary>Corresponds to: https://github.com/opentracing/opentracing-objc/blob/master/Pod/Classes/OTSpanContext.h</summary>
-    <remarks>To be added.</remarks>
+    <remarks></remarks>
   </Docs>
   <Members>
     <Member MemberName="ForEachBaggageItem">
@@ -60,9 +60,9 @@
         </Parameter>
       </Parameters>
       <Docs>
-        <param name="callback">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="callback"></param>
+        <summary></summary>
+        <remarks></remarks>
       </Docs>
     </Member>
   </Members>

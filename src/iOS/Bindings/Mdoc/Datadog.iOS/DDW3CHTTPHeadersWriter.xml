@@ -64,9 +64,9 @@
         <Parameter Name="t" Type="Foundation.NSObjectFlag" />
       </Parameters>
       <Docs>
-        <param name="t">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="t"></param>
+        <summary></summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -88,9 +88,9 @@
         <Parameter Name="handle" Type="ObjCRuntime.NativeHandle" />
       </Parameters>
       <Docs>
-        <param name="handle">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="handle"></param>
+        <summary></summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">
@@ -116,10 +116,10 @@
         <Parameter Name="traceContextInjection" Type="Datadog.iOS.DDTraceContextInjection" />
       </Parameters>
       <Docs>
-        <param name="samplingStrategy">To be added.</param>
-        <param name="traceContextInjection">To be added.</param>
-        <summary>To be added.</summary>
-        <remarks>To be added.</remarks>
+        <param name="samplingStrategy"></param>
+        <param name="traceContextInjection"></param>
+        <summary></summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="ClassHandle">
@@ -133,9 +133,9 @@
         <ReturnType>ObjCRuntime.NativeHandle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
+        <summary></summary>
+        <value></value>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="TraceHeaderFields">
@@ -158,7 +158,7 @@
       </ReturnValue>
       <Docs>
         <summary>A dictionary containing the required HTTP Headers for propagating trace information.</summary>
-        <value>To be added.</value>
+        <value></value>
         <remarks>
           <para>Usage:</para>
           <code>

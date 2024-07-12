@@ -15,7 +15,7 @@
   </Attributes>
   <Docs>
     <summary>Defines whether the trace context should be injected into all requests or only sampled ones.</summary>
-    <remarks>To be added.</remarks>
+    <remarks></remarks>
   </Docs>
   <Members>
     <Member MemberName="All">

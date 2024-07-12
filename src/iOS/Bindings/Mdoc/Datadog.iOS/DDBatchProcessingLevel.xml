@@ -15,7 +15,7 @@
   </Attributes>
   <Docs>
     <summary>Defines the maximum amount of batches processed sequentially without a delay within one reading/uploading cycle.</summary>
-    <remarks>To be added.</remarks>
+    <remarks></remarks>
   </Docs>
   <Members>
     <Member MemberName="High">
@@ -30,7 +30,7 @@
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
     <Member MemberName="Low">
@@ -45,7 +45,7 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
     <Member MemberName="Medium">
@@ -60,7 +60,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
   </Members>

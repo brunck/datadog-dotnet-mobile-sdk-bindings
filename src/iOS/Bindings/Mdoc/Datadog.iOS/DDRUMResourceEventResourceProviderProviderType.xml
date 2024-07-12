@@ -14,8 +14,8 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>To be added.</summary>
-    <remarks>To be added.</remarks>
+    <summary></summary>
+    <remarks></remarks>
   </Docs>
   <Members>
     <Member MemberName="Ad">
@@ -30,7 +30,7 @@
       </ReturnValue>
       <MemberValue>1</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
     <Member MemberName="Advertising">
@@ -45,7 +45,7 @@
       </ReturnValue>
       <MemberValue>2</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
     <Member MemberName="Analytics">
@@ -60,7 +60,7 @@
       </ReturnValue>
       <MemberValue>3</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
     <Member MemberName="CDN">
@@ -75,7 +75,7 @@
       </ReturnValue>
       <MemberValue>4</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
     <Member MemberName="Content">
@@ -90,7 +90,7 @@
       </ReturnValue>
       <MemberValue>5</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
     <Member MemberName="CustomerSuccess">
@@ -105,7 +105,7 @@
       </ReturnValue>
       <MemberValue>6</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
     <Member MemberName="FirstParty">
@@ -120,7 +120,7 @@
       </ReturnValue>
       <MemberValue>7</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
     <Member MemberName="Hosting">
@@ -135,7 +135,7 @@
       </ReturnValue>
       <MemberValue>8</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
     <Member MemberName="Marketing">
@@ -150,7 +150,7 @@
       </ReturnValue>
       <MemberValue>9</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
     <Member MemberName="None">
@@ -165,7 +165,7 @@
       </ReturnValue>
       <MemberValue>0</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
     <Member MemberName="Other">
@@ -180,7 +180,7 @@
       </ReturnValue>
       <MemberValue>10</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
     <Member MemberName="Social">
@@ -195,7 +195,7 @@
       </ReturnValue>
       <MemberValue>11</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
     <Member MemberName="TagManager">
@@ -210,7 +210,7 @@
       </ReturnValue>
       <MemberValue>12</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
     <Member MemberName="Utility">
@@ -225,7 +225,7 @@
       </ReturnValue>
       <MemberValue>13</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
     <Member MemberName="Video">
@@ -240,7 +240,7 @@
       </ReturnValue>
       <MemberValue>14</MemberValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary></summary>
       </Docs>
     </Member>
   </Members>
