@@ -64,8 +64,10 @@
 	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='UserInfo']/method[@name='component3']" />
 	<remove-node path="/api/package[@name='com.datadog.android.api.context']/class[@name='UserInfo']/method[@name='component4']" />
 
-	<remove-node path="/api/package[@name='com.datadog.android.api.feature']" />
-	<remove-node path="/api/package[@name='com.datadog.android.api.net']" />
+	<!--<remove-node path="/api/package[@name='com.datadog.android.api.feature']" />-->
+	<remove-node path="/api/package[@name='com.datadog.android.api.feature']/class[@name='FeatureScopeExtKt']" />
+	<remove-node path="/api/package[@name='com.datadog.android.api.feature']/interface[@name='FeatureSdkCore']/method[@name='getInternalLogger']" />
+	<!--<remove-node path="/api/package[@name='com.datadog.android.api.net']" />-->
 	<remove-node path="/api/package[@name='com.datadog.android.api.storage']/interface[@name='DataWriter']" />
 	<remove-node path="/api/package[@name='com.datadog.android.api.storage']/class[@name='NoOpDataWriter']" />
 	<remove-node path="/api/package[@name='com.datadog.android.api.storage']/interface[@name='EventBatchWriter']" />
@@ -86,7 +88,6 @@
 	<remove-node path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='HostsSanitizer']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='Configuration']/field[@name='Companion']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='Configuration.Companion']" />
-	<!--<remove-node path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='BackPressureStrategy']/method[@name='getOnItemDropped']" />-->
 	
 	<remove-node path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='BackPressureStrategy']/method[@name='component1']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core.configuration']/class[@name='BackPressureStrategy']/method[@name='component2']" />
