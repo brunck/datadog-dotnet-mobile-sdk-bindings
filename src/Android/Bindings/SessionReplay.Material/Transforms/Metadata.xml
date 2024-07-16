@@ -1,0 +1,5 @@
+﻿<metadata>
+
+	<remove-node path="/api/package[@name='com.datadog.android.sessionreplay.material.internal']/class[@name='LongExtKt']" />
+	
+</metadata>

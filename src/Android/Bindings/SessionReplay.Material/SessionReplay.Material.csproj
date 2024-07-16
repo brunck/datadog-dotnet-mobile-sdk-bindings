@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net8.0-android</TargetFramework>
+		<SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<IsTrimmable>true</IsTrimmable>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Bcr.Datadog.Android.Sdk.Core" Version="2.11.0" />
+		<PackageReference Include="Xamarin.Google.Android.Material" Version="1.4.0.1" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\SessionReplay\SessionReplay.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<AndroidLibrary Update="aars\dd-sdk-android-session-replay-material-release.aar" />
+	</ItemGroup>
+	<ItemGroup>
+		<AndroidNamespaceReplacement Include="com.datadog.android.sessionreplay.material."
+		                             Replacement="Datadog.Android.SessionReplay.Material" />
+	</ItemGroup>
+</Project>

@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ndk", "Bindings\Ndk\Ndk.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SessionReplay", "Bindings\SessionReplay\SessionReplay.csproj", "{E629F707-A9C9-4A61-B5C0-91EBEEF0167F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SessionReplay.Material", "Bindings\SessionReplayMaterial\SessionReplay.Material.csproj", "{9FBE65C6-3794-4C5E-AF2B-5A1F368A8F51}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SessionReplay.Material", "Bindings\SessionReplay.Material\SessionReplay.Material.csproj", "{9FBE65C6-3794-4C5E-AF2B-5A1F368A8F51}"
 EndProject
 EndProject
 Global
