@@ -4,6 +4,7 @@
 		<SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
+		<IsTrimmable>true</IsTrimmable>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Bcr.Datadog.Android.Sdk.Core" Version="2.11.0" />
