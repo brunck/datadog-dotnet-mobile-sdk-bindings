@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net8.0-android</TargetFramework>
+		<SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<IsTrimmable>true</IsTrimmable>
+	</PropertyGroup>
+	<ItemGroup>
+		<AndroidLibrary Update="aars\dd-sdk-android-trace-release.aar" />
+	</ItemGroup>
+	<ItemGroup>
+		<AndroidNamespaceReplacement Include="com.datadog." Replacement="Datadog.Android" />
+	</ItemGroup>
+</Project>

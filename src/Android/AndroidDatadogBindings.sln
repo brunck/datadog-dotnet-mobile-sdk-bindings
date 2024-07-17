@@ -15,6 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SessionReplay", "Bindings\S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SessionReplay.Material", "Bindings\SessionReplay.Material\SessionReplay.Material.csproj", "{9FBE65C6-3794-4C5E-AF2B-5A1F368A8F51}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trace", "Bindings\Trace\Trace.csproj", "{925CC0D1-2FFF-4342-9967-054EC6E6096F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,6 +47,10 @@ Global
 		{9FBE65C6-3794-4C5E-AF2B-5A1F368A8F51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FBE65C6-3794-4C5E-AF2B-5A1F368A8F51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FBE65C6-3794-4C5E-AF2B-5A1F368A8F51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{925CC0D1-2FFF-4342-9967-054EC6E6096F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{925CC0D1-2FFF-4342-9967-054EC6E6096F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{925CC0D1-2FFF-4342-9967-054EC6E6096F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{925CC0D1-2FFF-4342-9967-054EC6E6096F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

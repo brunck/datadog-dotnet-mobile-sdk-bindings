@@ -1,0 +1,10 @@
+﻿<metadata>
+	
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/class[@name='URIUtils.LazyUrl']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api']/class[@name='Functions']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/class[@name='AgentTracer.NoopAgentSpan']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/class[@name='AgentTracer.NoopAgentScope']" />
+	
+	             <!--<attr path="/api/package[@name='com.datadog.trace.common.sampling']/class[@name='SamplingRule.ServiceSamplingRule']/method[@name='getRelevantString' and count(parameter)=1 and parameter[1][@type='T']]" name="managedName">GetRelevantStringFormatted</attr>-->
+	
+</metadata>
