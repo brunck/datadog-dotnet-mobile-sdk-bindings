@@ -1,4 +1,4 @@
-﻿namespace Datadog.Android.Trace.Common.Sampling
+﻿namespace Datadog.Trace.Common.Sampling
 {
     public partial class SamplingRule
     {
