@@ -1,11 +1,11 @@
 ﻿// ReSharper disable once CheckNamespace
 namespace Core.KotlinInterop;
 
-internal class ActionOfObjectWrapper : Java.Lang.Object, Kotlin.Jvm.Functions.IFunction1
+internal class ActionOfObjectImplementor : Java.Lang.Object, Kotlin.Jvm.Functions.IFunction1
 {
     private readonly Action<object> _action;
 
-    public ActionOfObjectWrapper(Action<object> action)
+    public ActionOfObjectImplementor(Action<object> action)
     {
         _action = action;
     }
@@ -26,11 +26,11 @@ internal class ActionOfObjectWrapper : Java.Lang.Object, Kotlin.Jvm.Functions.IF
     }
 }
 
-internal class ActionWrapper : Java.Lang.Object, Kotlin.Jvm.Functions.IFunction0
+internal class ActionImplementor : Java.Lang.Object, Kotlin.Jvm.Functions.IFunction0
 {
     private readonly Action _action;
 
-    public ActionWrapper(Action action)
+    public ActionImplementor(Action action)
     {
         _action = action;
     }

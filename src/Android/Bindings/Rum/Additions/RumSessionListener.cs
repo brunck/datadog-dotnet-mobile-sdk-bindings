@@ -1,6 +1,4 @@
-﻿using Datadog.Android.Rum;
-
-namespace Rum.Additions
+﻿namespace Datadog.Android.Rum
 {
     public class RumSessionListener : Java.Lang.Object, IRumSessionListener
     {

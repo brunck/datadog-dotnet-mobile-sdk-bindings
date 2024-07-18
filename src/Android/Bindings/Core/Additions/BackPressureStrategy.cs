@@ -10,7 +10,7 @@ public partial class BackPressureStrategy
         get
         {
             var kotlinResult = OnItemDroppedInterop();
-            if (kotlinResult is not ActionOfObjectWrapper result)
+            if (kotlinResult is not ActionOfObjectImplementor result)
             {
                 throw new InvalidOperationException("Kotlin interop failure.");
             }
@@ -24,7 +24,7 @@ public partial class BackPressureStrategy
         get
         {
             var kotlinResult = OnThresholdReachedInterop();
-            if (kotlinResult is not ActionWrapper result)
+            if (kotlinResult is not ActionImplementor result)
             {
                 throw new InvalidOperationException("Kotlin interop failure.");
             }
@@ -36,13 +36,13 @@ public partial class BackPressureStrategy
     public BackPressureStrategy Copy(int capacity, Action onThresholdReached, Action<object> onItemDropped,
         BackPressureMitigation backpressureMitigation)
     {
-        return CopyInterop(capacity, new ActionWrapper(onThresholdReached), new ActionOfObjectWrapper(onItemDropped),
+        return CopyInterop(capacity, new ActionImplementor(onThresholdReached), new ActionOfObjectImplementor(onItemDropped),
             backpressureMitigation);
     }
 
     public BackPressureStrategy(int capacity, Action onThresholdReached, Action<object> onItemDropped
         , BackPressureMitigation backpressureMitigation)
-        : this(capacity, new ActionWrapper(onThresholdReached), new ActionOfObjectWrapper(onItemDropped),
+        : this(capacity, new ActionImplementor(onThresholdReached), new ActionOfObjectImplementor(onItemDropped),
             backpressureMitigation)
     {
     }
