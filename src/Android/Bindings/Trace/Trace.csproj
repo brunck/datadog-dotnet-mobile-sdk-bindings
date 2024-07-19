@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFramework>net8.0-android</TargetFramework>
 		<SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
@@ -8,6 +8,7 @@
 	</PropertyGroup>
 	<ItemGroup>
 		<AndroidLibrary Update="aars\dd-sdk-android-trace-release.aar" />
+		<AndroidLibrary Update="aars\opentracing-api-0.32.0.jar" />
 	</ItemGroup>
 	<ItemGroup>
 		<AndroidNamespaceReplacement Include="com.datadog.opentracing" Replacement="Datadog.OpenTracing" />
@@ -17,6 +18,7 @@
 		<AndroidNamespaceReplacement Include="com.datadog.trace.core.tagprocessor" Replacement="Datadog.Trace.Core.TagProcessor" />
 		<!--<AndroidNamespaceReplacement Include="com.datadog.trace.common.writer.ddagent" Replacement="Datadog.Trace.Common.Writer.DDAgent" />-->
 		<AndroidNamespaceReplacement Include="com." Replacement="" />
+		<AndroidNamespaceReplacement Include="IO.Opentracing." Replacement="IO.OpenTracing" />
 	</ItemGroup>
 	<ItemGroup>
 	  <PackageReference Include="Bcr.Datadog.Android.Sdk.Core" Version="2.11.0" />
