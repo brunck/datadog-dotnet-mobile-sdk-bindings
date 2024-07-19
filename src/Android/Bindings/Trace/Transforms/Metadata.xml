@@ -16,29 +16,33 @@
 	<remove-node path="/api/package[@name='com.datadog.opentracing.jfr']/class[@name='DDNoopScopeEventFactory']" />
 	<remove-node path="/api/package[@name='com.datadog.opentracing.propagation']/class[@name='HaystackHttpCodec']" />
 	<remove-node path="/api/package[@name='com.datadog.opentracing.propagation']/class[@name='HttpCodec']" />
-	
+
 	<remove-node path="/api/package[@name='com.datadog.trace.api']/class[@name='Functions']" />
 	<remove-node path="/api/package[@name='com.datadog.trace.api.cache']" />
 	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap']/class[@name='ActiveSubsystems']" />
 	<remove-node
 		path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/class[@name='URIUtils.LazyUrl']" />
-	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/interface[@name='AgentHistogram']" />
+	<remove-node
+		path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/interface[@name='AgentHistogram']" />
 	<remove-node
 		path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/class[@name='AgentTracer.NoopAgentSpan']" />
 	<remove-node
 		path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/class[@name='AgentTracer.NoopAgentScope']" />
 	<remove-node path="/api/package[@name='com.datadog.trace.core']/class[@name='CoreTracer']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.core']/class[@name='DDSpan']/method[@name='samplingPriority' and count(parameter)=0]" />
+	<remove-node path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpanContext']/method[@name='baggageItems' and count(parameter)=0]" />
+	<remove-node path="/api/package[@name='io.opentracing.tag']/class[@name='BooleanTag']" />
+	<remove-node path="/api/package[@name='io.opentracing.tag']/class[@name='IntTag']" />
+	<remove-node path="/api/package[@name='io.opentracing.tag']/class[@name='StringTag']" />
 
-	
-	
-	
+
 	<attr path="/api/package[@name='com.datadog.trace.api']/class[@name='Config']" name="managedName">Configuration</attr>
-	<attr 
+	<attr
 		path="/api/package[@name='com.datadog.trace.core']/interface[@name='CoreSpan']/method[@name='samplingPriority' and count(parameter)=0]"
 		name="managedReturn">
 		Java.Lang.Integer
 	</attr>
-	<!--<attr
+	<attr
 		path="/api/package[@name='com.datadog.trace.core']/class[@name='CoreTracer']/method[@name='buildSpan' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.CharSequence']]"
 		name="managedReturn">
 		Datadog.Trace.Bootstrap.Instrumentation.Api.AgentTracer.ISpanBuilder
@@ -68,7 +72,7 @@
 		name="managedReturn">
 		Datadog.Trace.Bootstrap.Instrumentation.Api.AgentTracer.ISpanBuilder
 	</attr>
-	<attr 
+	<attr
 		path="/api/package[@name='com.datadog.trace.core']/class[@name='CoreTracer.CoreSpanBuilder']/method[@name='withServiceName' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
 		name="managedReturn">
 		Datadog.Trace.Bootstrap.Instrumentation.Api.AgentTracer.ISpanBuilder
@@ -87,10 +91,117 @@
 		path="/api/package[@name='com.datadog.trace.core']/class[@name='CoreTracer.CoreSpanBuilder']/method[@name='withTag']"
 		name="managedReturn">
 		Datadog.Trace.Bootstrap.Instrumentation.Api.AgentTracer.ISpanBuilder
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDTracer.DDSpanBuilder']/method[@name='addReference' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='io.opentracing.SpanContext']]"
+		name="managedReturn">
+		IO.OpenTracing.ITracer.ISpanBuilder
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDTracer.DDSpanBuilder']/method[@name='asChildOf' and count(parameter)=1 and parameter[1][@type='io.opentracing.Span']]"
+		name="managedReturn">
+		IO.OpenTracing.ITracer.ISpanBuilder
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDTracer.DDSpanBuilder']/method[@name='asChildOf' and count(parameter)=1 and parameter[1][@type='io.opentracing.SpanContext']]"
+		name="managedReturn">
+		IO.OpenTracing.ITracer.ISpanBuilder
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDTracer.DDSpanBuilder']/method[@name='withStartTimestamp' and count(parameter)=1 and parameter[1][@type='long']]"
+		name="managedReturn">
+		IO.OpenTracing.ITracer.ISpanBuilder
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDTracer.DDSpanBuilder']/method[@name='withTag' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='boolean']]"
+		name="managedReturn">
+		IO.OpenTracing.ITracer.ISpanBuilder
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDTracer.DDSpanBuilder']/method[@name='withTag' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.Number']]"
+		name="managedReturn">
+		IO.OpenTracing.ITracer.ISpanBuilder
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDTracer.DDSpanBuilder']/method[@name='withTag' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]"
+		name="managedReturn">
+		IO.OpenTracing.ITracer.ISpanBuilder
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpan']/method[@name='context' and count(parameter)=0]"
+		name="managedReturn">
+		IO.OpenTracing.ISpanContext
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpan']/method[@name='log' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+		name="managedReturn">
+		IO.OpenTracing.ISpan
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpan']/method[@name='log' and count(parameter)=1 and parameter[1][@type='java.util.Map&lt;java.lang.String, ?&gt;']]"
+		name="managedReturn">
+		IO.OpenTracing.ISpan
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpan']/method[@name='log' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='java.lang.String']]"
+		name="managedReturn">
+		IO.OpenTracing.ISpan
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpan']/method[@name='log' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='java.util.Map&lt;java.lang.String, ?&gt;']]"
+		name="managedReturn">
+		IO.OpenTracing.ISpan
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpan']/method[@name='setBaggageItem' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]"
+		name="managedReturn">
+		IO.OpenTracing.ISpan
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpan']/method[@name='setOperationName' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+		name="managedReturn">
+		IO.OpenTracing.ISpan
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpan']/method[@name='setTag' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='boolean']]"
+		name="managedReturn">
+		IO.OpenTracing.ISpan
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpan']/method[@name='setTag' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.Number']]"
+		name="managedReturn">
+		IO.OpenTracing.ISpan
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpan']/method[@name='setTag' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]"
+		name="managedReturn">
+		IO.OpenTracing.ISpan
+	</attr>
+	<attr path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpan']/method[@name='setTag' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]"
+		  name="managedReturn">
+		IO.OpenTracing.ISpan
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.trace.core']/class[@name='DDSpan']/method[@name='getSamplingPriority' and count(parameter)=0]"
+		name="managedName">
+		SamplingPriority
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpanContext']/method[@name='getBaggageItems' and count(parameter)=0]"
+		name="managedName">
+		BaggageItemsGet
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpanContext']/method[@name='getBaggageItems' and count(parameter)=0]"
+		name="visibility">
+		internal
+	</attr>
+
+	<!--<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpanContext']/method[@name='getBaggageItems' and count(parameter)=0]"
+		name="managedReturn">
+	Java.Lang.IIterable
 	</attr>-->
-	
-	
-	
 	
 
 </metadata>
