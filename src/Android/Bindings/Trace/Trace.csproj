@@ -9,6 +9,10 @@
 	<ItemGroup>
 		<AndroidLibrary Update="aars\dd-sdk-android-trace-release.aar" />
 		<AndroidLibrary Update="aars\opentracing-api-0.32.0.jar" />
+		<AndroidLibrary Update="aars\opentracing-util-0.32.0.jar" />
+		<AndroidLibrary Update="aars\opentracing-noop-0.32.0.jar" Bind="false" />
+		<AndroidLibrary Update="aars\jctools-core-3.3.0.jar" Bind="false" />
+		<AndroidLibrary Update="aars\re2j-1.7.jar" Bind="false" />
 	</ItemGroup>
 	<ItemGroup>
 		<AndroidNamespaceReplacement Include="com.datadog.opentracing" Replacement="Datadog.OpenTracing" />
@@ -22,5 +26,8 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <PackageReference Include="Bcr.Datadog.Android.Sdk.Core" Version="2.11.0" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Additions\Datadog.OpenTracing\" />
 	</ItemGroup>
 </Project>
