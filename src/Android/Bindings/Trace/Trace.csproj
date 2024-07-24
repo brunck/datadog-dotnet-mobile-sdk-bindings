@@ -16,11 +16,9 @@
 	</ItemGroup>
 	<ItemGroup>
 		<AndroidNamespaceReplacement Include="com.datadog.opentracing" Replacement="Datadog.OpenTracing" />
-		<!--<AndroidNamespaceReplacement Include="com.datadog.trace" Replacement="Datadog.Tracing" />-->
 		<AndroidNamespaceReplacement Include="com.datadog.trace.api.scopemanager" Replacement="Datadog.Trace.Api.ScopeManager" />
 		<AndroidNamespaceReplacement Include="com.datadog.trace.core.taginterceptor" Replacement="Datadog.Trace.Core.TagInterceptor" />
 		<AndroidNamespaceReplacement Include="com.datadog.trace.core.tagprocessor" Replacement="Datadog.Trace.Core.TagProcessor" />
-		<!--<AndroidNamespaceReplacement Include="com.datadog.trace.common.writer.ddagent" Replacement="Datadog.Trace.Common.Writer.DDAgent" />-->
 		<AndroidNamespaceReplacement Include="com." Replacement="" />
 		<AndroidNamespaceReplacement Include="IO.Opentracing." Replacement="IO.OpenTracing" />
 	</ItemGroup>
