@@ -4,7 +4,7 @@ public partial class DDSpanContext
 {
     public Java.Lang.IIterable? BaggageItems()
     {
-        var dictionary = BaggageItemsGet();
+        var dictionary = BaggageItemsAsDictionary();
         if (dictionary == null)
         {
             return null;

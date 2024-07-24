@@ -15,6 +15,7 @@
 		<AndroidLibrary Update="aars\re2j-1.7.jar" Bind="false" />
 	</ItemGroup>
 	<ItemGroup>
+		<AndroidNamespaceReplacement Include="com.datadog.opentracing.scopemanager" Replacement="Datadog.OpenTracing.ScopeManager" />
 		<AndroidNamespaceReplacement Include="com.datadog.opentracing" Replacement="Datadog.OpenTracing" />
 		<AndroidNamespaceReplacement Include="com.datadog.trace.api.scopemanager" Replacement="Datadog.Trace.Api.ScopeManager" />
 		<AndroidNamespaceReplacement Include="com.datadog.trace.core.taginterceptor" Replacement="Datadog.Trace.Core.TagInterceptor" />
@@ -24,8 +25,5 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <PackageReference Include="Bcr.Datadog.Android.Sdk.Core" Version="2.11.0" />
-	</ItemGroup>
-	<ItemGroup>
-	  <Folder Include="Additions\Datadog.OpenTracing\" />
 	</ItemGroup>
 </Project>

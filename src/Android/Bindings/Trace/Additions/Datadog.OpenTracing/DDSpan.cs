@@ -6,7 +6,7 @@ namespace Datadog.OpenTracing;
 
 public partial class DDSpan
 {
-    public IMutableSpan SetOperationNameForMutableSpan(string? p0)
+    public IMutableSpan? SetOperationNameForMutableSpan(string? p0)
     {
         SetOperationName(p0);
         return this;
@@ -48,7 +48,7 @@ public partial class DDSpan
         return this;
     }
 
-    public IMutableSpan SetErrorForMutableSpan (bool p0)
+    public IMutableSpan? SetErrorForMutableSpan (bool p0)
     {
         SetError(p0);
         return this;
