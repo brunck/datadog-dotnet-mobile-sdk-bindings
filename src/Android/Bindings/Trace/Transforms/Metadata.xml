@@ -184,6 +184,7 @@
 	<remove-node path="/api/package[@name='com.datadog.trace.ddagent']" />
 	<remove-node path="/api/package[@name='com.datadog.trace.logger']" />
 	<remove-node path="/api/package[@name='com.datadog.trace.monitor']" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.opentelemetry.internal']" />
 	<remove-node path="/api/package[@name='com.datadog.trace.relocate.api']" />
 	<remove-node path="/api/package[@name='com.datadog.trace.util']" />
 	<remove-node path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpanContext']/method[@name='baggageItems' and count(parameter)=0]" />
@@ -201,6 +202,10 @@
 	<remove-node path="/api/package[@name='io.opentracing.tag']/class[@name='StringTag']" />
 	<remove-node
 		path="/api/package[@name='com.datadog.trace.core']/interface[@name='CoreSpan']/method[@name='getTag' and count(parameter)=2 and parameter[1][@type='java.lang.CharSequence'] and parameter[2][@type='U']]" />
+	<remove-node path="/api/package[@name='com.datadog.opentelemetry.trace']/class[@name='OtelExtractedContext']" />
+	<remove-node path="/api/package[@name='com.datadog.opentelemetry.context.propagation']/class[@name='TraceStateHelper']" />
+	<remove-node path="/api/package[@name='io.opentelemetry.api.internal']" />
+	<remove-node path="/api/package[@name='io.opentelemetry.context.internal.shaded']" />
 	<remove-node
 		path="/api/package[@name='io.opentracing.util']/class[@name='GlobalTracer']/method[@name='register' and count(parameter)=1 and parameter[1][@type='io.opentracing.Tracer']]" />
 	<remove-node path="/api/package[@name='io.opentracing.util']/class[@name='AutoFinishScopeManager']" />
@@ -377,6 +382,11 @@
 		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpanContext']/method[@name='getBaggageItems' and count(parameter)=0]"
 		name="managedName">
 		BaggageItemsAsDictionary
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.android.trace.opentelemetry']/class[@name='BuildConfig']/field[@name='OPENTELEMETRY_API_VERSION_NAME']"
+		name="managedName">
+		OpenTelemetryApiVersionName
 	</attr>
 
 </metadata>

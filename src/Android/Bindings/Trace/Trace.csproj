@@ -8,6 +8,9 @@
 	</PropertyGroup>
 	<ItemGroup>
 		<AndroidLibrary Update="aars\dd-sdk-android-trace-release.aar" />
+		<AndroidLibrary Update="aars\dd-sdk-android-trace-otel-release.aar" />
+		<AndroidLibrary Update="aars\opentelemetry-api-1.4.0.jar" />
+		<AndroidLibrary Update="aars\opentelemetry-context-1.4.0.jar" />
 		<AndroidLibrary Update="aars\opentracing-api-0.32.0.jar" />
 		<AndroidLibrary Update="aars\opentracing-util-0.32.0.jar" />
 		<AndroidLibrary Update="aars\opentracing-noop-0.32.0.jar" Bind="false" />
@@ -15,6 +18,8 @@
 		<AndroidLibrary Update="aars\re2j-1.7.jar" Bind="false" />
 	</ItemGroup>
 	<ItemGroup>
+		<AndroidNamespaceReplacement Include="com.datadog.android.trace.opentelemetry" Replacement="Datadog.Android.Trace.OpenTelemetry" />
+		<AndroidNamespaceReplacement Include="com.datadog.opentelemetry" Replacement="Datadog.OpenTelemetry" />
 		<AndroidNamespaceReplacement Include="com.datadog.opentracing.scopemanager" Replacement="Datadog.OpenTracing.ScopeManager" />
 		<AndroidNamespaceReplacement Include="com.datadog.opentracing" Replacement="Datadog.OpenTracing" />
 		<AndroidNamespaceReplacement Include="com.datadog.trace.api.scopemanager" Replacement="Datadog.Trace.Api.ScopeManager" />
@@ -22,6 +27,7 @@
 		<AndroidNamespaceReplacement Include="com.datadog.trace.core.tagprocessor" Replacement="Datadog.Trace.Core.TagProcessor" />
 		<AndroidNamespaceReplacement Include="com." Replacement="" />
 		<AndroidNamespaceReplacement Include="IO.Opentracing." Replacement="IO.OpenTracing" />
+		<AndroidNamespaceReplacement Include="IO.Opentelemetry." Replacement="IO.OpenTelemetry" />
 	</ItemGroup>
 	<ItemGroup>
 	  <PackageReference Include="Bcr.Datadog.Android.Sdk.Core" Version="2.11.0" />
