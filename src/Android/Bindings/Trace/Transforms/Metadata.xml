@@ -220,12 +220,10 @@
 	<remove-node path="/api/package[@name='io.opentracing.propagation']/interface[@name='Binary']" />
 	<remove-node path="/api/package[@name='io.opentracing.propagation']/class[@name='BinaryAdapters']" />
 	<remove-node path="/api/package[@name='io.opentracing.propagation']/interface[@name='BinaryExtract']" />
-	<remove-node path="/api/package[@name='io.opentracing.propagation']/interface[@name='BinaryInject']" />
 	<remove-node path="/api/package[@name='io.opentracing.propagation']/interface[@name='TextMap']" />
 	<remove-node path="/api/package[@name='io.opentracing.propagation']/class[@name='TextMapAdapter']" />
 	<remove-node path="/api/package[@name='io.opentracing.propagation']/interface[@name='TextMapExtract']" />
 	<remove-node path="/api/package[@name='io.opentracing.propagation']/class[@name='TextMapExtractAdapter']" />
-	<remove-node path="/api/package[@name='io.opentracing.propagation']/interface[@name='TextMapInject']" />
 	<remove-node path="/api/package[@name='io.opentracing.propagation']/class[@name='TextMapInjectAdapter']" />
 
 
