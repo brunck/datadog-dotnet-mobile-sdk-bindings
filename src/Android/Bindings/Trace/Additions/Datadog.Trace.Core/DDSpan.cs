@@ -8,6 +8,4 @@ public partial class DDSpan
     {
         return (int)SamplingPriorityInternal()!;
     }
-
-    
 }
