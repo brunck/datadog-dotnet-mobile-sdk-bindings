@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net8.0-android</TargetFramework>
+		<SupportedOSPlatformVersion>26</SupportedOSPlatformVersion>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+	<ItemGroup>
+	  <AndroidLibrary Update="aars\dd-sdk-android-webview-release.aar" />
+	</ItemGroup>
+	<ItemGroup>
+		<AndroidNamespaceReplacement Include="com.datadog.android.webview" Replacement="Datadog.Android.WebView" />
+		<AndroidNamespaceReplacement Include="com." Replacement="" />
+	</ItemGroup>
+</Project>
