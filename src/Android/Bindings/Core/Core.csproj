@@ -12,7 +12,7 @@
 		<Authors>bcr</Authors>
 		<Product>Datadog</Product>
 		<Description>Bindings for the Datadog Android SDK Core library</Description>
-		<PackageTags>.NET Android Mobile Binding Core Datadog dd-sdk-android-core</PackageTags>
+		<PackageTags>.NET for Android Datadog Mobile Binding Core artifact=com.datadog.android:dd-sdk-android-core artifact_versioned=com.datadog.android:dd-sdk-android-core:2.11.0</PackageTags>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
 	<ItemGroup>

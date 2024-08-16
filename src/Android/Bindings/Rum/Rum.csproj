@@ -6,6 +6,15 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<IsTrimmable>true</IsTrimmable>
 	</PropertyGroup>
+	<PropertyGroup>
+		<PackageId>Bcr.Datadog.Android.Sdk.Rum</PackageId>
+		<Version>2.11.0</Version>
+		<Authors>bcr</Authors>
+		<Product>Datadog</Product>
+		<Description>Bindings for the Datadog Android SDK RUM library</Description>
+		<PackageTags>.NET for Android Datadog Mobile Binding RUM artifact=com.datadog.android:dd-sdk-android-rum artifact_versioned=com.datadog.android:dd-sdk-android-rum:2.11.0</PackageTags>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Bcr.Datadog.Android.Sdk.Core" Version="2.11.0" />
 		<PackageReference Include="Xamarin.AndroidX.CustomView" Version="1.1.0.15" />
