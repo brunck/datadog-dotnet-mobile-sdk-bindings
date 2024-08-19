@@ -205,7 +205,15 @@
 	<remove-node path="/api/package[@name='com.datadog.opentelemetry.trace']/class[@name='OtelExtractedContext']" />
 	<remove-node path="/api/package[@name='com.datadog.opentelemetry.context.propagation']/class[@name='TraceStateHelper']" />
 	<remove-node path="/api/package[@name='io.opentelemetry.api.internal']" />
+	<remove-node path="/api/package[@name='io.opentelemetry.api.baggage']" />
+	<remove-node path="/api/package[@name='io.opentelemetry.api.common']" />
+	<remove-node path="/api/package[@name='io.opentelemetry.api']" />
+	<remove-node path="/api/package[@name='io.opentelemetry.api.baggage.propagation']" />
+	<remove-node path="/api/package[@name='io.opentelemetry.api.trace']" />
+	<remove-node path="/api/package[@name='io.opentelemetry.context']" />
+	<remove-node path="/api/package[@name='io.opentelemetry.context.propagation']" />
 	<remove-node path="/api/package[@name='io.opentelemetry.context.internal.shaded']" />
+	<remove-node path="/api/package[@name='io.opentelemetry.api.trace.propagation']" />
 	<remove-node path="/api/package[@name='com.datadog.opentelemetry.trace']/class[@name='OtelConventions']" />
 	<remove-node
 		path="/api/package[@name='io.opentracing.util']/class[@name='GlobalTracer']/method[@name='register' and count(parameter)=1 and parameter[1][@type='io.opentracing.Tracer']]" />
