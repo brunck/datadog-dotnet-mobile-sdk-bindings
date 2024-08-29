@@ -4,15 +4,16 @@
 		<SupportedOSPlatformVersion>26</SupportedOSPlatformVersion>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
+		<IsBindingProject>true</IsBindingProject>
 		<IsTrimmable>true</IsTrimmable>
 	</PropertyGroup>
 	<PropertyGroup>
 		<PackageId>Bcr.Datadog.Android.Sdk.Ndk</PackageId>
-		<Version>2.11.0</Version>
+		<Version>2.12.0</Version>
 		<Authors>bcr</Authors>
 		<Product>Datadog</Product>
 		<Description>Bindings for the Datadog Android SDK NDK library</Description>
-		<PackageTags>.NET for Android Datadog Mobile Binding NDK artifact=com.datadog.android:dd-sdk-android-ndk artifact_versioned=com.datadog.android:dd-sdk-android-ndk:2.11.0</PackageTags>
+		<PackageTags>.NET for Android Datadog Mobile Binding NDK artifact=com.datadog.android:dd-sdk-android-ndk artifact_versioned=com.datadog.android:dd-sdk-android-ndk:2.12.0</PackageTags>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
 	<ItemGroup>

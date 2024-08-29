@@ -4,20 +4,21 @@
 		<SupportedOSPlatformVersion>26</SupportedOSPlatformVersion>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
+		<IsBindingProject>true</IsBindingProject>
 		<IsTrimmable>true</IsTrimmable>
 	</PropertyGroup>
 	<PropertyGroup>
 		<PackageId>Bcr.Datadog.Android.Sdk.Logs</PackageId>
-		<Version>2.11.0</Version>
+		<Version>2.12.0</Version>
 		<Authors>bcr</Authors>
 		<Product>Datadog</Product>
 		<Description>Bindings for the Datadog Android SDK Logs library</Description>
-		<PackageTags>.NET for Android Datadog Mobile Binding Logs artifact=com.datadog.android:dd-sdk-android-logs artifact_versioned=com.datadog.android:dd-sdk-android-logs:2.11.0</PackageTags>
+		<PackageTags>.NET for Android Datadog Mobile Binding Logs artifact=com.datadog.android:dd-sdk-android-logs artifact_versioned=com.datadog.android:dd-sdk-android-logs:2.12.0</PackageTags>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Bcr.Datadog.Android.Sdk.Core" Version="2.11.0" />
-		<PackageReference Include="GoogleGson" Version="2.10.1.8" />
+		<PackageReference Include="Bcr.Datadog.Android.Sdk.Core" Version="2.12.0" />
+		<PackageReference Include="GoogleGson" Version="2.10.1.10" />
 	</ItemGroup>
 	<ItemGroup>
 		<AndroidLibrary Update="aars\dd-sdk-android-logs-release.aar" />

@@ -76,23 +76,7 @@
 	<remove-node path="/api/package[@name='com.datadog.android.core.feature.event']/class[@name='JvmCrash']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core.feature.event']/class[@name='ThreadDump']" />
 	
-	<remove-node path="/api/package[@name='com.datadog.android.core.internal.configuration']" />
-	<remove-node path="/api/package[@name='com.datadog.android.core.internal.constraints']" />
-	<remove-node path="/api/package[@name='com.datadog.android.core.internal.data.upload']" />
-	<remove-node path="/api/package[@name='com.datadog.android.core.internal.lifecycle']" />
-	<remove-node path="/api/package[@name='com.datadog.android.core.internal.metrics']" />
-	<remove-node path="/api/package[@name='com.datadog.android.core.internal.net']" />
-	<remove-node path="/api/package[@name='com.datadog.android.core.internal.net.info']" />
-	<remove-node path="/api/package[@name='com.datadog.android.core.internal.persistence']" />
-	<remove-node path="/api/package[@name='com.datadog.android.core.internal.persistence.file']" />
-	<remove-node path="/api/package[@name='com.datadog.android.core.internal.privacy']" />
-	<remove-node path="/api/package[@name='com.datadog.android.core.internal.receiver']" />
-	<remove-node path="/api/package[@name='com.datadog.android.core.internal.system']" />
-	<remove-node path="/api/package[@name='com.datadog.android.core.internal.thread']" />
-	<remove-node path="/api/package[@name='com.datadog.android.core.internal.time']" />
-	<remove-node path="/api/package[@name='com.datadog.android.core.internal.user']" />
-	<remove-node path="/api/package[@name='com.datadog.android.core.internal.utils']" />
-	<remove-node path="/api/package[@name='com.datadog.android.core.internal']" />
+	<remove-node path="/api/package[starts-with(@name,'com.datadog.android.core.internal')]" />
 
 	<remove-node path="/api/package[@name='com.datadog.android.lint']/interface[@name='InternalApi']" />
 	
@@ -114,7 +98,6 @@
 	<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/interface[@name='PersistenceStrategy.Factory']/method[@name='create']" />
 	<remove-node path="/api/package[@name='com.datadog.android.core.persistence']/class[@name='PersistenceStrategy.Batch']" />
 
-	
 	<remove-node path="/api/package[@name='com.datadog.android.core.thread']" />
 	
 	<remove-node path="/api/package[@name='com.datadog.tools.annotation']/interface[@name='NoOpImplementation']" />

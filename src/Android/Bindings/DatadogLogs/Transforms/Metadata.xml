@@ -59,8 +59,15 @@
 	
 	<!--********************* Renaming *********************--> 
 	
-	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Dd']" name="managedName">DD</attr>
+	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Dd']" name="managedName">DatadogInfo</attr>
 	<!--<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='getDd' and count(parameter)=0]" name="managedName">DD</attr>-->
-	<!--<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Usr']" name="managedName">User</attr>-->
+	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Usr']" name="managedName">User</attr>
 	<!--<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='getUsr']" name="propertyName">User</attr>-->
+	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='getDdtags' and count(parameter)=0]" name="visibility">internal</attr>
+	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='getDdtags' and count(parameter)=0]" name="managedName">DdTagsGet</attr>
+	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='setDdtags' and count(parameter)=1 and parameter[1][@type='java.lang.String']]" name="visibility">internal</attr>
+	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='getError' and count(parameter)=0]" name="visibility">internal</attr>
+	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='getLogger' and count(parameter)=0]" name="visibility">internal</attr>
+	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='getNetwork' and count(parameter)=0]" name="visibility">internal</attr>
+	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='getStatus' and count(parameter)=0]" name="visibility">internal</attr>
 </metadata>
