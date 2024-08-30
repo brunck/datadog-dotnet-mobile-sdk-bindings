@@ -18,6 +18,9 @@
 		<Title>Bcr.Datadog.Android.Sdk.Trace.Otel</Title>
 	</PropertyGroup>
 	<ItemGroup>
+	  <PackageReference Include="Bcr.Datadog.Android.Sdk.Trace" Version="2.12.0" />
+	</ItemGroup>
+	<ItemGroup>
 	  <AndroidLibrary Update="aars\dd-sdk-android-trace-otel-release.aar" />
 	</ItemGroup>
 </Project>
