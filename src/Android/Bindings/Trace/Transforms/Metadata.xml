@@ -5,6 +5,7 @@
 	<remove-node path="/api/package[@name='com.datadog.android.trace.internal.utils']/class[@name='TracerExtensionsKt']" />
 	<remove-node path="/api/package[@name='com.datadog.android.trace']/class[@name='AndroidTracer.Companion']" />
 	<remove-node path="/api/package[@name='com.datadog.android.trace']/class[@name='AndroidTracer.Builder']/method[@name='addGlobalTag']" />
+	<remove-node path="/api/package[starts-with(@name, 'com.datadog.android.trace.internal')]" />
 	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Companion']" />
 	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent']/method[starts-with(@name,'component')]" />
 	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Application.Companion']" />
@@ -65,7 +66,7 @@
 	<remove-node path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpanContext']/method[@name='getTracer']" />
 	<remove-node path="/api/package[@name='com.datadog.opentracing']/class[@name='DDTracer.DDSpanBuilder']/method[@name='withLogHandler']" />
 	<remove-node path="/api/package[@name='com.datadog.opentracing']/interface[@name='LogHandler']" />
-
+	
 	<remove-node path="/api/package[@name='com.datadog.trace.api']/class[@name='Functions']" />
 	<remove-node path="/api/package[@name='com.datadog.trace.api']/class[@name='Config']" />
 	<remove-node path="/api/package[@name='com.datadog.trace.api']/class[@name='DDSpanId']" />
@@ -202,8 +203,6 @@
 	<remove-node path="/api/package[@name='io.opentracing.tag']/class[@name='StringTag']" />
 	<remove-node
 		path="/api/package[@name='com.datadog.trace.core']/interface[@name='CoreSpan']/method[@name='getTag' and count(parameter)=2 and parameter[1][@type='java.lang.CharSequence'] and parameter[2][@type='U']]" />
-	<remove-node path="/api/package[@name='com.datadog.opentelemetry.trace']/class[@name='OtelExtractedContext']" />
-	<remove-node path="/api/package[@name='com.datadog.opentelemetry.context.propagation']/class[@name='TraceStateHelper']" />
 	<remove-node path="/api/package[@name='io.opentelemetry.api.internal']" />
 	<remove-node path="/api/package[@name='io.opentelemetry.api.baggage']" />
 	<remove-node path="/api/package[@name='io.opentelemetry.api.common']" />
@@ -214,7 +213,6 @@
 	<remove-node path="/api/package[@name='io.opentelemetry.context.propagation']" />
 	<remove-node path="/api/package[@name='io.opentelemetry.context.internal.shaded']" />
 	<remove-node path="/api/package[@name='io.opentelemetry.api.trace.propagation']" />
-	<remove-node path="/api/package[@name='com.datadog.opentelemetry.trace']/class[@name='OtelConventions']" />
 	<remove-node
 		path="/api/package[@name='io.opentracing.util']/class[@name='GlobalTracer']/method[@name='register' and count(parameter)=1 and parameter[1][@type='io.opentracing.Tracer']]" />
 	<remove-node path="/api/package[@name='io.opentracing.util']/class[@name='AutoFinishScopeManager']" />
@@ -234,7 +232,11 @@
 	<remove-node path="/api/package[@name='io.opentracing.propagation']/interface[@name='TextMapExtract']" />
 	<remove-node path="/api/package[@name='io.opentracing.propagation']/class[@name='TextMapExtractAdapter']" />
 	<remove-node path="/api/package[@name='io.opentracing.propagation']/class[@name='TextMapInjectAdapter']" />
-
+	
+	<remove-node path="/api/package/class[@deprecated='deprecated']" />
+	<remove-node path="/api/package/interface[@deprecated='deprecated']" />
+	<remove-node path="/api/package/class/method[@deprecated='deprecated']" />
+	<remove-node path="/api/package/interface/method[@deprecated='deprecated']" />
 
 	<attr path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Dd']" name="managedName">DD</attr>
 	<attr path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Usr']" name="managedName">User</attr>
@@ -390,30 +392,4 @@
 		name="managedName">
 		BaggageItemsAsDictionary
 	</attr>
-	<attr
-		path="/api/package[@name='com.datadog.android.trace.opentelemetry']/class[@name='BuildConfig']/field[@name='OPENTELEMETRY_API_VERSION_NAME']"
-		name="managedName">
-		OpenTelemetryApiVersionName
-	</attr>
-	<attr
-		path="/api/package[@name='com.datadog.android.trace.opentelemetry']/class[@name='OtelTracerProvider']/method[@name='get' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
-		name="managedType">
-		string?
-	</attr>
-	<attr
-		path="/api/package[@name='com.datadog.android.trace.opentelemetry']/class[@name='OtelTracerProvider']/method[@name='get' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]/parameter[1]"
-		name="managedType">
-		string?
-	</attr>
-	<attr
-		path="/api/package[@name='com.datadog.android.trace.opentelemetry']/class[@name='OtelTracerProvider']/method[@name='get' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]/parameter[2]"
-		name="managedType">
-		string?
-	</attr>
-	<attr
-		path="/api/package[@name='com.datadog.android.trace.opentelemetry']/class[@name='OtelTracerProvider']/method[@name='tracerBuilder' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
-		name="managedType">
-		string?
-	</attr>
-
 </metadata>

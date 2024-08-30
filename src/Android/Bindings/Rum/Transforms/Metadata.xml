@@ -7,11 +7,9 @@
 	<remove-node path="/api/package[@name='com.datadog.android.rum']/class[@name='DdRumContentProvider']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum']/class[@name='GlobalRumKt']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum']/class[@name='GlobalRumMonitor']" />
-	<remove-node path="/api/package[@name='com.datadog.android.rum.internal.domain']" />
-	<remove-node path="/api/package[@name='com.datadog.android.rum.internal.domain.event']" />
-	<remove-node path="/api/package[@name='com.datadog.android.rum.internal.domain.scope']" />
-	<remove-node path="/api/package[@name='com.datadog.android.rum.internal.instrumentation.gestures']" />
-	<remove-node path="/api/package[@name='com.datadog.android.rum.internal.utils']" />
+	
+	<remove-node path="/api/package[starts-with(@name, 'com.datadog.android.rum.internal')]" />
+	
 	<remove-node path="/api/package[@name='com.datadog.android.telemetry.internal']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum']/class[@name='RumMonitor.DefaultImpls']" />
 	<remove-node path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ActionChildProperties.Companion']" />

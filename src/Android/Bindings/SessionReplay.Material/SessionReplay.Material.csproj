@@ -17,17 +17,13 @@
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Bcr.Datadog.Android.Sdk.Core" Version="2.11.0" />
-		<PackageReference Include="Xamarin.Google.Android.Material" Version="1.4.0.1" />
-	</ItemGroup>
-	<ItemGroup>
-		<ProjectReference Include="..\SessionReplay\SessionReplay.csproj" />
+		<PackageReference Include="Bcr.Datadog.Android.Sdk.SessionReplay" Version="2.12.0" />
+		<PackageReference Include="Xamarin.Google.Android.Material" Version="1.4.0.6" />
 	</ItemGroup>
 	<ItemGroup>
 		<AndroidLibrary Update="aars\dd-sdk-android-session-replay-material-release.aar" />
 	</ItemGroup>
 	<ItemGroup>
-		<AndroidNamespaceReplacement Include="com.datadog.android.sessionreplay.material."
-		                             Replacement="Datadog.Android.SessionReplay.Material" />
+		<AndroidNamespaceReplacement Include="com.datadog.android.sessionreplay.material." Replacement="Datadog.Android.SessionReplay.Material" />
 	</ItemGroup>
 </Project>
