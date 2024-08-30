@@ -137,4 +137,6 @@
 	
 	<attr path="/api/package[@name='com.datadog.android.trace']/class[@name='TracingHeaderType']/field[@name='B3MULTI']" name="managedName">B3Multi</attr>
 	<attr path="/api/package[@name='com.datadog.android.trace']/class[@name='TracingHeaderType']/field[@name='TRACECONTEXT']" name="managedName">TraceContext</attr>
+	
+	<attr path="/api/package[@name='com.datadog.android.event']/interface[@name='EventMapper']" name="managedName">IEventMapperBase</attr>
 </metadata>

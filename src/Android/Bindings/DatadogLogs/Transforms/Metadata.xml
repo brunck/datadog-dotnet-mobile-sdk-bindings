@@ -57,12 +57,14 @@
 	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Usr']/method[@name='component3']" />
 	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Usr']/method[@name='component4']" />
 	
-	<!--********************* Renaming *********************--> 
-	
-	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Dd']" name="managedName">DatadogInfo</attr>
-	<!--<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='getDd' and count(parameter)=0]" name="managedName">DD</attr>-->
+ 	<!--********************* Renaming *********************--> 
+
+
+	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Dd']" name="managedName">DatadogDeviceInfo</attr>
+	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='getDd' and count(parameter)=0]" name="managedName">DDInternal</attr>
+	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='getDd' and count(parameter)=0]" name="visibility">internal</attr>
 	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Usr']" name="managedName">User</attr>
-	<!--<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='getUsr']" name="propertyName">User</attr>-->
+	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='getUsr']" name="propertyName">User</attr>
 	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='getDdtags' and count(parameter)=0]" name="visibility">internal</attr>
 	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='getDdtags' and count(parameter)=0]" name="managedName">DdTagsGet</attr>
 	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='setDdtags' and count(parameter)=1 and parameter[1][@type='java.lang.String']]" name="visibility">internal</attr>
@@ -70,4 +72,6 @@
 	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='getLogger' and count(parameter)=0]" name="visibility">internal</attr>
 	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='getNetwork' and count(parameter)=0]" name="visibility">internal</attr>
 	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='getStatus' and count(parameter)=0]" name="visibility">internal</attr>
+	<attr path="/api/package[@name='com.datadog.android.log']/class[@name='LogsConfiguration.Builder']/method[@name='setEventMapper' and count(parameter)=1 and parameter[1][@type='com.datadog.android.event.EventMapper&lt;com.datadog.android.log.model.LogEvent&gt;']]" name="visibility">internal</attr>
+	<attr path="/api/package[@name='com.datadog.android.log']/class[@name='LogsConfiguration.Builder']/method[@name='setEventMapper' and count(parameter)=1 and parameter[1][@type='com.datadog.android.event.EventMapper&lt;com.datadog.android.log.model.LogEvent&gt;']]" name="managedName">SetLogEventMapperInternal</attr>
 </metadata>
