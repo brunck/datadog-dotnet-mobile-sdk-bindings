@@ -217,7 +217,8 @@ namespace Datadog.iOS
 		Anr = 1,
 		AppHang = 2,
 		Exception = 3,
-		WatchdogTermination = 4
+		WatchdogTermination = 4,
+		MemoryWarning = 5
 	}
 
 	[Native]

@@ -4541,6 +4541,10 @@ namespace Datadog.iOS
 		[NullAllowed, Export ("silentMultipleInit", ArgumentSemantic.Strong)]
 		NSNumber SilentMultipleInit { get; }
 
+		// @property (nonatomic, strong) NSNumber * _Nullable startRecordingImmediately;
+		[NullAllowed, Export ("startRecordingImmediately", ArgumentSemantic.Strong)]
+		NSNumber StartRecordingImmediately { get; set; }
+
 		// @property (nonatomic, strong) NSNumber * _Nullable startSessionReplayRecordingManually;
 		[NullAllowed, Export ("startSessionReplayRecordingManually", ArgumentSemantic.Strong)]
 		NSNumber StartSessionReplayRecordingManually { get; set; }

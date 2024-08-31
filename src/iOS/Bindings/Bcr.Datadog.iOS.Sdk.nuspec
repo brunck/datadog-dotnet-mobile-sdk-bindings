@@ -4,7 +4,7 @@
     <owners>bcr</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>Initial release of the Datadog iOS bindings.</releaseNotes>
-    <tags>ios datadog sdk bindings</tags>
+    <tags>.NET iOS DataDog Mobile SDK Bindings</tags>
   </metadata>
   <files>
     <!-- Include the .xcframework files -->

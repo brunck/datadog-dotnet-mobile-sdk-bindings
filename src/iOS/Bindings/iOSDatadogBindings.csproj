@@ -8,9 +8,10 @@
 
 		<!-- NuGet package properties-->
 		<PackageId>Bcr.Datadog.iOS.Sdk</PackageId>
-		<PackageVersion>2.14.0</PackageVersion>
+		<PackageVersion>2.16.0</PackageVersion>
 		<Authors>bcr</Authors>
-		<Description>Bindings for Datadog iOS SDK</Description>
+		<Description>.NET Bindings for the Datadog iOS SDK</Description>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 
 		<!--
       Enable trim analyzers for class libraries.
@@ -20,7 +21,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<None Include="Mdoc/ios.xml" Pack="true" PackagePath="lib/net8.0-ios17.2/" />
+		<None Include="Mdoc/ios.xml" Pack="true" PackagePath="lib/net8.0-ios17.5/" />
 	</ItemGroup>
 
 	<ItemGroup>

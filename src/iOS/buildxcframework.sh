@@ -44,7 +44,7 @@ function archive {
     ENABLE_BITCODE=NO \
     SKIP_INSTALL=NO \
     BUILD_LIBRARY_FOR_DISTRIBUTION=YES; then
-      echo "Simulator build for $5 failed. Exiting."
+      echo "Build for $5 failed. Exiting."
       echo
       exit 1
   fi
