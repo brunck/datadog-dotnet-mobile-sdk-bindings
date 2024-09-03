@@ -48,7 +48,7 @@ Not everything has been tested. Use at your own risk; although any issues past c
 
 ## License
 
-This package is licensed under the MIT License. See the LICENSE file for details.
+This repository is licensed under the MIT License. See the LICENSE file for details.
 
 ### NOTICE
 
@@ -56,4 +56,4 @@ These packages include software developed at Datadog (https://www.datadoghq.com/
 
 Copyright 2019 Datadog, Inc.
 
-For more information, please refer to the [Datadog Android SDK repository](https://github.com/DataDog/dd-sdk-android).
+For more information, please refer to the [Datadog Android SDK repository](https://github.com/DataDog/dd-sdk-android) or the [Datadog iOS SDK repository](https://github.com/DataDog/dd-sdk-ios).

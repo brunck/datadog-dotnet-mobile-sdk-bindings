@@ -10,7 +10,7 @@ This package is licensed under the MIT License. See the LICENSE file for details
 
 ### NOTICE
 
-This project includes software developed at Datadog (https://www.datadoghq.com/).
+This package includes software developed at Datadog (https://www.datadoghq.com/).
 
 Copyright 2019 Datadog, Inc.
 
