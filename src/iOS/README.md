@@ -14,6 +14,8 @@ Before using the iOS SDK bindings, make sure you have the following prerequisite
 
 ## Usage
 
+### [Sample](T/)
+
 See the [Datadog iOS SDK repository](https://github.com/DataDog/dd-sdk-ios) for more information about initialization for any given piece of functionality.
 
 All functionality requires you to initialize the SDK before use. The Datadog documentation has more information; the basics are to initialize in `FinishedLaunching()`: 
