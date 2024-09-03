@@ -4,20 +4,20 @@ For use with .NET for Android and .NET for iOS applications, including .NET MAUI
 ## What is Datadog?
 See the main [Datadog](https://www.datadoghq.com/) site.
 
-These bindings apply only to the Datadog Mobile SDKs for both iOS and Android. No other Datadog functionality is included.
+These .NET bindings apply only to the Datadog Mobile SDKs for both iOS and Android. No other Datadog functionality is included.
 
 For more information, please refer to the [Datadog iOS SDK repository](https://github.com/DataDog/dd-sdk-ios) and the [Datadog Android SDK repository](https://github.com/DataDog/dd-sdk-android).
 
-## Platforms
+# Platforms
 
-### iOS
+## iOS
 
 See the [iOS-specific documentation](src/iOS) for this package.
 
-### Android
+## Android
 The [Android SDK](https://github.com/DataDog/dd-sdk-android/tree/master) is broken out into separate packages, so you only have to install the ones that correspond to the functionality you are using.
 
-> The integration libraries are not available at this time.
+> Bindings for the integration libraries are not available at this time.
 
 The various packages (with links to documentation) are:
 
@@ -30,6 +30,9 @@ The various packages (with links to documentation) are:
 * [WebView](TODO) - [Docs](https://docs.datadoghq.com/real_user_monitoring/mobile_and_tv_monitoring/web_view_tracking/?tab=android#prerequisites)
 * [Ndk](TODO)
 
+### Initialization
+See the [sample app](src\Android\Bindings\Test\TestBindings) for an example.
+
 ## Binding Policies
 The major/minor/patch versions mirror those of the Maven packages. For example, version `2.11.0.1` binds the `2.11.0` version of the `com.datadoghq:dd-sdk-android-core` library.
 
@@ -41,7 +44,7 @@ Support here is limited to issues related to the bindings only. For documentatio
 Not everything has been tested. Use at your own risk; although any issues past compilation/missing bindings are likely in the SDK itself rather than the bindings.
 
 #### Note
-There is currently no .NET MAUI cross-platform code for initialization. Refer to the Datadog mobile documentation for how to initialize the SDKs for each platform.
+> There is currently no .NET MAUI cross-platform code for initialization. Refer to the Datadog mobile documentation for how to initialize the SDKs for each platform.
 
 ## License
 
