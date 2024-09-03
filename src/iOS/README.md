@@ -46,7 +46,7 @@ All functionality requires you to initialize the SDK before use. The Datadog doc
     }
     ```
 
-For more information on using the Datadog .NET Mobile SDK, refer to the [official documentation](https://docs.datadoghq.com/tracing/setup_overview/setup/dotnet/).
+For more information on using the Datadog .NET Mobile SDK, refer to the [official documentation](https://docs.datadoghq.com/).
 
 ## FAQ
 
