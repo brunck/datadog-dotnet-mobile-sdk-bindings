@@ -11,6 +11,7 @@
 		<PackageVersion>2.16.0</PackageVersion>
 		<Authors>bcr</Authors>
 		<Description>.NET Bindings for the Datadog iOS SDK</Description>
+		<PackageTags>.NET for iOS Datadog Mobile Binding 2.16.0</PackageTags>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 
 		<!--
@@ -22,6 +23,10 @@
 
 	<ItemGroup>
 		<None Include="Mdoc/ios.xml" Pack="true" PackagePath="lib/net8.0-ios17.5/" />
+		<None Update="..\README.md">
+			<Pack>true</Pack>
+			<PackagePath>README.md</PackagePath>
+		</None>
 	</ItemGroup>
 
 	<ItemGroup>

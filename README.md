@@ -17,6 +17,9 @@ See the [iOS-specific documentation](src/iOS) for this package.
 [Sample](src/iOS/T/)
 
 ## Android
+
+Requires Android 26 or later.
+
 The [Android SDK](https://github.com/DataDog/dd-sdk-android/tree/master) is broken out into separate packages, so you only have to install the ones that correspond to the functionality you are using.
 
 > Bindings for the integration libraries are not available at this time.
