@@ -52,8 +52,8 @@ This repository is licensed under the MIT License. See the LICENSE file for deta
 
 ### NOTICE
 
-These packages include software developed at Datadog (https://www.datadoghq.com/).
+This repository includes software developed at Datadog (https://www.datadoghq.com/), which is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). 
 
-Copyright 2019 Datadog, Inc.
+Those portions are Copyright 2019 Datadog, Inc.
 
 For more information, please refer to the [Datadog Android SDK repository](https://github.com/DataDog/dd-sdk-android) or the [Datadog iOS SDK repository](https://github.com/DataDog/dd-sdk-ios).
