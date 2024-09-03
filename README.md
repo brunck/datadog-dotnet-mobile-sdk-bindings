@@ -31,7 +31,7 @@ The various packages (with links to documentation) are:
 * [Ndk](TODO)
 
 ### Initialization
-See the [sample app](src\Android\Bindings\Test\TestBindings) for an example.
+See the [sample app](src/Android/Bindings/Test/TestBindings) for an example.
 
 ## Binding Policies
 The major/minor/patch versions mirror those of the Maven packages. For example, version `2.11.0.1` binds the `2.11.0` version of the `com.datadoghq:dd-sdk-android-core` library.
