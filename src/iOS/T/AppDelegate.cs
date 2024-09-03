@@ -18,7 +18,7 @@ namespace T
 
             // initialize the Datadog SDK
             DDConfiguration config = new DDConfiguration(
-                "<client token>", "<environment>
+                "<client token>", "<environment>"
             );
 
             config.Service = "<service name>";
@@ -33,7 +33,7 @@ namespace T
             // init the logger
             DDLoggerConfiguration logConfig = new DDLoggerConfiguration();
             logConfig.Service = "<log service>";
-            logConfig.NetworkInfoEnabled = true;
+            logConfig.NetworkInfoEnabled = false;
             logConfig.PrintLogsToConsole = true;
             logConfig.BundleWithRumEnabled = false;
 
