@@ -14,10 +14,14 @@ For more information, please refer to the [Datadog iOS SDK repository](https://g
 
 See the [iOS-specific documentation](src/iOS) for this package.
 
+[Sample](src/iOS/T/)
+
 ## Android
 The [Android SDK](https://github.com/DataDog/dd-sdk-android/tree/master) is broken out into separate packages, so you only have to install the ones that correspond to the functionality you are using.
 
 > Bindings for the integration libraries are not available at this time.
+
+[Sample](src/Android/Bindings/Test/TestBindings/)
 
 The various packages (with links to documentation) are:
 
