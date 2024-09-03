@@ -18,11 +18,11 @@ namespace T
 
             // initialize the Datadog SDK
             DDConfiguration config = new DDConfiguration(
-                "pub85a8b559287d01f91e6f4fd10977151a", "sandbox"
+                "<client token>", "<environment>
             );
 
-            config.Service = "intermatic-connect";
-            config.Site = DDSite.US5;
+            config.Service = "<service name>";
+            config.Site = <Datadog Site>;
 
             DDDatadog.Initialize(config, DDTrackingConsent.Granted);
             DDDatadog.VerbosityLevel = DDSDKVerbosityLevel.Debug;
@@ -32,7 +32,7 @@ namespace T
 
             // init the logger
             DDLoggerConfiguration logConfig = new DDLoggerConfiguration();
-            logConfig.Service = "intermatic-connect";
+            logConfig.Service = "<log service>";
             logConfig.NetworkInfoEnabled = true;
             logConfig.PrintLogsToConsole = true;
             logConfig.BundleWithRumEnabled = false;
