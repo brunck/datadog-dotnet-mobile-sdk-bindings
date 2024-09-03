@@ -11,8 +11,12 @@
 		<PackageVersion>2.16.0</PackageVersion>
 		<Authors>bcr</Authors>
 		<Description>.NET Bindings for the Datadog iOS SDK</Description>
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl>https://github.com/brunck/datadog-dotnet-mobile-sdk-bindings</RepositoryUrl>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<PackageTags>.NET for iOS Datadog Mobile Binding 2.16.0</PackageTags>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 
 		<!--
       Enable trim analyzers for class libraries.
@@ -23,10 +27,7 @@
 
 	<ItemGroup>
 		<None Include="Mdoc/ios.xml" Pack="true" PackagePath="lib/net8.0-ios17.5/" />
-		<None Update="..\README.md">
-			<Pack>true</Pack>
-			<PackagePath>README.md</PackagePath>
-		</None>
+		<None Include="../README.md" Pack="true" PackagePath="/" />
 	</ItemGroup>
 
 	<ItemGroup>
