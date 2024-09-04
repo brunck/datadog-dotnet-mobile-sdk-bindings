@@ -388,7 +388,7 @@
             If set, internal events occuring inside the SDK will be printed to the debugger console if their level is equal or greater than <c>VerbosityLevel</c>.
           </para>
                 <para>
-            Default is <c>null</c>.
+            Default is <c>None</c>.
           </para>
             </remarks>
         </member>
@@ -2410,7 +2410,7 @@
                 <para>
             Note: App Hangs monitoring requires Datadog Crash Reporting to be enabled. Otherwise stack trace will be not reported in App Hang errors.
           </para>
-                <para>Default: <c>NULL</c> (hangs monitoring disabled).</para>
+                <para>Default: <c>0.0</c> (hangs monitoring disabled).</para>
             </remarks>
         </member>
         <member name="P:Datadog.iOS.DDRUMConfiguration.ApplicationId">
@@ -7332,7 +7332,7 @@
             RUM will create a trace for each first-party resource by injecting HTTP trace headers and creating an APM span.
             If your backend is also instrumented with Datadog, you will see the full trace (app → backend).
           </para>
-                <para>Default: <c>NULL</c> - which means distributed tracing is not enabled by default.</para>
+                <para>Distributed tracing is not enabled by default.</para>
             </remarks>
         </member>
         <member name="M:Datadog.iOS.DDRUMURLSessionTracking.SetResourceAttributesProvider(System.Func{Foundation.NSUrlRequest,Foundation.NSUrlResponse,Foundation.NSData,Foundation.NSError,Foundation.NSDictionary{Foundation.NSString,Foundation.NSObject}})">
@@ -12067,7 +12067,7 @@ and within those sessions, only 20% will have replays.
         an empty tag map.
         </param>
             <param name="startTime">
-        An explicitly specified start timestamp for the <see cref="IOTSpan" />, or <c>&gt;NULL</c> to use the current walltime.
+        An explicitly specified start timestamp for the <see cref="IOTSpan" />, or <c>NULL</c> to use the current walltime.
         </param>
             <summary>Start a new span with the given operation name.</summary>
             <returns>A valid Span instance; it is the caller's responsibility to call <see cref="IOTSpan.Finish" />.</returns>
