@@ -17,6 +17,7 @@
 		<PackageTags>.NET for iOS Datadog Mobile Binding 2.16.0</PackageTags>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 
 		<!--
       Enable trim analyzers for class libraries.
@@ -28,6 +29,7 @@
 	<ItemGroup>
 		<None Include="Mdoc/ios.xml" Pack="true" PackagePath="lib/net8.0-ios17.5/" />
 		<None Include="../README.md" Pack="true" PackagePath="/" />
+		<None Include="../../../LICENSE" Pack="true" PackagePath="/" />
 	</ItemGroup>
 
 	<ItemGroup>

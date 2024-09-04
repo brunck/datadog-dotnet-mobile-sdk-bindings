@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <owners>bcr</owners>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <releaseNotes>Initial release of the Datadog iOS bindings.</releaseNotes>
     <tags>.NET iOS DataDog Mobile SDK Bindings</tags>
   </metadata>
