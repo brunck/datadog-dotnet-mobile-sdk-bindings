@@ -9,7 +9,7 @@
 	</PropertyGroup>
 	<PropertyGroup>
 		<PackageId>Bcr.Datadog.Android.Sdk.Logs</PackageId>
-		<Version>2.12.0</Version>
+		<Version>2.12.0.1</Version>
 		<Authors>bcr</Authors>
 		<Description>Bindings for the Datadog Android SDK Logs library</Description>
 		<RepositoryType>git</RepositoryType>
@@ -25,7 +25,7 @@
 		<None Include="LICENSE" Pack="true" PackagePath="/" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Bcr.Datadog.Android.Sdk.Core" Version="2.12.0" />
+		<PackageReference Include="Bcr.Datadog.Android.Sdk.Core" Version="2.12.0.1" />
 	</ItemGroup>
 	<ItemGroup>
 		<AndroidLibrary Update="aars\dd-sdk-android-logs-release.aar" />

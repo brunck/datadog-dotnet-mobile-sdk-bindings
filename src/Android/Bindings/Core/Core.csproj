@@ -9,7 +9,7 @@
 	</PropertyGroup>
 	<PropertyGroup>
 		<PackageId>Bcr.Datadog.Android.Sdk.Core</PackageId>
-		<Version>2.12.0</Version>
+		<Version>2.12.0.1</Version>
 		<Authors>bcr</Authors>
 		<Title>Bcr.Datadog.Android.Sdk.Core</Title>
 		<Description>Bindings for the Datadog Android SDK Core library</Description>
@@ -28,6 +28,7 @@
 	<ItemGroup>
 		<PackageReference Include="GoogleGson" Version="2.10.1.10" />
 		<PackageReference Include="Square.OkHttp3" Version="4.11.0" />
+		<PackageReference Include="Xamarin.AndroidX.Annotation" Version="1.6.0.4" />
 		<PackageReference Include="Xamarin.AndroidX.Work.Runtime" Version="2.8.1" />
 		<PackageReference Include="Xamarin.Kotlin.StdLib" Version="1.9.10.2" />
 		<PackageReference Include="Xamarin.Kotlin.StdLib.Jdk8" Version="1.9.10.2" />

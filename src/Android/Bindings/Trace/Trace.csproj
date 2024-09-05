@@ -42,6 +42,6 @@
 		<AndroidNamespaceReplacement Include="IO.Opentracing." Replacement="IO.OpenTracing" />
 	</ItemGroup>
 	<ItemGroup>
-	  <PackageReference Include="Bcr.Datadog.Android.Sdk.Core" Version="2.12.0" />
+	  <PackageReference Include="Bcr.Datadog.Android.Sdk.Core" Version="2.12.0.1" />
 	</ItemGroup>
 </Project>
