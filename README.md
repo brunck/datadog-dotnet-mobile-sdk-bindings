@@ -53,6 +53,10 @@ Not everything has been tested. Use at your own risk; although any issues past c
 #### Note
 > There is currently no .NET MAUI cross-platform code for initialization. Refer to the Datadog mobile documentation for how to initialize the SDKs for each platform.
 
+## Contributing
+
+Not accepting contributions at this time.
+
 ## License
 
 This repository is licensed under the MIT License. See the LICENSE file for details.
