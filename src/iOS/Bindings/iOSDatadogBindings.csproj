@@ -8,13 +8,13 @@
 
 		<!-- NuGet package properties-->
 		<PackageId>Bcr.Datadog.iOS.Sdk</PackageId>
-		<PackageVersion>2.16.0</PackageVersion>
+		<PackageVersion>2.16.0.1</PackageVersion>
 		<Authors>bcr</Authors>
 		<Description>.NET Bindings for the Datadog iOS SDK</Description>
 		<RepositoryType>git</RepositoryType>
 		<RepositoryUrl>https://github.com/brunck/datadog-dotnet-mobile-sdk-bindings</RepositoryUrl>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
-		<PackageTags>.NET for iOS Datadog Mobile Binding 2.16.0</PackageTags>
+		<PackageTags>.NET for iOS Datadog Mobile Binding</PackageTags>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
@@ -40,37 +40,37 @@
 		<NativeReference Include="Libs/OpenTelemetryApi.xcframework">
 			<Kind>Framework</Kind>
 			<Frameworks></Frameworks>
-			<SmartLink>False</SmartLink>
+			<SmartLink>True</SmartLink>
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
 		<NativeReference Include="Libs/DDObjc.xcframework">
 			<Kind>Framework</Kind>
 			<Frameworks>Foundation</Frameworks>
-			<SmartLink>False</SmartLink>
+			<SmartLink>True</SmartLink>
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
 		<NativeReference Include="Libs/DDC.xcframework">
 			<Kind>Framework</Kind>
 			<Frameworks>Foundation Network SystemConfiguration CoreTelephony UIKit Security</Frameworks>
-			<SmartLink>False</SmartLink>
+			<SmartLink>True</SmartLink>
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
 		<NativeReference Include="Libs/DDCR.xcframework">
 			<Kind>Framework</Kind>
 			<Frameworks>Foundation</Frameworks>
-			<SmartLink>False</SmartLink>
+			<SmartLink>True</SmartLink>
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
 		<NativeReference Include="Libs/DDInt.xcframework">
 			<Kind>Framework</Kind>
 			<Frameworks>Foundation OSLog</Frameworks>
-			<SmartLink>False</SmartLink>
+			<SmartLink>True</SmartLink>
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
 		<NativeReference Include="Libs/DDL.xcframework">
 			<Kind>Framework</Kind>
 			<Frameworks>Foundation</Frameworks>
-			<SmartLink>False</SmartLink>
+			<SmartLink>True</SmartLink>
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
 		<NativeReference Include="Libs/DDR.xcframework">
@@ -82,19 +82,19 @@
 		<NativeReference Include="Libs/DDSR.xcframework">
 			<Kind>Framework</Kind>
 			<Frameworks>Foundation CoreGraphics SafariServices SwiftUI WebKit CryptoKit</Frameworks>
-			<SmartLink>False</SmartLink>
+			<SmartLink>True</SmartLink>
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
 		<NativeReference Include="Libs/DDT.xcframework">
 			<Kind>Framework</Kind>
 			<Frameworks>Foundation</Frameworks>
-			<SmartLink>False</SmartLink>
+			<SmartLink>True</SmartLink>
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
 		<NativeReference Include="Libs/DWVT.xcframework">
 			<Kind>Framework</Kind>
 			<Frameworks>Foundation</Frameworks>
-			<SmartLink>False</SmartLink>
+			<SmartLink>True</SmartLink>
 			<ForceLoad>True</ForceLoad>
 		</NativeReference>
 	</ItemGroup>

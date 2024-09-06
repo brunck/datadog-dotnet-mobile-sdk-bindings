@@ -3,7 +3,6 @@
   <metadata>
     <owners>bcr</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <releaseNotes>Initial release of the Datadog iOS bindings.</releaseNotes>
     <tags>.NET iOS DataDog Mobile SDK Bindings</tags>
   </metadata>
   <files>
