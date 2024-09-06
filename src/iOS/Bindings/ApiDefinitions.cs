@@ -402,20 +402,7 @@ namespace Datadog.iOS
 		NativeHandle Constructor ([NullAllowed] NSUrl customEndpoint);
 	}
 
-	// @interface DDNSURLSessionDelegate : NSObject <NSURLSessionDataDelegate>
-	[BaseType (typeof(NSObject), Name = "_TtC11DatadogObjc22DDNSURLSessionDelegate")]
-	[Obsolete("Deprecated; use DDURLSessionInstrumentation.Enable() instead.", false)]
-	interface DDNSURLSessionDelegate : INSUrlSessionDataDelegate
-	{
-		// -(instancetype _Nonnull)initWithAdditionalFirstPartyHostsWithHeaderTypes:(NSDictionary<NSString *,NSSet<DDTracingHeaderType *> *> * _Nonnull)additionalFirstPartyHostsWithHeaderTypes __attribute__((objc_designated_initializer));
-		[Export ("initWithAdditionalFirstPartyHostsWithHeaderTypes:")]
-		[DesignatedInitializer]
-		NativeHandle Constructor (NSDictionary<NSString, NSSet<DDTracingHeaderType>> additionalFirstPartyHostsWithHeaderTypes);
-
-		// -(instancetype _Nonnull)initWithAdditionalFirstPartyHosts:(NSSet<NSString *> * _Nonnull)additionalFirstPartyHosts;
-		[Export ("initWithAdditionalFirstPartyHosts:")]
-		NativeHandle Constructor (NSSet<NSString> additionalFirstPartyHosts);
-	}
+	// remove deprecated class DDNSURLSessionDelegate
 
 	// @interface DDOTelHTTPHeadersWriter : DDB3HTTPHeadersWriter
 	[BaseType (typeof(DDB3HTTPHeadersWriter), Name = "_TtC11DatadogObjc23DDOTelHTTPHeadersWriter")]
@@ -5589,41 +5576,9 @@ namespace Datadog.iOS
 		void Disable (WKWebView webView);
 	}
 
-	// @interface DatadogURLSessionDelegate : NSObject <NSURLSessionDataDelegate>
-	[BaseType (typeof(NSObject), Name = "_TtC15DatadogInternal25DatadogURLSessionDelegate")]
-	[Obsolete("Deprecated; use DDURLSessionInstrumentation.Enable() instead.")]
-	interface DatadogURLSessionDelegate : INSUrlSessionDataDelegate
-	{
-		// -(instancetype _Nonnull)initWithAdditionalFirstPartyHosts:(NSSet<NSString *> * _Nonnull)additionalFirstPartyHosts;
-		[Export ("initWithAdditionalFirstPartyHosts:")]
-		NativeHandle Constructor (NSSet<NSString> additionalFirstPartyHosts);
+	// remove deprecated DatadogURLSessionDelegate class - causes multiple selector registration errors anyway
 
-		// -(void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didFinishCollectingMetrics:(NSURLSessionTaskMetrics * _Nonnull)metrics;
-		[Export ("URLSession:task:didFinishCollectingMetrics:")]
-		void URLSessionTaskDidFinishCollecingMetrics (NSUrlSession session, NSUrlSessionTask task, NSUrlSessionTaskMetrics metrics);
-
-		// -(void)URLSession:(NSURLSession * _Nonnull)session dataTask:(NSURLSessionDataTask * _Nonnull)dataTask didReceiveData:(NSData * _Nonnull)data;
-		[Export ("URLSession:dataTask:didReceiveData:")]
-		void URLSessionDataTaskDidReceiveData (NSUrlSession session, NSUrlSessionDataTask dataTask, NSData data);
-
-		// -(void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didCompleteWithError:(NSError * _Nullable)error;
-		[Export ("URLSession:task:didCompleteWithError:")]
-		void URLSessionTaskDidCompleteWithError (NSUrlSession session, NSUrlSessionTask task, [NullAllowed] NSError error);
-	}
-
-	// @protocol __URLSessionDelegateProviding <NSURLSessionDelegate>
-    [Protocol (Name = "_TtP15DatadogInternal29__URLSessionDelegateProviding_")]
-	[Obsolete("Deprecated; use DDURLSessionInstrumentation.Enable() instead.")]
-	interface URLSessionDelegateProviding : INSUrlSessionDelegate
-	{
-		[Wrap ("WeakDDURLSessionDelegate"), Abstract]
-		DatadogURLSessionDelegate DDURLSessionDelegate { get; }
-
-		// @required @property (readonly, nonatomic, strong) DatadogURLSessionDelegate * _Nonnull ddURLSessionDelegate;
-		[Abstract]
-		[NullAllowed, Export ("ddURLSessionDelegate", ArgumentSemantic.Strong)]
-		NSObject WeakDDURLSessionDelegate { get; }
-	}
+	// remove deprecated URLSessionDelegateProviding protocol - same reason as above
 
 	// remove weird category attempt
 }
