@@ -3,7 +3,6 @@
   <metadata>
     <owners>bcr</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <tags>.NET iOS DataDog Mobile SDK Bindings</tags>
   </metadata>
   <files>
     <!-- Include the .xcframework files -->
