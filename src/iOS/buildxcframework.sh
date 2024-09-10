@@ -24,7 +24,7 @@ OUTPUT_FOLDER="${PWD}/build"
 echo
 echo "Cleaning up old .xcframework files at ${OUTPUT_FOLDER}."
 if find "${OUTPUT_FOLDER}" -name "*.xcframework" -type d | grep -q .; then
-  find "${OUTPUT_FOLDER}" -name "*.xcframework" -type d -exec rm -rf {} \;
+  find "${OUTPUT_FOLDER}" -name "*.xcframework" -type d -exec rm -rf {} \; || true
   echo "Removed existing .xcframework files."
 else
   echo "No existing .xcframework files to remove."
@@ -43,7 +43,8 @@ function archive {
     IPHONEOS_DEPLOYMENT_TARGET=13.0 \
     ENABLE_BITCODE=NO \
     SKIP_INSTALL=NO \
-    BUILD_LIBRARY_FOR_DISTRIBUTION=YES; then
+    BUILD_LIBRARY_FOR_DISTRIBUTION=YES \
+    DEBUG_INFORMATION_FORMAT="dwarf"; then
       echo "Build for $5 failed. Exiting."
       echo
       exit 1
