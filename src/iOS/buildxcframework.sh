@@ -44,7 +44,6 @@ function archive {
     ENABLE_BITCODE=NO \
     SKIP_INSTALL=NO \
     BUILD_LIBRARY_FOR_DISTRIBUTION=YES \
-    DEBUG_INFORMATION_FORMAT="dwarf" \
     STRIP_DEBUG_SYMBOLS=YES; then
       echo "Build for $5 failed. Exiting."
       echo
