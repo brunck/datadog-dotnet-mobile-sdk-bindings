@@ -8,6 +8,6 @@
     <ProvisioningType>manual</ProvisioningType>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Bcr.Datadog.iOS.Sdk" Version="2.16.0.2" />
+    <PackageReference Include="Bcr.Datadog.iOS.Sdk" Version="2.16.0.4" />
   </ItemGroup>
 </Project>

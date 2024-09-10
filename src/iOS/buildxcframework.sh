@@ -44,7 +44,8 @@ function archive {
     ENABLE_BITCODE=NO \
     SKIP_INSTALL=NO \
     BUILD_LIBRARY_FOR_DISTRIBUTION=YES \
-    DEBUG_INFORMATION_FORMAT="dwarf"; then
+    DEBUG_INFORMATION_FORMAT="dwarf" \
+    STRIP_DEBUG_SYMBOLS=YES; then
       echo "Build for $5 failed. Exiting."
       echo
       exit 1
@@ -75,6 +76,11 @@ for INDEX in "${!FRAMEWORK_NAMES[@]}"; do
 
   archive "${SCHEME}" iphoneos "generic/platform=iOS" "${DEVICE_ARCHIVE_PATH}" "${FRAMEWORK_NAME}"
   xcoptions+=(-archive "${DEVICE_ARCHIVE_PATH}" -framework "${FRAMEWORK_NAME}.framework")
+
+  # Remove dSYM files from archives
+  echo "Removing dSYM files from archives."
+  rm -rf "${SIMULATOR_ARCHIVE_PATH}/dSYMs"
+  rm -rf "${DEVICE_ARCHIVE_PATH}/dSYMs"
 
   # Create XCFramework by combining all frameworks
   # Datadog class conflicts with module name and Swift emits invalid module interface
