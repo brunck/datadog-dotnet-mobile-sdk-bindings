@@ -1,0 +1,3 @@
+[submodule "dd-sdk-ios"]
+	path = dd-sdk-ios
+	url = https://github.com/brunck/dd-sdk-ios.git
