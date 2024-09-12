@@ -26,6 +26,53 @@ namespace Datadog.iOS
 	}
 
 	[Native]
+	public enum DDLogEventInterface : long
+	{
+		WiFi = 0,
+		WiredEthernet = 1,
+		Cellular = 2,
+		Loopback = 3,
+		Other = 4
+	}
+
+	[Native]
+	public enum DDLogEventRadioAccessTechnology : long
+	{
+		GPRS = 0,
+		Edge = 1,
+		WCDMA = 2,
+		HSDPA = 3,
+		HSUPA = 4,
+		CDMA1x = 5,
+		CDMAEVDORev0 = 6,
+		CDMAEVDORevA = 7,
+		CDMAEVDORevB = 8,
+		EHRPD = 9,
+		LTE = 10,
+		Unknown = 11
+	}
+
+	[Native]
+	public enum DDLogEventReachability : long
+	{
+		Yes = 0,
+		Maybe = 1,
+		No = 2
+	}
+
+	[Native]
+	public enum DDLogEventStatus : long
+	{
+		Debug = 0,
+		Info = 1,
+		Notice = 2,
+		Warn = 3,
+		Error = 4,
+		Critical = 5,
+		Emergency = 6
+	}
+
+	[Native]
 	public enum DDLogLevel : long
 	{
 		Debug = 0,
@@ -413,6 +460,26 @@ namespace Datadog.iOS
 		Prewarm = 5,
 		FromNonInteractiveSession = 6,
 		ExplicitStop = 7
+	}
+
+	[Native]
+	public enum DDRUMLongTaskEventLongTaskEntryType : long
+	{
+		None = 0,
+		LongTask = 1,
+		LongAnimationFrame = 2
+	}
+
+	[Native]
+	public enum DDRUMLongTaskEventLongTaskScriptsInvokerType : long
+	{
+		None = 0,
+		UserCallback = 1,
+		EventListener = 2,
+		ResolvePromise = 3,
+		RejectPromise = 4,
+		ClassicScript = 5,
+		ModuleScript = 6
 	}
 
 	[Native]

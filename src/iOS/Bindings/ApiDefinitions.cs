@@ -217,6 +217,286 @@ namespace Datadog.iOS
 		NativeHandle Constructor (DDTraceSamplingStrategy samplingStrategy, DDTraceContextInjection traceContextInjection);
 	}
 
+	// @interface DDLogEvent : NSObject
+	[BaseType (typeof(NSObject), Name = "_TtC11DatadogObjc10DDLogEvent")]
+	[DisableDefaultCtor]
+	interface DDLogEvent
+	{
+		// @property (readonly, copy, nonatomic) NSDate * _Nonnull date;
+		[Export ("date", ArgumentSemantic.Copy)]
+		NSDate Date { get; }
+
+		// @property (readonly, nonatomic) enum DDLogEventStatus status;
+		[Export ("status")]
+		DDLogEventStatus Status { get; }
+
+		// @property (copy, nonatomic) NSString * _Nonnull message;
+		[Export ("message")]
+		string Message { get; set; }
+
+		// @property (readonly, nonatomic, strong) DDLogEventError * _Nullable error;
+		[NullAllowed, Export ("error", ArgumentSemantic.Strong)]
+		DDLogEventError Error { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nonnull serviceName;
+		[Export ("serviceName")]
+		string ServiceName { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nonnull environment;
+		[Export ("environment")]
+		string Environment { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nonnull loggerName;
+		[Export ("loggerName")]
+		string LoggerName { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nonnull loggerVersion;
+		[Export ("loggerVersion")]
+		string LoggerVersion { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable threadName;
+		[NullAllowed, Export ("threadName")]
+		string ThreadName { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nonnull applicationVersion;
+		[Export ("applicationVersion")]
+		string ApplicationVersion { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nonnull applicationBuildNumber;
+		[Export ("applicationBuildNumber")]
+		string ApplicationBuildNumber { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable buildId;
+		[NullAllowed, Export ("buildId")]
+		string BuildId { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable variant;
+		[NullAllowed, Export ("variant")]
+		string Variant { get; }
+
+		// @property (readonly, nonatomic, strong) DDLogEventDd * _Nonnull dd;
+		[Export ("dd", ArgumentSemantic.Strong)]
+		DDLogEventDd Dd { get; }
+
+		// @property (readonly, nonatomic, strong) DDLogEventOperatingSystem * _Nonnull os;
+		[Export ("os", ArgumentSemantic.Strong)]
+		DDLogEventOperatingSystem Os { get; }
+
+		// @property (readonly, nonatomic, strong) DDLogEventUserInfo * _Nonnull userInfo;
+		[Export ("userInfo", ArgumentSemantic.Strong)]
+		DDLogEventUserInfo UserInfo { get; }
+
+		// @property (readonly, nonatomic, strong) DDLogEventNetworkConnectionInfo * _Nullable networkConnectionInfo;
+		[NullAllowed, Export ("networkConnectionInfo", ArgumentSemantic.Strong)]
+		DDLogEventNetworkConnectionInfo NetworkConnectionInfo { get; }
+
+		// @property (readonly, nonatomic, strong) DDLogEventCarrierInfo * _Nullable mobileCarrierInfo;
+		[NullAllowed, Export ("mobileCarrierInfo", ArgumentSemantic.Strong)]
+		DDLogEventCarrierInfo MobileCarrierInfo { get; }
+
+		// @property (readonly, nonatomic, strong) DDLogEventAttributes * _Nonnull attributes;
+		[Export ("attributes", ArgumentSemantic.Strong)]
+		DDLogEventAttributes Attributes { get; }
+
+		// @property (copy, nonatomic) NSArray<NSString *> * _Nullable tags;
+		[NullAllowed, Export ("tags", ArgumentSemantic.Copy)]
+		string[] Tags { get; set; }
+	}
+
+	// @interface DDLogEventAttributes : NSObject
+	[BaseType (typeof(NSObject), Name = "_TtC11DatadogObjc20DDLogEventAttributes")]
+	[DisableDefaultCtor]
+	interface DDLogEventAttributes
+	{
+		// @property (copy, nonatomic) NSDictionary<NSString *,id> * _Nonnull userAttributes;
+		[Export ("userAttributes", ArgumentSemantic.Copy)]
+		NSDictionary<NSString, NSObject> UserAttributes { get; set; }
+	}
+
+	// @interface DDLogEventBinaryImage : NSObject
+	[BaseType (typeof(NSObject), Name = "_TtC11DatadogObjc21DDLogEventBinaryImage")]
+	[DisableDefaultCtor]
+	interface DDLogEventBinaryImage
+	{
+		// @property (readonly, copy, nonatomic) NSString * _Nullable arch;
+		[NullAllowed, Export ("arch")]
+		string Arch { get; }
+
+		// @property (readonly, nonatomic) BOOL isSystem;
+		[Export ("isSystem")]
+		bool IsSystem { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable loadAddress;
+		[NullAllowed, Export ("loadAddress")]
+		string LoadAddress { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable maxAddress;
+		[NullAllowed, Export ("maxAddress")]
+		string MaxAddress { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nonnull name;
+		[Export ("name")]
+		string Name { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nonnull uuid;
+		[Export ("uuid")]
+		string Uuid { get; }
+	}
+
+	// @interface DDLogEventCarrierInfo : NSObject
+	[BaseType (typeof(NSObject), Name = "_TtC11DatadogObjc21DDLogEventCarrierInfo")]
+	[DisableDefaultCtor]
+	interface DDLogEventCarrierInfo
+	{
+		// @property (readonly, copy, nonatomic) NSString * _Nullable carrierName;
+		[NullAllowed, Export ("carrierName")]
+		string CarrierName { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable carrierISOCountryCode;
+		[NullAllowed, Export ("carrierISOCountryCode")]
+		string CarrierISOCountryCode { get; }
+
+		// @property (readonly, nonatomic) BOOL carrierAllowsVOIP;
+		[Export ("carrierAllowsVOIP")]
+		bool CarrierAllowsVOIP { get; }
+
+		// @property (readonly, nonatomic) enum DDLogEventRadioAccessTechnology radioAccessTechnology;
+		[Export ("radioAccessTechnology")]
+		DDLogEventRadioAccessTechnology RadioAccessTechnology { get; }
+	}
+
+	// @interface DDLogEventDd : NSObject
+	[BaseType (typeof(NSObject), Name = "_TtC11DatadogObjc12DDLogEventDd")]
+	[DisableDefaultCtor]
+	interface DDLogEventDd
+	{
+		// @property (readonly, nonatomic, strong) DDLogEventDeviceInfo * _Nonnull device;
+		[Export ("device", ArgumentSemantic.Strong)]
+		DDLogEventDeviceInfo Device { get; }
+	}
+
+	// @interface DDLogEventDeviceInfo : NSObject
+	[BaseType (typeof(NSObject), Name = "_TtC11DatadogObjc20DDLogEventDeviceInfo")]
+	[DisableDefaultCtor]
+	interface DDLogEventDeviceInfo
+	{
+		// @property (readonly, copy, nonatomic) NSString * _Nonnull brand;
+		[Export ("brand")]
+		string Brand { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nonnull name;
+		[Export ("name")]
+		string Name { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nonnull model;
+		[Export ("model")]
+		string Model { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nonnull architecture;
+		[Export ("architecture")]
+		string Architecture { get; }
+	}
+
+	// @interface DDLogEventError : NSObject
+	[BaseType (typeof(NSObject), Name = "_TtC11DatadogObjc15DDLogEventError")]
+	[DisableDefaultCtor]
+	interface DDLogEventError
+	{
+		// @property (copy, nonatomic) NSString * _Nullable kind;
+		[NullAllowed, Export ("kind")]
+		string Kind { get; set; }
+
+		// @property (copy, nonatomic) NSString * _Nullable message;
+		[NullAllowed, Export ("message")]
+		string Message { get; set; }
+
+		// @property (copy, nonatomic) NSString * _Nullable stack;
+		[NullAllowed, Export ("stack")]
+		string Stack { get; set; }
+
+		// @property (copy, nonatomic) NSString * _Nonnull sourceType;
+		[Export ("sourceType")]
+		string SourceType { get; set; }
+
+		// @property (copy, nonatomic) NSString * _Nullable fingerprint;
+		[NullAllowed, Export ("fingerprint")]
+		string Fingerprint { get; set; }
+
+		// @property (copy, nonatomic) NSArray<DDLogEventBinaryImage *> * _Nullable binaryImages;
+		[NullAllowed, Export ("binaryImages", ArgumentSemantic.Copy)]
+		DDLogEventBinaryImage[] BinaryImages { get; set; }
+	}
+
+	// @interface DDLogEventNetworkConnectionInfo : NSObject
+	[BaseType (typeof(NSObject), Name = "_TtC11DatadogObjc31DDLogEventNetworkConnectionInfo")]
+	[DisableDefaultCtor]
+	interface DDLogEventNetworkConnectionInfo
+	{
+		// @property (readonly, nonatomic) enum DDLogEventReachability reachability;
+		[Export ("reachability")]
+		DDLogEventReachability Reachability { get; }
+
+		// @property (readonly, copy, nonatomic) NSArray<NSNumber *> * _Nullable availableInterfaces;
+		[NullAllowed, Export ("availableInterfaces", ArgumentSemantic.Copy)]
+		NSNumber[] AvailableInterfaces { get; }
+
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable supportsIPv4;
+		[NullAllowed, Export ("supportsIPv4", ArgumentSemantic.Strong)]
+		NSNumber SupportsIPv4 { get; }
+
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable supportsIPv6;
+		[NullAllowed, Export ("supportsIPv6", ArgumentSemantic.Strong)]
+		NSNumber SupportsIPv6 { get; }
+
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable isExpensive;
+		[NullAllowed, Export ("isExpensive", ArgumentSemantic.Strong)]
+		NSNumber IsExpensive { get; }
+
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable isConstrained;
+		[NullAllowed, Export ("isConstrained", ArgumentSemantic.Strong)]
+		NSNumber IsConstrained { get; }
+	}
+
+	// @interface DDLogEventOperatingSystem : NSObject
+	[BaseType (typeof(NSObject), Name = "_TtC11DatadogObjc25DDLogEventOperatingSystem")]
+	[DisableDefaultCtor]
+	interface DDLogEventOperatingSystem
+	{
+		// @property (readonly, copy, nonatomic) NSString * _Nonnull name;
+		[Export ("name")]
+		string Name { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nonnull version;
+		[Export ("version")]
+		string Version { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable build;
+		[NullAllowed, Export ("build")]
+		string Build { get; }
+	}
+
+	// @interface DDLogEventUserInfo : NSObject
+	[BaseType (typeof(NSObject), Name = "_TtC11DatadogObjc18DDLogEventUserInfo")]
+	[DisableDefaultCtor]
+	interface DDLogEventUserInfo
+	{
+		// @property (readonly, copy, nonatomic) NSString * _Nullable id;
+		[NullAllowed, Export ("id")]
+		string Id { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable name;
+		[NullAllowed, Export ("name")]
+		string Name { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable email;
+		[NullAllowed, Export ("email")]
+		string Email { get; }
+
+		// @property (copy, nonatomic) NSDictionary<NSString *,id> * _Nonnull extraInfo;
+		[Export ("extraInfo", ArgumentSemantic.Copy)]
+		NSDictionary<NSString, NSObject> ExtraInfo { get; set; }
+	}
+
 	// @interface DDLogger : NSObject
 	[BaseType (typeof(NSObject), Name = "_TtC11DatadogObjc8DDLogger")]
 	[DisableDefaultCtor]
@@ -400,13 +680,28 @@ namespace Datadog.iOS
 		[Export ("initWithCustomEndpoint:")]
 		[DesignatedInitializer]
 		NativeHandle Constructor ([NullAllowed] NSUrl customEndpoint);
+
+		// -(void)setEventMapper:(DDLogEvent * _Nullable (^ _Nonnull)(DDLogEvent * _Nonnull))mapper;
+		[Export ("setEventMapper:")]
+		void SetEventMapper (Func<DDLogEvent, DDLogEvent> mapper);
 	}
 
-	// remove deprecated class DDNSURLSessionDelegate
+	// @interface DDNSURLSessionDelegate : NSObject <NSURLSessionDataDelegate>
+	[BaseType (typeof(NSObject), Name = "_TtC11DatadogObjc22DDNSURLSessionDelegate")]
+	interface DDNSURLSessionDelegate : INSUrlSessionDataDelegate
+	{
+		// -(instancetype _Nonnull)initWithAdditionalFirstPartyHostsWithHeaderTypes:(NSDictionary<NSString *,NSSet<DDTracingHeaderType *> *> * _Nonnull)additionalFirstPartyHostsWithHeaderTypes __attribute__((objc_designated_initializer));
+		[Export ("initWithAdditionalFirstPartyHostsWithHeaderTypes:")]
+		[DesignatedInitializer]
+		NativeHandle Constructor (NSDictionary<NSString, NSSet<DDTracingHeaderType>> additionalFirstPartyHostsWithHeaderTypes);
+
+		// -(instancetype _Nonnull)initWithAdditionalFirstPartyHosts:(NSSet<NSString *> * _Nonnull)additionalFirstPartyHosts;
+		[Export ("initWithAdditionalFirstPartyHosts:")]
+		NativeHandle Constructor (NSSet<NSString> additionalFirstPartyHosts);
+	}
 
 	// @interface DDOTelHTTPHeadersWriter : DDB3HTTPHeadersWriter
 	[BaseType (typeof(DDB3HTTPHeadersWriter), Name = "_TtC11DatadogObjc23DDOTelHTTPHeadersWriter")]
-	[Obsolete("Deprecated, renamed: DDB3HTTPHeadersWriter")]
 	interface DDOTelHTTPHeadersWriter
 	{
 		// -(instancetype _Nonnull)initWithSampleRate:(float)sampleRate injectEncoding:(enum DDInjectEncoding)injectEncoding __attribute__((objc_designated_initializer)) __attribute__((deprecated("This will be removed in future versions of the SDK. Use `init(samplingStrategy: .custom(sampleRate:))` instead.", "DDB3HTTPHeadersWriter")));
@@ -2021,9 +2316,21 @@ namespace Datadog.iOS
 	[DisableDefaultCtor]
 	interface DDRUMLongTaskEventLongTask
 	{
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable blockingDuration;
+		[NullAllowed, Export ("blockingDuration", ArgumentSemantic.Strong)]
+		NSNumber BlockingDuration { get; }
+
 		// @property (readonly, nonatomic, strong) NSNumber * _Nonnull duration;
 		[Export ("duration", ArgumentSemantic.Strong)]
 		NSNumber Duration { get; }
+
+		// @property (readonly, nonatomic) enum DDRUMLongTaskEventLongTaskEntryType entryType;
+		[Export ("entryType")]
+		DDRUMLongTaskEventLongTaskEntryType EntryType { get; }
+
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable firstUiEventTimestamp;
+		[NullAllowed, Export ("firstUiEventTimestamp", ArgumentSemantic.Strong)]
+		NSNumber FirstUiEventTimestamp { get; }
 
 		// @property (readonly, copy, nonatomic) NSString * _Nullable id;
 		[NullAllowed, Export ("id")]
@@ -2032,6 +2339,68 @@ namespace Datadog.iOS
 		// @property (readonly, nonatomic, strong) NSNumber * _Nullable isFrozenFrame;
 		[NullAllowed, Export ("isFrozenFrame", ArgumentSemantic.Strong)]
 		NSNumber IsFrozenFrame { get; }
+
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable renderStart;
+		[NullAllowed, Export ("renderStart", ArgumentSemantic.Strong)]
+		NSNumber RenderStart { get; }
+
+		// @property (readonly, copy, nonatomic) NSArray<DDRUMLongTaskEventLongTaskScripts *> * _Nullable scripts;
+		[NullAllowed, Export ("scripts", ArgumentSemantic.Copy)]
+		DDRUMLongTaskEventLongTaskScripts[] Scripts { get; }
+
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable styleAndLayoutStart;
+		[NullAllowed, Export ("styleAndLayoutStart", ArgumentSemantic.Strong)]
+		NSNumber StyleAndLayoutStart { get; }
+	}
+
+	// @interface DDRUMLongTaskEventLongTaskScripts : NSObject
+	[BaseType (typeof(NSObject), Name = "_TtC11DatadogObjc33DDRUMLongTaskEventLongTaskScripts")]
+	[DisableDefaultCtor]
+	interface DDRUMLongTaskEventLongTaskScripts
+	{
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable duration;
+		[NullAllowed, Export ("duration", ArgumentSemantic.Strong)]
+		NSNumber Duration { get; }
+
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable executionStart;
+		[NullAllowed, Export ("executionStart", ArgumentSemantic.Strong)]
+		NSNumber ExecutionStart { get; }
+
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable forcedStyleAndLayoutDuration;
+		[NullAllowed, Export ("forcedStyleAndLayoutDuration", ArgumentSemantic.Strong)]
+		NSNumber ForcedStyleAndLayoutDuration { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable invoker;
+		[NullAllowed, Export ("invoker")]
+		string Invoker { get; }
+
+		// @property (readonly, nonatomic) enum DDRUMLongTaskEventLongTaskScriptsInvokerType invokerType;
+		[Export ("invokerType")]
+		DDRUMLongTaskEventLongTaskScriptsInvokerType InvokerType { get; }
+
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable pauseDuration;
+		[NullAllowed, Export ("pauseDuration", ArgumentSemantic.Strong)]
+		NSNumber PauseDuration { get; }
+
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable sourceCharPosition;
+		[NullAllowed, Export ("sourceCharPosition", ArgumentSemantic.Strong)]
+		NSNumber SourceCharPosition { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable sourceFunctionName;
+		[NullAllowed, Export ("sourceFunctionName")]
+		string SourceFunctionName { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable sourceUrl;
+		[NullAllowed, Export ("sourceUrl")]
+		string SourceUrl { get; }
+
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable startTime;
+		[NullAllowed, Export ("startTime", ArgumentSemantic.Strong)]
+		NSNumber StartTime { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable windowAttribution;
+		[NullAllowed, Export ("windowAttribution")]
+		string WindowAttribution { get; }
 	}
 
 	// @interface DDRUMLongTaskEventRUMCITest : NSObject
@@ -4480,6 +4849,10 @@ namespace Datadog.iOS
 		[NullAllowed, Export ("forwardReports", ArgumentSemantic.Strong)]
 		DDTelemetryConfigurationEventTelemetryConfigurationForwardReports ForwardReports { get; }
 
+		// @property (copy, nonatomic) NSString * _Nullable imagePrivacyLevel;
+		[NullAllowed, Export ("imagePrivacyLevel")]
+		string ImagePrivacyLevel { get; set; }
+
 		// @property (copy, nonatomic) NSString * _Nullable initializationType;
 		[NullAllowed, Export ("initializationType")]
 		string InitializationType { get; set; }
@@ -4551,6 +4924,14 @@ namespace Datadog.iOS
 		// @property (readonly, nonatomic, strong) NSNumber * _Nullable telemetryUsageSampleRate;
 		[NullAllowed, Export ("telemetryUsageSampleRate", ArgumentSemantic.Strong)]
 		NSNumber TelemetryUsageSampleRate { get; }
+
+		// @property (copy, nonatomic) NSString * _Nullable textAndInputPrivacyLevel;
+		[NullAllowed, Export ("textAndInputPrivacyLevel")]
+		string TextAndInputPrivacyLevel { get; set; }
+
+		// @property (copy, nonatomic) NSString * _Nullable touchPrivacyLevel;
+		[NullAllowed, Export ("touchPrivacyLevel")]
+		string TouchPrivacyLevel { get; set; }
 
 		// @property (nonatomic) enum DDTelemetryConfigurationEventTelemetryConfigurationTraceContextInjection traceContextInjection;
 		[Export ("traceContextInjection", ArgumentSemantic.Assign)]
