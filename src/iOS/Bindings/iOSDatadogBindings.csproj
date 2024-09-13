@@ -8,7 +8,7 @@
 
 		<!-- NuGet package properties-->
 		<PackageId>Bcr.Datadog.iOS.Sdk</PackageId>
-		<PackageVersion>2.16.0.4</PackageVersion>
+		<PackageVersion>2.17.0</PackageVersion>
 		<Authors>bcr</Authors>
 		<Description>.NET Bindings for the Datadog iOS SDK</Description>
 		<RepositoryType>git</RepositoryType>
