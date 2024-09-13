@@ -686,22 +686,11 @@ namespace Datadog.iOS
 		void SetEventMapper (Func<DDLogEvent, DDLogEvent> mapper);
 	}
 
-	// @interface DDNSURLSessionDelegate : NSObject <NSURLSessionDataDelegate>
-	[BaseType (typeof(NSObject), Name = "_TtC11DatadogObjc22DDNSURLSessionDelegate")]
-	interface DDNSURLSessionDelegate : INSUrlSessionDataDelegate
-	{
-		// -(instancetype _Nonnull)initWithAdditionalFirstPartyHostsWithHeaderTypes:(NSDictionary<NSString *,NSSet<DDTracingHeaderType *> *> * _Nonnull)additionalFirstPartyHostsWithHeaderTypes __attribute__((objc_designated_initializer));
-		[Export ("initWithAdditionalFirstPartyHostsWithHeaderTypes:")]
-		[DesignatedInitializer]
-		NativeHandle Constructor (NSDictionary<NSString, NSSet<DDTracingHeaderType>> additionalFirstPartyHostsWithHeaderTypes);
-
-		// -(instancetype _Nonnull)initWithAdditionalFirstPartyHosts:(NSSet<NSString *> * _Nonnull)additionalFirstPartyHosts;
-		[Export ("initWithAdditionalFirstPartyHosts:")]
-		NativeHandle Constructor (NSSet<NSString> additionalFirstPartyHosts);
-	}
+	// remove deprecated class DDNSURLSessionDelegate
 
 	// @interface DDOTelHTTPHeadersWriter : DDB3HTTPHeadersWriter
 	[BaseType (typeof(DDB3HTTPHeadersWriter), Name = "_TtC11DatadogObjc23DDOTelHTTPHeadersWriter")]
+	[Obsolete("Deprecated, renamed: DDB3HTTPHeadersWriter")]
 	interface DDOTelHTTPHeadersWriter
 	{
 		// -(instancetype _Nonnull)initWithSampleRate:(float)sampleRate injectEncoding:(enum DDInjectEncoding)injectEncoding __attribute__((objc_designated_initializer)) __attribute__((deprecated("This will be removed in future versions of the SDK. Use `init(samplingStrategy: .custom(sampleRate:))` instead.", "DDB3HTTPHeadersWriter")));
