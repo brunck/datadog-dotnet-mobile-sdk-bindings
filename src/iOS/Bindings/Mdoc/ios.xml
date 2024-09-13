@@ -3,65 +3,6 @@
         <name>ios</name>
     </assembly>
     <members>
-        <member name="T:Datadog.iOS.DatadogURLSessionDelegate">
-            <summary>
-      The <c>URLSession</c> delegate object which enables network requests instrumentation. <i>It must be
-      used together with</i><c>DatadogRUM</c> or <c>DatadogTrace</c>.
-      All requests made with the <c>URLSession</c> instrumented with this delegate will be intercepted by the SDK.
-    </summary>
-            <remarks />
-        </member>
-        <member name="C:Datadog.iOS.DatadogURLSessionDelegate">
-            <summary />
-            <remarks />
-        </member>
-        <member name="C:Datadog.iOS.DatadogURLSessionDelegate(Foundation.NSObjectFlag)">
-            <param name="t" />
-            <summary />
-            <remarks />
-        </member>
-        <member name="C:Datadog.iOS.DatadogURLSessionDelegate(Foundation.NSSet{Foundation.NSString})">
-            <param name="additionalFirstPartyHosts">
-          These hosts are tracked <i>in addition to</i> what was
-          passed to <c>DatadogConfiguration.Builder</c> via <c>trackURLSession(firstPartyHosts:)</c></param>
-            <summary>
-         Automatically tracked hosts can be customized per instance with this initializer.
-          <i>NOTE:</i> If <c>trackURLSession(firstPartyHosts:)</c> is never called, 
-          automatic tracking will <i>not</i> take place.
-        </summary>
-            <remarks />
-        </member>
-        <member name="C:Datadog.iOS.DatadogURLSessionDelegate(ObjCRuntime.NativeHandle)">
-            <param name="handle" />
-            <summary />
-            <remarks />
-        </member>
-        <member name="P:Datadog.iOS.DatadogURLSessionDelegate.ClassHandle">
-            <summary />
-            <value />
-            <remarks />
-        </member>
-        <member name="M:Datadog.iOS.DatadogURLSessionDelegate.URLSessionDataTaskDidReceiveData(Foundation.NSUrlSession,Foundation.NSUrlSessionDataTask,Foundation.NSData)">
-            <param name="session" />
-            <param name="dataTask" />
-            <param name="data" />
-            <summary />
-            <remarks />
-        </member>
-        <member name="M:Datadog.iOS.DatadogURLSessionDelegate.URLSessionTaskDidCompleteWithError(Foundation.NSUrlSession,Foundation.NSUrlSessionTask,Foundation.NSError)">
-            <param name="session" />
-            <param name="task" />
-            <param name="error" />
-            <summary />
-            <remarks />
-        </member>
-        <member name="M:Datadog.iOS.DatadogURLSessionDelegate.URLSessionTaskDidFinishCollecingMetrics(Foundation.NSUrlSession,Foundation.NSUrlSessionTask,Foundation.NSUrlSessionTaskMetrics)">
-            <param name="session" />
-            <param name="task" />
-            <param name="metrics" />
-            <summary />
-            <remarks />
-        </member>
         <member name="T:Datadog.iOS.DDB3HTTPHeadersWriter">
             <summary>
       The <c>DDB3HTTPHeadersWriter</c> class facilitates the injection of trace propagation headers into network requests 
@@ -528,6 +469,568 @@
                 <para>See: Single Header (https://github.com/openzipkin/b3-propagation#single-header).</para>
             </summary>
         </member>
+        <member name="T:Datadog.iOS.DDLogEvent">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:Datadog.iOS.DDLogEvent(Foundation.NSObjectFlag)">
+            <param name="t">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:Datadog.iOS.DDLogEvent(ObjCRuntime.NativeHandle)">
+            <param name="handle">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEvent.ApplicationBuildNumber">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEvent.ApplicationVersion">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEvent.Attributes">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEvent.BuildId">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEvent.ClassHandle">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEvent.Date">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEvent.Dd">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEvent.Environment">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEvent.Error">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEvent.LoggerName">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEvent.LoggerVersion">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEvent.Message">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEvent.MobileCarrierInfo">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEvent.NetworkConnectionInfo">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEvent.Os">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEvent.ServiceName">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEvent.Status">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEvent.Tags">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEvent.ThreadName">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEvent.UserInfo">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEvent.Variant">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="T:Datadog.iOS.DDLogEventAttributes">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:Datadog.iOS.DDLogEventAttributes(Foundation.NSObjectFlag)">
+            <param name="t">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:Datadog.iOS.DDLogEventAttributes(ObjCRuntime.NativeHandle)">
+            <param name="handle">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventAttributes.ClassHandle">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventAttributes.UserAttributes">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="T:Datadog.iOS.DDLogEventBinaryImage">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:Datadog.iOS.DDLogEventBinaryImage(Foundation.NSObjectFlag)">
+            <param name="t">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:Datadog.iOS.DDLogEventBinaryImage(ObjCRuntime.NativeHandle)">
+            <param name="handle">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventBinaryImage.Arch">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventBinaryImage.ClassHandle">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventBinaryImage.IsSystem">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventBinaryImage.LoadAddress">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventBinaryImage.MaxAddress">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventBinaryImage.Name">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventBinaryImage.Uuid">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="T:Datadog.iOS.DDLogEventCarrierInfo">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:Datadog.iOS.DDLogEventCarrierInfo(Foundation.NSObjectFlag)">
+            <param name="t">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:Datadog.iOS.DDLogEventCarrierInfo(ObjCRuntime.NativeHandle)">
+            <param name="handle">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventCarrierInfo.CarrierAllowsVOIP">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventCarrierInfo.CarrierISOCountryCode">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventCarrierInfo.CarrierName">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventCarrierInfo.ClassHandle">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventCarrierInfo.RadioAccessTechnology">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="T:Datadog.iOS.DDLogEventDd">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:Datadog.iOS.DDLogEventDd(Foundation.NSObjectFlag)">
+            <param name="t">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:Datadog.iOS.DDLogEventDd(ObjCRuntime.NativeHandle)">
+            <param name="handle">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventDd.ClassHandle">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventDd.Device">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="T:Datadog.iOS.DDLogEventDeviceInfo">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:Datadog.iOS.DDLogEventDeviceInfo(Foundation.NSObjectFlag)">
+            <param name="t">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:Datadog.iOS.DDLogEventDeviceInfo(ObjCRuntime.NativeHandle)">
+            <param name="handle">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventDeviceInfo.Architecture">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventDeviceInfo.Brand">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventDeviceInfo.ClassHandle">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventDeviceInfo.Model">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventDeviceInfo.Name">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="T:Datadog.iOS.DDLogEventError">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:Datadog.iOS.DDLogEventError(Foundation.NSObjectFlag)">
+            <param name="t">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:Datadog.iOS.DDLogEventError(ObjCRuntime.NativeHandle)">
+            <param name="handle">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventError.BinaryImages">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventError.ClassHandle">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventError.Fingerprint">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventError.Kind">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventError.Message">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventError.SourceType">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventError.Stack">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="T:Datadog.iOS.DDLogEventInterface">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="F:Datadog.iOS.DDLogEventInterface.Cellular">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDLogEventInterface.Loopback">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDLogEventInterface.Other">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDLogEventInterface.WiFi">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDLogEventInterface.WiredEthernet">
+            <summary>To be added.</summary>
+        </member>
+        <member name="T:Datadog.iOS.DDLogEventNetworkConnectionInfo">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:Datadog.iOS.DDLogEventNetworkConnectionInfo(Foundation.NSObjectFlag)">
+            <param name="t">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:Datadog.iOS.DDLogEventNetworkConnectionInfo(ObjCRuntime.NativeHandle)">
+            <param name="handle">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventNetworkConnectionInfo.AvailableInterfaces">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventNetworkConnectionInfo.ClassHandle">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventNetworkConnectionInfo.IsConstrained">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventNetworkConnectionInfo.IsExpensive">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventNetworkConnectionInfo.Reachability">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventNetworkConnectionInfo.SupportsIPv4">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventNetworkConnectionInfo.SupportsIPv6">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="T:Datadog.iOS.DDLogEventOperatingSystem">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:Datadog.iOS.DDLogEventOperatingSystem(Foundation.NSObjectFlag)">
+            <param name="t">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:Datadog.iOS.DDLogEventOperatingSystem(ObjCRuntime.NativeHandle)">
+            <param name="handle">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventOperatingSystem.Build">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventOperatingSystem.ClassHandle">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventOperatingSystem.Name">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventOperatingSystem.Version">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="T:Datadog.iOS.DDLogEventRadioAccessTechnology">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="F:Datadog.iOS.DDLogEventRadioAccessTechnology.CDMA1x">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDLogEventRadioAccessTechnology.CDMAEVDORev0">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDLogEventRadioAccessTechnology.CDMAEVDORevA">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDLogEventRadioAccessTechnology.CDMAEVDORevB">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDLogEventRadioAccessTechnology.Edge">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDLogEventRadioAccessTechnology.EHRPD">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDLogEventRadioAccessTechnology.GPRS">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDLogEventRadioAccessTechnology.HSDPA">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDLogEventRadioAccessTechnology.HSUPA">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDLogEventRadioAccessTechnology.LTE">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDLogEventRadioAccessTechnology.Unknown">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDLogEventRadioAccessTechnology.WCDMA">
+            <summary>To be added.</summary>
+        </member>
+        <member name="T:Datadog.iOS.DDLogEventReachability">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="F:Datadog.iOS.DDLogEventReachability.Maybe">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDLogEventReachability.No">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDLogEventReachability.Yes">
+            <summary>To be added.</summary>
+        </member>
+        <member name="T:Datadog.iOS.DDLogEventStatus">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="F:Datadog.iOS.DDLogEventStatus.Critical">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDLogEventStatus.Debug">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDLogEventStatus.Emergency">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDLogEventStatus.Error">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDLogEventStatus.Info">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDLogEventStatus.Notice">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDLogEventStatus.Warn">
+            <summary>To be added.</summary>
+        </member>
+        <member name="T:Datadog.iOS.DDLogEventUserInfo">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:Datadog.iOS.DDLogEventUserInfo(Foundation.NSObjectFlag)">
+            <param name="t">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:Datadog.iOS.DDLogEventUserInfo(ObjCRuntime.NativeHandle)">
+            <param name="handle">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventUserInfo.ClassHandle">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventUserInfo.Email">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventUserInfo.ExtraInfo">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventUserInfo.Id">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDLogEventUserInfo.Name">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="T:Datadog.iOS.DDLogger">
             <summary>Datadog Logger.</summary>
             <remarks>
@@ -970,38 +1473,13 @@
             <value />
             <remarks />
         </member>
-        <member name="T:Datadog.iOS.DDNSURLSessionDelegate">
-            <summary>Configuration of URLSession instrumentation.</summary>
-            <remarks />
-        </member>
-        <member name="C:Datadog.iOS.DDNSURLSessionDelegate">
-            <summary />
-            <remarks />
-        </member>
-        <member name="C:Datadog.iOS.DDNSURLSessionDelegate(Foundation.NSDictionary{Foundation.NSString,Foundation.NSSet{Datadog.iOS.DDTracingHeaderType}})">
-            <param name="additionalFirstPartyHostsWithHeaderTypes">
-        Dictionary of hosts and tracing header types to use. Note: Hosts must not include "http(s)://" prefix.</param>
-            <summary />
-            <remarks />
-        </member>
-        <member name="C:Datadog.iOS.DDNSURLSessionDelegate(Foundation.NSObjectFlag)">
-            <param name="t" />
-            <summary />
-            <remarks />
-        </member>
-        <member name="C:Datadog.iOS.DDNSURLSessionDelegate(Foundation.NSSet{Foundation.NSString})">
-            <param name="additionalFirstPartyHosts" />
-            <summary />
-            <remarks />
-        </member>
-        <member name="C:Datadog.iOS.DDNSURLSessionDelegate(ObjCRuntime.NativeHandle)">
-            <param name="handle" />
-            <summary />
-            <remarks />
-        </member>
-        <member name="P:Datadog.iOS.DDNSURLSessionDelegate.ClassHandle">
-            <summary />
-            <value />
+        <member name="M:Datadog.iOS.DDLogsConfiguration.SetEventMapper(System.Func{Datadog.iOS.DDLogEvent,Datadog.iOS.DDLogEvent})">
+            <param name="mapper" />
+            <summary>
+                <para>Sets the custom mapper for <c>DDLogEvent</c>. This can be used to modify logs before they are sent to Datadog.</para>
+                <para>The implementation should obtain a mutable version of the <c>DDLogEvent</c>, modify it and return it. Returning <c>null</c> will result 
+        in dropping the Log event entirely, so it won't be sent to Datadog.</para>
+            </summary>
             <remarks />
         </member>
         <member name="T:Datadog.iOS.DDOTelHTTPHeadersWriter">
@@ -3304,6 +3782,9 @@
         <member name="F:Datadog.iOS.DDRUMErrorEventErrorCategory.Exception">
             <summary />
         </member>
+        <member name="F:Datadog.iOS.DDRUMErrorEventErrorCategory.MemoryWarning">
+            <summary>To be added.</summary>
+        </member>
         <member name="F:Datadog.iOS.DDRUMErrorEventErrorCategory.None">
             <summary />
         </member>
@@ -4825,6 +5306,11 @@
             <summary />
             <remarks />
         </member>
+        <member name="P:Datadog.iOS.DDRUMLongTaskEventLongTask.BlockingDuration">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="P:Datadog.iOS.DDRUMLongTaskEventLongTask.ClassHandle">
             <summary />
             <value />
@@ -4835,6 +5321,16 @@
             <value />
             <remarks />
         </member>
+        <member name="P:Datadog.iOS.DDRUMLongTaskEventLongTask.EntryType">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDRUMLongTaskEventLongTask.FirstUiEventTimestamp">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="P:Datadog.iOS.DDRUMLongTaskEventLongTask.Id">
             <summary />
             <value />
@@ -4844,6 +5340,133 @@
             <summary />
             <value />
             <remarks />
+        </member>
+        <member name="P:Datadog.iOS.DDRUMLongTaskEventLongTask.RenderStart">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDRUMLongTaskEventLongTask.Scripts">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDRUMLongTaskEventLongTask.StyleAndLayoutStart">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="T:Datadog.iOS.DDRUMLongTaskEventLongTaskEntryType">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="F:Datadog.iOS.DDRUMLongTaskEventLongTaskEntryType.LongAnimationFrame">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDRUMLongTaskEventLongTaskEntryType.LongTask">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDRUMLongTaskEventLongTaskEntryType.None">
+            <summary>To be added.</summary>
+        </member>
+        <member name="T:Datadog.iOS.DDRUMLongTaskEventLongTaskScripts">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:Datadog.iOS.DDRUMLongTaskEventLongTaskScripts(Foundation.NSObjectFlag)">
+            <param name="t">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:Datadog.iOS.DDRUMLongTaskEventLongTaskScripts(ObjCRuntime.NativeHandle)">
+            <param name="handle">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDRUMLongTaskEventLongTaskScripts.ClassHandle">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDRUMLongTaskEventLongTaskScripts.Duration">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDRUMLongTaskEventLongTaskScripts.ExecutionStart">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDRUMLongTaskEventLongTaskScripts.ForcedStyleAndLayoutDuration">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDRUMLongTaskEventLongTaskScripts.Invoker">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDRUMLongTaskEventLongTaskScripts.InvokerType">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDRUMLongTaskEventLongTaskScripts.PauseDuration">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDRUMLongTaskEventLongTaskScripts.SourceCharPosition">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDRUMLongTaskEventLongTaskScripts.SourceFunctionName">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDRUMLongTaskEventLongTaskScripts.SourceUrl">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDRUMLongTaskEventLongTaskScripts.StartTime">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDRUMLongTaskEventLongTaskScripts.WindowAttribution">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="T:Datadog.iOS.DDRUMLongTaskEventLongTaskScriptsInvokerType">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="F:Datadog.iOS.DDRUMLongTaskEventLongTaskScriptsInvokerType.ClassicScript">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDRUMLongTaskEventLongTaskScriptsInvokerType.EventListener">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDRUMLongTaskEventLongTaskScriptsInvokerType.ModuleScript">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDRUMLongTaskEventLongTaskScriptsInvokerType.None">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDRUMLongTaskEventLongTaskScriptsInvokerType.RejectPromise">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDRUMLongTaskEventLongTaskScriptsInvokerType.ResolvePromise">
+            <summary>To be added.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDRUMLongTaskEventLongTaskScriptsInvokerType.UserCallback">
+            <summary>To be added.</summary>
         </member>
         <member name="T:Datadog.iOS.DDRUMLongTaskEventRUMCITest">
             <summary />
@@ -10564,6 +11187,11 @@ and within those sessions, only 20% will have replays.
             <value />
             <remarks />
         </member>
+        <member name="P:Datadog.iOS.DDTelemetryConfigurationEventTelemetryConfiguration.ImagePrivacyLevel">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="P:Datadog.iOS.DDTelemetryConfigurationEventTelemetryConfiguration.InitializationType">
             <summary />
             <value />
@@ -10624,6 +11252,11 @@ and within those sessions, only 20% will have replays.
             <value />
             <remarks />
         </member>
+        <member name="P:Datadog.iOS.DDTelemetryConfigurationEventTelemetryConfiguration.StartRecordingImmediately">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="P:Datadog.iOS.DDTelemetryConfigurationEventTelemetryConfiguration.StartSessionReplayRecordingManually">
             <summary />
             <value />
@@ -10648,6 +11281,16 @@ and within those sessions, only 20% will have replays.
             <summary />
             <value />
             <remarks />
+        </member>
+        <member name="P:Datadog.iOS.DDTelemetryConfigurationEventTelemetryConfiguration.TextAndInputPrivacyLevel">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDTelemetryConfigurationEventTelemetryConfiguration.TouchPrivacyLevel">
+            <summary>To be added.</summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
         </member>
         <member name="P:Datadog.iOS.DDTelemetryConfigurationEventTelemetryConfiguration.TraceContextInjection">
             <summary />
@@ -12753,37 +13396,6 @@ and within those sessions, only 20% will have replays.
             <summary />
             <returns />
             <remarks />
-        </member>
-        <member name="T:Datadog.iOS.IURLSessionDelegateProviding">
-            <summary>
-      An interface for forwarding <c>URLSessionDelegate</c> calls to <c>DDURLSessionDelegate</c>.
-      The implementation must ensure that required methods are called on the <c>ddURLSessionDelegate</c>.
-    </summary>
-            <remarks />
-        </member>
-        <member name="P:Datadog.iOS.IURLSessionDelegateProviding.WeakDDURLSessionDelegate">
-            <summary>
-        Datadog delegate object.
-        </summary>
-            <value />
-            <remarks>
-                <para>
-        The class implementing <c>DDURLSessionDelegateProviding</c> must ensure that the following method calls are forwarded to <c>DDURLSessionDelegate</c>:
-        </para>
-                <para>
-                    <list type="bullet">
-                        <item>
-                            <c>void URLSessionTaskDidFinishCollecingMetrics()</c>
-                        </item>
-                        <item>
-                            <c>void URLSessionTaskDidCompleteWithError()</c>
-                        </item>
-                        <item>
-                            <c>void URLSessionDataTaskDidReceiveData()</c>
-                        </item>
-                    </list>
-                </para>
-            </remarks>
         </member>
         <member name="T:Datadog.iOS.OT">
             <summary />
