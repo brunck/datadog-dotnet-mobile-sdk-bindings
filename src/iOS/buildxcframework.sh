@@ -37,6 +37,7 @@ function archive {
     -sdk "$2" \
     -destination "$3" \
     -archivePath "$4" \
+    -configuration "${CONFIGURATION}" \
     -derivedDataPath "${DERIVED_DATA_PATH}" \
     -IDECustomBuildProductsPath="" -IDECustomBuildIntermediatesPath="" \
     ONLY_ACTIVE_ARCH=NO \
@@ -44,6 +45,7 @@ function archive {
     ENABLE_BITCODE=NO \
     SKIP_INSTALL=NO \
     BUILD_LIBRARY_FOR_DISTRIBUTION=YES \
+    DEBUG_INFORMATION_FORMAT=dwarf \
     STRIP_DEBUG_SYMBOLS=YES; then
       echo "Build for $5 failed. Exiting."
       echo
@@ -75,11 +77,6 @@ for INDEX in "${!FRAMEWORK_NAMES[@]}"; do
 
   archive "${SCHEME}" iphoneos "generic/platform=iOS" "${DEVICE_ARCHIVE_PATH}" "${FRAMEWORK_NAME}"
   xcoptions+=(-archive "${DEVICE_ARCHIVE_PATH}" -framework "${FRAMEWORK_NAME}.framework")
-
-  # Remove dSYM files from archives
-  echo "Removing dSYM files from archives."
-  rm -rf "${SIMULATOR_ARCHIVE_PATH}/dSYMs"
-  rm -rf "${DEVICE_ARCHIVE_PATH}/dSYMs"
 
   # Create XCFramework by combining all frameworks
   # Datadog class conflicts with module name and Swift emits invalid module interface
@@ -138,6 +135,44 @@ echo
 if ! cp -R "${CARTHAGE_OUTPUT}/OpenTelemetryApi.xcframework" "${TARGET_DIR}"; then
   echo "Failed to copy OpenTelemetryApi.xcframework. Exiting."
   exit 1
+fi
+
+# Search for all dSYMs folders in TARGET_DIR and its subfolders
+echo "Searching for all dSYMs folders in ${TARGET_DIR} and its subfolders."
+echo
+DSYM_FOLDERS=$(find "${TARGET_DIR}" -type d -name "dSYMs")
+
+# Check if any dSYMs folders were found
+if [ -z "$DSYM_FOLDERS" ]; then
+  echo "No dSYMs folders found in ${TARGET_DIR} and its subfolders."
+else
+  echo "Found the following dSYMs folders:"
+  echo "$DSYM_FOLDERS"
+  
+  # Remove the dSYMs folders
+  echo
+  echo "Removing all dSYMs folders..."
+  find "${TARGET_DIR}" -type d -name "dSYMs" -exec rm -rf {} +
+  echo "All dSYMs folders have been removed."
+fi
+
+# Search for all folders that don't start with ios-arm64 in TARGET_DIR and its subfolders
+echo
+echo "Searching for extra architectures in ${TARGET_DIR} and its subfolders."
+echo
+EXTRA_ARCHS=$(find "${TARGET_DIR}" -type d -path "*/.xcframework/*" ! -name "ios-arm64*")
+
+if [ -z "$EXTRA_ARCHS" ]; then
+  echo "No extra architectures found in ${TARGET_DIR} and its subfolders."
+else
+  # Remove the non-ios-arm64 folders
+  echo
+  echo "Found the following extra architectures:"
+  echo "$EXTRA_ARCHS"
+  echo
+  echo "Removing all extra architectures..."
+  find "${TARGET_DIR}" -type d -path "*/.xcframework/*" ! -name "ios-arm64*" -exec rm -rf {} +
+  echo "All extra architectures removed."
 fi
 
 echo
