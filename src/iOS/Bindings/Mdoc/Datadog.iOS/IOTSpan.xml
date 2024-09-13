@@ -1,6 +1,6 @@
 <Type Name="IOTSpan" FullName="Datadog.iOS.IOTSpan">
   <TypeSignature Language="C#" Value="public interface IOTSpan : IDisposable, ObjCRuntime.INativeObject" />
-  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IOTSpan implements class ObjCRuntime.INativeObject, class System.IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IOTSpan implements class ObjCRuntime.INativeObject, class System.IDisposable" />
   <AssemblyInfo>
     <AssemblyName>ios</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -72,7 +72,7 @@
   </Docs>
   <Members>
     <Member MemberName="Context">
-      <MemberSignature Language="C#" Value="public Datadog.iOS.IOTSpanContext Context { get; }" />
+      <MemberSignature Language="C#" Value="public virtual Datadog.iOS.IOTSpanContext Context { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Datadog.iOS.IOTSpanContext Context" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
@@ -80,10 +80,13 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+          <AttributeName>get: Foundation.Export("context", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>get: Foundation.Export("context", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+          <AttributeName>Foundation.RequiredMember</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -98,7 +101,7 @@
       </Docs>
     </Member>
     <Member MemberName="Finish">
-      <MemberSignature Language="C#" Value="public void Finish ();" />
+      <MemberSignature Language="C#" Value="public virtual void Finish ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Finish() cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -109,10 +112,10 @@
           <AttributeName>Foundation.Export("finish")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+          <AttributeName>Foundation.RequiredMember</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -126,7 +129,7 @@
       </Docs>
     </Member>
     <Member MemberName="Finish">
-      <MemberSignature Language="C#" Value="public void Finish (Foundation.NSDate finishTime);" />
+      <MemberSignature Language="C#" Value="public virtual void Finish (Foundation.NSDate finishTime);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Finish(class Foundation.NSDate finishTime) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -137,13 +140,13 @@
           <AttributeName>Foundation.Export("finishWithTime:")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
-        </Attribute>
-        <Attribute>
           <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Runtime.CompilerServices.NullableContext(2)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.RequiredMember</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -160,7 +163,7 @@
       </Docs>
     </Member>
     <Member MemberName="GetBaggageItem">
-      <MemberSignature Language="C#" Value="public string GetBaggageItem (string key);" />
+      <MemberSignature Language="C#" Value="public virtual string GetBaggageItem (string key);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance string GetBaggageItem(string key) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -171,10 +174,10 @@
           <AttributeName>Foundation.Export("getBaggageItem:")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+          <AttributeName>Foundation.RequiredMember</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -191,12 +194,14 @@
       <Docs>
         <param name="key">Key of the baggage item to get</param>
         <summary>Get the baggage item corresponding to the given key; <c>null</c> if the baggage item does not exist</summary>
-        <returns></returns>
-        <remarks></remarks>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Log">
-      <MemberSignature Language="C#" Value="public void Log (Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; fields);" />
+      <MemberSignature Language="C#" Value="public virtual void Log (Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; fields);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Log(class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt; fields) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -207,10 +212,10 @@
           <AttributeName>Foundation.Export("log:")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+          <AttributeName>Foundation.RequiredMember</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -227,7 +232,7 @@
       </Docs>
     </Member>
     <Member MemberName="Log">
-      <MemberSignature Language="C#" Value="public void Log (Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; fields, Foundation.NSDate timestamp);" />
+      <MemberSignature Language="C#" Value="public virtual void Log (Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; fields, Foundation.NSDate timestamp);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Log(class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt; fields, class Foundation.NSDate timestamp) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -238,10 +243,10 @@
           <AttributeName>Foundation.Export("log:timestamp:")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+          <AttributeName>Foundation.RequiredMember</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -266,7 +271,7 @@
       </Docs>
     </Member>
     <Member MemberName="SetActive">
-      <MemberSignature Language="C#" Value="public Datadog.iOS.IOTSpan SetActive ();" />
+      <MemberSignature Language="C#" Value="public virtual Datadog.iOS.IOTSpan SetActive ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Datadog.iOS.IOTSpan SetActive() cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -277,10 +282,10 @@
           <AttributeName>Foundation.Export("setActive")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+          <AttributeName>Foundation.RequiredMember</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -312,7 +317,7 @@
       </Docs>
     </Member>
     <Member MemberName="SetBaggageItem">
-      <MemberSignature Language="C#" Value="public Datadog.iOS.IOTSpan SetBaggageItem (string key, string value);" />
+      <MemberSignature Language="C#" Value="public virtual Datadog.iOS.IOTSpan SetBaggageItem (string key, string value);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Datadog.iOS.IOTSpan SetBaggageItem(string key, string value) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -323,10 +328,10 @@
           <AttributeName>Foundation.Export("setBaggageItem:value:")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+          <AttributeName>Foundation.RequiredMember</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -340,12 +345,14 @@
         <param name="key">Key of the baggage item to set.</param>
         <param name="value">Value of the baggage item to set.</param>
         <summary>Add a new baggage item or replace an existing baggage item value for the given key.</summary>
-        <returns></returns>
-        <remarks></remarks>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SetError">
-      <MemberSignature Language="C#" Value="public void SetError (Foundation.NSError error);" />
+      <MemberSignature Language="C#" Value="public virtual void SetError (Foundation.NSError error);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetError(class Foundation.NSError error) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -356,10 +363,10 @@
           <AttributeName>Foundation.Export("setError:")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+          <AttributeName>Foundation.RequiredMember</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -380,7 +387,7 @@
       </Docs>
     </Member>
     <Member MemberName="SetError">
-      <MemberSignature Language="C#" Value="public void SetError (string kind, string message, string stack);" />
+      <MemberSignature Language="C#" Value="public virtual void SetError (string kind, string message, string stack);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetError(string kind, string message, string stack) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -391,10 +398,10 @@
           <AttributeName>Foundation.Export("setErrorWithKind:message:stack:")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+          <AttributeName>Foundation.RequiredMember</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -428,7 +435,7 @@
       </Docs>
     </Member>
     <Member MemberName="SetOperationName">
-      <MemberSignature Language="C#" Value="public void SetOperationName (string operationName);" />
+      <MemberSignature Language="C#" Value="public virtual void SetOperationName (string operationName);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetOperationName(string operationName) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -439,10 +446,10 @@
           <AttributeName>Foundation.Export("setOperationName:")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+          <AttributeName>Foundation.RequiredMember</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -454,11 +461,12 @@
       <Docs>
         <param name="operationName">The name of the operation this span represents.</param>
         <summary>Set the name of the operation this span represents.</summary>
-        <remarks></remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SetTag">
-      <MemberSignature Language="C#" Value="public void SetTag (string key, Foundation.NSNumber numberValue);" />
+      <MemberSignature Language="C#" Value="public virtual void SetTag (string key, Foundation.NSNumber numberValue);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetTag(string key, class Foundation.NSNumber numberValue) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -469,10 +477,10 @@
           <AttributeName>Foundation.Export("setTag:numberValue:")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+          <AttributeName>Foundation.RequiredMember</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -486,11 +494,12 @@
         <param name="key">Key of the tag to set.</param>
         <param name="numberValue">Value of the tag to set.</param>
         <summary>Add a new tag or replace an existing tag key with this value.</summary>
-        <remarks></remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SetTag">
-      <MemberSignature Language="C#" Value="public void SetTag (string key, bool boolValue);" />
+      <MemberSignature Language="C#" Value="public virtual void SetTag (string key, bool boolValue);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetTag(string key, bool boolValue) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -501,10 +510,10 @@
           <AttributeName>Foundation.Export("setTag:boolValue:")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+          <AttributeName>Foundation.RequiredMember</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -523,7 +532,7 @@
       </Docs>
     </Member>
     <Member MemberName="SetTag">
-      <MemberSignature Language="C#" Value="public void SetTag (string key, string value);" />
+      <MemberSignature Language="C#" Value="public virtual void SetTag (string key, string value);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetTag(string key, string value) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -534,10 +543,10 @@
           <AttributeName>Foundation.Export("setTag:value:")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+          <AttributeName>Foundation.RequiredMember</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -556,7 +565,7 @@
       </Docs>
     </Member>
     <Member MemberName="Tracer">
-      <MemberSignature Language="C#" Value="public Datadog.iOS.IOTTracer Tracer { get; }" />
+      <MemberSignature Language="C#" Value="public virtual Datadog.iOS.IOTTracer Tracer { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Datadog.iOS.IOTTracer Tracer" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
@@ -564,10 +573,13 @@
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+          <AttributeName>get: Foundation.Export("tracer", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>get: Foundation.Export("tracer", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+          <AttributeName>Foundation.RequiredMember</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -575,8 +587,10 @@
       </ReturnValue>
       <Docs>
         <summary>The tracer that produced this span.</summary>
-        <value></value>
-        <remarks></remarks>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
   </Members>

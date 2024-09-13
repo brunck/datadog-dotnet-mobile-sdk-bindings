@@ -50,7 +50,8 @@
       <Docs>
         <param name="hostsWithHeaderTypes">Dictionary of hosts and tracing header types to use. Note: Hosts must not include "http(s)://" prefix.</param>
         <summary>Trace given hosts with using custom tracing headers.</summary>
-        <remarks></remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">

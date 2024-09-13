@@ -127,7 +127,8 @@
         <param name="injectEncoding">The B3 header encoding type, with <see cref="DDInjectEncoding.Single" /> as the default.</param>
         <param name="traceContextInjection">The trace context injection strategy, with <see cref="DDTraceContextInjection.All" /> as the default.</param>
         <summary>Initializes the headers writer.</summary>
-        <remarks></remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ClassHandle">

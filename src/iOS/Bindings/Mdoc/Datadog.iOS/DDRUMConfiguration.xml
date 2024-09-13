@@ -374,7 +374,7 @@
         <Parameter Name="mapper" Type="System.Func&lt;Datadog.iOS.DDRUMActionEvent,Datadog.iOS.DDRUMActionEvent&gt;">
           <Attributes>
             <Attribute>
-              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDFuncArity2V0))</AttributeName>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDFuncArity2V1))</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
@@ -417,7 +417,7 @@
         <Parameter Name="mapper" Type="System.Func&lt;Datadog.iOS.DDRUMErrorEvent,Datadog.iOS.DDRUMErrorEvent&gt;">
           <Attributes>
             <Attribute>
-              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDFuncArity2V1))</AttributeName>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDFuncArity2V2))</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
@@ -460,7 +460,7 @@
         <Parameter Name="mapper" Type="System.Func&lt;Datadog.iOS.DDRUMLongTaskEvent,Datadog.iOS.DDRUMLongTaskEvent&gt;">
           <Attributes>
             <Attribute>
-              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDFuncArity2V2))</AttributeName>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDFuncArity2V3))</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
@@ -503,7 +503,7 @@
         <Parameter Name="mapper" Type="System.Func&lt;Datadog.iOS.DDRUMResourceEvent,Datadog.iOS.DDRUMResourceEvent&gt;">
           <Attributes>
             <Attribute>
-              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDFuncArity2V3))</AttributeName>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDFuncArity2V4))</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>
@@ -579,7 +579,7 @@
         <Parameter Name="mapper" Type="System.Func&lt;Datadog.iOS.DDRUMViewEvent,Datadog.iOS.DDRUMViewEvent&gt;">
           <Attributes>
             <Attribute>
-              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDFuncArity2V4))</AttributeName>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDFuncArity2V5))</AttributeName>
             </Attribute>
           </Attributes>
         </Parameter>

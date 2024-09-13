@@ -140,7 +140,8 @@
         <param name="remoteLogThreshold">Set the minimum log level reported to Datadog servers. <c>Debug</c> by default.</param>
         <param name="printLogsToConsole">Format to use when printing logs to the console - either <c>Short</c> or <c>Json</c>.</param>
         <summary>Creates a Logger Configuration.</summary>
-        <remarks></remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="BundleWithRumEnabled">

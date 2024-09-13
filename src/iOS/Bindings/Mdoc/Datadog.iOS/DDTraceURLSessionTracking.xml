@@ -50,7 +50,8 @@
       <Docs>
         <param name="firstPartyHostsTracing">Distributed tracing configuration for particular first-party hosts.</param>
         <summary>Configuration for automatic network requests tracing.</summary>
-        <remarks></remarks>
+        <remarks>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName=".ctor">

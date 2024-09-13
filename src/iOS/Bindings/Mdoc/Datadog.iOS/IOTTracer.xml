@@ -1,6 +1,6 @@
 <Type Name="IOTTracer" FullName="Datadog.iOS.IOTTracer">
   <TypeSignature Language="C#" Value="public interface IOTTracer : IDisposable, ObjCRuntime.INativeObject" />
-  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IOTTracer implements class ObjCRuntime.INativeObject, class System.IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IOTTracer implements class ObjCRuntime.INativeObject, class System.IDisposable" />
   <AssemblyInfo>
     <AssemblyName>ios</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -54,7 +54,7 @@
   </Docs>
   <Members>
     <Member MemberName="Extract">
-      <MemberSignature Language="C#" Value="public bool Extract (string format, Foundation.NSObject carrier, out Foundation.NSError error);" />
+      <MemberSignature Language="C#" Value="public virtual bool Extract (string format, Foundation.NSObject carrier, out Foundation.NSError error);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Extract(string format, class Foundation.NSObject carrier, [out] class Foundation.NSError&amp; error) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -65,10 +65,10 @@
           <AttributeName>Foundation.Export("extractWithFormat:carrier:error:")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+          <AttributeName>Foundation.RequiredMember</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -101,7 +101,7 @@
       </Docs>
     </Member>
     <Member MemberName="Inject">
-      <MemberSignature Language="C#" Value="public bool Inject (Datadog.iOS.IOTSpanContext spanContext, string format, Foundation.NSObject carrier, out Foundation.NSError error);" />
+      <MemberSignature Language="C#" Value="public virtual bool Inject (Datadog.iOS.IOTSpanContext spanContext, string format, Foundation.NSObject carrier, out Foundation.NSError error);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Inject(class Datadog.iOS.IOTSpanContext spanContext, string format, class Foundation.NSObject carrier, [out] class Foundation.NSError&amp; error) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -112,10 +112,10 @@
           <AttributeName>Foundation.Export("inject:format:carrier:error:")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+          <AttributeName>Foundation.RequiredMember</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -151,7 +151,7 @@
       </Docs>
     </Member>
     <Member MemberName="StartSpan">
-      <MemberSignature Language="C#" Value="public Datadog.iOS.IOTSpan StartSpan (string operationName);" />
+      <MemberSignature Language="C#" Value="public virtual Datadog.iOS.IOTSpan StartSpan (string operationName);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Datadog.iOS.IOTSpan StartSpan(string operationName) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -162,10 +162,10 @@
           <AttributeName>Foundation.Export("startSpan:")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+          <AttributeName>Foundation.RequiredMember</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -186,7 +186,7 @@
       </Docs>
     </Member>
     <Member MemberName="StartSpan">
-      <MemberSignature Language="C#" Value="public Datadog.iOS.IOTSpan StartSpan (string operationName, Datadog.iOS.IOTSpanContext parent);" />
+      <MemberSignature Language="C#" Value="public virtual Datadog.iOS.IOTSpan StartSpan (string operationName, Datadog.iOS.IOTSpanContext parent);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Datadog.iOS.IOTSpan StartSpan(string operationName, class Datadog.iOS.IOTSpanContext parent) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -197,10 +197,10 @@
           <AttributeName>Foundation.Export("startSpan:childOf:")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+          <AttributeName>Foundation.RequiredMember</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -230,7 +230,7 @@
       </Docs>
     </Member>
     <Member MemberName="StartSpan">
-      <MemberSignature Language="C#" Value="public Datadog.iOS.IOTSpan StartSpan (string operationName, Foundation.NSDictionary tags);" />
+      <MemberSignature Language="C#" Value="public virtual Datadog.iOS.IOTSpan StartSpan (string operationName, Foundation.NSDictionary tags);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Datadog.iOS.IOTSpan StartSpan(string operationName, class Foundation.NSDictionary tags) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -241,10 +241,10 @@
           <AttributeName>Foundation.Export("startSpan:tags:")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+          <AttributeName>Foundation.RequiredMember</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -274,7 +274,7 @@
       </Docs>
     </Member>
     <Member MemberName="StartSpan">
-      <MemberSignature Language="C#" Value="public Datadog.iOS.IOTSpan StartSpan (string operationName, Datadog.iOS.IOTSpanContext parent, Foundation.NSDictionary tags);" />
+      <MemberSignature Language="C#" Value="public virtual Datadog.iOS.IOTSpan StartSpan (string operationName, Datadog.iOS.IOTSpanContext parent, Foundation.NSDictionary tags);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Datadog.iOS.IOTSpan StartSpan(string operationName, class Datadog.iOS.IOTSpanContext parent, class Foundation.NSDictionary tags) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -285,10 +285,10 @@
           <AttributeName>Foundation.Export("startSpan:childOf:tags:")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+          <AttributeName>Foundation.RequiredMember</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
@@ -327,7 +327,7 @@
       </Docs>
     </Member>
     <Member MemberName="StartSpan">
-      <MemberSignature Language="C#" Value="public Datadog.iOS.IOTSpan StartSpan (string operationName, Datadog.iOS.IOTSpanContext parent, Foundation.NSDictionary tags, Foundation.NSDate startTime);" />
+      <MemberSignature Language="C#" Value="public virtual Datadog.iOS.IOTSpan StartSpan (string operationName, Datadog.iOS.IOTSpanContext parent, Foundation.NSDictionary tags, Foundation.NSDate startTime);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Datadog.iOS.IOTSpan StartSpan(string operationName, class Datadog.iOS.IOTSpanContext parent, class Foundation.NSDictionary tags, class Foundation.NSDate startTime) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -338,13 +338,13 @@
           <AttributeName>Foundation.Export("startSpan:childOf:tags:startTime:")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
-        </Attribute>
-        <Attribute>
           <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Runtime.CompilerServices.NullableContext(2)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.RequiredMember</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

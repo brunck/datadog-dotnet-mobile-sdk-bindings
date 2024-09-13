@@ -389,7 +389,8 @@
         <summary>
             Verbosity level of the Datadog SDK. Can be used for debugging purposes.
         </summary>
-        <value></value>
+        <value>
+        </value>
         <remarks>
           <para>
             If set, internal events occuring inside the SDK will be printed to the debugger console if their level is equal or greater than <c>VerbosityLevel</c>.

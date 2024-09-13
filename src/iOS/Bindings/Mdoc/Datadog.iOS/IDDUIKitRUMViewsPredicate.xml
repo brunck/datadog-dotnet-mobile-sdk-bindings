@@ -1,6 +1,6 @@
 <Type Name="IDDUIKitRUMViewsPredicate" FullName="Datadog.iOS.IDDUIKitRUMViewsPredicate">
   <TypeSignature Language="C#" Value="public interface IDDUIKitRUMViewsPredicate : IDisposable, ObjCRuntime.INativeObject" />
-  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IDDUIKitRUMViewsPredicate implements class ObjCRuntime.INativeObject, class System.IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDDUIKitRUMViewsPredicate implements class ObjCRuntime.INativeObject, class System.IDisposable" />
   <AssemblyInfo>
     <AssemblyName>ios</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -29,7 +29,7 @@
   </Docs>
   <Members>
     <Member MemberName="RumView">
-      <MemberSignature Language="C#" Value="public Datadog.iOS.DDRUMView RumView (UIKit.UIViewController viewController);" />
+      <MemberSignature Language="C#" Value="public virtual Datadog.iOS.DDRUMView RumView (UIKit.UIViewController viewController);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Datadog.iOS.DDRUMView RumView(class UIKit.UIViewController viewController) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -40,13 +40,13 @@
           <AttributeName>Foundation.Export("rumViewFor:")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>Foundation.Preserve(Conditional=true)</AttributeName>
-        </Attribute>
-        <Attribute>
           <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Runtime.CompilerServices.NullableContext(1)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.RequiredMember</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>

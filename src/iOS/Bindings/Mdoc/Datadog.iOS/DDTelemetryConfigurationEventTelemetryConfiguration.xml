@@ -514,6 +514,33 @@
         </remarks>
       </Docs>
     </Member>
+    <Member MemberName="ImagePrivacyLevel">
+      <MemberSignature Language="C#" Value="public virtual string ImagePrivacyLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ImagePrivacyLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("imagePrivacyLevel")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setImagePrivacyLevel:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="InitializationType">
       <MemberSignature Language="C#" Value="public virtual string InitializationType { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance string InitializationType" />
@@ -862,6 +889,33 @@
         </remarks>
       </Docs>
     </Member>
+    <Member MemberName="StartRecordingImmediately">
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSNumber StartRecordingImmediately { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSNumber StartRecordingImmediately" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("startRecordingImmediately", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setStartRecordingImmediately:", ObjCRuntime.ArgumentSemantic.Strong)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSNumber</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="StartSessionReplayRecordingManually">
       <MemberSignature Language="C#" Value="public virtual Foundation.NSNumber StartSessionReplayRecordingManually { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Foundation.NSNumber StartSessionReplayRecordingManually" />
@@ -998,6 +1052,60 @@
         </value>
         <remarks>
         </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextAndInputPrivacyLevel">
+      <MemberSignature Language="C#" Value="public virtual string TextAndInputPrivacyLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TextAndInputPrivacyLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("textAndInputPrivacyLevel")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setTextAndInputPrivacyLevel:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TouchPrivacyLevel">
+      <MemberSignature Language="C#" Value="public virtual string TouchPrivacyLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TouchPrivacyLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("touchPrivacyLevel")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setTouchPrivacyLevel:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="TraceContextInjection">
