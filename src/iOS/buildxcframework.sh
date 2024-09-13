@@ -2,13 +2,13 @@
 #
 
 # Define workspace and scheme
-WORKSPACE="../../../dd-sdk-ios/Datadog.xcworkspace"
+WORKSPACE="../../dd-sdk-ios/Datadog.xcworkspace"
 FRAMEWORK_NAMES=("DatadogInternal" "DatadogCore" "DatadogLogs" "DatadogTrace" "DatadogRUM" "DatadogSessionReplay" "DatadogCrashReporting" "DatadogObjc" "DatadogWebViewTracking")
 XCFRAMEWORK_NAMES=("DDInt" "DDC" "DDL" "DDT" "DDR" "DDSR" "DDCR" "DDObjc" "DWVT")
 CONFIGURATION="Release"
 DERIVED_DATA_PATH="./DerivedData"
 BUILD_DIR="${DERIVED_DATA_PATH}/Build/Products/${CONFIGURATION}"
-CARTFILE_DIRECTORY="../../../dd-sdk-ios"
+CARTFILE_DIRECTORY="../../dd-sdk-ios"
 CARTHAGE_OUTPUT="${CARTFILE_DIRECTORY}/Carthage/Build"
 
 echo
