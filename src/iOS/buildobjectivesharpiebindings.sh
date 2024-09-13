@@ -6,8 +6,8 @@ FOLDER_PATH="./Bindings"
 BINDING_OUTPUT_PATH="${FOLDER_PATH}"
 HEADER_FILES_TARGET_PATH="${FOLDER_PATH}/Headers"
 OUTPUT_FOLDER="${PWD}/build"
-HEADER_FILE_PREFIXES=("DatadogObjc" "DatadogCrashReporting" "DatadogInternal" "DatadogWebViewTracking")
-XCFRAMEWORK_NAMES=("DDObjc" "DDCR" "DDInt" "DWVT")
+HEADER_FILE_PREFIXES=("DatadogObjc" "DatadogCrashReporting" "DatadogInternal" "DatadogSessionReplay" "DatadogWebViewTracking")
+XCFRAMEWORK_NAMES=("DDObjc" "DDCR" "DDInt" "DDSR" "DWVT")
 
 if [[ -d $HEADER_FILES_TARGET_PATH ]]; then
     rm -r $HEADER_FILES_TARGET_PATH
