@@ -10,7 +10,7 @@
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Bcr.Datadog.Android.Sdk.Logs" Version="2.12.0.1" />
-    <PackageReference Include="Bcr.Datadog.Android.Sdk.Ndk" Version="2.12.0.1" />
+    <PackageReference Include="Bcr.Datadog.Android.Sdk.Logs" Version="2.13.1" />
+    <PackageReference Include="Bcr.Datadog.Android.Sdk.Ndk" Version="2.13.1" />
   </ItemGroup>
 </Project>
