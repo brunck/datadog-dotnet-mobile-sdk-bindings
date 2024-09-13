@@ -149,7 +149,7 @@
           <para>
             Note: App Hangs monitoring requires Datadog Crash Reporting to be enabled. Otherwise stack trace will be not reported in App Hang errors.
           </para>
-          <para>Default: <c>NULL</c> (hangs monitoring disabled).</para>
+          <para>Default: <c>0.0</c> (hangs monitoring disabled).</para>
         </remarks>
       </Docs>
     </Member>

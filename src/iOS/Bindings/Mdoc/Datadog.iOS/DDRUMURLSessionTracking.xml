@@ -183,7 +183,7 @@
             RUM will create a trace for each first-party resource by injecting HTTP trace headers and creating an APM span.
             If your backend is also instrumented with Datadog, you will see the full trace (app → backend).
           </para>
-          <para>Default: <c>NULL</c> - which means distributed tracing is not enabled by default.</para>
+          <para>Distributed tracing is not enabled by default.</para>
         </remarks>
       </Docs>
     </Member>

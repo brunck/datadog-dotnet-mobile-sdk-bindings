@@ -396,7 +396,7 @@
             If set, internal events occuring inside the SDK will be printed to the debugger console if their level is equal or greater than <c>VerbosityLevel</c>.
           </para>
           <para>
-            Default is <c>null</c>.
+            Default is <c>None</c>.
           </para>
         </remarks>
       </Docs>

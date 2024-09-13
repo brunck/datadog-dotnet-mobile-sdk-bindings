@@ -466,7 +466,7 @@
         an empty tag map.
         </param>
         <param name="startTime">
-        An explicitly specified start timestamp for the <see cref="IOTSpan" />, or <c>&gt;NULL</c> to use the current walltime.
+        An explicitly specified start timestamp for the <see cref="IOTSpan" />, or <c>NULL</c> to use the current walltime.
         </param>
         <summary>Start a new span with the given operation name.</summary>
         <returns>A valid Span instance; it is the caller's responsibility to call <see cref="IOTSpan.Finish" />.</returns>
