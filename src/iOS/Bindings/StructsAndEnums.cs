@@ -1007,14 +1007,6 @@ namespace Datadog.iOS
 	}
 
 	[Native]
-	public enum DDSessionReplayConfigurationPrivacyLevel : long
-	{
-		Allow = 0,
-		Mask = 1,
-		MaskUserInput = 2
-	}
-
-	[Native]
 	public enum DDTelemetryConfigurationEventSource : long
 	{
 		Android = 0,
@@ -1100,5 +1092,47 @@ namespace Datadog.iOS
 		Frequent = 0,
 		Average = 1,
 		Rare = 2
+	}
+
+	[Native]
+	public enum DDImagePrivacyLevel : long
+	{
+		MaskNonBundledOnly = 0,
+		MaskAll = 1,
+		MaskNone = 2
+	}
+
+	[Native]
+	public enum DDSessionReplayConfigurationPrivacyLevel : long
+	{
+		Allow = 0,
+		Mask = 1,
+		MaskUserInput = 2
+	}
+
+	[Native]
+	public enum DDTextAndInputPrivacyLevel : long
+	{
+		/// <summary>
+		/// Show all text except sensitive input (eg. password fields).
+		/// </summary>
+		MaskSensitiveInputs = 0,
+
+		/// <summary>
+		/// Mask all text and input, eg. textfields, switches, checkboxes.
+		/// </summary>
+		MaskAllInputs = 1,
+
+		/// <summary>
+		/// Mask all text and input.
+		/// </summary>
+		MaskAll = 2
+	}
+
+	[Native]
+	public enum DDTouchPrivacyLevel : long
+	{
+		Show = 0,
+		Hide = 1
 	}
 }
