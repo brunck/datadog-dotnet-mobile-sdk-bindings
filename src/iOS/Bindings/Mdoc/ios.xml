@@ -453,6 +453,19 @@
           </code>
             </remarks>
         </member>
+        <member name="T:Datadog.iOS.DDImagePrivacyLevel">
+            <summary>Available image privacy levels for image masking.</summary>
+            <remarks />
+        </member>
+        <member name="F:Datadog.iOS.DDImagePrivacyLevel.MaskAll">
+            <summary>No images will be recorded.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDImagePrivacyLevel.MaskNonBundledOnly">
+            <summary>Only SF Symbols and images loaded using UIImage(named:) that are bundled within the application package will be recorded.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDImagePrivacyLevel.MaskNone">
+            <summary>All images will be recorded, including the ones downloaded from the Internet or generated during the app runtime.</summary>
+        </member>
         <member name="T:Datadog.iOS.DDInjectEncoding">
             <summary />
             <remarks />
@@ -1469,7 +1482,7 @@
             <remarks />
         </member>
         <member name="P:Datadog.iOS.DDLogsConfiguration.CustomEndpoint">
-            <summary />
+            <summary>Overrides the custom server endpoint where Logs are sent.</summary>
             <value />
             <remarks />
         </member>
@@ -10744,13 +10757,12 @@
             <summary />
             <remarks />
         </member>
-        <member name="C:Datadog.iOS.DDSessionReplayConfiguration(System.Single)">
-            <param name="replaySampleRate">
-        The sampling rate for Session Replay. It is applied in addition to the RUM session sample rate.
-        </param>
-            <summary>
-        Creates Session Replay configuration.
-        </summary>
+        <member name="C:Datadog.iOS.DDSessionReplayConfiguration(System.Single,Datadog.iOS.DDTextAndInputPrivacyLevel,Datadog.iOS.DDImagePrivacyLevel,Datadog.iOS.DDTouchPrivacyLevel)">
+            <param name="replaySampleRate">The sampling rate for Session Replay. It is applied in addition to the RUM session sample rate.</param>
+            <param name="textAndInputPrivacyLevel">The way texts and inputs (e.g. label, textfield, checkbox) should be masked. Default: <c>MaskAll</c>.</param>
+            <param name="imagePrivacyLevel">Image recording privacy level. Default: <c>MaskAll</c>.</param>
+            <param name="touchPrivacyLevel">The way user touches (e.g. tap) should be masked. Default: <c>Hide</c>.</param>
+            <summary>Creates Session Replay configuration.</summary>
             <remarks />
         </member>
         <member name="P:Datadog.iOS.DDSessionReplayConfiguration.ClassHandle">
@@ -10766,11 +10778,11 @@
             <value />
             <remarks />
         </member>
-        <member name="P:Datadog.iOS.DDSessionReplayConfiguration.DefaultPrivacyLevel">
+        <member name="P:Datadog.iOS.DDSessionReplayConfiguration.ImagePrivacyLevel">
             <summary>
-          Defines the way sensitive content (e.g. text) should be masked.
-          Default: <c>.mask</c>.
-        </summary>
+                <para>Defines the way images should be masked.</para>
+                <para>Default: <c>MaskAll</c>.</para>
+            </summary>
             <value />
             <remarks />
         </member>
@@ -10786,6 +10798,22 @@
 and Session Replay uses a sample rate of 20%, it means that out of all user sessions, 80% will be included in RUM,
 and within those sessions, only 20% will have replays.
     </remarks>
+        </member>
+        <member name="P:Datadog.iOS.DDSessionReplayConfiguration.TextAndInputPrivacyLevel">
+            <summary>
+                <para>Defines the way texts and inputs (e.g. labels, textfields, checkboxes) should be masked.</para>
+                <para>Default: <c>MaskAll</c>.</para>
+            </summary>
+            <value />
+            <remarks />
+        </member>
+        <member name="P:Datadog.iOS.DDSessionReplayConfiguration.TouchPrivacyLevel">
+            <summary>
+                <para>Defines the way user touches (e.g. tap) should be masked.</para>
+                <para>Default: <c>Hide</c>.</para>
+            </summary>
+            <value />
+            <remarks />
         </member>
         <member name="T:Datadog.iOS.DDSessionReplayConfigurationPrivacyLevel">
             <summary>Available privacy levels for content masking.</summary>
@@ -12428,6 +12456,29 @@ and within those sessions, only 20% will have replays.
             <summary />
             <value />
             <remarks />
+        </member>
+        <member name="T:Datadog.iOS.DDTextAndInputPrivacyLevel">
+            <summary>Available privacy levels for text and input masking.</summary>
+            <remarks />
+        </member>
+        <member name="F:Datadog.iOS.DDTextAndInputPrivacyLevel.MaskAll">
+            <summary>Mask all text and input.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDTextAndInputPrivacyLevel.MaskAllInputs">
+            <summary>Mask all text and input, eg. textfields, switches, checkboxes.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDTextAndInputPrivacyLevel.MaskSensitiveInputs">
+            <summary>Show all text except sensitive input (eg. password fields).</summary>
+        </member>
+        <member name="T:Datadog.iOS.DDTouchPrivacyLevel">
+            <summary>Available privacy levels for content masking.</summary>
+            <remarks />
+        </member>
+        <member name="F:Datadog.iOS.DDTouchPrivacyLevel.Hide">
+            <summary>Hide all touches.</summary>
+        </member>
+        <member name="F:Datadog.iOS.DDTouchPrivacyLevel.Show">
+            <summary>Show all touches.</summary>
         </member>
         <member name="T:Datadog.iOS.DDTrace">
             <summary />
