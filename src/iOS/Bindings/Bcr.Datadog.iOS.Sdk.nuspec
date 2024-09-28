@@ -3,9 +3,13 @@
   <metadata>
     <owners>bcr</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <dependencies>
+      <group targetFramework="net8.0-ios17.5">
+      </group>
+    </dependencies>
   </metadata>
   <files>
     <!-- Include the .xcframework files -->
-    <file src="Libs/*.xcframework/**" target="lib/net8.0-ios" />
+    <file src="Libs/*.xcframework/**" target="lib/net8.0-ios17.5" />
   </files>
 </package>
