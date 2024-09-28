@@ -11,13 +11,13 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>Foundation.Register("_TtC11DatadogObjc28DDSessionReplayConfiguration", true)</AttributeName>
-    </Attribute>
-    <Attribute>
       <AttributeName>System.Runtime.CompilerServices.Nullable(0)</AttributeName>
     </Attribute>
     <Attribute>
       <AttributeName>System.Runtime.CompilerServices.NullableContext(2)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.Register("_TtC20DatadogSessionReplay28DDSessionReplayConfiguration", true)</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -81,15 +81,15 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public DDSessionReplayConfiguration (float replaySampleRate);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float32 replaySampleRate) cil managed" />
+      <MemberSignature Language="C#" Value="public DDSessionReplayConfiguration (float replaySampleRate, Datadog.iOS.DDTextAndInputPrivacyLevel textAndInputPrivacyLevel, Datadog.iOS.DDImagePrivacyLevel imagePrivacyLevel, Datadog.iOS.DDTouchPrivacyLevel touchPrivacyLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float32 replaySampleRate, valuetype Datadog.iOS.DDTextAndInputPrivacyLevel textAndInputPrivacyLevel, valuetype Datadog.iOS.DDImagePrivacyLevel imagePrivacyLevel, valuetype Datadog.iOS.DDTouchPrivacyLevel touchPrivacyLevel) cil managed" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute>
-          <AttributeName>Foundation.Export("initWithReplaySampleRate:")</AttributeName>
+          <AttributeName>Foundation.Export("initWithReplaySampleRate:textAndInputPrivacyLevel:imagePrivacyLevel:touchPrivacyLevel:")</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
@@ -100,16 +100,17 @@
       </Attributes>
       <Parameters>
         <Parameter Name="replaySampleRate" Type="System.Single" />
+        <Parameter Name="textAndInputPrivacyLevel" Type="Datadog.iOS.DDTextAndInputPrivacyLevel" />
+        <Parameter Name="imagePrivacyLevel" Type="Datadog.iOS.DDImagePrivacyLevel" />
+        <Parameter Name="touchPrivacyLevel" Type="Datadog.iOS.DDTouchPrivacyLevel" />
       </Parameters>
       <Docs>
-        <param name="replaySampleRate">
-        The sampling rate for Session Replay. It is applied in addition to the RUM session sample rate.
-        </param>
-        <summary>
-        Creates Session Replay configuration.
-        </summary>
-        <remarks>
-        </remarks>
+        <param name="replaySampleRate">The sampling rate for Session Replay. It is applied in addition to the RUM session sample rate.</param>
+        <param name="textAndInputPrivacyLevel">The way texts and inputs (e.g. label, textfield, checkbox) should be masked. Default: <c>MaskAll</c>.</param>
+        <param name="imagePrivacyLevel">Image recording privacy level. Default: <c>MaskAll</c>.</param>
+        <param name="touchPrivacyLevel">The way user touches (e.g. tap) should be masked. Default: <c>Hide</c>.</param>
+        <summary>Creates Session Replay configuration.</summary>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="ClassHandle">
@@ -163,9 +164,9 @@
         </remarks>
       </Docs>
     </Member>
-    <Member MemberName="DefaultPrivacyLevel">
-      <MemberSignature Language="C#" Value="public virtual Datadog.iOS.DDSessionReplayConfigurationPrivacyLevel DefaultPrivacyLevel { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance valuetype Datadog.iOS.DDSessionReplayConfigurationPrivacyLevel DefaultPrivacyLevel" />
+    <Member MemberName="ImagePrivacyLevel">
+      <MemberSignature Language="C#" Value="public virtual Datadog.iOS.DDImagePrivacyLevel ImagePrivacyLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Datadog.iOS.DDImagePrivacyLevel ImagePrivacyLevel" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -175,24 +176,22 @@
           <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>get: Foundation.Export("defaultPrivacyLevel", ObjCRuntime.ArgumentSemantic.UnsafeUnretained)</AttributeName>
+          <AttributeName>get: Foundation.Export("imagePrivacyLevel", ObjCRuntime.ArgumentSemantic.UnsafeUnretained)</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>set: Foundation.Export("setDefaultPrivacyLevel:", ObjCRuntime.ArgumentSemantic.UnsafeUnretained)</AttributeName>
+          <AttributeName>set: Foundation.Export("setImagePrivacyLevel:", ObjCRuntime.ArgumentSemantic.UnsafeUnretained)</AttributeName>
         </Attribute>
       </Attributes>
       <ReturnValue>
-        <ReturnType>Datadog.iOS.DDSessionReplayConfigurationPrivacyLevel</ReturnType>
+        <ReturnType>Datadog.iOS.DDImagePrivacyLevel</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-          Defines the way sensitive content (e.g. text) should be masked.
-          Default: <c>.mask</c>.
+          <para>Defines the way images should be masked.</para>
+          <para>Default: <c>MaskAll</c>.</para>
         </summary>
-        <value>
-        </value>
-        <remarks>
-        </remarks>
+        <value></value>
+        <remarks></remarks>
       </Docs>
     </Member>
     <Member MemberName="ReplaySampleRate">
@@ -229,6 +228,66 @@
 and Session Replay uses a sample rate of 20%, it means that out of all user sessions, 80% will be included in RUM,
 and within those sessions, only 20% will have replays.
     </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextAndInputPrivacyLevel">
+      <MemberSignature Language="C#" Value="public virtual Datadog.iOS.DDTextAndInputPrivacyLevel TextAndInputPrivacyLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Datadog.iOS.DDTextAndInputPrivacyLevel TextAndInputPrivacyLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("textAndInputPrivacyLevel", ObjCRuntime.ArgumentSemantic.UnsafeUnretained)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setTextAndInputPrivacyLevel:", ObjCRuntime.ArgumentSemantic.UnsafeUnretained)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.DDTextAndInputPrivacyLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <para>Defines the way texts and inputs (e.g. labels, textfields, checkboxes) should be masked.</para>
+          <para>Default: <c>MaskAll</c>.</para>
+        </summary>
+        <value></value>
+        <remarks></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TouchPrivacyLevel">
+      <MemberSignature Language="C#" Value="public virtual Datadog.iOS.DDTouchPrivacyLevel TouchPrivacyLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Datadog.iOS.DDTouchPrivacyLevel TouchPrivacyLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("touchPrivacyLevel", ObjCRuntime.ArgumentSemantic.UnsafeUnretained)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setTouchPrivacyLevel:", ObjCRuntime.ArgumentSemantic.UnsafeUnretained)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.DDTouchPrivacyLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <para>Defines the way user touches (e.g. tap) should be masked.</para>
+          <para>Default: <c>Hide</c>.</para>
+        </summary>
+        <value></value>
+        <remarks></remarks>
       </Docs>
     </Member>
   </Members>

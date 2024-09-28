@@ -11,7 +11,7 @@
   <Interfaces />
   <Attributes>
     <Attribute>
-      <AttributeName>Foundation.Register("_TtC11DatadogObjc15DDSessionReplay", true)</AttributeName>
+      <AttributeName>Foundation.Register("_TtC20DatadogSessionReplay15DDSessionReplay", true)</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>

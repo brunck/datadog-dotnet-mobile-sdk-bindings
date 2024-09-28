@@ -48,7 +48,7 @@
           <AttributeName>System.Reflection.AssemblyFileVersion("1.0.0.0")</AttributeName>
         </Attribute>
         <Attribute>
-          <AttributeName>System.Reflection.AssemblyInformationalVersion("1.0.0+68bcf173de096178f74586a9a4265e5eed570d1d")</AttributeName>
+          <AttributeName>System.Reflection.AssemblyInformationalVersion("1.0.0+036ae3b5fd56f2813a66ae487b48058e86b6583d")</AttributeName>
         </Attribute>
         <Attribute>
           <AttributeName>System.Reflection.AssemblyMetadata("IsTrimmable", "True")</AttributeName>
@@ -95,6 +95,7 @@
       <Type Name="DDDefaultUIKitRUMActionsPredicate" Kind="Class" />
       <Type Name="DDDefaultUIKitRUMViewsPredicate" Kind="Class" />
       <Type Name="DDHTTPHeadersWriter" Kind="Class" />
+      <Type Name="DDImagePrivacyLevel" Kind="Enumeration" />
       <Type Name="DDInjectEncoding" Kind="Enumeration" />
       <Type Name="DDLogEvent" Kind="Class" />
       <Type Name="DDLogEventAttributes" Kind="Class" />
@@ -416,6 +417,8 @@
       <Type Name="DDTelemetryErrorEventTelemetryRUMTelemetryDevice" Kind="Class" />
       <Type Name="DDTelemetryErrorEventTelemetryRUMTelemetryOperatingSystem" Kind="Class" />
       <Type Name="DDTelemetryErrorEventView" Kind="Class" />
+      <Type Name="DDTextAndInputPrivacyLevel" Kind="Enumeration" />
+      <Type Name="DDTouchPrivacyLevel" Kind="Enumeration" />
       <Type Name="DDTrace" Kind="Class" />
       <Type Name="DDTraceConfiguration" Kind="Class" />
       <Type Name="DDTraceContextInjection" Kind="Enumeration" />
