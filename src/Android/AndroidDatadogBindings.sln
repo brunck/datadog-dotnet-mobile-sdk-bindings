@@ -23,7 +23,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{C747C72B-1
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestBindings", "Bindings\Test\TestBindings\TestBindings.csproj", "{FCB1675A-8CA0-474A-BDB2-8019767A370C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trace.Otel", "Bindings\Trace.Otel\Trace.Otel.csproj", "{67B6A045-1CEE-4736-86E1-2C4C679A729C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trace.Otel", "Bindings\Trace.Otel\Trace.Otel.csproj", "{67B6A045-1CEE-4736-86E1-2C4C679A729C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Internal", "Bindings\Internal\Internal.csproj", "{63C66DC2-386C-4DAC-B504-AA718ACF8278}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +75,10 @@ Global
 		{67B6A045-1CEE-4736-86E1-2C4C679A729C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67B6A045-1CEE-4736-86E1-2C4C679A729C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67B6A045-1CEE-4736-86E1-2C4C679A729C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63C66DC2-386C-4DAC-B504-AA718ACF8278}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63C66DC2-386C-4DAC-B504-AA718ACF8278}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63C66DC2-386C-4DAC-B504-AA718ACF8278}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63C66DC2-386C-4DAC-B504-AA718ACF8278}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
