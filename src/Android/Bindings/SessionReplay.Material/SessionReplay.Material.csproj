@@ -9,13 +9,13 @@
 	</PropertyGroup>
 	<PropertyGroup>
 		<PackageId>Bcr.Datadog.Android.Sdk.SessionReplay.Material</PackageId>
-		<Version>2.13.1</Version>
+		<Version>2.14.0</Version>
 		<Authors>bcr</Authors>
 		<Description>Bindings for the Datadog Android SDK SessionReplay.Material library</Description>
 		<RepositoryType>git</RepositoryType>
 		<RepositoryUrl>https://github.com/brunck/datadog-dotnet-mobile-sdk-bindings</RepositoryUrl>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
-		<PackageTags>.NET for Android Datadog Mobile Binding SessionReplay.Material artifact=com.datadog.android:dd-sdk-android-sessionreplay-material artifact_versioned=com.datadog.android:dd-sdk-android-sessionreplay-material:2.13.1</PackageTags>
+		<PackageTags>.NET for Android Datadog Mobile Binding SessionReplay.Material artifact=com.datadog.android:dd-sdk-android-sessionreplay-material artifact_versioned=com.datadog.android:dd-sdk-android-sessionreplay-material:2.14.0</PackageTags>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
@@ -25,7 +25,7 @@
 		<None Include="LICENSE" Pack="true" PackagePath="/" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Bcr.Datadog.Android.Sdk.SessionReplay" Version="2.13.1" />
+		<PackageReference Include="Bcr.Datadog.Android.Sdk.SessionReplay" Version="2.14.0" />
 		<PackageReference Include="Xamarin.Google.Android.Material" Version="1.4.0.6" />
 	</ItemGroup>
 	<ItemGroup>
