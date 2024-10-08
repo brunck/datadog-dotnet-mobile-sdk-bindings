@@ -2,10 +2,11 @@
 {
     public partial class RumResourceKind
     {
+        private static readonly Lazy<Companion> CompanionInstance = new(() => new Companion(null));
+
         public static RumResourceKind FromMimeType(string mimeType)
         {
-            var companion = new Companion(null);
-            return companion.FromMimeType(mimeType);
+            return CompanionInstance.Value.FromMimeType(mimeType);
         }
     }
 }

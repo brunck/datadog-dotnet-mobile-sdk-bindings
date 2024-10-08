@@ -3,9 +3,11 @@
 	<remove-node path="/api/package[@name='com.datadog.android.sessionreplay.internal.gson']/class[@name='GsonExtKt']" />
 	<remove-node path="/api/package[@name='com.datadog.android.sessionreplay.internal.processor']/class[@name='EnrichedResourceKt']" />
 	<remove-node path="/api/package[@name='com.datadog.android.sessionreplay.internal.processor']/class[@name='MobileSegmentExtKt']" />
+	<remove-node path="/api/package[@name='com.datadog.android.sessionreplay.internal.recorder']/class[@name='BenchmarkExtKt']" />
 	<remove-node path="/api/package[@name='com.datadog.android.sessionreplay.internal.recorder']/class[@name='IntExtKt']" />
 	<remove-node path="/api/package[@name='com.datadog.android.sessionreplay.internal.recorder']/class[@name='LayerDrawableExtKt']" />
 	<remove-node path="/api/package[@name='com.datadog.android.sessionreplay.internal.recorder']/class[@name='LongExtKt']" />
+	<remove-node path="/api/package[@name='com.datadog.android.sessionreplay.internal.recorder.mapper']/class[@name='SwitchCompatMapperKt']" />
 	<remove-node path="/api/package[@name='com.datadog.android.sessionreplay.internal.utils']/class[@name='ShapeStyleExtKt']" />
 	<remove-node path="/api/package[@name='com.datadog.android.sessionreplay.internal.utils']/class[@name='WireframeExtKt']" />
 	<remove-node path="/api/package[@name='com.datadog.android.sessionreplay.model']/class[@name='MobileSegment.Companion']" />
@@ -110,5 +112,10 @@
 	
 	<attr path="/api/package[@name='com.datadog.android.sessionreplay.model']/class[@name='MobileSegment.Wireframe.WebviewWireframe']" name="managedName">WebViewWireframe</attr>
 	<attr path="/api/package[@name='com.datadog.android.sessionreplay.model']/class[@name='MobileSegment.WireframeUpdateMutation.WebviewWireframeUpdate']" name="managedName">WebViewWireframeUpdate</attr>
+	
+	<attr path="/api/package[@name='com.datadog.android.sessionreplay']/class[@name='SessionReplay']/method[@name='startRecording' and count(parameter)=1 and parameter[1][@type='com.datadog.android.api.SdkCore']]" name="visibility">internal</attr>
+	<attr path="/api/package[@name='com.datadog.android.sessionreplay']/class[@name='SessionReplay']/method[@name='stopRecording' and count(parameter)=1 and parameter[1][@type='com.datadog.android.api.SdkCore']]" name="visibility">internal</attr>
+	<attr path="/api/package[@name='com.datadog.android.sessionreplay']/class[@name='SessionReplay']/method[@name='startRecording' and count(parameter)=1 and parameter[1][@type='com.datadog.android.api.SdkCore']]" name="managedName">StartRecordingInternal</attr>
+	<attr path="/api/package[@name='com.datadog.android.sessionreplay']/class[@name='SessionReplay']/method[@name='stopRecording' and count(parameter)=1 and parameter[1][@type='com.datadog.android.api.SdkCore']]" name="managedName">StopRecordingInternal</attr>
 	
 </metadata>

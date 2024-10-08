@@ -621,6 +621,42 @@
 	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryErrorEvent.Telemetry']/method[starts-with(@name,'component')]" />
 	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryErrorEvent.View.Companion']" />
 	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryErrorEvent.View']/method[starts-with(@name,'component')]" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent']/method[starts-with(@name,'component')]" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Action.Companion']" />	
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Action']/method[starts-with(@name,'component')]" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Application.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Application']/method[starts-with(@name,'component')]" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Dd.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Device.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Device']/method[starts-with(@name,'component')]" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Os.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Os']/method[starts-with(@name,'component')]" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Session.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Session']/method[starts-with(@name,'component')]" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Source.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Telemetry.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Telemetry']/method[starts-with(@name,'component')]" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.TrackingConsent.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Usage.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Usage.AddAction.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Usage.AddError.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Usage.AddFeatureFlagEvaluation.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Usage.AddViewLoadingTime.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Usage.AddViewLoadingTime']/method[starts-with(@name,'component')]" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Usage.SetGlobalContext.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Usage.SetTrackingConsent.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Usage.SetTrackingConsent']/method[starts-with(@name,'component')]" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Usage.SetUser.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Usage.StartView.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Usage.StopSession.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Usage.TelemetryBrowserFeaturesUsage_0.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Usage.TelemetryBrowserFeaturesUsage_0']/method[starts-with(@name,'component')]" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Usage.TelemetryBrowserFeaturesUsage_1.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Usage.TelemetryBrowserFeaturesUsage_2.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Usage.TelemetryBrowserFeaturesUsage_3.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.View.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.View']/method[starts-with(@name,'component')]" />
 	
 	
 	<!--******************* Renaming *******************-->
@@ -690,6 +726,7 @@
 	<attr path="/api/package[@name='com.datadog.android.rum.model']/class[@name='ViewEvent']/method[@name='getOs']" name="managedName">GetOS</attr>
 
 	<attr path="/api/package[@name='com.datadog.android.rum']/class[@name='RumResourceKind.Companion']" name="visibility">internal</attr>
+	
 	<attr
 		path="/api/package[@name='com.datadog.android.sqlite']/class[@name='DatadogDatabaseErrorHandler']/method[@name='onCorruption']/parameter[@type='android.database.sqlite.SQLiteDatabase']"
 		name="managedType">Android.Database.Sqlite.SQLiteDatabase?</attr>
@@ -709,5 +746,9 @@
 	<attr path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryErrorEvent.Dd']" name="managedName">DD</attr>
 	<attr path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryErrorEvent.Os']" name="managedName">OS</attr>
 	<attr path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryErrorEvent']/method[@name='getDd']" name="managedName">GetDD</attr>
+	<attr path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Dd']" name="managedName">DD</attr>
+	<attr path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Os']" name="managedName">OS</attr>
+	<attr path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent']/method[@name='getDd']" name="managedName">GetDD</attr>
+	<attr path="/api/package[@name='com.datadog.android.telemetry.model']/class[@name='TelemetryUsageEvent.Os']" name="managedName">OS</attr>
 
 </metadata>
