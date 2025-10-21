@@ -1,0 +1,157 @@
+<Type Name="DDRUMErrorEventErrorResourceRUMMethod" FullName="Datadog.iOS.ObjC.DDRUMErrorEventErrorResourceRUMMethod">
+  <TypeSignature Language="C#" Value="public enum DDRUMErrorEventErrorResourceRUMMethod" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DDRUMErrorEventErrorResourceRUMMethod extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>objc</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>ObjCRuntime.Native</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary></summary>
+    <remarks></remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Connect">
+      <MemberSignature Language="C#" Value="Connect" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDRUMErrorEventErrorResourceRUMMethod Connect = int64(8)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDRUMErrorEventErrorResourceRUMMethod</ReturnType>
+      </ReturnValue>
+      <MemberValue>8</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="Delete" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDRUMErrorEventErrorResourceRUMMethod Delete = int64(4)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDRUMErrorEventErrorResourceRUMMethod</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="Get" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDRUMErrorEventErrorResourceRUMMethod Get = int64(1)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDRUMErrorEventErrorResourceRUMMethod</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Head">
+      <MemberSignature Language="C#" Value="Head" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDRUMErrorEventErrorResourceRUMMethod Head = int64(2)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDRUMErrorEventErrorResourceRUMMethod</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Options">
+      <MemberSignature Language="C#" Value="Options" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDRUMErrorEventErrorResourceRUMMethod Options = int64(7)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDRUMErrorEventErrorResourceRUMMethod</ReturnType>
+      </ReturnValue>
+      <MemberValue>7</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Patch">
+      <MemberSignature Language="C#" Value="Patch" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDRUMErrorEventErrorResourceRUMMethod Patch = int64(5)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDRUMErrorEventErrorResourceRUMMethod</ReturnType>
+      </ReturnValue>
+      <MemberValue>5</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Post">
+      <MemberSignature Language="C#" Value="Post" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDRUMErrorEventErrorResourceRUMMethod Post = int64(0)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDRUMErrorEventErrorResourceRUMMethod</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Put">
+      <MemberSignature Language="C#" Value="Put" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDRUMErrorEventErrorResourceRUMMethod Put = int64(3)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDRUMErrorEventErrorResourceRUMMethod</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Trace">
+      <MemberSignature Language="C#" Value="Trace" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDRUMErrorEventErrorResourceRUMMethod Trace = int64(6)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDRUMErrorEventErrorResourceRUMMethod</ReturnType>
+      </ReturnValue>
+      <MemberValue>6</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

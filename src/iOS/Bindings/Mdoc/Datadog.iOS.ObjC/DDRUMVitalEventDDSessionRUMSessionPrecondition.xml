@@ -1,0 +1,142 @@
+<Type Name="DDRUMVitalEventDDSessionRUMSessionPrecondition" FullName="Datadog.iOS.ObjC.DDRUMVitalEventDDSessionRUMSessionPrecondition">
+  <TypeSignature Language="C#" Value="public enum DDRUMVitalEventDDSessionRUMSessionPrecondition" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DDRUMVitalEventDDSessionRUMSessionPrecondition extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>objc</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>ObjCRuntime.Native</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary></summary>
+    <remarks></remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BackgroundLaunch">
+      <MemberSignature Language="C#" Value="BackgroundLaunch" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDRUMVitalEventDDSessionRUMSessionPrecondition BackgroundLaunch = int64(4)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDRUMVitalEventDDSessionRUMSessionPrecondition</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ExplicitStop">
+      <MemberSignature Language="C#" Value="ExplicitStop" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDRUMVitalEventDDSessionRUMSessionPrecondition ExplicitStop = int64(7)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDRUMVitalEventDDSessionRUMSessionPrecondition</ReturnType>
+      </ReturnValue>
+      <MemberValue>7</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FromNonInteractiveSession">
+      <MemberSignature Language="C#" Value="FromNonInteractiveSession" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDRUMVitalEventDDSessionRUMSessionPrecondition FromNonInteractiveSession = int64(6)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDRUMVitalEventDDSessionRUMSessionPrecondition</ReturnType>
+      </ReturnValue>
+      <MemberValue>6</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InactivityTimeout">
+      <MemberSignature Language="C#" Value="InactivityTimeout" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDRUMVitalEventDDSessionRUMSessionPrecondition InactivityTimeout = int64(2)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDRUMVitalEventDDSessionRUMSessionPrecondition</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxDuration">
+      <MemberSignature Language="C#" Value="MaxDuration" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDRUMVitalEventDDSessionRUMSessionPrecondition MaxDuration = int64(3)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDRUMVitalEventDDSessionRUMSessionPrecondition</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDRUMVitalEventDDSessionRUMSessionPrecondition None = int64(0)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDRUMVitalEventDDSessionRUMSessionPrecondition</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Prewarm">
+      <MemberSignature Language="C#" Value="Prewarm" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDRUMVitalEventDDSessionRUMSessionPrecondition Prewarm = int64(5)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDRUMVitalEventDDSessionRUMSessionPrecondition</ReturnType>
+      </ReturnValue>
+      <MemberValue>5</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="UserAppLaunch">
+      <MemberSignature Language="C#" Value="UserAppLaunch" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDRUMVitalEventDDSessionRUMSessionPrecondition UserAppLaunch = int64(1)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDRUMVitalEventDDSessionRUMSessionPrecondition</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

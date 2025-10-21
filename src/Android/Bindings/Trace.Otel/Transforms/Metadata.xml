@@ -1,0 +1,37 @@
+﻿<metadata>
+	<remove-node path="/api/package[starts-with(@name, 'com.datadog.android.trace.opentelemetry.internal')]" />
+	<remove-node path="/api/package[@name='com.datadog.opentelemetry.context.propagation']/class[@name='TraceStateHelper']" />
+	<remove-node path="/api/package[@name='com.datadog.opentelemetry.trace']/class[@name='OtelConventions']" />
+	<remove-node path="/api/package[@name='com.datadog.opentelemetry.trace']/class[@name='OtelExtractedContext']" />
+
+	<attr
+		path="/api/package[@name='com.datadog.android.trace.opentelemetry']/class[@name='BuildConfig']/field[@name='OPENTELEMETRY_API_VERSION_NAME']"
+		name="managedName">
+		OpenTelemetryApiVersionName
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.android.trace.opentelemetry']/class[@name='OtelTracerProvider']/field[@name='IS_OPENTELEMETRY_ENABLED_CONFIG_KEY']"
+		name="managedName">
+		IsOpenTelemetryEnabledConfigKey
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.android.trace.opentelemetry']/class[@name='OtelTracerProvider']/method[@name='get' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+		name="managedType">
+		string?
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.android.trace.opentelemetry']/class[@name='OtelTracerProvider']/method[@name='get' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]/parameter[1]"
+		name="managedType">
+		string?
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.android.trace.opentelemetry']/class[@name='OtelTracerProvider']/method[@name='get' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]/parameter[2]"
+		name="managedType">
+		string?
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.android.trace.opentelemetry']/class[@name='OtelTracerProvider']/method[@name='tracerBuilder' and count(parameter)=1 and parameter[1][@type='java.lang.String']]/parameter[1]"
+		name="managedType">
+		string?
+	</attr>
+</metadata>

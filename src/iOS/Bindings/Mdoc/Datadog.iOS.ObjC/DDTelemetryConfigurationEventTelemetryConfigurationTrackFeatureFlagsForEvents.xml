@@ -1,0 +1,97 @@
+<Type Name="DDTelemetryConfigurationEventTelemetryConfigurationTrackFeatureFlagsForEvents" FullName="Datadog.iOS.ObjC.DDTelemetryConfigurationEventTelemetryConfigurationTrackFeatureFlagsForEvents">
+  <TypeSignature Language="C#" Value="public enum DDTelemetryConfigurationEventTelemetryConfigurationTrackFeatureFlagsForEvents" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DDTelemetryConfigurationEventTelemetryConfigurationTrackFeatureFlagsForEvents extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>objc</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>ObjCRuntime.Native</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary></summary>
+    <remarks></remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Action">
+      <MemberSignature Language="C#" Value="Action" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDTelemetryConfigurationEventTelemetryConfigurationTrackFeatureFlagsForEvents Action = int64(3)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDTelemetryConfigurationEventTelemetryConfigurationTrackFeatureFlagsForEvents</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LongTask">
+      <MemberSignature Language="C#" Value="LongTask" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDTelemetryConfigurationEventTelemetryConfigurationTrackFeatureFlagsForEvents LongTask = int64(4)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDTelemetryConfigurationEventTelemetryConfigurationTrackFeatureFlagsForEvents</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDTelemetryConfigurationEventTelemetryConfigurationTrackFeatureFlagsForEvents None = int64(0)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDTelemetryConfigurationEventTelemetryConfigurationTrackFeatureFlagsForEvents</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Resource">
+      <MemberSignature Language="C#" Value="Resource" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDTelemetryConfigurationEventTelemetryConfigurationTrackFeatureFlagsForEvents Resource = int64(2)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDTelemetryConfigurationEventTelemetryConfigurationTrackFeatureFlagsForEvents</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Vital">
+      <MemberSignature Language="C#" Value="Vital" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDTelemetryConfigurationEventTelemetryConfigurationTrackFeatureFlagsForEvents Vital = int64(1)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDTelemetryConfigurationEventTelemetryConfigurationTrackFeatureFlagsForEvents</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

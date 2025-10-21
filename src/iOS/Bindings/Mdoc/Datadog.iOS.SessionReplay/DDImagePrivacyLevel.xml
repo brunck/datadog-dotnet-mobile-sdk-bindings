@@ -1,0 +1,67 @@
+<Type Name="DDImagePrivacyLevel" FullName="Datadog.iOS.SessionReplay.DDImagePrivacyLevel">
+  <TypeSignature Language="C#" Value="public enum DDImagePrivacyLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DDImagePrivacyLevel extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>sr</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>ObjCRuntime.Native</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Available image privacy levels for image masking.</summary>
+    <remarks></remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="MaskAll">
+      <MemberSignature Language="C#" Value="MaskAll" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.SessionReplay.DDImagePrivacyLevel MaskAll = int64(1)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.SessionReplay.DDImagePrivacyLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>No images will be recorded.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MaskNonBundledOnly">
+      <MemberSignature Language="C#" Value="MaskNonBundledOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.SessionReplay.DDImagePrivacyLevel MaskNonBundledOnly = int64(0)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.SessionReplay.DDImagePrivacyLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>Only SF Symbols and images loaded using <c>UIImage(named:)</c> that are bundled within the application package will be recorded.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MaskNone">
+      <MemberSignature Language="C#" Value="MaskNone" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.SessionReplay.DDImagePrivacyLevel MaskNone = int64(2)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.SessionReplay.DDImagePrivacyLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>All images will be recorded, including the ones downloaded from the Internet or generated during the app runtime.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

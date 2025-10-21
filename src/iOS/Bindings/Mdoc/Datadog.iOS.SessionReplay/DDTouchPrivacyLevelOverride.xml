@@ -1,0 +1,67 @@
+<Type Name="DDTouchPrivacyLevelOverride" FullName="Datadog.iOS.SessionReplay.DDTouchPrivacyLevelOverride">
+  <TypeSignature Language="C#" Value="public enum DDTouchPrivacyLevelOverride" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DDTouchPrivacyLevelOverride extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>sr</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>ObjCRuntime.Native</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary></summary>
+    <remarks></remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Hide">
+      <MemberSignature Language="C#" Value="Hide" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.SessionReplay.DDTouchPrivacyLevelOverride Hide = int64(2)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.SessionReplay.DDTouchPrivacyLevelOverride</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.SessionReplay.DDTouchPrivacyLevelOverride None = int64(0)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.SessionReplay.DDTouchPrivacyLevelOverride</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Show">
+      <MemberSignature Language="C#" Value="Show" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.SessionReplay.DDTouchPrivacyLevelOverride Show = int64(1)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.SessionReplay.DDTouchPrivacyLevelOverride</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

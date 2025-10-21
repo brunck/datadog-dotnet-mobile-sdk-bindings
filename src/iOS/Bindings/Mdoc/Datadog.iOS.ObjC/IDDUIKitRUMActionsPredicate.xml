@@ -1,0 +1,29 @@
+<Type Name="IDDUIKitRUMActionsPredicate" FullName="Datadog.iOS.ObjC.IDDUIKitRUMActionsPredicate">
+  <TypeSignature Language="C#" Value="public interface IDDUIKitRUMActionsPredicate : Datadog.iOS.ObjC.IDDUITouchRUMActionsPredicate, IDisposable, ObjCRuntime.INativeObject" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract beforefieldinit IDDUIKitRUMActionsPredicate implements class Datadog.iOS.ObjC.IDDUITouchRUMActionsPredicate, class ObjCRuntime.INativeObject, class System.IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>objc</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Datadog.iOS.ObjC.IDDUITouchRUMActionsPredicate</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>ObjCRuntime.INativeObject</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>Foundation.Protocol(Name="_TtP11DatadogObjc26DDUIKitRUMActionsPredicate_", WrapperType=typeof(Datadog.iOS.ObjC.DDUIKitRUMActionsPredicateWrapper))</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary></summary>
+    <remarks></remarks>
+  </Docs>
+  <Members />
+</Type>

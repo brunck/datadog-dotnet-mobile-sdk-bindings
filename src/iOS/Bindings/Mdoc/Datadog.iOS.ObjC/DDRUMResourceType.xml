@@ -1,0 +1,187 @@
+<Type Name="DDRUMResourceType" FullName="Datadog.iOS.ObjC.DDRUMResourceType">
+  <TypeSignature Language="C#" Value="public enum DDRUMResourceType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DDRUMResourceType extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>objc</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>ObjCRuntime.Native</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary></summary>
+    <remarks></remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Beacon">
+      <MemberSignature Language="C#" Value="Beacon" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDRUMResourceType Beacon = int64(2)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDRUMResourceType</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Css">
+      <MemberSignature Language="C#" Value="Css" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDRUMResourceType Css = int64(3)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDRUMResourceType</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Document">
+      <MemberSignature Language="C#" Value="Document" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDRUMResourceType Document = int64(4)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDRUMResourceType</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Fetch">
+      <MemberSignature Language="C#" Value="Fetch" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDRUMResourceType Fetch = int64(5)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDRUMResourceType</ReturnType>
+      </ReturnValue>
+      <MemberValue>5</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Font">
+      <MemberSignature Language="C#" Value="Font" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDRUMResourceType Font = int64(6)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDRUMResourceType</ReturnType>
+      </ReturnValue>
+      <MemberValue>6</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Image">
+      <MemberSignature Language="C#" Value="Image" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDRUMResourceType Image = int64(0)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDRUMResourceType</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Js">
+      <MemberSignature Language="C#" Value="Js" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDRUMResourceType Js = int64(7)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDRUMResourceType</ReturnType>
+      </ReturnValue>
+      <MemberValue>7</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Media">
+      <MemberSignature Language="C#" Value="Media" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDRUMResourceType Media = int64(8)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDRUMResourceType</ReturnType>
+      </ReturnValue>
+      <MemberValue>8</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Native">
+      <MemberSignature Language="C#" Value="Native" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDRUMResourceType Native = int64(10)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDRUMResourceType</ReturnType>
+      </ReturnValue>
+      <MemberValue>10</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Other">
+      <MemberSignature Language="C#" Value="Other" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDRUMResourceType Other = int64(9)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDRUMResourceType</ReturnType>
+      </ReturnValue>
+      <MemberValue>9</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Xhr">
+      <MemberSignature Language="C#" Value="Xhr" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDRUMResourceType Xhr = int64(1)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDRUMResourceType</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

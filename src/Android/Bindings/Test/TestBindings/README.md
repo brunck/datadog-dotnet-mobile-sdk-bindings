@@ -1,0 +1,1 @@
+# Sample Android app for the .NET for Android bindings to the Datadog Android SDK

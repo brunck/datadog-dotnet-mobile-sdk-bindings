@@ -1,0 +1,1 @@
+# .NET Bindings for the Datadog Mobile Android SDK

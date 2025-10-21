@@ -1,0 +1,4 @@
+﻿<metadata>
+	<remove-node path="/api/package[starts-with(@name, 'com.datadog.android.internal')]"/>
+	<remove-node path="/api/package[@name='com.datadog.tools.annotation']" />
+</metadata>

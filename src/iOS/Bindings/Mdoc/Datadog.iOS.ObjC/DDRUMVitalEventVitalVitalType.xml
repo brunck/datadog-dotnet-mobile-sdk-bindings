@@ -1,0 +1,37 @@
+<Type Name="DDRUMVitalEventVitalVitalType" FullName="Datadog.iOS.ObjC.DDRUMVitalEventVitalVitalType">
+  <TypeSignature Language="C#" Value="public enum DDRUMVitalEventVitalVitalType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DDRUMVitalEventVitalVitalType extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>objc</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>ObjCRuntime.Native</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary></summary>
+    <remarks></remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DDRUMVitalEventVitalVitalTypeDuration">
+      <MemberSignature Language="C#" Value="DDRUMVitalEventVitalVitalTypeDuration" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDRUMVitalEventVitalVitalType DDRUMVitalEventVitalVitalTypeDuration = int64(0)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDRUMVitalEventVitalVitalType</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

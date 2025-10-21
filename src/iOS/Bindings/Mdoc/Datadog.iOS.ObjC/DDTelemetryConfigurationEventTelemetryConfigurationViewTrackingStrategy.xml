@@ -1,0 +1,97 @@
+<Type Name="DDTelemetryConfigurationEventTelemetryConfigurationViewTrackingStrategy" FullName="Datadog.iOS.ObjC.DDTelemetryConfigurationEventTelemetryConfigurationViewTrackingStrategy">
+  <TypeSignature Language="C#" Value="public enum DDTelemetryConfigurationEventTelemetryConfigurationViewTrackingStrategy" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DDTelemetryConfigurationEventTelemetryConfigurationViewTrackingStrategy extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>objc</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>ObjCRuntime.Native</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary></summary>
+    <remarks></remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ActivityViewTrackingStrategy">
+      <MemberSignature Language="C#" Value="ActivityViewTrackingStrategy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDTelemetryConfigurationEventTelemetryConfigurationViewTrackingStrategy ActivityViewTrackingStrategy = int64(1)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDTelemetryConfigurationEventTelemetryConfigurationViewTrackingStrategy</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="FragmentViewTrackingStrategy">
+      <MemberSignature Language="C#" Value="FragmentViewTrackingStrategy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDTelemetryConfigurationEventTelemetryConfigurationViewTrackingStrategy FragmentViewTrackingStrategy = int64(2)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDTelemetryConfigurationEventTelemetryConfigurationViewTrackingStrategy</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MixedViewTrackingStrategy">
+      <MemberSignature Language="C#" Value="MixedViewTrackingStrategy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDTelemetryConfigurationEventTelemetryConfigurationViewTrackingStrategy MixedViewTrackingStrategy = int64(3)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDTelemetryConfigurationEventTelemetryConfigurationViewTrackingStrategy</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigationViewTrackingStrategy">
+      <MemberSignature Language="C#" Value="NavigationViewTrackingStrategy" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDTelemetryConfigurationEventTelemetryConfigurationViewTrackingStrategy NavigationViewTrackingStrategy = int64(4)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDTelemetryConfigurationEventTelemetryConfigurationViewTrackingStrategy</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDTelemetryConfigurationEventTelemetryConfigurationViewTrackingStrategy None = int64(0)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDTelemetryConfigurationEventTelemetryConfigurationViewTrackingStrategy</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

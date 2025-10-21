@@ -1,0 +1,76 @@
+<Type Name="IOTSpanContext" FullName="Datadog.iOS.ObjC.IOTSpanContext">
+  <TypeSignature Language="C#" Value="public interface IOTSpanContext : IDisposable, ObjCRuntime.INativeObject" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IOTSpanContext implements class ObjCRuntime.INativeObject, class System.IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>objc</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>ObjCRuntime.INativeObject</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>Foundation.Protocol(Name="_TtP11DatadogObjc13OTSpanContext_", WrapperType=typeof(Datadog.iOS.ObjC.OTSpanContextWrapper))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.ProtocolMember(IsProperty=false, IsRequired=true, IsStatic=false, Name="ForEachBaggageItem", ParameterBlockProxy=new System.Type[] { typeof(ObjCRuntime.Trampolines/NIDFuncArity3V0) }, ParameterByRef=new System.Boolean[] { false }, ParameterType=new System.Type[] { typeof(System.Func`3&lt;Foundation.NSString,Foundation.NSString,System.Boolean&gt;) }, Selector="forEachBaggageItem:")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Corresponds to: https://github.com/opentracing/opentracing-objc/blob/master/Pod/Classes/OTSpanContext.h</summary>
+    <remarks>
+      Span context captures any implementation-dependent state such as trace ID and span ID, as well as the
+      baggage items.
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ForEachBaggageItem">
+      <MemberSignature Language="C#" Value="public virtual void ForEachBaggageItem (Func&lt;Foundation.NSString,Foundation.NSString,bool&gt; callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ForEachBaggageItem(class System.Func`3&lt;class Foundation.NSString, class Foundation.NSString, bool&gt; callback) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("forEachBaggageItem:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.RequiredMember</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.NullableContext(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Func&lt;Foundation.NSString,Foundation.NSString,System.Boolean&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDFuncArity3V0))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="callback">
+          Lambda invoked with each baggage item key-value pair as the parameters. 
+          If the lambda returns true, iteration will stop.
+        </param>
+        <summary>Iterate through the baggage items.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

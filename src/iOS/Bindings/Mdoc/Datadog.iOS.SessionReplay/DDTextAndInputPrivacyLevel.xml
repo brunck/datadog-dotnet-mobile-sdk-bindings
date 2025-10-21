@@ -1,0 +1,67 @@
+<Type Name="DDTextAndInputPrivacyLevel" FullName="Datadog.iOS.SessionReplay.DDTextAndInputPrivacyLevel">
+  <TypeSignature Language="C#" Value="public enum DDTextAndInputPrivacyLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DDTextAndInputPrivacyLevel extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>sr</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>ObjCRuntime.Native</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Available privacy levels for text and input masking.</summary>
+    <remarks></remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="MaskAll">
+      <MemberSignature Language="C#" Value="MaskAll" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.SessionReplay.DDTextAndInputPrivacyLevel MaskAll = int64(2)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.SessionReplay.DDTextAndInputPrivacyLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>Mask all text and input.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MaskAllInputs">
+      <MemberSignature Language="C#" Value="MaskAllInputs" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.SessionReplay.DDTextAndInputPrivacyLevel MaskAllInputs = int64(1)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.SessionReplay.DDTextAndInputPrivacyLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>Mask all text and input, eg. textfields, switches, checkboxes.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MaskSensitiveInputs">
+      <MemberSignature Language="C#" Value="MaskSensitiveInputs" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.SessionReplay.DDTextAndInputPrivacyLevel MaskSensitiveInputs = int64(0)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.SessionReplay.DDTextAndInputPrivacyLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>Show all text except sensitive input (eg. password fields).</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,10 @@
+<namespaces>
+    <namespace name="Datadog.iOS.CrashReporting">
+    </namespace>
+    <namespace name="Datadog.iOS.ObjC">
+    </namespace>
+    <namespace name="Datadog.iOS.SessionReplay">
+    </namespace>
+    <namespace name="Datadog.iOS.WebViewTracking">
+    </namespace>
+</namespaces>

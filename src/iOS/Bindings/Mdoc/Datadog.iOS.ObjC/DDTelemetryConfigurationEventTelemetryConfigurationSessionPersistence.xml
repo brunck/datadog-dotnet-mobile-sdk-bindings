@@ -1,0 +1,67 @@
+<Type Name="DDTelemetryConfigurationEventTelemetryConfigurationSessionPersistence" FullName="Datadog.iOS.ObjC.DDTelemetryConfigurationEventTelemetryConfigurationSessionPersistence">
+  <TypeSignature Language="C#" Value="public enum DDTelemetryConfigurationEventTelemetryConfigurationSessionPersistence" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DDTelemetryConfigurationEventTelemetryConfigurationSessionPersistence extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>objc</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>ObjCRuntime.Native</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary></summary>
+    <remarks></remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cookie">
+      <MemberSignature Language="C#" Value="Cookie" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDTelemetryConfigurationEventTelemetryConfigurationSessionPersistence Cookie = int64(2)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDTelemetryConfigurationEventTelemetryConfigurationSessionPersistence</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalStorage">
+      <MemberSignature Language="C#" Value="LocalStorage" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDTelemetryConfigurationEventTelemetryConfigurationSessionPersistence LocalStorage = int64(1)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDTelemetryConfigurationEventTelemetryConfigurationSessionPersistence</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDTelemetryConfigurationEventTelemetryConfigurationSessionPersistence None = int64(0)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDTelemetryConfigurationEventTelemetryConfigurationSessionPersistence</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

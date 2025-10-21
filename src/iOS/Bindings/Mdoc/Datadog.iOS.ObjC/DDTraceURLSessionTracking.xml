@@ -1,0 +1,181 @@
+<Type Name="DDTraceURLSessionTracking" FullName="Datadog.iOS.ObjC.DDTraceURLSessionTracking">
+  <TypeSignature Language="C#" Value="public class DDTraceURLSessionTracking : Foundation.NSObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DDTraceURLSessionTracking extends Foundation.NSObject" />
+  <AssemblyInfo>
+    <AssemblyName>objc</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Foundation.NSObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Foundation.Register("_TtC11DatadogObjc25DDTraceURLSessionTracking", true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.Nullable(0)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.NullableContext(1)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Configuration of automatic network requests tracing.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DDTraceURLSessionTracking (Datadog.iOS.ObjC.DDTraceFirstPartyHostsTracing firstPartyHostsTracing);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Datadog.iOS.ObjC.DDTraceFirstPartyHostsTracing firstPartyHostsTracing) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("initWithFirstPartyHostsTracing:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.DesignatedInitializer</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="firstPartyHostsTracing" Type="Datadog.iOS.ObjC.DDTraceFirstPartyHostsTracing" />
+      </Parameters>
+      <Docs>
+        <param name="firstPartyHostsTracing">Distributed tracing configuration for particular first-party hosts.</param>
+        <summary>Configuration for automatic network requests tracing.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DDTraceURLSessionTracking (Foundation.NSObjectFlag t);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(valuetype Foundation.NSObjectFlag t) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="t" Type="Foundation.NSObjectFlag" />
+      </Parameters>
+      <Docs>
+        <param name="t"></param>
+        <summary></summary>
+        <remarks></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected internal DDTraceURLSessionTracking (ObjCRuntime.NativeHandle handle);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(valuetype ObjCRuntime.NativeHandle handle) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="handle" Type="ObjCRuntime.NativeHandle" />
+      </Parameters>
+      <Docs>
+        <param name="handle"></param>
+        <summary></summary>
+        <remarks></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassHandle">
+      <MemberSignature Language="C#" Value="public override ObjCRuntime.NativeHandle ClassHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype ObjCRuntime.NativeHandle ClassHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ObjCRuntime.NativeHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary></summary>
+        <value></value>
+        <remarks></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFirstPartyHostsTracing">
+      <MemberSignature Language="C#" Value="public virtual void SetFirstPartyHostsTracing (Datadog.iOS.ObjC.DDTraceFirstPartyHostsTracing firstPartyHostsTracing);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetFirstPartyHostsTracing(class Datadog.iOS.ObjC.DDTraceFirstPartyHostsTracing firstPartyHostsTracing) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("setFirstPartyHostsTracing:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="firstPartyHostsTracing" Type="Datadog.iOS.ObjC.DDTraceFirstPartyHostsTracing" />
+      </Parameters>
+      <Docs>
+        <param name="firstPartyHostsTracing">
+        </param>
+        <summary>Determines distributed tracing configuration for particular first-party hosts.</summary>
+        <remarks>
+          <para>Each request is classified as first-party or third-party based on the first-party hosts configured.</para>
+          <para>For example:</para>
+          <list type="bullet">
+            <item>
+              <description>If <c>example.com</c> is defined as a first-party host:</description>
+              <list type="bullet">
+                <item>
+                  <description>First-party URL examples include <c>https://example.com/</c> and <c>https://api.example.com/v2/users</c>.</description>
+                </item>
+                <item>
+                  <description>Third-party URL example: <c>https://foo.com/</c>.</description>
+                </item>
+              </list>
+            </item>
+            <item>
+              <description>If <c>api.example.com</c> is defined as a first-party host:</description>
+              <list type="bullet">
+                <item>
+                  <description>First-party URL examples include <c>https://api.example.com/</c> and <c>https://api.example.com/v2/users</c>.</description>
+                </item>
+                <item>
+                  <description>Third-party URL examples include <c>https://example.com/</c> and <c>https://foo.com/</c>.</description>
+                </item>
+              </list>
+            </item>
+          </list>
+          <para>
+            A trace will be created for each first-party request by injecting HTTP trace headers and creating an APM span. 
+            If your backend is also instrumented with Datadog, you will see the full trace (app → backend).
+          </para>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

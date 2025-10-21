@@ -1,0 +1,225 @@
+<Type Name="DDRUMURLSessionTracking" FullName="Datadog.iOS.ObjC.DDRUMURLSessionTracking">
+  <TypeSignature Language="C#" Value="public class DDRUMURLSessionTracking : Foundation.NSObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DDRUMURLSessionTracking extends Foundation.NSObject" />
+  <AssemblyInfo>
+    <AssemblyName>objc</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Foundation.NSObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Foundation.Register("_TtC11DatadogObjc23DDRUMURLSessionTracking", true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.Nullable(0)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.NullableContext(1)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Configuration of automatic RUM resources tracking.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DDRUMURLSessionTracking ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("init")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary></summary>
+        <remarks></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DDRUMURLSessionTracking (Foundation.NSObjectFlag t);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(valuetype Foundation.NSObjectFlag t) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="t" Type="Foundation.NSObjectFlag" />
+      </Parameters>
+      <Docs>
+        <param name="t"></param>
+        <summary></summary>
+        <remarks></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected internal DDRUMURLSessionTracking (ObjCRuntime.NativeHandle handle);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(valuetype ObjCRuntime.NativeHandle handle) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="handle" Type="ObjCRuntime.NativeHandle" />
+      </Parameters>
+      <Docs>
+        <param name="handle"></param>
+        <summary></summary>
+        <remarks></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassHandle">
+      <MemberSignature Language="C#" Value="public override ObjCRuntime.NativeHandle ClassHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype ObjCRuntime.NativeHandle ClassHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ObjCRuntime.NativeHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary></summary>
+        <value></value>
+        <remarks></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetFirstPartyHostsTracing">
+      <MemberSignature Language="C#" Value="public virtual void SetFirstPartyHostsTracing (Datadog.iOS.ObjC.DDRUMFirstPartyHostsTracing firstPartyHostsTracing);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetFirstPartyHostsTracing(class Datadog.iOS.ObjC.DDRUMFirstPartyHostsTracing firstPartyHostsTracing) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("setFirstPartyHostsTracing:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="firstPartyHostsTracing" Type="Datadog.iOS.ObjC.DDRUMFirstPartyHostsTracing" />
+      </Parameters>
+      <Docs>
+        <param name="firstPartyHostsTracing">
+        </param>
+        <summary>Determines distributed tracing configuration for particular first-party hosts.</summary>
+        <remarks>
+          <para>
+            Each request is classified as first-party or third-party based on the first-party hosts configured.
+          </para>
+          <para>For example:</para>
+          <list type="bullet">
+            <item>
+              <description>If "example.com" is defined as a first-party host:</description>
+              <list type="bullet">
+                <item>
+                  <description>First-party URL examples: https://example.com/ and https://api.example.com/v2/users</description>
+                </item>
+                <item>
+                  <description>Third-party URL example: https://foo.com/</description>
+                </item>
+              </list>
+            </item>
+            <item>
+              <description>If "api.example.com" is defined as a first-party host:</description>
+              <list type="bullet">
+                <item>
+                  <description>First-party URL examples: https://api.example.com/ and https://api.example.com/v2/users</description>
+                </item>
+                <item>
+                  <description>Third-party URL examples: https://example.com/ and https://foo.com/</description>
+                </item>
+              </list>
+            </item>
+          </list>
+          <para>
+            RUM will create a trace for each first-party resource by injecting HTTP trace headers and creating an APM span.
+            If your backend is also instrumented with Datadog, you will see the full trace (app → backend).
+          </para>
+          <para>Distributed tracing is not enabled by default.</para>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetResourceAttributesProvider">
+      <MemberSignature Language="C#" Value="public virtual void SetResourceAttributesProvider (Func&lt;Foundation.NSUrlRequest,Foundation.NSUrlResponse,Foundation.NSData,Foundation.NSError,Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt; provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetResourceAttributesProvider(class System.Func`5&lt;class Foundation.NSUrlRequest, class Foundation.NSUrlResponse, class Foundation.NSData, class Foundation.NSError, class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt;&gt; provider) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("setResourceAttributesProvider:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="System.Func&lt;Foundation.NSUrlRequest,Foundation.NSUrlResponse,Foundation.NSData,Foundation.NSError,Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDFuncArity5V0))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="provider">Delegate for each network request.</param>
+        <summary>Custom attributes provider for intercepted RUM resources.</summary>
+        <remarks>
+          <para>
+            This delegate gets called for each network request intercepted by RUM. Use it to return additional
+            attributes for RUM resource based on the provided request, response, data, and error.
+            Keep the implementation fast and do not make any assumptions on the thread used to run it.
+          </para>
+          <para>
+            Note: This is not supported for (Swift) async-await APIs.
+          </para>
+          <para>
+            Default: <c>NULL</c>.
+          </para>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

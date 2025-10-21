@@ -1,0 +1,408 @@
+<Type Name="DDDatadog" FullName="Datadog.iOS.ObjC.DDDatadog">
+  <TypeSignature Language="C#" Value="public class DDDatadog : Foundation.NSObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DDDatadog extends Foundation.NSObject" />
+  <AssemblyInfo>
+    <AssemblyName>objc</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Foundation.NSObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Foundation.Register("_TtC11DatadogObjc9DDDatadog", true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.Nullable(0)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.NullableContext(1)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+      An entry point to the Datadog SDK.
+    </summary>
+    <remarks>
+      <para>Initialize the core instance of the Datadog SDK prior to enabling any product.</para>
+      <code>
+        DDDatadog.Initialize(
+            new DDConfiguration("client token", "environment"),
+            DDTrackingConsent.Pending);
+      </code>
+      <para>Once the Datadog SDK is initialized, you can enable products such as RUM:</para>
+      <code>
+        DDRUMMonitor.Enable(
+            new DDRUMConfiguration("application id")
+        );
+      </code>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DDDatadog ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("init")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DDDatadog (Foundation.NSObjectFlag t);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(valuetype Foundation.NSObjectFlag t) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="t" Type="Foundation.NSObjectFlag" />
+      </Parameters>
+      <Docs>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected internal DDDatadog (ObjCRuntime.NativeHandle handle);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(valuetype ObjCRuntime.NativeHandle handle) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="handle" Type="ObjCRuntime.NativeHandle" />
+      </Parameters>
+      <Docs>
+        <param name="handle">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddUserExtraInfo">
+      <MemberSignature Language="C#" Value="public static void AddUserExtraInfo (Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; extraInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AddUserExtraInfo(class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt; extraInfo) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("addUserExtraInfo:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="extraInfo" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="extraInfo">User's additional custom attributes.</param>
+        <summary>Add custom attributes to the current user information.</summary>
+        <remarks>
+          <para>This extra info will be added to already existing extra info that is added to logs traces and RUM events automatically. 
+      </para>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassHandle">
+      <MemberSignature Language="C#" Value="public override ObjCRuntime.NativeHandle ClassHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype ObjCRuntime.NativeHandle ClassHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ObjCRuntime.NativeHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearAllData">
+      <MemberSignature Language="C#" Value="public static void ClearAllData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ClearAllData() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("clearAllData")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>xClears all data that has not already been sent to the Datadog servers.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public static void Initialize (Datadog.iOS.ObjC.DDConfiguration configuration, Datadog.iOS.ObjC.DDTrackingConsent trackingConsent);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Initialize(class Datadog.iOS.ObjC.DDConfiguration configuration, class Datadog.iOS.ObjC.DDTrackingConsent trackingConsent) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("initializeWithConfiguration:trackingConsent:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configuration" Type="Datadog.iOS.ObjC.DDConfiguration" />
+        <Parameter Name="trackingConsent" Type="Datadog.iOS.ObjC.DDTrackingConsent" />
+      </Parameters>
+      <Docs>
+        <param name="configuration">The SDK configuration of type <see cref="DDConfiguration" />.</param>
+        <param name="trackingConsent">The initial state of the Data Tracking Consent (<see cref="DDTrackingConsent" />) given by the user of the app. </param>
+        <summary>Initializes the Datadog SDK.</summary>
+        <remarks>
+          <para>You <i>must</i> initialize the core instance of the Datadog SDK prior to enabling any product.</para>
+          <code>
+            DDDatadog.Initialize(
+                new DDConfiguration("client token", "environment"),
+                DDTrackingConsent.Pending);
+          </code>
+          <para>Once the Datadog SDK is initialized, you can enable products such as RUM:</para>
+          <code>
+            DDRUM.Enable(
+                new DDRUMConfiguration("applicationId")
+            );
+          </code>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInitialized">
+      <MemberSignature Language="C#" Value="public static bool IsInitialized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property bool IsInitialized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("isInitialized")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTrackingConsent">
+      <MemberSignature Language="C#" Value="public static void SetTrackingConsent (Datadog.iOS.ObjC.DDTrackingConsent consent);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetTrackingConsent(class Datadog.iOS.ObjC.DDTrackingConsent consent) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("setTrackingConsentWithConsent:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="consent" Type="Datadog.iOS.ObjC.DDTrackingConsent" />
+      </Parameters>
+      <Docs>
+        <param name="consent">The new consent value, which will be applied for all data collected from now on.</param>
+        <summary>Sets the tracking consent regarding the data collection for the Datadog SDK.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetUserInfo">
+      <MemberSignature Language="C#" Value="public static void SetUserInfo (string userId, string name, string email, Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; extraInfo);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetUserInfo(string userId, string name, string email, class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt; extraInfo) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.Export("setUserInfoWithUserId:name:email:extraInfo:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="userId" Type="System.String" />
+        <Parameter Name="name" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="email" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="extraInfo" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="userId">Mandatory User ID.</param>
+        <param name="name">Name representing the user, if any.</param>
+        <param name="email">User's e-mail address, if any.</param>
+        <param name="extraInfo">User's custom attributes, if any.</param>
+        <summary>Sets current user information.</summary>
+        <remarks>
+          <para>Those will be added to logs, traces and RUM events automatically.</para>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopInstance">
+      <MemberSignature Language="C#" Value="public static void StopInstance ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void StopInstance() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("stopInstance")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stops the initialized SDK instance.</summary>
+        <remarks>
+          <para>
+            Stopping a core instance will stop all current processes by deallocating all Features registered 
+            in the core as well as their storage &amp; upload units.
+          </para>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerbosityLevel">
+      <MemberSignature Language="C#" Value="public static Datadog.iOS.ObjC.DDSDKVerbosityLevel VerbosityLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype Datadog.iOS.ObjC.DDSDKVerbosityLevel VerbosityLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("verbosityLevel")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setVerbosityLevel:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDSDKVerbosityLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Verbosity level of the Datadog SDK. Can be used for debugging purposes.
+        </summary>
+        <value>
+        </value>
+        <remarks>
+          <para>
+            If set, internal events occuring inside the SDK will be printed to the debugger console if their level is equal or greater than <c>VerbosityLevel</c>.
+          </para>
+          <para>
+            Default is <c>None</c>.
+          </para>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,897 @@
+<Overview>
+  <Assemblies>
+    <Assembly Name="core" Version="1.0.0.0">
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.LinkWith("DDC.xcframework", ForceLoad=true, Frameworks="Foundation Network SystemConfiguration CoreTelephony UIKit Security", SmartLink=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Debuggable(System.Diagnostics.DebuggableAttribute+DebuggingModes.IgnoreSymbolStoreSequencePoints)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyCompany("bcr")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyConfiguration("Release")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyDescription(".NET Bindings for Datadog iOS SDK Core")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyFileVersion("1.0.0.0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyInformationalVersion("1.0.0+[REDACTED_SOURCEGRAPH_TOKEN]")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyMetadata("IsTrimmable", "True")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyMetadata("RepositoryUrl", "https://github.com/brunck/datadog-dotnet-mobile-sdk-bindings")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyProduct("core")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyTitle("core")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.CompilationRelaxations(8)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.ReferenceAssembly</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.RuntimeCompatibility(WrapNonExceptionThrows=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Versioning.SupportedOSPlatform("iOS18.0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Versioning.TargetFramework(".NETCoreApp,Version=v9.0", FrameworkDisplayName=".NET 9.0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Versioning.TargetPlatform("iOS18.0")</AttributeName>
+        </Attribute>
+      </Attributes>
+    </Assembly>
+    <Assembly Name="cr" Version="1.0.0.0">
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.LinkWith("DDCR.xcframework", ForceLoad=true, Frameworks="Foundation", SmartLink=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Debuggable(System.Diagnostics.DebuggableAttribute+DebuggingModes.Default | System.Diagnostics.DebuggableAttribute+DebuggingModes.DisableOptimizations | System.Diagnostics.DebuggableAttribute+DebuggingModes.IgnoreSymbolStoreSequencePoints | System.Diagnostics.DebuggableAttribute+DebuggingModes.EnableEditAndContinue)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyCompany("bcr")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyConfiguration("Debug")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyDescription(".NET Bindings for Datadog iOS SDK CrashReporting")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyFileVersion("1.0.0.0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyInformationalVersion("1.0.0+[REDACTED_SOURCEGRAPH_TOKEN]")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyMetadata("IsTrimmable", "True")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyMetadata("RepositoryUrl", "https://github.com/brunck/datadog-dotnet-mobile-sdk-bindings")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyProduct("cr")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyTitle("cr")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.CompilationRelaxations(8)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.ReferenceAssembly</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.RuntimeCompatibility(WrapNonExceptionThrows=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Versioning.SupportedOSPlatform("iOS18.0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Versioning.TargetFramework(".NETCoreApp,Version=v9.0", FrameworkDisplayName=".NET 9.0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Versioning.TargetPlatform("iOS18.0")</AttributeName>
+        </Attribute>
+      </Attributes>
+    </Assembly>
+    <Assembly Name="log" Version="1.0.0.0">
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.LinkWith("DDL.xcframework", ForceLoad=true, Frameworks="Foundation", SmartLink=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Debuggable(System.Diagnostics.DebuggableAttribute+DebuggingModes.IgnoreSymbolStoreSequencePoints)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyCompany("bcr")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyConfiguration("Release")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyDescription(".NET Bindings for Datadog iOS SDK Logs")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyFileVersion("1.0.0.0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyInformationalVersion("1.0.0+[REDACTED_SOURCEGRAPH_TOKEN]")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyMetadata("IsTrimmable", "True")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyMetadata("RepositoryUrl", "https://github.com/brunck/datadog-dotnet-mobile-sdk-bindings")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyProduct("log")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyTitle("log")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.CompilationRelaxations(8)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.RuntimeCompatibility(WrapNonExceptionThrows=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Versioning.SupportedOSPlatform("iOS18.0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Versioning.TargetFramework(".NETCoreApp,Version=v9.0", FrameworkDisplayName=".NET 9.0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Versioning.TargetPlatform("iOS18.0")</AttributeName>
+        </Attribute>
+      </Attributes>
+    </Assembly>
+    <Assembly Name="int" Version="1.0.0.0">
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.LinkWith("DDInt.xcframework", ForceLoad=true, Frameworks="Foundation OSLog", SmartLink=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Debuggable(System.Diagnostics.DebuggableAttribute+DebuggingModes.IgnoreSymbolStoreSequencePoints)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyCompany("bcr")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyConfiguration("Release")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyDescription(".NET Bindings for Datadog iOS SDK Internal")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyFileVersion("1.0.0.0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyInformationalVersion("1.0.0+[REDACTED_SOURCEGRAPH_TOKEN]")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyMetadata("IsTrimmable", "True")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyMetadata("RepositoryUrl", "https://github.com/brunck/datadog-dotnet-mobile-sdk-bindings")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyProduct("int")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyTitle("int")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.CompilationRelaxations(8)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.ReferenceAssembly</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.RuntimeCompatibility(WrapNonExceptionThrows=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Versioning.SupportedOSPlatform("iOS18.0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Versioning.TargetFramework(".NETCoreApp,Version=v9.0", FrameworkDisplayName=".NET 9.0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Versioning.TargetPlatform("iOS18.0")</AttributeName>
+        </Attribute>
+      </Attributes>
+    </Assembly>
+    <Assembly Name="objc" Version="1.0.0.0">
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.LinkWith("DDObjc.xcframework", ForceLoad=true, Frameworks="Foundation", SmartLink=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Debuggable(System.Diagnostics.DebuggableAttribute+DebuggingModes.Default | System.Diagnostics.DebuggableAttribute+DebuggingModes.DisableOptimizations | System.Diagnostics.DebuggableAttribute+DebuggingModes.IgnoreSymbolStoreSequencePoints | System.Diagnostics.DebuggableAttribute+DebuggingModes.EnableEditAndContinue)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyCompany("bcr")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyConfiguration("Debug")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyDescription(".NET Bindings for Datadog iOS SDK ObjC")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyFileVersion("1.0.0.0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyInformationalVersion("1.0.0+[REDACTED_SOURCEGRAPH_TOKEN]")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyMetadata("IsTrimmable", "True")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyMetadata("RepositoryUrl", "https://github.com/brunck/datadog-dotnet-mobile-sdk-bindings")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyProduct("objc")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyTitle("objc")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.CompilationRelaxations(8)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.ReferenceAssembly</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.RuntimeCompatibility(WrapNonExceptionThrows=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Versioning.SupportedOSPlatform("iOS18.0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Versioning.TargetFramework(".NETCoreApp,Version=v9.0", FrameworkDisplayName=".NET 9.0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Versioning.TargetPlatform("iOS18.0")</AttributeName>
+        </Attribute>
+      </Attributes>
+    </Assembly>
+    <Assembly Name="rum" Version="1.0.0.0">
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.LinkWith("DDR.xcframework", ForceLoad=true, Frameworks="Foundation SwiftUI")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Debuggable(System.Diagnostics.DebuggableAttribute+DebuggingModes.IgnoreSymbolStoreSequencePoints)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyCompany("bcr")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyConfiguration("Release")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyDescription(".NET Bindings for Datadog iOS SDK RUM")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyFileVersion("1.0.0.0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyInformationalVersion("1.0.0+[REDACTED_SOURCEGRAPH_TOKEN]")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyMetadata("IsTrimmable", "True")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyMetadata("RepositoryUrl", "https://github.com/brunck/datadog-dotnet-mobile-sdk-bindings")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyProduct("rum")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyTitle("rum")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.CompilationRelaxations(8)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.ReferenceAssembly</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.RuntimeCompatibility(WrapNonExceptionThrows=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Versioning.SupportedOSPlatform("iOS18.0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Versioning.TargetFramework(".NETCoreApp,Version=v9.0", FrameworkDisplayName=".NET 9.0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Versioning.TargetPlatform("iOS18.0")</AttributeName>
+        </Attribute>
+      </Attributes>
+    </Assembly>
+    <Assembly Name="sr" Version="1.0.0.0">
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.LinkWith("DDSR.xcframework", ForceLoad=true, Frameworks="Foundation CoreGraphics SafariServices SwiftUI WebKit CryptoKit", SmartLink=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Debuggable(System.Diagnostics.DebuggableAttribute+DebuggingModes.Default | System.Diagnostics.DebuggableAttribute+DebuggingModes.DisableOptimizations | System.Diagnostics.DebuggableAttribute+DebuggingModes.IgnoreSymbolStoreSequencePoints | System.Diagnostics.DebuggableAttribute+DebuggingModes.EnableEditAndContinue)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyCompany("bcr")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyConfiguration("Debug")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyDescription(".NET Bindings for Datadog iOS SDK SessionReplay")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyFileVersion("1.0.0.0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyInformationalVersion("1.0.0+[REDACTED_SOURCEGRAPH_TOKEN]")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyMetadata("IsTrimmable", "True")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyMetadata("RepositoryUrl", "https://github.com/brunck/datadog-dotnet-mobile-sdk-bindings")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyProduct("sr")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyTitle("sr")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.CompilationRelaxations(8)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.ReferenceAssembly</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.RuntimeCompatibility(WrapNonExceptionThrows=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Versioning.SupportedOSPlatform("iOS18.0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Versioning.TargetFramework(".NETCoreApp,Version=v9.0", FrameworkDisplayName=".NET 9.0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Versioning.TargetPlatform("iOS18.0")</AttributeName>
+        </Attribute>
+      </Attributes>
+    </Assembly>
+    <Assembly Name="trace" Version="1.0.0.0">
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.LinkWith("DDT.xcframework", ForceLoad=true, Frameworks="Foundation", SmartLink=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Debuggable(System.Diagnostics.DebuggableAttribute+DebuggingModes.IgnoreSymbolStoreSequencePoints)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyCompany("bcr")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyConfiguration("Release")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyDescription(".NET Bindings for Datadog iOS SDK Trace")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyFileVersion("1.0.0.0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyInformationalVersion("1.0.0+[REDACTED_SOURCEGRAPH_TOKEN]")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyMetadata("IsTrimmable", "True")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyMetadata("RepositoryUrl", "https://github.com/brunck/datadog-dotnet-mobile-sdk-bindings")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyProduct("trace")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyTitle("trace")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.CompilationRelaxations(8)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.ReferenceAssembly</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.RuntimeCompatibility(WrapNonExceptionThrows=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Versioning.SupportedOSPlatform("iOS18.0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Versioning.TargetFramework(".NETCoreApp,Version=v9.0", FrameworkDisplayName=".NET 9.0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Versioning.TargetPlatform("iOS18.0")</AttributeName>
+        </Attribute>
+      </Attributes>
+    </Assembly>
+    <Assembly Name="wvt" Version="1.0.0.0">
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.LinkWith("DWVT.xcframework", ForceLoad=true, Frameworks="Foundation", SmartLink=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Debuggable(System.Diagnostics.DebuggableAttribute+DebuggingModes.Default | System.Diagnostics.DebuggableAttribute+DebuggingModes.DisableOptimizations | System.Diagnostics.DebuggableAttribute+DebuggingModes.IgnoreSymbolStoreSequencePoints | System.Diagnostics.DebuggableAttribute+DebuggingModes.EnableEditAndContinue)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyCompany("bcr")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyConfiguration("Debug")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyDescription(".NET Bindings for Datadog iOS SDK WebViewTracking")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyFileVersion("1.0.0.0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyInformationalVersion("1.0.0+[REDACTED_SOURCEGRAPH_TOKEN]")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyMetadata("IsTrimmable", "True")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyMetadata("RepositoryUrl", "https://github.com/brunck/datadog-dotnet-mobile-sdk-bindings")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyProduct("wvt")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyTitle("wvt")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.CompilationRelaxations(8)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.ReferenceAssembly</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.RuntimeCompatibility(WrapNonExceptionThrows=true)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Versioning.SupportedOSPlatform("iOS18.0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Versioning.TargetFramework(".NETCoreApp,Version=v9.0", FrameworkDisplayName=".NET 9.0")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.Versioning.TargetPlatform("iOS18.0")</AttributeName>
+        </Attribute>
+      </Attributes>
+    </Assembly>
+  </Assemblies>
+  <Remarks>
+  </Remarks>
+  <Copyright>
+  </Copyright>
+  <Types>
+    <Namespace Name="Datadog.iOS">
+    </Namespace>
+    <Namespace Name="Datadog.iOS.CrashReporting">
+      <Type Name="DDCrashReporter" Kind="Class" />
+    </Namespace>
+    <Namespace Name="Datadog.iOS.ObjC">
+      <Type Name="DDB3HTTPHeadersWriter" Kind="Class" />
+      <Type Name="DDBatchProcessingLevel" Kind="Enumeration" />
+      <Type Name="DDBatchSize" Kind="Enumeration" />
+      <Type Name="DDConfiguration" Kind="Class" />
+      <Type Name="DDDatadog" Kind="Class" />
+      <Type Name="DDDefaultUIKitRUMActionsPredicate" Kind="Class" />
+      <Type Name="DDDefaultUIKitRUMViewsPredicate" Kind="Class" />
+      <Type Name="DDHTTPHeadersWriter" Kind="Class" />
+      <Type Name="DDInjectEncoding" Kind="Enumeration" />
+      <Type Name="DDLogEvent" Kind="Class" />
+      <Type Name="DDLogEventAttributes" Kind="Class" />
+      <Type Name="DDLogEventBinaryImage" Kind="Class" />
+      <Type Name="DDLogEventCarrierInfo" Kind="Class" />
+      <Type Name="DDLogEventDd" Kind="Class" />
+      <Type Name="DDLogEventDeviceInfo" Kind="Class" />
+      <Type Name="DDLogEventError" Kind="Class" />
+      <Type Name="DDLogEventInterface" Kind="Enumeration" />
+      <Type Name="DDLogEventNetworkConnectionInfo" Kind="Class" />
+      <Type Name="DDLogEventOperatingSystem" Kind="Class" />
+      <Type Name="DDLogEventRadioAccessTechnology" Kind="Enumeration" />
+      <Type Name="DDLogEventReachability" Kind="Enumeration" />
+      <Type Name="DDLogEventStatus" Kind="Enumeration" />
+      <Type Name="DDLogEventUserInfo" Kind="Class" />
+      <Type Name="DDLogger" Kind="Class" />
+      <Type Name="DDLoggerConfiguration" Kind="Class" />
+      <Type Name="DDLogLevel" Kind="Enumeration" />
+      <Type Name="DDLogs" Kind="Class" />
+      <Type Name="DDLogsConfiguration" Kind="Class" />
+      <Type Name="DDOTelHTTPHeadersWriter" Kind="Class" />
+      <Type Name="DDRUM" Kind="Class" />
+      <Type Name="DDRUMAction" Kind="Class" />
+      <Type Name="DDRUMActionEvent" Kind="Class" />
+      <Type Name="DDRUMActionEventAccount" Kind="Class" />
+      <Type Name="DDRUMActionEventAction" Kind="Class" />
+      <Type Name="DDRUMActionEventActionActionType" Kind="Enumeration" />
+      <Type Name="DDRUMActionEventActionCrash" Kind="Class" />
+      <Type Name="DDRUMActionEventActionError" Kind="Class" />
+      <Type Name="DDRUMActionEventActionFrustration" Kind="Class" />
+      <Type Name="DDRUMActionEventActionFrustrationFrustrationType" Kind="Enumeration" />
+      <Type Name="DDRUMActionEventActionLongTask" Kind="Class" />
+      <Type Name="DDRUMActionEventActionResource" Kind="Class" />
+      <Type Name="DDRUMActionEventActionTarget" Kind="Class" />
+      <Type Name="DDRUMActionEventApplication" Kind="Class" />
+      <Type Name="DDRUMActionEventContainer" Kind="Class" />
+      <Type Name="DDRUMActionEventContainerSource" Kind="Enumeration" />
+      <Type Name="DDRUMActionEventContainerView" Kind="Class" />
+      <Type Name="DDRUMActionEventDD" Kind="Class" />
+      <Type Name="DDRUMActionEventDDAction" Kind="Class" />
+      <Type Name="DDRUMActionEventDDActionNameSource" Kind="Enumeration" />
+      <Type Name="DDRUMActionEventDDActionPosition" Kind="Class" />
+      <Type Name="DDRUMActionEventDDActionTarget" Kind="Class" />
+      <Type Name="DDRUMActionEventDDConfiguration" Kind="Class" />
+      <Type Name="DDRUMActionEventDDSession" Kind="Class" />
+      <Type Name="DDRUMActionEventDDSessionPlan" Kind="Enumeration" />
+      <Type Name="DDRUMActionEventDDSessionRUMSessionPrecondition" Kind="Enumeration" />
+      <Type Name="DDRUMActionEventDisplay" Kind="Class" />
+      <Type Name="DDRUMActionEventDisplayViewport" Kind="Class" />
+      <Type Name="DDRUMActionEventRUMCITest" Kind="Class" />
+      <Type Name="DDRUMActionEventRUMConnectivity" Kind="Class" />
+      <Type Name="DDRUMActionEventRUMConnectivityCellular" Kind="Class" />
+      <Type Name="DDRUMActionEventRUMConnectivityEffectiveType" Kind="Enumeration" />
+      <Type Name="DDRUMActionEventRUMConnectivityInterfaces" Kind="Enumeration" />
+      <Type Name="DDRUMActionEventRUMConnectivityStatus" Kind="Enumeration" />
+      <Type Name="DDRUMActionEventRUMDevice" Kind="Class" />
+      <Type Name="DDRUMActionEventRUMDeviceRUMDeviceType" Kind="Enumeration" />
+      <Type Name="DDRUMActionEventRUMEventAttributes" Kind="Class" />
+      <Type Name="DDRUMActionEventRUMOperatingSystem" Kind="Class" />
+      <Type Name="DDRUMActionEventRUMSyntheticsTest" Kind="Class" />
+      <Type Name="DDRUMActionEventRUMUser" Kind="Class" />
+      <Type Name="DDRUMActionEventSession" Kind="Class" />
+      <Type Name="DDRUMActionEventSessionRUMSessionType" Kind="Enumeration" />
+      <Type Name="DDRUMActionEventSource" Kind="Enumeration" />
+      <Type Name="DDRUMActionEventView" Kind="Class" />
+      <Type Name="DDRUMActionType" Kind="Enumeration" />
+      <Type Name="DDRUMConfiguration" Kind="Class" />
+      <Type Name="DDRUMErrorEvent" Kind="Class" />
+      <Type Name="DDRUMErrorEventAccount" Kind="Class" />
+      <Type Name="DDRUMErrorEventAction" Kind="Class" />
+      <Type Name="DDRUMErrorEventActionRUMActionID" Kind="Class" />
+      <Type Name="DDRUMErrorEventApplication" Kind="Class" />
+      <Type Name="DDRUMErrorEventContainer" Kind="Class" />
+      <Type Name="DDRUMErrorEventContainerSource" Kind="Enumeration" />
+      <Type Name="DDRUMErrorEventContainerView" Kind="Class" />
+      <Type Name="DDRUMErrorEventDD" Kind="Class" />
+      <Type Name="DDRUMErrorEventDDConfiguration" Kind="Class" />
+      <Type Name="DDRUMErrorEventDDSession" Kind="Class" />
+      <Type Name="DDRUMErrorEventDDSessionPlan" Kind="Enumeration" />
+      <Type Name="DDRUMErrorEventDDSessionRUMSessionPrecondition" Kind="Enumeration" />
+      <Type Name="DDRUMErrorEventDisplay" Kind="Class" />
+      <Type Name="DDRUMErrorEventDisplayViewport" Kind="Class" />
+      <Type Name="DDRUMErrorEventError" Kind="Class" />
+      <Type Name="DDRUMErrorEventErrorBinaryImages" Kind="Class" />
+      <Type Name="DDRUMErrorEventErrorCategory" Kind="Enumeration" />
+      <Type Name="DDRUMErrorEventErrorCauses" Kind="Class" />
+      <Type Name="DDRUMErrorEventErrorCausesSource" Kind="Enumeration" />
+      <Type Name="DDRUMErrorEventErrorCSP" Kind="Class" />
+      <Type Name="DDRUMErrorEventErrorCSPDisposition" Kind="Enumeration" />
+      <Type Name="DDRUMErrorEventErrorHandling" Kind="Enumeration" />
+      <Type Name="DDRUMErrorEventErrorMeta" Kind="Class" />
+      <Type Name="DDRUMErrorEventErrorResource" Kind="Class" />
+      <Type Name="DDRUMErrorEventErrorResourceProvider" Kind="Class" />
+      <Type Name="DDRUMErrorEventErrorResourceProviderProviderType" Kind="Enumeration" />
+      <Type Name="DDRUMErrorEventErrorResourceRUMMethod" Kind="Enumeration" />
+      <Type Name="DDRUMErrorEventErrorSource" Kind="Enumeration" />
+      <Type Name="DDRUMErrorEventErrorSourceType" Kind="Enumeration" />
+      <Type Name="DDRUMErrorEventErrorThreads" Kind="Class" />
+      <Type Name="DDRUMErrorEventFeatureFlags" Kind="Class" />
+      <Type Name="DDRUMErrorEventFreeze" Kind="Class" />
+      <Type Name="DDRUMErrorEventRUMCITest" Kind="Class" />
+      <Type Name="DDRUMErrorEventRUMConnectivity" Kind="Class" />
+      <Type Name="DDRUMErrorEventRUMConnectivityCellular" Kind="Class" />
+      <Type Name="DDRUMErrorEventRUMConnectivityEffectiveType" Kind="Enumeration" />
+      <Type Name="DDRUMErrorEventRUMConnectivityInterfaces" Kind="Enumeration" />
+      <Type Name="DDRUMErrorEventRUMConnectivityStatus" Kind="Enumeration" />
+      <Type Name="DDRUMErrorEventRUMDevice" Kind="Class" />
+      <Type Name="DDRUMErrorEventRUMDeviceRUMDeviceType" Kind="Enumeration" />
+      <Type Name="DDRUMErrorEventRUMEventAttributes" Kind="Class" />
+      <Type Name="DDRUMErrorEventRUMOperatingSystem" Kind="Class" />
+      <Type Name="DDRUMErrorEventRUMSyntheticsTest" Kind="Class" />
+      <Type Name="DDRUMErrorEventRUMUser" Kind="Class" />
+      <Type Name="DDRUMErrorEventSession" Kind="Class" />
+      <Type Name="DDRUMErrorEventSessionRUMSessionType" Kind="Enumeration" />
+      <Type Name="DDRUMErrorEventSource" Kind="Enumeration" />
+      <Type Name="DDRUMErrorEventView" Kind="Class" />
+      <Type Name="DDRUMErrorSource" Kind="Enumeration" />
+      <Type Name="DDRUMFirstPartyHostsTracing" Kind="Class" />
+      <Type Name="DDRUMLongTaskEvent" Kind="Class" />
+      <Type Name="DDRUMLongTaskEventAccount" Kind="Class" />
+      <Type Name="DDRUMLongTaskEventAction" Kind="Class" />
+      <Type Name="DDRUMLongTaskEventActionRUMActionID" Kind="Class" />
+      <Type Name="DDRUMLongTaskEventApplication" Kind="Class" />
+      <Type Name="DDRUMLongTaskEventContainer" Kind="Class" />
+      <Type Name="DDRUMLongTaskEventContainerSource" Kind="Enumeration" />
+      <Type Name="DDRUMLongTaskEventContainerView" Kind="Class" />
+      <Type Name="DDRUMLongTaskEventDD" Kind="Class" />
+      <Type Name="DDRUMLongTaskEventDDConfiguration" Kind="Class" />
+      <Type Name="DDRUMLongTaskEventDDSession" Kind="Class" />
+      <Type Name="DDRUMLongTaskEventDDSessionPlan" Kind="Enumeration" />
+      <Type Name="DDRUMLongTaskEventDDSessionRUMSessionPrecondition" Kind="Enumeration" />
+      <Type Name="DDRUMLongTaskEventDisplay" Kind="Class" />
+      <Type Name="DDRUMLongTaskEventDisplayViewport" Kind="Class" />
+      <Type Name="DDRUMLongTaskEventLongTask" Kind="Class" />
+      <Type Name="DDRUMLongTaskEventLongTaskEntryType" Kind="Enumeration" />
+      <Type Name="DDRUMLongTaskEventLongTaskScripts" Kind="Class" />
+      <Type Name="DDRUMLongTaskEventLongTaskScriptsInvokerType" Kind="Enumeration" />
+      <Type Name="DDRUMLongTaskEventRUMCITest" Kind="Class" />
+      <Type Name="DDRUMLongTaskEventRUMConnectivity" Kind="Class" />
+      <Type Name="DDRUMLongTaskEventRUMConnectivityCellular" Kind="Class" />
+      <Type Name="DDRUMLongTaskEventRUMConnectivityEffectiveType" Kind="Enumeration" />
+      <Type Name="DDRUMLongTaskEventRUMConnectivityInterfaces" Kind="Enumeration" />
+      <Type Name="DDRUMLongTaskEventRUMConnectivityStatus" Kind="Enumeration" />
+      <Type Name="DDRUMLongTaskEventRUMDevice" Kind="Class" />
+      <Type Name="DDRUMLongTaskEventRUMDeviceRUMDeviceType" Kind="Enumeration" />
+      <Type Name="DDRUMLongTaskEventRUMEventAttributes" Kind="Class" />
+      <Type Name="DDRUMLongTaskEventRUMOperatingSystem" Kind="Class" />
+      <Type Name="DDRUMLongTaskEventRUMSyntheticsTest" Kind="Class" />
+      <Type Name="DDRUMLongTaskEventRUMUser" Kind="Class" />
+      <Type Name="DDRUMLongTaskEventSession" Kind="Class" />
+      <Type Name="DDRUMLongTaskEventSessionRUMSessionType" Kind="Enumeration" />
+      <Type Name="DDRUMLongTaskEventSource" Kind="Enumeration" />
+      <Type Name="DDRUMLongTaskEventView" Kind="Class" />
+      <Type Name="DDRUMMethod" Kind="Enumeration" />
+      <Type Name="DDRUMMonitor" Kind="Class" />
+      <Type Name="DDRUMResourceEvent" Kind="Class" />
+      <Type Name="DDRUMResourceEventAccount" Kind="Class" />
+      <Type Name="DDRUMResourceEventAction" Kind="Class" />
+      <Type Name="DDRUMResourceEventActionRUMActionID" Kind="Class" />
+      <Type Name="DDRUMResourceEventApplication" Kind="Class" />
+      <Type Name="DDRUMResourceEventContainer" Kind="Class" />
+      <Type Name="DDRUMResourceEventContainerSource" Kind="Enumeration" />
+      <Type Name="DDRUMResourceEventContainerView" Kind="Class" />
+      <Type Name="DDRUMResourceEventDD" Kind="Class" />
+      <Type Name="DDRUMResourceEventDDConfiguration" Kind="Class" />
+      <Type Name="DDRUMResourceEventDDSession" Kind="Class" />
+      <Type Name="DDRUMResourceEventDDSessionPlan" Kind="Enumeration" />
+      <Type Name="DDRUMResourceEventDDSessionRUMSessionPrecondition" Kind="Enumeration" />
+      <Type Name="DDRUMResourceEventDisplay" Kind="Class" />
+      <Type Name="DDRUMResourceEventDisplayViewport" Kind="Class" />
+      <Type Name="DDRUMResourceEventResource" Kind="Class" />
+      <Type Name="DDRUMResourceEventResourceConnect" Kind="Class" />
+      <Type Name="DDRUMResourceEventResourceDeliveryType" Kind="Enumeration" />
+      <Type Name="DDRUMResourceEventResourceDNS" Kind="Class" />
+      <Type Name="DDRUMResourceEventResourceDownload" Kind="Class" />
+      <Type Name="DDRUMResourceEventResourceFirstByte" Kind="Class" />
+      <Type Name="DDRUMResourceEventResourceGraphql" Kind="Class" />
+      <Type Name="DDRUMResourceEventResourceGraphqlOperationType" Kind="Enumeration" />
+      <Type Name="DDRUMResourceEventResourceProvider" Kind="Class" />
+      <Type Name="DDRUMResourceEventResourceProviderProviderType" Kind="Enumeration" />
+      <Type Name="DDRUMResourceEventResourceRedirect" Kind="Class" />
+      <Type Name="DDRUMResourceEventResourceRenderBlockingStatus" Kind="Enumeration" />
+      <Type Name="DDRUMResourceEventResourceResourceType" Kind="Enumeration" />
+      <Type Name="DDRUMResourceEventResourceRUMMethod" Kind="Enumeration" />
+      <Type Name="DDRUMResourceEventResourceSSL" Kind="Class" />
+      <Type Name="DDRUMResourceEventResourceWorker" Kind="Class" />
+      <Type Name="DDRUMResourceEventRUMCITest" Kind="Class" />
+      <Type Name="DDRUMResourceEventRUMConnectivity" Kind="Class" />
+      <Type Name="DDRUMResourceEventRUMConnectivityCellular" Kind="Class" />
+      <Type Name="DDRUMResourceEventRUMConnectivityEffectiveType" Kind="Enumeration" />
+      <Type Name="DDRUMResourceEventRUMConnectivityInterfaces" Kind="Enumeration" />
+      <Type Name="DDRUMResourceEventRUMConnectivityStatus" Kind="Enumeration" />
+      <Type Name="DDRUMResourceEventRUMDevice" Kind="Class" />
+      <Type Name="DDRUMResourceEventRUMDeviceRUMDeviceType" Kind="Enumeration" />
+      <Type Name="DDRUMResourceEventRUMEventAttributes" Kind="Class" />
+      <Type Name="DDRUMResourceEventRUMOperatingSystem" Kind="Class" />
+      <Type Name="DDRUMResourceEventRUMSyntheticsTest" Kind="Class" />
+      <Type Name="DDRUMResourceEventRUMUser" Kind="Class" />
+      <Type Name="DDRUMResourceEventSession" Kind="Class" />
+      <Type Name="DDRUMResourceEventSessionRUMSessionType" Kind="Enumeration" />
+      <Type Name="DDRUMResourceEventSource" Kind="Enumeration" />
+      <Type Name="DDRUMResourceEventView" Kind="Class" />
+      <Type Name="DDRUMResourceType" Kind="Enumeration" />
+      <Type Name="DDRUMURLSessionTracking" Kind="Class" />
+      <Type Name="DDRUMView" Kind="Class" />
+      <Type Name="DDRUMViewEvent" Kind="Class" />
+      <Type Name="DDRUMViewEventAccount" Kind="Class" />
+      <Type Name="DDRUMViewEventApplication" Kind="Class" />
+      <Type Name="DDRUMViewEventContainer" Kind="Class" />
+      <Type Name="DDRUMViewEventContainerSource" Kind="Enumeration" />
+      <Type Name="DDRUMViewEventContainerView" Kind="Class" />
+      <Type Name="DDRUMViewEventDD" Kind="Class" />
+      <Type Name="DDRUMViewEventDDCLS" Kind="Class" />
+      <Type Name="DDRUMViewEventDDConfiguration" Kind="Class" />
+      <Type Name="DDRUMViewEventDDPageStates" Kind="Class" />
+      <Type Name="DDRUMViewEventDDPageStatesState" Kind="Enumeration" />
+      <Type Name="DDRUMViewEventDDReplayStats" Kind="Class" />
+      <Type Name="DDRUMViewEventDDSession" Kind="Class" />
+      <Type Name="DDRUMViewEventDDSessionPlan" Kind="Enumeration" />
+      <Type Name="DDRUMViewEventDDSessionRUMSessionPrecondition" Kind="Enumeration" />
+      <Type Name="DDRUMViewEventDisplay" Kind="Class" />
+      <Type Name="DDRUMViewEventDisplayScroll" Kind="Class" />
+      <Type Name="DDRUMViewEventDisplayViewport" Kind="Class" />
+      <Type Name="DDRUMViewEventFeatureFlags" Kind="Class" />
+      <Type Name="DDRUMViewEventPrivacy" Kind="Class" />
+      <Type Name="DDRUMViewEventPrivacyReplayLevel" Kind="Enumeration" />
+      <Type Name="DDRUMViewEventRUMCITest" Kind="Class" />
+      <Type Name="DDRUMViewEventRUMConnectivity" Kind="Class" />
+      <Type Name="DDRUMViewEventRUMConnectivityCellular" Kind="Class" />
+      <Type Name="DDRUMViewEventRUMConnectivityEffectiveType" Kind="Enumeration" />
+      <Type Name="DDRUMViewEventRUMConnectivityInterfaces" Kind="Enumeration" />
+      <Type Name="DDRUMViewEventRUMConnectivityStatus" Kind="Enumeration" />
+      <Type Name="DDRUMViewEventRUMDevice" Kind="Class" />
+      <Type Name="DDRUMViewEventRUMDeviceRUMDeviceType" Kind="Enumeration" />
+      <Type Name="DDRUMViewEventRUMEventAttributes" Kind="Class" />
+      <Type Name="DDRUMViewEventRUMOperatingSystem" Kind="Class" />
+      <Type Name="DDRUMViewEventRUMSyntheticsTest" Kind="Class" />
+      <Type Name="DDRUMViewEventRUMUser" Kind="Class" />
+      <Type Name="DDRUMViewEventSession" Kind="Class" />
+      <Type Name="DDRUMViewEventSessionRUMSessionType" Kind="Enumeration" />
+      <Type Name="DDRUMViewEventSource" Kind="Enumeration" />
+      <Type Name="DDRUMViewEventView" Kind="Class" />
+      <Type Name="DDRUMViewEventViewAction" Kind="Class" />
+      <Type Name="DDRUMViewEventViewCrash" Kind="Class" />
+      <Type Name="DDRUMViewEventViewError" Kind="Class" />
+      <Type Name="DDRUMViewEventViewFlutterBuildTime" Kind="Class" />
+      <Type Name="DDRUMViewEventViewFlutterRasterTime" Kind="Class" />
+      <Type Name="DDRUMViewEventViewFrozenFrame" Kind="Class" />
+      <Type Name="DDRUMViewEventViewFrustration" Kind="Class" />
+      <Type Name="DDRUMViewEventViewInForegroundPeriods" Kind="Class" />
+      <Type Name="DDRUMViewEventViewJsRefreshRate" Kind="Class" />
+      <Type Name="DDRUMViewEventViewLoadingType" Kind="Enumeration" />
+      <Type Name="DDRUMViewEventViewLongTask" Kind="Class" />
+      <Type Name="DDRUMViewEventViewPerformance" Kind="Class" />
+      <Type Name="DDRUMViewEventViewPerformanceCLS" Kind="Class" />
+      <Type Name="DDRUMViewEventViewPerformanceCLSCurrentRect" Kind="Class" />
+      <Type Name="DDRUMViewEventViewPerformanceCLSPreviousRect" Kind="Class" />
+      <Type Name="DDRUMViewEventViewPerformanceFBC" Kind="Class" />
+      <Type Name="DDRUMViewEventViewPerformanceFCP" Kind="Class" />
+      <Type Name="DDRUMViewEventViewPerformanceFID" Kind="Class" />
+      <Type Name="DDRUMViewEventViewPerformanceINP" Kind="Class" />
+      <Type Name="DDRUMViewEventViewPerformanceLCP" Kind="Class" />
+      <Type Name="DDRUMViewEventViewResource" Kind="Class" />
+      <Type Name="DDRUMViewEventViewSlowFrames" Kind="Class" />
+      <Type Name="DDRUMVitalEvent" Kind="Class" />
+      <Type Name="DDRUMVitalEventAccount" Kind="Class" />
+      <Type Name="DDRUMVitalEventApplication" Kind="Class" />
+      <Type Name="DDRUMVitalEventContainer" Kind="Class" />
+      <Type Name="DDRUMVitalEventContainerSource" Kind="Enumeration" />
+      <Type Name="DDRUMVitalEventContainerView" Kind="Class" />
+      <Type Name="DDRUMVitalEventDD" Kind="Class" />
+      <Type Name="DDRUMVitalEventDDConfiguration" Kind="Class" />
+      <Type Name="DDRUMVitalEventDDSession" Kind="Class" />
+      <Type Name="DDRUMVitalEventDDSessionPlan" Kind="Enumeration" />
+      <Type Name="DDRUMVitalEventDDSessionRUMSessionPrecondition" Kind="Enumeration" />
+      <Type Name="DDRUMVitalEventDDVital" Kind="Class" />
+      <Type Name="DDRUMVitalEventDisplay" Kind="Class" />
+      <Type Name="DDRUMVitalEventDisplayViewport" Kind="Class" />
+      <Type Name="DDRUMVitalEventRUMCITest" Kind="Class" />
+      <Type Name="DDRUMVitalEventRUMConnectivity" Kind="Class" />
+      <Type Name="DDRUMVitalEventRUMConnectivityCellular" Kind="Class" />
+      <Type Name="DDRUMVitalEventRUMConnectivityEffectiveType" Kind="Enumeration" />
+      <Type Name="DDRUMVitalEventRUMConnectivityInterfaces" Kind="Enumeration" />
+      <Type Name="DDRUMVitalEventRUMConnectivityStatus" Kind="Enumeration" />
+      <Type Name="DDRUMVitalEventRUMDevice" Kind="Class" />
+      <Type Name="DDRUMVitalEventRUMDeviceRUMDeviceType" Kind="Enumeration" />
+      <Type Name="DDRUMVitalEventRUMEventAttributes" Kind="Class" />
+      <Type Name="DDRUMVitalEventRUMOperatingSystem" Kind="Class" />
+      <Type Name="DDRUMVitalEventRUMSyntheticsTest" Kind="Class" />
+      <Type Name="DDRUMVitalEventRUMUser" Kind="Class" />
+      <Type Name="DDRUMVitalEventSession" Kind="Class" />
+      <Type Name="DDRUMVitalEventSessionRUMSessionType" Kind="Enumeration" />
+      <Type Name="DDRUMVitalEventSource" Kind="Enumeration" />
+      <Type Name="DDRUMVitalEventView" Kind="Class" />
+      <Type Name="DDRUMVitalEventVital" Kind="Class" />
+      <Type Name="DDRUMVitalEventVitalVitalType" Kind="Enumeration" />
+      <Type Name="DDRUMVitalsFrequency" Kind="Enumeration" />
+      <Type Name="DDSDKVerbosityLevel" Kind="Enumeration" />
+      <Type Name="DDSite" Kind="Class" />
+      <Type Name="DDTelemetryConfigurationEvent" Kind="Class" />
+      <Type Name="DDTelemetryConfigurationEventAction" Kind="Class" />
+      <Type Name="DDTelemetryConfigurationEventApplication" Kind="Class" />
+      <Type Name="DDTelemetryConfigurationEventDD" Kind="Class" />
+      <Type Name="DDTelemetryConfigurationEventSession" Kind="Class" />
+      <Type Name="DDTelemetryConfigurationEventSource" Kind="Enumeration" />
+      <Type Name="DDTelemetryConfigurationEventTelemetry" Kind="Class" />
+      <Type Name="DDTelemetryConfigurationEventTelemetryConfiguration" Kind="Class" />
+      <Type Name="DDTelemetryConfigurationEventTelemetryConfigurationForwardConsoleLogs" Kind="Class" />
+      <Type Name="DDTelemetryConfigurationEventTelemetryConfigurationForwardReports" Kind="Class" />
+      <Type Name="DDTelemetryConfigurationEventTelemetryConfigurationPlugins" Kind="Class" />
+      <Type Name="DDTelemetryConfigurationEventTelemetryConfigurationSelectedTracingPropagators" Kind="Enumeration" />
+      <Type Name="DDTelemetryConfigurationEventTelemetryConfigurationSessionPersistence" Kind="Enumeration" />
+      <Type Name="DDTelemetryConfigurationEventTelemetryConfigurationTraceContextInjection" Kind="Enumeration" />
+      <Type Name="DDTelemetryConfigurationEventTelemetryConfigurationTrackFeatureFlagsForEvents" Kind="Enumeration" />
+      <Type Name="DDTelemetryConfigurationEventTelemetryConfigurationTrackingConsent" Kind="Enumeration" />
+      <Type Name="DDTelemetryConfigurationEventTelemetryConfigurationViewTrackingStrategy" Kind="Enumeration" />
+      <Type Name="DDTelemetryConfigurationEventTelemetryRUMTelemetryDevice" Kind="Class" />
+      <Type Name="DDTelemetryConfigurationEventTelemetryRUMTelemetryOperatingSystem" Kind="Class" />
+      <Type Name="DDTelemetryConfigurationEventView" Kind="Class" />
+      <Type Name="DDTelemetryDebugEvent" Kind="Class" />
+      <Type Name="DDTelemetryDebugEventAction" Kind="Class" />
+      <Type Name="DDTelemetryDebugEventApplication" Kind="Class" />
+      <Type Name="DDTelemetryDebugEventDD" Kind="Class" />
+      <Type Name="DDTelemetryDebugEventSession" Kind="Class" />
+      <Type Name="DDTelemetryDebugEventSource" Kind="Enumeration" />
+      <Type Name="DDTelemetryDebugEventTelemetry" Kind="Class" />
+      <Type Name="DDTelemetryDebugEventTelemetryRUMTelemetryDevice" Kind="Class" />
+      <Type Name="DDTelemetryDebugEventTelemetryRUMTelemetryOperatingSystem" Kind="Class" />
+      <Type Name="DDTelemetryDebugEventView" Kind="Class" />
+      <Type Name="DDTelemetryErrorEvent" Kind="Class" />
+      <Type Name="DDTelemetryErrorEventAction" Kind="Class" />
+      <Type Name="DDTelemetryErrorEventApplication" Kind="Class" />
+      <Type Name="DDTelemetryErrorEventDD" Kind="Class" />
+      <Type Name="DDTelemetryErrorEventSession" Kind="Class" />
+      <Type Name="DDTelemetryErrorEventSource" Kind="Enumeration" />
+      <Type Name="DDTelemetryErrorEventTelemetry" Kind="Class" />
+      <Type Name="DDTelemetryErrorEventTelemetryError" Kind="Class" />
+      <Type Name="DDTelemetryErrorEventTelemetryRUMTelemetryDevice" Kind="Class" />
+      <Type Name="DDTelemetryErrorEventTelemetryRUMTelemetryOperatingSystem" Kind="Class" />
+      <Type Name="DDTelemetryErrorEventView" Kind="Class" />
+      <Type Name="DDTrace" Kind="Class" />
+      <Type Name="DDTraceConfiguration" Kind="Class" />
+      <Type Name="DDTraceContextInjection" Kind="Enumeration" />
+      <Type Name="DDTraceFirstPartyHostsTracing" Kind="Class" />
+      <Type Name="DDTracer" Kind="Class" />
+      <Type Name="DDTraceSamplingStrategy" Kind="Class" />
+      <Type Name="DDTraceURLSessionTracking" Kind="Class" />
+      <Type Name="DDTracingHeaderType" Kind="Class" />
+      <Type Name="DDTrackingConsent" Kind="Class" />
+      <Type Name="DDUploadFrequency" Kind="Enumeration" />
+      <Type Name="DDURLSessionInstrumentation" Kind="Class" />
+      <Type Name="DDURLSessionInstrumentationConfiguration" Kind="Class" />
+      <Type Name="DDURLSessionInstrumentationFirstPartyHostsTracing" Kind="Class" />
+      <Type Name="DDW3CHTTPHeadersWriter" Kind="Class" />
+      <Type Name="IDDDataEncryption" Kind="Interface" />
+      <Type Name="IDDServerDateProvider" Kind="Interface" />
+      <Type Name="IDDUIKitRUMActionsPredicate" Kind="Interface" />
+      <Type Name="IDDUIKitRUMViewsPredicate" Kind="Interface" />
+      <Type Name="IDDUIPressRUMActionsPredicate" Kind="Interface" />
+      <Type Name="IDDUITouchRUMActionsPredicate" Kind="Interface" />
+      <Type Name="IOTSpan" Kind="Interface" />
+      <Type Name="IOTSpanContext" Kind="Interface" />
+      <Type Name="IOTTracer" Kind="Interface" />
+      <Type Name="OT" Kind="Class" />
+    </Namespace>
+    <Namespace Name="Datadog.iOS.SessionReplay">
+      <Type Name="DDImagePrivacyLevel" Kind="Enumeration" />
+      <Type Name="DDImagePrivacyLevelOverride" Kind="Enumeration" />
+      <Type Name="DDSessionReplay" Kind="Class" />
+      <Type Name="DDSessionReplayConfiguration" Kind="Class" />
+      <Type Name="DDSessionReplayConfigurationPrivacyLevel" Kind="Enumeration" />
+      <Type Name="DDSessionReplayPrivacyOverrides" Kind="Class" />
+      <Type Name="DDTextAndInputPrivacyLevel" Kind="Enumeration" />
+      <Type Name="DDTextAndInputPrivacyLevelOverride" Kind="Enumeration" />
+      <Type Name="DDTouchPrivacyLevel" Kind="Enumeration" />
+      <Type Name="DDTouchPrivacyLevelOverride" Kind="Enumeration" />
+    </Namespace>
+    <Namespace Name="Datadog.iOS.WebViewTracking">
+      <Type Name="DDWebViewTracking" Kind="Class" />
+    </Namespace>
+  </Types>
+  <Title>Untitled</Title>
+</Overview>

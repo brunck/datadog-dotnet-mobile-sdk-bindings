@@ -1,0 +1,277 @@
+<doc>
+    <assembly>
+        <name>sr</name>
+    </assembly>
+    <members>
+        <member name="T:Datadog.iOS.SessionReplay.DDImagePrivacyLevel">
+            <summary>Available image privacy levels for image masking.</summary>
+            <remarks />
+        </member>
+        <member name="F:Datadog.iOS.SessionReplay.DDImagePrivacyLevel.MaskAll">
+            <summary>No images will be recorded.</summary>
+        </member>
+        <member name="F:Datadog.iOS.SessionReplay.DDImagePrivacyLevel.MaskNonBundledOnly">
+            <summary>Only SF Symbols and images loaded using <c>UIImage(named:)</c> that are bundled within the application package will be recorded.</summary>
+        </member>
+        <member name="F:Datadog.iOS.SessionReplay.DDImagePrivacyLevel.MaskNone">
+            <summary>All images will be recorded, including the ones downloaded from the Internet or generated during the app runtime.</summary>
+        </member>
+        <member name="T:Datadog.iOS.SessionReplay.DDImagePrivacyLevelOverride">
+            <summary />
+            <remarks />
+        </member>
+        <member name="F:Datadog.iOS.SessionReplay.DDImagePrivacyLevelOverride.MaskAll">
+            <summary />
+        </member>
+        <member name="F:Datadog.iOS.SessionReplay.DDImagePrivacyLevelOverride.MaskNonBundledOnly">
+            <summary />
+        </member>
+        <member name="F:Datadog.iOS.SessionReplay.DDImagePrivacyLevelOverride.MaskNone">
+            <summary />
+        </member>
+        <member name="F:Datadog.iOS.SessionReplay.DDImagePrivacyLevelOverride.None">
+            <summary />
+        </member>
+        <member name="T:Datadog.iOS.SessionReplay.DDSessionReplay">
+            <summary>An entry point to the Datadog Session Replay feature.</summary>
+            <remarks />
+        </member>
+        <member name="C:Datadog.iOS.SessionReplay.DDSessionReplay(Foundation.NSObjectFlag)">
+            <param name="t" />
+            <summary />
+            <remarks />
+        </member>
+        <member name="C:Datadog.iOS.SessionReplay.DDSessionReplay(ObjCRuntime.NativeHandle)">
+            <param name="handle" />
+            <summary />
+            <remarks />
+        </member>
+        <member name="P:Datadog.iOS.SessionReplay.DDSessionReplay.ClassHandle">
+            <summary />
+            <value />
+            <remarks />
+        </member>
+        <member name="M:Datadog.iOS.SessionReplay.DDSessionReplay.Enable(Datadog.iOS.SessionReplay.DDSessionReplayConfiguration)">
+            <param name="configuration">Configuration of the feature.</param>
+            <summary>
+          Enables Datadog Session Replay feature.
+        </summary>
+            <remarks>
+                <para>Recording will start automatically after enabling Session Replay.</para>
+                <para>Note: Session Replay requires the RUM feature to be enabled.</para>
+            </remarks>
+        </member>
+        <member name="M:Datadog.iOS.SessionReplay.DDSessionReplay.StartRecording">
+            <summary>Starts the recording manually.</summary>
+            <remarks />
+        </member>
+        <member name="M:Datadog.iOS.SessionReplay.DDSessionReplay.StopRecording">
+            <summary>Stops the recording manually.</summary>
+            <remarks />
+        </member>
+        <member name="T:Datadog.iOS.SessionReplay.DDSessionReplayConfiguration">
+            <summary>Session Replay feature configuration.</summary>
+            <remarks />
+        </member>
+        <member name="C:Datadog.iOS.SessionReplay.DDSessionReplayConfiguration(Foundation.NSObjectFlag)">
+            <param name="t" />
+            <summary />
+            <remarks />
+        </member>
+        <member name="C:Datadog.iOS.SessionReplay.DDSessionReplayConfiguration(ObjCRuntime.NativeHandle)">
+            <param name="handle" />
+            <summary />
+            <remarks />
+        </member>
+        <member name="C:Datadog.iOS.SessionReplay.DDSessionReplayConfiguration(System.Single,Datadog.iOS.SessionReplay.DDTextAndInputPrivacyLevel,Datadog.iOS.SessionReplay.DDImagePrivacyLevel,Datadog.iOS.SessionReplay.DDTouchPrivacyLevel)">
+            <param name="replaySampleRate" />
+            <param name="textAndInputPrivacyLevel" />
+            <param name="imagePrivacyLevel" />
+            <param name="touchPrivacyLevel" />
+            <summary />
+            <remarks />
+        </member>
+        <member name="C:Datadog.iOS.SessionReplay.DDSessionReplayConfiguration(System.Single,Datadog.iOS.SessionReplay.DDTextAndInputPrivacyLevel,Datadog.iOS.SessionReplay.DDImagePrivacyLevel,Datadog.iOS.SessionReplay.DDTouchPrivacyLevel,Foundation.NSDictionary{Foundation.NSString,Foundation.NSNumber})">
+            <param name="replaySampleRate">The sampling rate for Session Replay. It is applied in addition to the RUM session sample rate.</param>
+            <param name="textAndInputPrivacyLevel">The way texts and inputs (e.g. label, textfield, checkbox) should be masked. Default: <c>MaskAll</c>.</param>
+            <param name="imagePrivacyLevel">Image recording privacy level. Default: <c>MaskAll</c>.</param>
+            <param name="touchPrivacyLevel">The way user touches (e.g. tap) should be masked. Default: <c>Hide</c>.</param>
+            <param name="featureFlags">Experimental feature flags.</param>
+            <summary>Creates Session Replay configuration.</summary>
+            <remarks />
+        </member>
+        <member name="P:Datadog.iOS.SessionReplay.DDSessionReplayConfiguration.ClassHandle">
+            <summary />
+            <value />
+            <remarks />
+        </member>
+        <member name="P:Datadog.iOS.SessionReplay.DDSessionReplayConfiguration.CustomEndpoint">
+            <summary>Custom server url for sending replay data. Default: <c>NULL</c>. </summary>
+            <value />
+            <remarks />
+        </member>
+        <member name="P:Datadog.iOS.SessionReplay.DDSessionReplayConfiguration.FeatureFlags">
+            <summary />
+            <value />
+            <remarks />
+        </member>
+        <member name="P:Datadog.iOS.SessionReplay.DDSessionReplayConfiguration.ImagePrivacyLevel">
+            <summary>
+                <para>Defines the way images should be masked.</para>
+                <para>Default: <c>MaskAll</c>.</para>
+            </summary>
+            <value />
+            <remarks />
+        </member>
+        <member name="P:Datadog.iOS.SessionReplay.DDSessionReplayConfiguration.ReplaySampleRate">
+            <summary>
+                <para>The sampling rate for Session Replay. It is applied in addition to the RUM session sample rate.</para>
+                <para>It must be a number between 0.0 and 100.0, where 0 means no replays will be recorded and 100 means all RUM sessions will contain replay.</para>
+            </summary>
+            <value />
+            <remarks>
+          Note: This sample rate is applied in addition to the RUM sample rate. For example, if RUM
+          uses a sample rate of 80%
+          and Session Replay uses a sample rate of 20%, it means that out of all user sessions, 80%
+          will be included in RUM,
+          and within those sessions, only 20% will have replays.
+        </remarks>
+        </member>
+        <member name="P:Datadog.iOS.SessionReplay.DDSessionReplayConfiguration.StartRecordingImmediately">
+            <summary>
+                <para>Defines if the recording should start automatically. When <c>true</c>, the recording
+            starts automatically; when <c>false</c> it doesn't, and the recording will need to be
+            started manually.</para>
+                <para>Default: <c>true</c>.</para>
+            </summary>
+            <value />
+            <remarks />
+        </member>
+        <member name="P:Datadog.iOS.SessionReplay.DDSessionReplayConfiguration.TextAndInputPrivacyLevel">
+            <summary>
+                <para>Defines the way texts and inputs (e.g. labels, textfields, checkboxes) should be
+            masked.</para>
+                <para>Default: <c>MaskAll</c>.</para>
+            </summary>
+            <value />
+            <remarks />
+        </member>
+        <member name="P:Datadog.iOS.SessionReplay.DDSessionReplayConfiguration.TouchPrivacyLevel">
+            <summary>
+                <para>Defines the way user touches (e.g. tap) should be masked.</para>
+                <para>Default: <c>Hide</c>.</para>
+            </summary>
+            <value />
+            <remarks />
+        </member>
+        <member name="T:Datadog.iOS.SessionReplay.DDSessionReplayConfigurationPrivacyLevel">
+            <summary>Available privacy levels for content masking.</summary>
+            <remarks />
+        </member>
+        <member name="F:Datadog.iOS.SessionReplay.DDSessionReplayConfigurationPrivacyLevel.Allow">
+            <summary>Record all content.</summary>
+        </member>
+        <member name="F:Datadog.iOS.SessionReplay.DDSessionReplayConfigurationPrivacyLevel.Mask">
+            <summary>Mask all content.</summary>
+        </member>
+        <member name="F:Datadog.iOS.SessionReplay.DDSessionReplayConfigurationPrivacyLevel.MaskUserInput">
+            <summary>Mask input elements, but record all other content.</summary>
+        </member>
+        <member name="T:Datadog.iOS.SessionReplay.DDSessionReplayPrivacyOverrides">
+            <summary />
+            <remarks />
+        </member>
+        <member name="C:Datadog.iOS.SessionReplay.DDSessionReplayPrivacyOverrides(Foundation.NSObjectFlag)">
+            <param name="t" />
+            <summary />
+            <remarks />
+        </member>
+        <member name="C:Datadog.iOS.SessionReplay.DDSessionReplayPrivacyOverrides(ObjCRuntime.NativeHandle)">
+            <param name="handle" />
+            <summary />
+            <remarks />
+        </member>
+        <member name="C:Datadog.iOS.SessionReplay.DDSessionReplayPrivacyOverrides(UIKit.UIView)">
+            <param name="view" />
+            <summary />
+            <remarks />
+        </member>
+        <member name="P:Datadog.iOS.SessionReplay.DDSessionReplayPrivacyOverrides.ClassHandle">
+            <summary />
+            <value />
+            <remarks />
+        </member>
+        <member name="P:Datadog.iOS.SessionReplay.DDSessionReplayPrivacyOverrides.Hide">
+            <summary />
+            <value />
+            <remarks />
+        </member>
+        <member name="P:Datadog.iOS.SessionReplay.DDSessionReplayPrivacyOverrides.ImagePrivacy">
+            <summary />
+            <value />
+            <remarks />
+        </member>
+        <member name="P:Datadog.iOS.SessionReplay.DDSessionReplayPrivacyOverrides.TextAndInputPrivacy">
+            <summary />
+            <value />
+            <remarks />
+        </member>
+        <member name="P:Datadog.iOS.SessionReplay.DDSessionReplayPrivacyOverrides.TouchPrivacy">
+            <summary />
+            <value />
+            <remarks />
+        </member>
+        <member name="T:Datadog.iOS.SessionReplay.DDTextAndInputPrivacyLevel">
+            <summary>Available privacy levels for text and input masking.</summary>
+            <remarks />
+        </member>
+        <member name="F:Datadog.iOS.SessionReplay.DDTextAndInputPrivacyLevel.MaskAll">
+            <summary>Mask all text and input.</summary>
+        </member>
+        <member name="F:Datadog.iOS.SessionReplay.DDTextAndInputPrivacyLevel.MaskAllInputs">
+            <summary>Mask all text and input, eg. textfields, switches, checkboxes.</summary>
+        </member>
+        <member name="F:Datadog.iOS.SessionReplay.DDTextAndInputPrivacyLevel.MaskSensitiveInputs">
+            <summary>Show all text except sensitive input (eg. password fields).</summary>
+        </member>
+        <member name="T:Datadog.iOS.SessionReplay.DDTextAndInputPrivacyLevelOverride">
+            <summary />
+            <remarks />
+        </member>
+        <member name="F:Datadog.iOS.SessionReplay.DDTextAndInputPrivacyLevelOverride.MaskAll">
+            <summary />
+        </member>
+        <member name="F:Datadog.iOS.SessionReplay.DDTextAndInputPrivacyLevelOverride.MaskAllInputs">
+            <summary />
+        </member>
+        <member name="F:Datadog.iOS.SessionReplay.DDTextAndInputPrivacyLevelOverride.MaskSensitiveInputs">
+            <summary />
+        </member>
+        <member name="F:Datadog.iOS.SessionReplay.DDTextAndInputPrivacyLevelOverride.None">
+            <summary />
+        </member>
+        <member name="T:Datadog.iOS.SessionReplay.DDTouchPrivacyLevel">
+            <summary>Available privacy levels for content masking.</summary>
+            <remarks />
+        </member>
+        <member name="F:Datadog.iOS.SessionReplay.DDTouchPrivacyLevel.Hide">
+            <summary>Hide all touches.</summary>
+        </member>
+        <member name="F:Datadog.iOS.SessionReplay.DDTouchPrivacyLevel.Show">
+            <summary>Show all touches.</summary>
+        </member>
+        <member name="T:Datadog.iOS.SessionReplay.DDTouchPrivacyLevelOverride">
+            <summary />
+            <remarks />
+        </member>
+        <member name="F:Datadog.iOS.SessionReplay.DDTouchPrivacyLevelOverride.Hide">
+            <summary />
+        </member>
+        <member name="F:Datadog.iOS.SessionReplay.DDTouchPrivacyLevelOverride.None">
+            <summary />
+        </member>
+        <member name="F:Datadog.iOS.SessionReplay.DDTouchPrivacyLevelOverride.Show">
+            <summary />
+        </member>
+    </members>
+</doc>

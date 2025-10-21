@@ -1,0 +1,130 @@
+<Type Name="IDDDataEncryption" FullName="Datadog.iOS.ObjC.IDDDataEncryption">
+  <TypeSignature Language="C#" Value="public interface IDDDataEncryption : IDisposable, ObjCRuntime.INativeObject" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDDDataEncryption implements class ObjCRuntime.INativeObject, class System.IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>objc</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>ObjCRuntime.INativeObject</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>Foundation.Protocol(Name="_TtP11DatadogObjc16DDDataEncryption_", WrapperType=typeof(Datadog.iOS.ObjC.DDDataEncryptionWrapper))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.ProtocolMember(IsProperty=false, IsRequired=true, IsStatic=false, Name="Encrypt", ParameterByRef=new System.Boolean[] { false, true }, ParameterType=new System.Type[] { typeof(Foundation.NSData), typeof(Foundation.NSError) }, ReturnType=typeof(Foundation.NSData), Selector="encryptWithData:error:")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.ProtocolMember(IsProperty=false, IsRequired=true, IsStatic=false, Name="Decrypt", ParameterByRef=new System.Boolean[] { false, true }, ParameterType=new System.Type[] { typeof(Foundation.NSData), typeof(Foundation.NSError) }, ReturnType=typeof(Foundation.NSData), Selector="decryptWithData:error:")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+    Interface that allows storing data in encrypted format. Encryption/decryption round should 
+    return exactly the same data as it given for the encryption originally (even if decryption 
+    happens in another process/app launch).
+    </summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Decrypt">
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSData Decrypt (Foundation.NSData data, out Foundation.NSError error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Foundation.NSData Decrypt(class Foundation.NSData data, [out] class Foundation.NSError&amp; error) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("decryptWithData:error:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.RequiredMember</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.NullableContext(2)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="Foundation.NSData">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(1)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="error" Type="Foundation.NSError" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="data">Data to decrypt.</param>
+        <param name="error">
+        </param>
+        <summary>Decrypts given <c>Data</c> with user-chosen encryption.</summary>
+        <returns>The decrypted data.</returns>
+        <remarks>
+        Beware that data to decrypt could be encrypted in a previous 
+        app launch, so implementation should be aware of the case when decryption could 
+        fail (for example, key used for encryption is different from key used for decryption, 
+        if they are unique for every app launch).
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Encrypt">
+      <MemberSignature Language="C#" Value="public virtual Foundation.NSData Encrypt (Foundation.NSData data, out Foundation.NSError error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Foundation.NSData Encrypt(class Foundation.NSData data, [out] class Foundation.NSError&amp; error) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("encryptWithData:error:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.RequiredMember</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.NullableContext(2)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSData</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="Foundation.NSData">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(1)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="error" Type="Foundation.NSError" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="data">Data to encrypt.</param>
+        <param name="error">
+        </param>
+        <summary>Encrypts given <c>Data</c> with user-chosen encryption.</summary>
+        <returns>The encrypted data.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

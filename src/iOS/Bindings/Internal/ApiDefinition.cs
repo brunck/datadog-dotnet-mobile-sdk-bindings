@@ -1,0 +1,1 @@
+namespace Datadog.iOS.Internal;

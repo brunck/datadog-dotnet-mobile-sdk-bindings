@@ -1,0 +1,447 @@
+<Type Name="DDSessionReplayConfiguration"
+  FullName="Datadog.iOS.SessionReplay.DDSessionReplayConfiguration">
+  <TypeSignature Language="C#"
+    Value="public class DDSessionReplayConfiguration : Foundation.NSObject" />
+  <TypeSignature Language="ILAsm"
+    Value=".class public auto ansi beforefieldinit DDSessionReplayConfiguration extends Foundation.NSObject" />
+  <AssemblyInfo>
+    <AssemblyName>sr</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Foundation.NSObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Foundation.Register("DDSessionReplayConfiguration", true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.Nullable(0)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.NullableContext(1)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Session Replay feature configuration.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#"
+        Value="protected DDSessionReplayConfiguration (Foundation.NSObjectFlag t);" />
+      <MemberSignature Language="ILAsm"
+        Value=".method familyhidebysig specialname rtspecialname instance void .ctor(valuetype Foundation.NSObjectFlag t) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode |
+            ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="t" Type="Foundation.NSObjectFlag" />
+      </Parameters>
+      <Docs>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#"
+        Value="protected internal DDSessionReplayConfiguration (ObjCRuntime.NativeHandle handle);" />
+      <MemberSignature Language="ILAsm"
+        Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(valuetype ObjCRuntime.NativeHandle handle) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode |
+            ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="handle" Type="ObjCRuntime.NativeHandle" />
+      </Parameters>
+      <Docs>
+        <param name="handle">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#"
+        Value="public DDSessionReplayConfiguration (float replaySampleRate, Datadog.iOS.SessionReplay.DDTextAndInputPrivacyLevel textAndInputPrivacyLevel, Datadog.iOS.SessionReplay.DDImagePrivacyLevel imagePrivacyLevel, Datadog.iOS.SessionReplay.DDTouchPrivacyLevel touchPrivacyLevel);" />
+      <MemberSignature Language="ILAsm"
+        Value=".method public hidebysig specialname rtspecialname instance void .ctor(float32 replaySampleRate, valuetype Datadog.iOS.SessionReplay.DDTextAndInputPrivacyLevel textAndInputPrivacyLevel, valuetype Datadog.iOS.SessionReplay.DDImagePrivacyLevel imagePrivacyLevel, valuetype Datadog.iOS.SessionReplay.DDTouchPrivacyLevel touchPrivacyLevel) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>
+            Foundation.Export("initWithReplaySampleRate:textAndInputPrivacyLevel:imagePrivacyLevel:touchPrivacyLevel:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode |
+            ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="replaySampleRate" Type="System.Single" />
+        <Parameter Name="textAndInputPrivacyLevel"
+          Type="Datadog.iOS.SessionReplay.DDTextAndInputPrivacyLevel" />
+        <Parameter Name="imagePrivacyLevel" Type="Datadog.iOS.SessionReplay.DDImagePrivacyLevel" />
+        <Parameter Name="touchPrivacyLevel" Type="Datadog.iOS.SessionReplay.DDTouchPrivacyLevel" />
+      </Parameters>
+      <Docs>
+        <param name="replaySampleRate"></param>
+        <param name="textAndInputPrivacyLevel"></param>
+        <param name="imagePrivacyLevel"></param>
+        <param name="touchPrivacyLevel"></param>
+        <summary></summary>
+        <remarks></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#"
+        Value="public DDSessionReplayConfiguration (float replaySampleRate, Datadog.iOS.SessionReplay.DDTextAndInputPrivacyLevel textAndInputPrivacyLevel, Datadog.iOS.SessionReplay.DDImagePrivacyLevel imagePrivacyLevel, Datadog.iOS.SessionReplay.DDTouchPrivacyLevel touchPrivacyLevel, Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSNumber&gt; featureFlags);" />
+      <MemberSignature Language="ILAsm"
+        Value=".method public hidebysig specialname rtspecialname instance void .ctor(float32 replaySampleRate, valuetype Datadog.iOS.SessionReplay.DDTextAndInputPrivacyLevel textAndInputPrivacyLevel, valuetype Datadog.iOS.SessionReplay.DDImagePrivacyLevel imagePrivacyLevel, valuetype Datadog.iOS.SessionReplay.DDTouchPrivacyLevel touchPrivacyLevel, class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSNumber&gt; featureFlags) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>
+            Foundation.Export("initWithReplaySampleRate:textAndInputPrivacyLevel:imagePrivacyLevel:touchPrivacyLevel:featureFlags:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode |
+            ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.DesignatedInitializer</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="replaySampleRate" Type="System.Single" />
+        <Parameter Name="textAndInputPrivacyLevel"
+          Type="Datadog.iOS.SessionReplay.DDTextAndInputPrivacyLevel" />
+        <Parameter Name="imagePrivacyLevel" Type="Datadog.iOS.SessionReplay.DDImagePrivacyLevel" />
+        <Parameter Name="touchPrivacyLevel" Type="Datadog.iOS.SessionReplay.DDTouchPrivacyLevel" />
+        <Parameter Name="featureFlags"
+          Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSNumber&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(new System.Byte[] { 2, 1, 1 })</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="replaySampleRate">The sampling rate for Session Replay. It is applied in addition to the RUM session sample rate.</param>
+        <param name="textAndInputPrivacyLevel">The way texts and inputs (e.g. label, textfield, checkbox) should be masked. Default: <c>MaskAll</c>.</param>
+        <param name="imagePrivacyLevel">Image recording privacy level. Default: <c>MaskAll</c>.</param>
+        <param name="touchPrivacyLevel">The way user touches (e.g. tap) should be masked. Default: <c>Hide</c>.</param>
+        <param name="featureFlags">Experimental feature flags.</param>
+        <summary>Creates Session Replay configuration.</summary>
+        <remarks></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassHandle">
+      <MemberSignature Language="C#"
+        Value="public override ObjCRuntime.NativeHandle ClassHandle { get; }" />
+      <MemberSignature Language="ILAsm"
+        Value=".property instance valuetype ObjCRuntime.NativeHandle ClassHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ObjCRuntime.NativeHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomEndpoint">
+      <MemberSignature Language="C#"
+        Value="public virtual Foundation.NSUrl CustomEndpoint { get; set; }" />
+      <MemberSignature Language="ILAsm"
+        Value=".property instance class Foundation.NSUrl CustomEndpoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode |
+            ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("customEndpoint", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.CompilerServices.NullableContext(2)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setCustomEndpoint:",
+            ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Runtime.CompilerServices.NullableContext(2)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSUrl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Custom server url for sending replay data. Default: <c>NULL</c>. </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FeatureFlags">
+      <MemberSignature Language="C#"
+        Value="public virtual Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSNumber&gt; FeatureFlags { get; set; }" />
+      <MemberSignature Language="ILAsm"
+        Value=".property instance class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSNumber&gt; FeatureFlags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode |
+            ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("featureFlags", ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setFeatureFlags:",
+            ObjCRuntime.ArgumentSemantic.Copy)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSNumber&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary></summary>
+        <value></value>
+        <remarks></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ImagePrivacyLevel">
+      <MemberSignature Language="C#"
+        Value="public virtual Datadog.iOS.SessionReplay.DDImagePrivacyLevel ImagePrivacyLevel { get; set; }" />
+      <MemberSignature Language="ILAsm"
+        Value=".property instance valuetype Datadog.iOS.SessionReplay.DDImagePrivacyLevel ImagePrivacyLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode |
+            ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("imagePrivacyLevel",
+            ObjCRuntime.ArgumentSemantic.UnsafeUnretained)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setImagePrivacyLevel:",
+            ObjCRuntime.ArgumentSemantic.UnsafeUnretained)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.SessionReplay.DDImagePrivacyLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <para>Defines the way images should be masked.</para>
+          <para>Default: <c>MaskAll</c>.</para>
+        </summary>
+        <value></value>
+        <remarks></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplaySampleRate">
+      <MemberSignature Language="C#" Value="public virtual float ReplaySampleRate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 ReplaySampleRate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode |
+            ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("replaySampleRate")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setReplaySampleRate:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <para>The sampling rate for Session Replay. It is applied in addition to the RUM session sample rate.</para>
+          <para>It must be a number between 0.0 and 100.0, where 0 means no replays will be recorded and 100 means all RUM sessions will contain replay.</para>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+          Note: This sample rate is applied in addition to the RUM sample rate. For example, if RUM
+          uses a sample rate of 80%
+          and Session Replay uses a sample rate of 20%, it means that out of all user sessions, 80%
+          will be included in RUM,
+          and within those sessions, only 20% will have replays.
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartRecordingImmediately">
+      <MemberSignature Language="C#"
+        Value="public virtual bool StartRecordingImmediately { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool StartRecordingImmediately" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode |
+            ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("startRecordingImmediately")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setStartRecordingImmediately:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <para>Defines if the recording should start automatically. When <c>true</c>, the recording
+            starts automatically; when <c>false</c> it doesn't, and the recording will need to be
+            started manually.</para>
+          <para>Default: <c>true</c>.</para>
+        </summary>
+        <value></value>
+        <remarks></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextAndInputPrivacyLevel">
+      <MemberSignature Language="C#"
+        Value="public virtual Datadog.iOS.SessionReplay.DDTextAndInputPrivacyLevel TextAndInputPrivacyLevel { get; set; }" />
+      <MemberSignature Language="ILAsm"
+        Value=".property instance valuetype Datadog.iOS.SessionReplay.DDTextAndInputPrivacyLevel TextAndInputPrivacyLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode |
+            ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("textAndInputPrivacyLevel",
+            ObjCRuntime.ArgumentSemantic.UnsafeUnretained)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setTextAndInputPrivacyLevel:",
+            ObjCRuntime.ArgumentSemantic.UnsafeUnretained)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.SessionReplay.DDTextAndInputPrivacyLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <para>Defines the way texts and inputs (e.g. labels, textfields, checkboxes) should be
+            masked.</para>
+          <para>Default: <c>MaskAll</c>.</para>
+        </summary>
+        <value></value>
+        <remarks></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TouchPrivacyLevel">
+      <MemberSignature Language="C#"
+        Value="public virtual Datadog.iOS.SessionReplay.DDTouchPrivacyLevel TouchPrivacyLevel { get; set; }" />
+      <MemberSignature Language="ILAsm"
+        Value=".property instance valuetype Datadog.iOS.SessionReplay.DDTouchPrivacyLevel TouchPrivacyLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode |
+            ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("touchPrivacyLevel",
+            ObjCRuntime.ArgumentSemantic.UnsafeUnretained)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setTouchPrivacyLevel:",
+            ObjCRuntime.ArgumentSemantic.UnsafeUnretained)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.DDTouchPrivacyLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <para>Defines the way user touches (e.g. tap) should be masked.</para>
+          <para>Default: <c>Hide</c>.</para>
+        </summary>
+        <value></value>
+        <remarks></remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

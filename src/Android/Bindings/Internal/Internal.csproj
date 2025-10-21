@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net10.0-android</TargetFramework>
+		<SupportedOSPlatformVersion>26</SupportedOSPlatformVersion>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<IsBindingProject>true</IsBindingProject>
+		<IsTrimmable>true</IsTrimmable>
+		<JavaSdkDirectory>$(JAVA_HOME)</JavaSdkDirectory>
+	</PropertyGroup>
+	<PropertyGroup>
+		<PackageId>Bcr.Datadog.Android.Sdk.Internal</PackageId>
+		<Version>2.21.0-pre.1</Version>
+		<PackageReleaseNotes><![CDATA[
+			This addresses the 16 KB requirement for Android.
+			Note that there is a breaking bug in .NET for Android binding projects in the .NET 9 SDK that is fixed in .NET 10, which also requires targeting .NET 10. .NET 10 will not be GA until November 2025, so these packages are in pre-release form until then.
+			]]></PackageReleaseNotes>
+		<Authors>bcr</Authors>
+		<Title>Bcr.Datadog.Android.Sdk.Internal</Title>
+		<Description>Bindings for the Datadog Android SDK Internal library</Description>
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl>https://github.com/brunck/datadog-dotnet-mobile-sdk-bindings</RepositoryUrl>
+		<PublishRepositoryUrl>false</PublishRepositoryUrl>
+		<PackageTags>.NET for Android Datadog Mobile Binding Core artifact=com.datadog.android:dd-sdk-android-internal artifact_versioned=com.datadog.android:dd-sdk-android-internal:2.21.0</PackageTags>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Include="README.md" Pack="true" PackagePath="/" />
+		<None Include="LICENSE" Pack="true" PackagePath="/" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Xamarin.Kotlin.Reflect" Version="1.9.23.3" />
+	</ItemGroup>
+	<ItemGroup>
+		<AndroidLibrary Include="aars\dd-sdk-android-internal-release.aar" />
+	</ItemGroup>
+</Project>

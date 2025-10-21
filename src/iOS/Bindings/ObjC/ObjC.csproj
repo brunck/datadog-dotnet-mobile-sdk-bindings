@@ -1,0 +1,69 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net8.0-ios17.0;net9.0-ios18.0</TargetFrameworks>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <IsBindingProject>true</IsBindingProject>
+    <AssemblyName>objc</AssemblyName>
+
+    <!-- NuGet package properties-->
+    <PackageId>Bcr.Datadog.iOS.ObjC</PackageId>
+    <PackageVersion>2.26.0</PackageVersion>
+    <Authors>bcr</Authors>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Description>.NET Bindings for Datadog iOS SDK ObjC</Description>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/brunck/datadog-dotnet-mobile-sdk-bindings</RepositoryUrl>
+    <PublishRepositoryUrl>false</PublishRepositoryUrl>
+    <PackageTags>.NET for iOS Datadog Mobile Binding ObjC</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+
+    <XCFrameworkPath>../Libs/DDObjc.xcframework</XCFrameworkPath>
+
+    <!--
+      Enable trim analyzers for class libraries.
+      To learn more, see:
+    https://learn.microsoft.com/dotnet/core/deploying/trimming/prepare-libraries-for-trimming
+    -->
+    <IsTrimmable>true</IsTrimmable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bcr.Datadog.iOS.Core" Version="2.26.0" />
+    <PackageReference Include="Bcr.Datadog.iOS.Logs" Version="2.26.0" />
+    <PackageReference Include="Bcr.Datadog.iOS.RUM" Version="2.26.0" />
+    <PackageReference Include="Bcr.Datadog.iOS.Trace" Version="2.26.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
+    <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net8.0-ios17.0'">
+    <NativeReference Include="$(XCFrameworkPath)">
+      <Kind>Framework</Kind>
+      <Frameworks>Foundation</Frameworks>
+      <SmartLink>True</SmartLink>
+      <ForceLoad>True</ForceLoad>
+    </NativeReference>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net9.0-ios18.0'">
+    <NativeReference Include="$(XCFrameworkPath)">
+      <Kind>Framework</Kind>
+      <Frameworks>Foundation</Frameworks>
+      <SmartLink>True</SmartLink>
+      <ForceLoad>True</ForceLoad>
+    </NativeReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="../docs/$(AssemblyName).xml" Pack="true" PackagePath="lib/net8.0-ios17.0/" />
+    <None Include="../docs/$(AssemblyName).xml" Pack="true" PackagePath="lib/net9.0-ios18.0/" />
+    <None Include="./README.md" Pack="true" PackagePath="/" />
+    <None Include="../../../../LICENSE" Pack="true" PackagePath="/" />
+  </ItemGroup>
+</Project>

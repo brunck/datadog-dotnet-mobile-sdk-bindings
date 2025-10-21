@@ -1,0 +1,1192 @@
+<Type Name="DDRUMMonitor" FullName="Datadog.iOS.ObjC.DDRUMMonitor">
+  <TypeSignature Language="C#" Value="public class DDRUMMonitor : Foundation.NSObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DDRUMMonitor extends Foundation.NSObject" />
+  <AssemblyInfo>
+    <AssemblyName>objc</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Foundation.NSObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Foundation.Register("_TtC11DatadogObjc12DDRUMMonitor", true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.Nullable(0)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.NullableContext(1)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+    A class for manual interaction with the RUM feature. It records RUM events that are sent to Datadog RUM.
+    </summary>
+    <remarks>
+      <para>There can be only one active RUM monitor for a particular instance of the Datadog SDK. It gets enabled along with 
+      the call to <c>DDRUM.Enable (DDRUMConfiguration configuration)</c>:</para>
+      <para>
+        <code>
+          // Enable the RUM feature:
+          DDRUM.Enable (DDRUMConfiguration configuration)
+
+          // Use RUM monitor:
+          DDRUMMonitor.Shared.StartView(...)
+        </code>
+      </para>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DDRUMMonitor (Foundation.NSObjectFlag t);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(valuetype Foundation.NSObjectFlag t) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="t" Type="Foundation.NSObjectFlag" />
+      </Parameters>
+      <Docs>
+        <param name="t"></param>
+        <summary></summary>
+        <remarks></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected internal DDRUMMonitor (ObjCRuntime.NativeHandle handle);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(valuetype ObjCRuntime.NativeHandle handle) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="handle" Type="ObjCRuntime.NativeHandle" />
+      </Parameters>
+      <Docs>
+        <param name="handle"></param>
+        <summary></summary>
+        <remarks></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAction">
+      <MemberSignature Language="C#" Value="public virtual void AddAction (Datadog.iOS.ObjC.DDRUMActionType type, string name, Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddAction(valuetype Datadog.iOS.ObjC.DDRUMActionType type, string name, class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt; attributes) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("addActionWithType:name:attributes:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="Datadog.iOS.ObjC.DDRUMActionType" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="type">
+        The type of the action.
+        </param>
+        <param name="name">
+        The name of the action.
+        </param>
+        <param name="attributes">
+        Custom attributes to attach to this action.
+        </param>
+        <summary>
+        Adds a RUM action that has no duration.
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAttribute">
+      <MemberSignature Language="C#" Value="public virtual void AddAttribute (string key, Foundation.NSObject value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddAttribute(string key, class Foundation.NSObject value) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("addAttributeForKey:value:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="value" Type="Foundation.NSObject" />
+      </Parameters>
+      <Docs>
+        <param name="key">
+        The key for this attribute.
+        See <see cref="AttributeKey" /> documentation for information about nesting attribute values using dot <c>.</c> syntax.
+        </param>
+        <param name="value">
+        Any value.
+        See <see cref="AttributeValue" /> documentation for information about nested encoding containers limitation.
+        </param>
+        <summary>
+        Adds a custom attribute to next RUM events.
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddAttributes">
+      <MemberSignature Language="C#" Value="public virtual void AddAttributes (Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddAttributes(class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt; attributes) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("addAttributes:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="attributes">A dictionary with attributes. Each attribute is defined by a string key and NSObject value.</param>
+        <summary>Adds multiple attributes to the next RUM events.</summary>
+        <remarks></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddError">
+      <MemberSignature Language="C#" Value="public virtual void AddError (Foundation.NSError error, Datadog.iOS.ObjC.DDRUMErrorSource source, Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddError(class Foundation.NSError error, valuetype Datadog.iOS.ObjC.DDRUMErrorSource source, class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt; attributes) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("addErrorWithError:source:attributes:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="error" Type="Foundation.NSError" />
+        <Parameter Name="source" Type="Datadog.iOS.ObjC.DDRUMErrorSource" />
+        <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="error">
+        The <see cref="NSError" /> object. It will be used to infer error details.
+        </param>
+        <param name="source">
+        The origin of the error.
+        </param>
+        <param name="attributes">
+        Custom attributes to attach to this error.
+        </param>
+        <summary>
+        Adds a RUM error to the current RUM view.
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddError">
+      <MemberSignature Language="C#" Value="public virtual void AddError (string message, string stack, Datadog.iOS.ObjC.DDRUMErrorSource source, Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddError(string message, string stack, valuetype Datadog.iOS.ObjC.DDRUMErrorSource source, class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt; attributes) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("addErrorWithMessage:stack:source:attributes:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="stack" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="source" Type="Datadog.iOS.ObjC.DDRUMErrorSource" />
+        <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="message">
+        The error message.
+        </param>
+        <param name="stack">
+        The stack trace of the error. No specific format is required. If not specified, it will be inferred from `file` and `line`.
+        </param>
+        <param name="source">
+        The origin of the error.
+        </param>
+        <param name="attributes">
+        Custom attributes to attach to this error.
+        </param>
+        <summary>
+        Adds a RUM error to the current RUM view.
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddFeatureFlagEvaluation">
+      <MemberSignature Language="C#" Value="public virtual void AddFeatureFlagEvaluation (string name, Foundation.NSObject value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddFeatureFlagEvaluation(string name, class Foundation.NSObject value) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("addFeatureFlagEvaluationWithName:value:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="Foundation.NSObject" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+        The name of the feature flag.
+        </param>
+        <param name="value">
+        The result of the evaluation.
+        </param>
+        <summary>
+        Adds the result of evaluating a feature flag to the current RUM view.
+        </summary>
+        <remarks>
+        Feature flag evaluations are local to the active view and are cleared when the view is stopped.
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddResourceMetrics">
+      <MemberSignature Language="C#" Value="public virtual void AddResourceMetrics (string resourceKey, Foundation.NSUrlSessionTaskMetrics metrics, Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddResourceMetrics(string resourceKey, class Foundation.NSUrlSessionTaskMetrics metrics, class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt; attributes) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("addResourceMetricsWithResourceKey:metrics:attributes:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceKey" Type="System.String" />
+        <Parameter Name="metrics" Type="Foundation.NSUrlSessionTaskMetrics" />
+        <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="resourceKey">
+        The key representing the resource. It must match the one used to start the resource.
+        </param>
+        <param name="metrics">
+        The <c>NSUrlSessionTaskMetrics</c> for this resource.
+        </param>
+        <param name="attributes">
+        Custom attributes to attach to this resource.
+        </param>
+        <summary>
+        Adds temporal metrics to given RUM resource.
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddTiming">
+      <MemberSignature Language="C#" Value="public virtual void AddTiming (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddTiming(string name) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("addTimingWithName:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+        The name of the custom timing attribute. It must be unique for each timing.
+        </param>
+        <summary>Records a specific timing within the current RUM view.</summary>
+        <remarks>The duration of the timing is calculated as the number of nanoseconds elapsed between the start of the view and the addition of the timing.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassHandle">
+      <MemberSignature Language="C#" Value="public override ObjCRuntime.NativeHandle ClassHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype ObjCRuntime.NativeHandle ClassHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ObjCRuntime.NativeHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Debug">
+      <MemberSignature Language="C#" Value="public virtual bool Debug { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Debug" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("debug")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: Foundation.Export("setDebug:")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Enable a debug utility to inspect the active RUM view. Use it only when debugging.
+        </summary>
+        <value>
+        The default value is false.
+        </value>
+        <remarks>
+        If enabled, a debugging outline will be displayed on top of the application, indicating the name of the active RUM view.
+        This can be helpful for debugging RUM instrumentation issues in your app.
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCurrentSessionIdViaCallback">
+      <MemberSignature Language="C#" Value="public virtual void GetCurrentSessionIdViaCallback (Action&lt;Foundation.NSString&gt; callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void GetCurrentSessionIdViaCallback(class System.Action`1&lt;class Foundation.NSString&gt; callback) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("currentSessionIDWithCompletion:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="callback" Type="System.Action&lt;Foundation.NSString&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDActionArity1V0))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="callback">The callback that will recieve the current session ID. This will be called from a background thread.</param>
+        <summary>
+          Get the currently active session ID. Returns <c>null</c> if no sessions are currently active or if
+          the current session is sampled out.
+        </summary>
+        <remarks>
+          <para>
+          This method uses an asynchronous callback to ensure all pending RUM events have been processed
+          up to the moment of the call.
+        </para>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAttribute">
+      <MemberSignature Language="C#" Value="public virtual void RemoveAttribute (string key);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAttribute(string key) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("removeAttributeForKey:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">
+        The key for the attribute that will be removed.
+        </param>
+        <summary>
+        Removes an attribute from next RUM events.
+        </summary>
+        <remarks>
+        Events created prior to this call will not lose this attribute.
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAttributes">
+      <MemberSignature Language="C#" Value="public virtual void RemoveAttributes (string[] keys);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAttributes(string[] keys) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("removeAttributesForKeys:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keys" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="keys">Array of attribute keys that will be removed.</param>
+        <summary>
+          <para>Removes multiple attributes from the next RUM events.</para>
+          <para>Events created prior to this call will not lose these attributes.</para>
+        </summary>
+        <remarks></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shared">
+      <MemberSignature Language="C#" Value="public static Datadog.iOS.ObjC.DDRUMMonitor Shared { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Datadog.iOS.ObjC.DDRUMMonitor Shared" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("shared")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDRUMMonitor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        Obtains the RUM monitor for manual interaction with the RUM feature.
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        It requires <see cref="DDRUM.Enable" /> to be called first - otherwise it will return a no-op implementation.
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartAction">
+      <MemberSignature Language="C#" Value="public virtual void StartAction (Datadog.iOS.ObjC.DDRUMActionType type, string name, Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StartAction(valuetype Datadog.iOS.ObjC.DDRUMActionType type, string name, class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt; attributes) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("startActionWithType:name:attributes:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="Datadog.iOS.ObjC.DDRUMActionType" />
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="type">
+        The type of the action.
+        </param>
+        <param name="name">
+        The name of the action.
+        </param>
+        <param name="attributes">
+        Custom attributes to attach to this action.
+        </param>
+        <summary>
+        Starts a RUM action.
+        </summary>
+        <remarks>
+        If the action is not stopped with <see cref="StopAction(Datadog.iOS.DDRUMActionType)" />, it will be stopped automatically after 10 seconds.
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartResource">
+      <MemberSignature Language="C#" Value="public virtual void StartResource (string resourceKey, Foundation.NSUrl url, Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StartResource(string resourceKey, class Foundation.NSUrl url, class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt; attributes) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("startResourceWithResourceKey:url:attributes:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceKey" Type="System.String" />
+        <Parameter Name="url" Type="Foundation.NSUrl" />
+        <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="resourceKey">
+        The key representing the resource. It must be unique among all resources being currently tracked.
+        </param>
+        <param name="url">
+        The <c>NSUrl</c> of this resource.
+        </param>
+        <param name="attributes">
+        Custom attributes to attach to this resource.
+        </param>
+        <summary>
+        Starts a RUM resource.
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartResource">
+      <MemberSignature Language="C#" Value="public virtual void StartResource (string resourceKey, Foundation.NSUrlRequest request, Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StartResource(string resourceKey, class Foundation.NSUrlRequest request, class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt; attributes) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("startResourceWithResourceKey:request:attributes:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceKey" Type="System.String" />
+        <Parameter Name="request" Type="Foundation.NSUrlRequest" />
+        <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="resourceKey">
+        The key representing the resource. It must be unique among all resources being currently tracked.
+        </param>
+        <param name="request">
+        The <c>NSUrlRequest</c> of this resource.
+        </param>
+        <param name="attributes">
+        Custom attributes to attach to this resource.
+        </param>
+        <summary>
+        Starts a RUM resource.
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartResource">
+      <MemberSignature Language="C#" Value="public virtual void StartResource (string resourceKey, Datadog.iOS.ObjC.DDRUMMethod httpMethod, string urlString, Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StartResource(string resourceKey, valuetype Datadog.iOS.ObjC.DDRUMMethod httpMethod, string urlString, class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt; attributes) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("startResourceWithResourceKey:httpMethod:urlString:attributes:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceKey" Type="System.String" />
+        <Parameter Name="httpMethod" Type="Datadog.iOS.ObjC.DDRUMMethod" />
+        <Parameter Name="urlString" Type="System.String" />
+        <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="resourceKey">
+        The key representing the resource. It must be unique among all resources being currently tracked.
+        </param>
+        <param name="httpMethod">
+        A <see cref="DDRUMMethod" /> representing the HTTP method of this resource.
+        </param>
+        <param name="urlString">
+        The URL string of this resource.
+        </param>
+        <param name="attributes">
+        Custom attributes to attach to this resource.
+        </param>
+        <summary>
+        Starts a RUM resource.
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartView">
+      <MemberSignature Language="C#" Value="public virtual void StartView (string key, string name, Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StartView(string key, string name, class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt; attributes) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("startViewWithKey:name:attributes:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="name" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="key">
+          A <c>string</c> value identifying this view. It must match the key passed later to <see cref="StopView(string,Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;)" />.
+        </param>
+        <param name="name">
+          The name of the view. If not provided, the <see cref="key" /> name will be used.
+        </param>
+        <param name="attributes">
+          Custom attributes to attach to this view.
+        </param>
+        <summary>
+          Starts the RUM view.
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartView">
+      <MemberSignature Language="C#" Value="public virtual void StartView (UIKit.UIViewController viewController, string name, Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StartView(class UIKit.UIViewController viewController, string name, class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt; attributes) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("startViewWithViewController:name:attributes:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewController" Type="UIKit.UIViewController" />
+        <Parameter Name="name" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="viewController">
+          The instance of <c>UIViewController</c> representing this view.
+        </param>
+        <param name="name">
+          The name of the view. If not provided, the <see cref="viewController" /> class name will be used.
+        </param>
+        <param name="attributes">
+          Custom attributes to attach to this view.
+        </param>
+        <summary>
+          Starts the RUM view.
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopAction">
+      <MemberSignature Language="C#" Value="public virtual void StopAction (Datadog.iOS.ObjC.DDRUMActionType type, string name, Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StopAction(valuetype Datadog.iOS.ObjC.DDRUMActionType type, string name, class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt; attributes) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("stopActionWithType:name:attributes:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="Datadog.iOS.ObjC.DDRUMActionType" />
+        <Parameter Name="name" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="type">
+        The type of the action. It should match the type passed when starting this action.
+        </param>
+        <param name="name">
+        The name of the action. If not provided, it will use the name the action was started with.
+        </param>
+        <param name="attributes">
+        Custom attributes to attach to this action.
+        </param>
+        <summary>
+        Stops a RUM action.
+        </summary>
+        <remarks>
+        The action must be first started with <see cref="StartAction(Datadog.iOS.DDRUMActionType)" />.
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopResource">
+      <MemberSignature Language="C#" Value="public virtual void StopResource (string resourceKey, Foundation.NSError error, Foundation.NSUrlResponse response, Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StopResource(string resourceKey, class Foundation.NSError error, class Foundation.NSUrlResponse response, class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt; attributes) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("stopResourceWithErrorWithResourceKey:error:response:attributes:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceKey" Type="System.String" />
+        <Parameter Name="error" Type="Foundation.NSError" />
+        <Parameter Name="response" Type="Foundation.NSUrlResponse">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="resourceKey">
+        The key representing the resource. It must match the one used to start the resource.
+        </param>
+        <param name="error">
+        The <c>NSError</c> object. It will be used to infer error details.
+        </param>
+        <param name="response">
+         An optional <c>NSUrlResponse</c> received for the resource.
+        </param>
+        <param name="attributes">
+        Custom attributes to attach to this resource.
+        </param>
+        <summary>
+        Stops a RUM resource and reports an error.
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopResource">
+      <MemberSignature Language="C#" Value="public virtual void StopResource (string resourceKey, Foundation.NSUrlResponse response, Foundation.NSNumber size, Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StopResource(string resourceKey, class Foundation.NSUrlResponse response, class Foundation.NSNumber size, class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt; attributes) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("stopResourceWithResourceKey:response:size:attributes:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceKey" Type="System.String" />
+        <Parameter Name="response" Type="Foundation.NSUrlResponse" />
+        <Parameter Name="size" Type="Foundation.NSNumber">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="resourceKey">The key representing the resource. It must match the one used to start the resource.</param>
+        <param name="response">
+        The <c>NSUrlResponse</c> received for the resource.
+        </param>
+        <param name="size">
+        An optional size of the data received for the resource (in bytes). 
+        If not provided, it will be inferred from the "Content-Length" header of the <c>response</c>.
+        </param>
+        <param name="attributes">
+        Custom attributes to attach to this resource.
+        </param>
+        <summary>
+        Stops a RUM resource.
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopResource">
+      <MemberSignature Language="C#" Value="public virtual void StopResource (string resourceKey, string message, Foundation.NSUrlResponse response, Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StopResource(string resourceKey, string message, class Foundation.NSUrlResponse response, class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt; attributes) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("stopResourceWithErrorWithResourceKey:message:response:attributes:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceKey" Type="System.String" />
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="response" Type="Foundation.NSUrlResponse">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="resourceKey">
+        The key representing the resource. It must match the one used to start the resource.
+        </param>
+        <param name="message">
+        The message explaining the Resource failure.
+        </param>
+        <param name="response">
+        An optional <c>NSUrlResponse</c> received for the resource.
+        </param>
+        <param name="attributes">
+        Custom attributes to attach to this resource.
+        </param>
+        <summary>
+        Stops a RUM resource and reports an error.
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopResource">
+      <MemberSignature Language="C#" Value="public virtual void StopResource (string resourceKey, Foundation.NSNumber statusCode, Datadog.iOS.ObjC.DDRUMResourceType kind, Foundation.NSNumber size, Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StopResource(string resourceKey, class Foundation.NSNumber statusCode, valuetype Datadog.iOS.ObjC.DDRUMResourceType kind, class Foundation.NSNumber size, class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt; attributes) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("stopResourceWithResourceKey:statusCode:kind:size:attributes:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="resourceKey" Type="System.String" />
+        <Parameter Name="statusCode" Type="Foundation.NSNumber">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="kind" Type="Datadog.iOS.ObjC.DDRUMResourceType" />
+        <Parameter Name="size" Type="Foundation.NSNumber">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="resourceKey">
+        The key representing the resource. It must match the one used to start the resource.
+        </param>
+        <param name="statusCode">
+        HTTP code of the response.
+        </param>
+        <param name="kind">
+        Type of the resource.
+        </param>
+        <param name="size">
+        An optional size of the data received for the resource (in bytes).
+        </param>
+        <param name="attributes">
+        Custom attributes to attach to this resource.
+        </param>
+        <summary>
+        Stops a RUM resource.
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopSession">
+      <MemberSignature Language="C#" Value="public virtual void StopSession ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StopSession() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("stopSession")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+        Stops the current RUM session.
+        </summary>
+        <remarks>
+        A new session will start in response to a call to <see cref="StartView" /> or <see cref="AddAction" />.
+        If the session is started because of a call to <c>AddAction</c>, the last known view is restarted in the new session.
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopView">
+      <MemberSignature Language="C#" Value="public virtual void StopView (string key, Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StopView(string key, class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt; attributes) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("stopViewWithKey:attributes:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="key">
+          A <c>string</c> value identifying this view. It must match the <c>key</c> passed earlier to <see cref="StartView(string,string,Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;)" />.
+        </param>
+        <param name="attributes">
+          Custom attributes to attach to this view.
+        </param>
+        <summary>
+          Stops the RUM view.
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopView">
+      <MemberSignature Language="C#" Value="public virtual void StopView (UIKit.UIViewController viewController, Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt; attributes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StopView(class UIKit.UIViewController viewController, class Foundation.NSDictionary`2&lt;class Foundation.NSString, class Foundation.NSObject&gt; attributes) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("stopViewWithViewController:attributes:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewController" Type="UIKit.UIViewController" />
+        <Parameter Name="attributes" Type="Foundation.NSDictionary&lt;Foundation.NSString,Foundation.NSObject&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="viewController">
+          The instance of <c>UIViewController</c> representing this view.
+        </param>
+        <param name="attributes">
+          Custom attributes to attach to this view.
+        </param>
+        <summary>
+          Stops the RUM view.
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

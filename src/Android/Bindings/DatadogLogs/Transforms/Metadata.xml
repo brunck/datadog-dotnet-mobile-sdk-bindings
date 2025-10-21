@@ -1,0 +1,77 @@
+﻿<metadata>
+	<!--********************* Removal *********************-->
+	
+	<remove-node path="/api/package[@name='com.datadog.android.log.internal.utils']/class[@name='LogUtilsKt']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log']/class[@name='Logger']/field[@name='Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Logger']/field[@name='Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/field[@name='Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='component2']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='component3']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='component4']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='component5']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='component6']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='component7']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='component8']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='component9']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='component10']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='component11']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='component12']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Client']/field[@name='Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Client']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Client']/method[@name='component2']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Client']/method[@name='component3']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Client']/method[@name='component4']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Client']/method[@name='component5']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Dd.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Dd']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Error.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Error']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Error']/method[@name='component2']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Error']/method[@name='component3']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Error']/method[@name='component4']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Error']/method[@name='component5']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Error']/method[@name='component6']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Logger.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Logger']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Logger']/method[@name='component2']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Logger']/method[@name='component3']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Client.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Device.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Device']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Network.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Network']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.SimCarrier.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.SimCarrier']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.SimCarrier']/method[@name='component2']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Status.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Thread.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Thread']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Thread']/method[@name='component2']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Thread']/method[@name='component3']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Thread']/method[@name='component4']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Usr.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Usr']/method[@name='component1']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Usr']/method[@name='component2']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Usr']/method[@name='component3']" />
+	<remove-node path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Usr']/method[@name='component4']" />
+	
+ 	<!--********************* Renaming *********************--> 
+
+
+	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Dd']" name="managedName">DatadogDeviceInfo</attr>
+	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='getDd' and count(parameter)=0]" name="managedName">DDInternal</attr>
+	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='getDd' and count(parameter)=0]" name="visibility">internal</attr>
+	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent.Usr']" name="managedName">User</attr>
+	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='getUsr']" name="propertyName">User</attr>
+	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='getDdtags' and count(parameter)=0]" name="visibility">internal</attr>
+	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='getDdtags' and count(parameter)=0]" name="managedName">DdTagsGet</attr>
+	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='setDdtags' and count(parameter)=1 and parameter[1][@type='java.lang.String']]" name="visibility">internal</attr>
+	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='getError' and count(parameter)=0]" name="visibility">internal</attr>
+	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='getLogger' and count(parameter)=0]" name="visibility">internal</attr>
+	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='getNetwork' and count(parameter)=0]" name="visibility">internal</attr>
+	<attr path="/api/package[@name='com.datadog.android.log.model']/class[@name='LogEvent']/method[@name='getStatus' and count(parameter)=0]" name="visibility">internal</attr>
+	<attr path="/api/package[@name='com.datadog.android.log']/class[@name='LogsConfiguration.Builder']/method[@name='setEventMapper' and count(parameter)=1 and parameter[1][@type='com.datadog.android.event.EventMapper&lt;com.datadog.android.log.model.LogEvent&gt;']]" name="visibility">internal</attr>
+	<attr path="/api/package[@name='com.datadog.android.log']/class[@name='LogsConfiguration.Builder']/method[@name='setEventMapper' and count(parameter)=1 and parameter[1][@type='com.datadog.android.event.EventMapper&lt;com.datadog.android.log.model.LogEvent&gt;']]" name="managedName">SetLogEventMapperInternal</attr>
+</metadata>

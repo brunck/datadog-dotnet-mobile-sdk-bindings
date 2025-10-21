@@ -1,0 +1,6 @@
+[submodule "dd-sdk-ios"]
+	path = dd-sdk-ios
+	url = https://github.com/DataDog/dd-sdk-ios.git
+[submodule "dd-sdk-android"]
+	path = dd-sdk-android
+	url = https://github.com/DataDog/dd-sdk-android.git

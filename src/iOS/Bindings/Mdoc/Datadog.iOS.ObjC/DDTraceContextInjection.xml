@@ -1,0 +1,53 @@
+<Type Name="DDTraceContextInjection" FullName="Datadog.iOS.ObjC.DDTraceContextInjection">
+  <TypeSignature Language="C#" Value="public enum DDTraceContextInjection" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DDTraceContextInjection extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>objc</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>ObjCRuntime.Native</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Defines whether the trace context should be injected into all requests or only sampled ones.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="All">
+      <MemberSignature Language="C#" Value="All" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDTraceContextInjection All = int64(0)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDTraceContextInjection</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>Injects trace context into all requests irrespective of the sampling decision.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Sampled">
+      <MemberSignature Language="C#" Value="Sampled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.ObjC.DDTraceContextInjection Sampled = int64(1)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDTraceContextInjection</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>Injects trace context only into sampled requests.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

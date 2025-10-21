@@ -1,0 +1,72 @@
+<Type Name="IDDUIPressRUMActionsPredicate" FullName="Datadog.iOS.ObjC.IDDUIPressRUMActionsPredicate">
+  <TypeSignature Language="C#" Value="public interface IDDUIPressRUMActionsPredicate : IDisposable, ObjCRuntime.INativeObject" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDDUIPressRUMActionsPredicate implements class ObjCRuntime.INativeObject, class System.IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>objc</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>ObjCRuntime.INativeObject</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>Foundation.Protocol(Name="_TtP11DatadogObjc28DDUIPressRUMActionsPredicate_", WrapperType=typeof(Datadog.iOS.ObjC.DDUIPressRUMActionsPredicateWrapper))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.ProtocolMember(IsProperty=false, IsRequired=true, IsStatic=false, Name="RumAction", ParameterByRef=new System.Boolean[] { false, false }, ParameterType=new System.Type[] { typeof(UIKit.UIPressType), typeof(UIKit.UIView) }, ReturnType=typeof(Datadog.iOS.ObjC.DDRUMAction), Selector="rumActionWithPress:targetView:")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary></summary>
+    <remarks></remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="RumAction">
+      <MemberSignature Language="C#" Value="public virtual Datadog.iOS.ObjC.DDRUMAction RumAction (UIKit.UIPressType type, UIKit.UIView targetView);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Datadog.iOS.ObjC.DDRUMAction RumAction(valuetype UIKit.UIPressType type, class UIKit.UIView targetView) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("rumActionWithPress:targetView:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.RequiredMember</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.NullableContext(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.DDRUMAction</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="UIKit.UIPressType" />
+        <Parameter Name="targetView" Type="UIKit.UIView" />
+      </Parameters>
+      <Docs>
+        <param name="type">The <c>UIPress.PressType</c> which received the action.</param>
+        <param name="targetView">An instance of the <c>UIView</c> which received the action.</param>
+        <summary>The predicate deciding if the RUM Action should be recorded.</summary>
+        <returns>RUM Action if it should be recorded, <code>NULL</code> otherwise.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

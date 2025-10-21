@@ -1,0 +1,68 @@
+<Type Name="DDSessionReplayConfigurationPrivacyLevel" FullName="Datadog.iOS.SessionReplay.DDSessionReplayConfigurationPrivacyLevel">
+  <TypeSignature Language="C#" Value="public enum DDSessionReplayConfigurationPrivacyLevel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DDSessionReplayConfigurationPrivacyLevel extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>sr</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>ObjCRuntime.Native</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Available privacy levels for content masking.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Allow">
+      <MemberSignature Language="C#" Value="Allow" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.SessionReplay.DDSessionReplayConfigurationPrivacyLevel Allow = int64(0)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.SessionReplay.DDSessionReplayConfigurationPrivacyLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>Record all content.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Mask">
+      <MemberSignature Language="C#" Value="Mask" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.SessionReplay.DDSessionReplayConfigurationPrivacyLevel Mask = int64(1)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.SessionReplay.DDSessionReplayConfigurationPrivacyLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>Mask all content.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MaskUserInput">
+      <MemberSignature Language="C#" Value="MaskUserInput" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.SessionReplay.DDSessionReplayConfigurationPrivacyLevel MaskUserInput = int64(2)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.SessionReplay.DDSessionReplayConfigurationPrivacyLevel</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>Mask input elements, but record all other content.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

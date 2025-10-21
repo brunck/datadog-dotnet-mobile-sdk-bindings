@@ -1,0 +1,82 @@
+<Type Name="DDImagePrivacyLevelOverride" FullName="Datadog.iOS.SessionReplay.DDImagePrivacyLevelOverride">
+  <TypeSignature Language="C#" Value="public enum DDImagePrivacyLevelOverride" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed DDImagePrivacyLevelOverride extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>sr</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>ObjCRuntime.Native</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary></summary>
+    <remarks></remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="MaskAll">
+      <MemberSignature Language="C#" Value="MaskAll" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.SessionReplay.DDImagePrivacyLevelOverride MaskAll = int64(3)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.SessionReplay.DDImagePrivacyLevelOverride</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MaskNonBundledOnly">
+      <MemberSignature Language="C#" Value="MaskNonBundledOnly" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.SessionReplay.DDImagePrivacyLevelOverride MaskNonBundledOnly = int64(2)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.SessionReplay.DDImagePrivacyLevelOverride</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="MaskNone">
+      <MemberSignature Language="C#" Value="MaskNone" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.SessionReplay.DDImagePrivacyLevelOverride MaskNone = int64(1)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.SessionReplay.DDImagePrivacyLevelOverride</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Datadog.iOS.SessionReplay.DDImagePrivacyLevelOverride None = int64(0)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.SessionReplay.DDImagePrivacyLevelOverride</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary></summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

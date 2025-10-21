@@ -1,0 +1,76 @@
+<doc>
+    <assembly>
+        <name>wvt</name>
+    </assembly>
+    <members>
+        <member name="T:Datadog.iOS.WebViewTracking.DDWebViewTracking">
+            <summary>Real User Monitoring allows you to monitor web views and eliminate blind spots in your hybrid iOS applications.</summary>
+            <remarks>
+                <para>Prerequisites:</para>
+                <para>
+        Set up the web page you want rendered on your mobile iOS and tvOS application with the RUM Browser SDK first. 
+        For more information, see the RUM Browser Monitoring documentation at https://docs.datadoghq.com/real_user_monitoring/browser/#npm.
+      </para>
+                <para>You can perform the following:</para>
+                <list type="bullet">
+                    <item>
+                        <description>Track user journeys across web and native components in mobile applications.</description>
+                    </item>
+                    <item>
+                        <description>Scope the root cause of latency to web pages or native components in mobile applications.</description>
+                    </item>
+                    <item>
+                        <description>Support users that have difficulty loading web pages on mobile devices.</description>
+                    </item>
+                </list>
+            </remarks>
+        </member>
+        <member name="C:Datadog.iOS.WebViewTracking.DDWebViewTracking(Foundation.NSObjectFlag)">
+            <param name="t" />
+            <summary />
+            <remarks />
+        </member>
+        <member name="C:Datadog.iOS.WebViewTracking.DDWebViewTracking(ObjCRuntime.NativeHandle)">
+            <param name="handle" />
+            <summary />
+            <remarks />
+        </member>
+        <member name="P:Datadog.iOS.WebViewTracking.DDWebViewTracking.ClassHandle">
+            <summary />
+            <value />
+            <remarks />
+        </member>
+        <member name="M:Datadog.iOS.WebViewTracking.DDWebViewTracking.Disable(WebKit.WKWebView)">
+            <param name="webView">The web-view to stop tracking.</param>
+            <summary>Disables Datadog iOS SDK and Datadog Browser SDK integration.</summary>
+            <remarks>
+                <para>Removes Datadog's ScriptMessageHandler and UserScript from the caller.</para>
+                <para>Note: This method <i>must</i> be called when the webview can be deinitialized.</para>
+            </remarks>
+        </member>
+        <member name="M:Datadog.iOS.WebViewTracking.DDWebViewTracking.Enable(WebKit.WKWebView)">
+            <param name="webView">The <see cref="WKWebView" /> to track.</param>
+            <summary>
+                <para>Enables SDK to correlate Datadog RUM events and Logs from the WebView with native RUM session.</para>
+                <para>If the content loaded in WebView uses Datadog Browser SDK (`v4.2.0+`) and matches specified `hosts`, web events will be correlated with the RUM session from native SDK.</para>
+                <para>Default values of an empty NSSet&lt;NSString&gt; and <see cref="MaxSampleRate" /> of 100.</para>
+            </summary>
+        </member>
+        <member name="M:Datadog.iOS.WebViewTracking.DDWebViewTracking.Enable(WebKit.WKWebView,Foundation.NSSet{Foundation.NSString},System.Single)">
+            <param name="webView">The web-view to track.</param>
+            <param name="hosts">A set of hosts instrumented with Browser SDK to capture Datadog events from.</param>
+            <param name="logsSampleRate">
+          The sampling rate for logs coming from the WebView. Must be a value between <c>0</c> and <c>100</c>,
+          where 0 means no logs will be sent and 100 means all will be uploaded. Default: <c>100</c>.</param>
+            <summary>
+          Enables SDK to correlate Datadog RUM events and Logs from the WebView with native RUM session.
+          If the content loaded in WebView uses Datadog Browser SDK (<c>v4.2.0+</c>) and matches specified
+          <c>hosts</c>, web events will be correlated with the RUM session from native SDK.
+        </summary>
+            <remarks />
+        </member>
+        <member name="F:Datadog.iOS.WebViewTracking.DDWebViewTracking.MaxSampleRate">
+            <summary>Maximum sampling rate. It means every event is kept.</summary>
+        </member>
+    </members>
+</doc>

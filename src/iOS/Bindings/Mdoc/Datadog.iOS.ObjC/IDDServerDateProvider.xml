@@ -1,0 +1,75 @@
+<Type Name="IDDServerDateProvider" FullName="Datadog.iOS.ObjC.IDDServerDateProvider">
+  <TypeSignature Language="C#" Value="public interface IDDServerDateProvider : IDisposable, ObjCRuntime.INativeObject" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IDDServerDateProvider implements class ObjCRuntime.INativeObject, class System.IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>objc</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>ObjCRuntime.INativeObject</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>Foundation.Protocol(Name="_TtP11DatadogObjc20DDServerDateProvider_", WrapperType=typeof(Datadog.iOS.ObjC.DDServerDateProviderWrapper))</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>Foundation.ProtocolMember(IsProperty=false, IsRequired=true, IsStatic=false, Name="Synchronize", ParameterBlockProxy=new System.Type[] { typeof(ObjCRuntime.Trampolines/NIDActionArity1V1) }, ParameterByRef=new System.Boolean[] { false }, ParameterType=new System.Type[] { typeof(System.Action`1&lt;System.Double&gt;) }, Selector="synchronizeWithUpdate:")</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Abstract the monotonic clock synchronized with the server using NTP.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Synchronize">
+      <MemberSignature Language="C#" Value="public virtual void Synchronize (Action&lt;double&gt; update);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Synchronize(class System.Action`1&lt;float64&gt; update) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("synchronizeWithUpdate:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>Foundation.RequiredMember</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.NullableContext(1)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="update" Type="System.Action&lt;System.Double&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName>ObjCRuntime.BlockProxy(typeof(ObjCRuntime.Trampolines/NIDActionArity1V1))</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="update">
+        </param>
+        <summary>
+          <para>Start the clock synchronization with NTP server.</para>
+          <para>Calls the <c>Action</c> by passing it the server time offset when the synchronization succeeds or<c>NULL</c> if it fails.</para>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,478 @@
+<Type Name="DDTracer" FullName="Datadog.iOS.ObjC.DDTracer">
+  <TypeSignature Language="C#" Value="public class DDTracer : Foundation.NSObject, Datadog.iOS.ObjC.IOTTracer, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DDTracer extends Foundation.NSObject implements class Datadog.iOS.ObjC.IOTTracer, class ObjCRuntime.INativeObject, class System.IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>objc</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Foundation.NSObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Datadog.iOS.ObjC.IOTTracer</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>ObjCRuntime.INativeObject</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName>Foundation.Register("_TtC11DatadogObjc8DDTracer", true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.Nullable(0)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.NullableContext(1)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>A class for manual interaction with the Trace feature. It records spans that are sent to Datadog APM.</summary>
+    <remarks>
+      <para>
+        There can be only one active DDTracer for a certain instance of the Datadog SDK. 
+        It gets enabled along with the call to <c>DDTrace.Enable(DDTraceConfiguration)</c>:
+      </para>
+      <code>
+        // Enable Trace feature:
+        DDTrace.Enable(DDTraceConfiguration);
+  
+        // Use Tracer:
+        DDTracer.Shared.StartSpan(...);
+      </code>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DDTracer (Foundation.NSObjectFlag t);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(valuetype Foundation.NSObjectFlag t) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="t" Type="Foundation.NSObjectFlag" />
+      </Parameters>
+      <Docs>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected internal DDTracer (ObjCRuntime.NativeHandle handle);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(valuetype ObjCRuntime.NativeHandle handle) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="handle" Type="ObjCRuntime.NativeHandle" />
+      </Parameters>
+      <Docs>
+        <param name="handle">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassHandle">
+      <MemberSignature Language="C#" Value="public override ObjCRuntime.NativeHandle ClassHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype ObjCRuntime.NativeHandle ClassHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ObjCRuntime.NativeHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Extract">
+      <MemberSignature Language="C#" Value="public virtual bool Extract (string format, Foundation.NSObject carrier, out Foundation.NSError error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Extract(string format, class Foundation.NSObject carrier, [out] class Foundation.NSError&amp; error) cil managed" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Datadog.iOS.ObjC.IOTTracer.Extract(System.String,Foundation.NSObject,Foundation.NSError@)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("extractWithFormat:carrier:error:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="carrier" Type="Foundation.NSObject" />
+        <Parameter Name="error" Type="Foundation.NSError" RefType="out">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="format">
+        </param>
+        <param name="carrier">
+        </param>
+        <param name="error">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inject">
+      <MemberSignature Language="C#" Value="public virtual bool Inject (Datadog.iOS.ObjC.IOTSpanContext spanContext, string format, Foundation.NSObject carrier, out Foundation.NSError error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Inject(class Datadog.iOS.ObjC.IOTSpanContext spanContext, string format, class Foundation.NSObject carrier, [out] class Foundation.NSError&amp; error) cil managed" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Datadog.iOS.ObjC.IOTTracer.Inject(Datadog.iOS.ObjC.IOTSpanContext,System.String,Foundation.NSObject,Foundation.NSError@)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("inject:format:carrier:error:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="spanContext" Type="Datadog.iOS.ObjC.IOTSpanContext" />
+        <Parameter Name="format" Type="System.String" />
+        <Parameter Name="carrier" Type="Foundation.NSObject" />
+        <Parameter Name="error" Type="Foundation.NSError" RefType="out">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="spanContext">The <see cref="IOTSpanContext" /> instance to inject.</param>
+        <param name="format">Must be the string returned by <see cref="OT.FormatTextMap" />.</param>
+        <param name="carrier">
+          An instance of one of the following types: <see cref="DDHTTPHeadersWriter" />, <see cref="DDB3HTTPHeadersWriter" />, or <see cref="DDW3CHTTPHeadersWriter" />.
+        </param>
+        <param name="error">In the event of an error, the <see cref="NSError" /> instance.</param>
+        <summary>Transfer the span information into the carrier of the given format.</summary>
+        <returns>
+          <c>true</c> if successful, <c>false</c> otherwise.</returns>
+        <remarks>
+          <para>See Also: propagation (http://opentracing.io/propagation/)</para>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shared">
+      <MemberSignature Language="C#" Value="public static Datadog.iOS.ObjC.IOTTracer Shared { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class Datadog.iOS.ObjC.IOTTracer Shared" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: Foundation.Export("shared")</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.IOTTracer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Obtains the IOTTracer for manual tracing instrumentation.</summary>
+        <value>The IOTTracer that conforms to the Open Tracing API (<see cref="IOTTracer" />)</value>
+        <remarks>It requires <c>DDTrace.Enable(DDTraceConfiguration)</c> to be called first - otherwise it will return a no-op implementation.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartSpan">
+      <MemberSignature Language="C#" Value="public virtual Datadog.iOS.ObjC.IOTSpan StartSpan (string operationName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Datadog.iOS.ObjC.IOTSpan StartSpan(string operationName) cil managed" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Datadog.iOS.ObjC.IOTTracer.StartSpan(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("startSpan:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.IOTSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="operationName">the operation name for the newly-started span.</param>
+        <summary>Start a new span with the given operation name.</summary>
+        <returns>A valid Span instance; it is the caller's responsibility to call <see cref="IOTSpan.Finish" />.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartSpan">
+      <MemberSignature Language="C#" Value="public virtual Datadog.iOS.ObjC.IOTSpan StartSpan (string operationName, Datadog.iOS.ObjC.IOTSpanContext parent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Datadog.iOS.ObjC.IOTSpan StartSpan(string operationName, class Datadog.iOS.ObjC.IOTSpanContext parent) cil managed" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Datadog.iOS.ObjC.IOTTracer.StartSpan(System.String,Datadog.iOS.ObjC.IOTSpanContext)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("startSpan:childOf:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.IOTSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationName" Type="System.String" />
+        <Parameter Name="parent" Type="Datadog.iOS.ObjC.IOTSpanContext">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="operationName">the operation name for the newly-started span.</param>
+        <param name="parent">
+          Span context that will be a parent reference. If no 
+          reference is provided, and an active span exists in the current execution context,  
+          the active span will be used as the parent.
+        </param>
+        <summary>Start a new span with the given operation name.</summary>
+        <returns>A valid Span instance; it is the caller's responsibility to call <see cref="IOTSpan.Finish" />.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartSpan">
+      <MemberSignature Language="C#" Value="public virtual Datadog.iOS.ObjC.IOTSpan StartSpan (string operationName, Foundation.NSDictionary tags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Datadog.iOS.ObjC.IOTSpan StartSpan(string operationName, class Foundation.NSDictionary tags) cil managed" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Datadog.iOS.ObjC.IOTTracer.StartSpan(System.String,Foundation.NSDictionary)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("startSpan:tags:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.IOTSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationName" Type="System.String" />
+        <Parameter Name="tags" Type="Foundation.NSDictionary">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="operationName">The operation name for the newly-started span.</param>
+        <param name="tags">
+          A set of tag keys and values per <see cref="IOTSpan.SetTag" />, or <c>NULL</c> to start with 
+          an empty tag map.
+        </param>
+        <summary>Start a new span with the given operation name.</summary>
+        <returns>A valid Span instance; it is the caller's responsibility to call <see cref="IOTSpan.Finish" />.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartSpan">
+      <MemberSignature Language="C#" Value="public virtual Datadog.iOS.ObjC.IOTSpan StartSpan (string operationName, Datadog.iOS.ObjC.IOTSpanContext parent, Foundation.NSDictionary tags);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Datadog.iOS.ObjC.IOTSpan StartSpan(string operationName, class Datadog.iOS.ObjC.IOTSpanContext parent, class Foundation.NSDictionary tags) cil managed" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Datadog.iOS.ObjC.IOTTracer.StartSpan(System.String,Datadog.iOS.ObjC.IOTSpanContext,Foundation.NSDictionary)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("startSpan:childOf:tags:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.IOTSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationName" Type="System.String" />
+        <Parameter Name="parent" Type="Datadog.iOS.ObjC.IOTSpanContext">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="tags" Type="Foundation.NSDictionary">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(2)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="operationName">The operation name for the newly-started span.</param>
+        <param name="parent">
+          Span context that will be a parent reference. If no 
+          reference is provided, and an active span exists in the current execution context 
+          the active span will be used as the parent.
+        </param>
+        <param name="tags">
+          A set of tag keys and values per <see cref="IOTSpan.SetTag" />, or <c>NULL</c> to start with 
+          an empty tag map.
+        </param>
+        <summary>Start a new span with the given operation name.</summary>
+        <returns>A valid Span instance; it is the caller's responsibility to call <see cref="IOTSpan.Finish" />.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartSpan">
+      <MemberSignature Language="C#" Value="public virtual Datadog.iOS.ObjC.IOTSpan StartSpan (string operationName, Datadog.iOS.ObjC.IOTSpanContext parent, Foundation.NSDictionary tags, Foundation.NSDate startTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Datadog.iOS.ObjC.IOTSpan StartSpan(string operationName, class Datadog.iOS.ObjC.IOTSpanContext parent, class Foundation.NSDictionary tags, class Foundation.NSDate startTime) cil managed" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Datadog.iOS.ObjC.IOTTracer.StartSpan(System.String,Datadog.iOS.ObjC.IOTSpanContext,Foundation.NSDictionary,Foundation.NSDate)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("startSpan:childOf:tags:startTime:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.NullableContext(2)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Datadog.iOS.ObjC.IOTSpan</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName>System.Runtime.CompilerServices.Nullable(1)</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationName" Type="System.String">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.Runtime.CompilerServices.Nullable(1)</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="parent" Type="Datadog.iOS.ObjC.IOTSpanContext" />
+        <Parameter Name="tags" Type="Foundation.NSDictionary" />
+        <Parameter Name="startTime" Type="Foundation.NSDate" />
+      </Parameters>
+      <Docs>
+        <param name="operationName">the operation name for the newly-started span.</param>
+        <param name="parent">
+        Span context that will be a parent reference. If no 
+        reference is provided, and an active span exists in the current execution context 
+        the active span will be used as the parent.
+        </param>
+        <param name="tags">
+        A set of tag keys and values per <see cref="IOTSpan.SetTag" />, or <c>NULL</c> to start with 
+        an empty tag map.
+        </param>
+        <param name="startTime">
+        An explicitly specified start timestamp for the <see cref="IOTSpan" />, or <c>NULL</c> to use the current walltime.
+        </param>
+        <summary>Start a new span with the given operation name.</summary>
+        <returns>A valid Span instance; it is the caller's responsibility to call <see cref="IOTSpan.Finish" />.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

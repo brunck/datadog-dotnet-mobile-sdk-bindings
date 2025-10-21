@@ -1,0 +1,404 @@
+﻿<metadata>
+
+	<remove-node path="/api/package[@name='com.datadog.android.trace']/interface[@name='InternalCoreWriterProvider']" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.internal']/class[@name='FeatureSdkCoreExtKt']" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.internal.utils']/class[@name='TracerExtensionsKt']" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace']/class[@name='AndroidTracer.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace']/class[@name='AndroidTracer.Builder']/method[@name='addGlobalTag']" />
+	<remove-node path="/api/package[starts-with(@name, 'com.datadog.android.trace.internal')]" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent']/method[starts-with(@name,'component')]" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Application.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Application']/method[starts-with(@name,'component')]" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Client']/method[starts-with(@name,'component')]" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Client.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Dd']/method[starts-with(@name,'component')]" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Dd.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Meta.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Meta']/method[starts-with(@name,'component')]" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Metrics.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Metrics']/method[starts-with(@name,'component')]" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Network.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Network']/method[starts-with(@name,'component')]" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Session.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Session']/method[starts-with(@name,'component')]" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.SimCarrier.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.SimCarrier']/method[starts-with(@name,'component')]" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Tracer.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Tracer']/method[starts-with(@name,'component')]" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Usr.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Usr']/method[starts-with(@name,'component')]" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.View.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.View']/method[starts-with(@name,'component')]" />
+	<remove-node
+		path="/api/package[@name='com.datadog.legacy.trace.api.interceptor']/interface[@name='MutableSpan']/method[@name='setSamplingPriority' and count(parameter)=1 and parameter[1][@type='int']]" />
+	<remove-node
+		path="/api/package[@name='com.datadog.legacy.trace.api.interceptor']/interface[@name='MutableSpan']/method[@name='getRootSpan' and count(parameter)=0]" />
+	<remove-node path="/api/package[@name='com.datadog.legacy.trace.api.interceptor']/interface[@name='MutableSpan']/method[@name='drop']" />
+	<remove-node path="/api/package[@name='com.datadog.legacy.trace.api.sampling']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api.config']" />
+	<remove-node path="/api/package[@name='com.datadog.legacy.trace.api']/class[@name='Config.PropagationStyle']" />
+	<remove-node path="/api/package[@name='com.datadog.legacy.trace.common.sampling']" />
+	<remove-node path="/api/package[@name='com.datadog.legacy.trace.common.util']" />
+	<remove-node path="/api/package[@name='com.datadog.legacy.trace.common.writer']" />
+	<remove-node path="/api/package[@name='com.datadog.legacy.trace.api']/class[@name='Config']" />
+	<remove-node path="/api/package[@name='com.datadog.legacy.trace.api']/class[@name='DDSpanTypes']/field[@name='WEB_SERVLET']" />
+	<remove-node path="/api/package[@name='com.datadog.legacy.trace.api']/class[@name='DDTraceApiInfo']" />
+	<remove-node path="/api/package[@name='com.datadog.legacy.trace.api']/class[@name='DDTags']/field[@name='EVENT_SAMPLE_RATE']" />
+	<remove-node path="/api/package[@name='com.datadog.exec']" />
+	<remove-node path="/api/package[@name='com.datadog.opentracing']/class[@name='DDTraceOTInfo']/method[@name='main' and count(parameter)=1 and parameter[1][@type='java.lang.String...']]" />
+	<remove-node path="/api/package[@name='com.datadog.opentracing']/class[@name='StringCachingBigInteger']" />
+	<remove-node path="/api/package[@name='com.datadog.opentracing']/class[@name='DDTracer.DDSpanBuilder']/method[@name='startManual']" />
+	<remove-node path="/api/package[@name='com.datadog.opentracing.decorators']/class[@name='ServiceNameDecorator']" />
+	<remove-node path="/api/package[@name='com.datadog.opentracing.decorators']/class[@name='PeerServiceDecorator']" />
+	<remove-node path="/api/package[@name='com.datadog.opentracing.decorators']/class[@name='ForceManualKeepDecorator']" />
+	<remove-node path="/api/package[@name='com.datadog.opentracing.decorators']/class[@name='ForceManualDropDecorator']" />
+	<remove-node path="/api/package[@name='com.datadog.opentracing.decorators']/class[@name='DDDecoratorsFactory']" />
+	<remove-node path="/api/package[@name='com.datadog.opentracing.decorators']/class[@name='AbstractDecorator']" />
+	<remove-node path="/api/package[@name='com.datadog.opentracing.propagation']" />
+	<remove-node path="/api/package[@name='com.datadog.opentracing.jfr']/class[@name='DDNoopScopeEvent']" />
+	<remove-node path="/api/package[@name='com.datadog.opentracing.jfr']/class[@name='DDNoopScopeEventFactory']" />
+	<remove-node path="/api/package[@name='com.datadog.opentracing.scopemanager']/class[@name='ContextualScopeManager']" />
+	<remove-node path="/api/package[@name='com.datadog.opentracing.scopemanager']/class[@name='ContinuableScope']" />
+	<remove-node path="/api/package[@name='com.datadog.opentracing.scopemanager']/class[@name='SimpleScope']" />
+	<remove-node path="/api/package[@name='com.datadog.opentracing']/class[@name='DefaultLogHandler']" />
+	<remove-node path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpan']/method[@name='drop']" />
+	<remove-node path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpanContext']/method[@name='getTracer']" />
+	<remove-node path="/api/package[@name='com.datadog.opentracing']/class[@name='DDTracer.DDSpanBuilder']/method[@name='withLogHandler']" />
+	<remove-node path="/api/package[@name='com.datadog.opentracing']/interface[@name='LogHandler']" />
+	
+	<remove-node path="/api/package[@name='com.datadog.trace.api']/class[@name='Functions']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api']/class[@name='Config']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api']/class[@name='DDSpanId']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api']/class[@name='DDSpanTypes']/field[@name='WEB_SERVLET']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api']/class[@name='DDTags']/field[@name='EVENT_SAMPLE_RATE']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api']/class[@name='DDTags']/field[@name='HTTP_FRAGMENT']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api']/class[@name='ConfigDefaults']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api']/class[@name='ConfigCollector']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api']/class[@name='ConfigOrigin']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api']/class[@name='ConfigSetting']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api']/class[@name='DynamicConfig']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api']/class[@name='DD128bTraceId']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api']/class[@name='DD64bTraceId']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api']/class[@name='DDTraceApiInfo']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api']/interface[@name='EndpointCheckpointer']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api']/class[@name='EndpointCheckpointerHolder']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api']/interface[@name='EndpointTracker']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api']/class[@name='IdGenerationStrategy']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api']/class[@name='InstrumenterConfig']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api']/class[@name='MethodFilterConfigParser']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api']/class[@name='Pair']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api']/class[@name='Platform']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api']/class[@name='PropagationStyle']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api']/class[@name='ResolverCacheConfig']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api']/interface[@name='Stateful']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api']/interface[@name='StatsDClient']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api']/interface[@name='Trace']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api']/class[@name='TracePropagationStyle']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api.sampling']/class[@name='PrioritySampling']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api.sampling']/interface[@name='Sampler']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api.sampling']/class[@name='SamplingMechanism']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api.function']/interface[@name='TriFunction']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api.function']/interface[@name='TriConsumer']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api.cache']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api.env']/class[@name='CapturedEnvironment']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api.gateway']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api.interceptor']/interface[@name='MutableSpan']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api.internal']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api.internal.util']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api.metrics']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api.naming']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api.naming.v0']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api.naming.v1']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api.normalize']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api.profiling']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api.scopemanager']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.api.time']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.config.provider']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/interface[@name='AgentTrace']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/interface[@name='AgentScope']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/interface[@name='AgentScopeManager']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/interface[@name='AgentPropagation']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/interface[@name='AgentSpan']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/interface[@name='AgentSpanLink']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/class[@name='AgentTracer']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/interface[@name='AttachableWrapper']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/class[@name='ErrorPriorities']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/interface[@name='InboxItem']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/class[@name='InstrumentationTags']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/interface[@name='PathwayContext']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/interface[@name='ProfilerContext']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/interface[@name='ProfilingContextIntegration']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/interface[@name='ScopeState']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/interface[@name='URIDataAdapter']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/class[@name='ResourceNamePriorities']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/class[@name='SamplerConstants']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/interface[@name='ScopeStateAware']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/class[@name='ScopeSource']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/class[@name='SpanLink']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/class[@name='SpanLinkAttributes']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/class[@name='StatsPoint']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/class[@name='Tags']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/class[@name='TagContext']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/class[@name='UnparseableURIDataAdapter']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/class[@name='URIDataAdapterBase']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/class[@name='URIDefaultDataAdapter']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap']/class[@name='ActiveSubsystems']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.appsec.api.blocking']/class[@name='BlockingContentType']" />
+	<remove-node
+		path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/class[@name='URIUtils.LazyUrl']" />
+	<remove-node
+		path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/interface[@name='AgentHistogram']" />
+	<remove-node
+		path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/class[@name='AgentTracer.NoopAgentSpan']" />
+	<remove-node
+		path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/class[@name='AgentTracer.NoopAgentScope']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.bootstrap.instrumentation.api']/class[@name='URIUtils']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.common.metrics']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.common.sampling']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.common.writer']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.common.writer.ddagent']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.context']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.core']/class[@name='Metadata']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.core']/interface[@name='MetadataConsumer']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.core.monitor']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.core']/class[@name='CoreTracer']" />
+	<remove-node
+		path="/api/package[@name='com.datadog.trace.core']/class[@name='DDSpan']/method[@name='samplingPriority' and count(parameter)=0]" />
+	<remove-node path="/api/package[@name='com.datadog.trace.core']/class[@name='DDSpan']/method[@name='setSamplingPriority' and count(parameter)=1 and parameter[1][@type='int']]" />
+	<remove-node path="/api/package[@name='com.datadog.trace.core']/class[@name='DDSpanContext']/method[@name='getTrace']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.core']/class[@name='DDSpanContext']/method[@name='lockSamplingPriority']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.core']/class[@name='DDSpanContext']/constructor" />
+	<remove-node path="/api/package[@name='com.datadog.trace.core']/class[@name='DDTraceCoreInfo']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.core']/class[@name='LongRunningTracesTracker']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.core.propagation']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.core.propagation.ptags']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.core.scopemanager']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.core.tagprocessor']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.core.util']" />
+	<remove-node
+		path="/api/package[@name='com.datadog.trace.core']/interface[@name='CoreSpan']/method[@name='setTag' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.Object']]" />
+	<remove-node
+		path="/api/package[@name='com.datadog.trace.core']/interface[@name='CoreSpan']/method[@name='processTagsAndBaggage' and count(parameter)=1 and parameter[1][@type='com.datadog.trace.core.MetadataConsumer']]" />
+	<remove-node path="/api/package[@name='com.datadog.trace.core.taginterceptor']/class[@name='RuleFlags']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.core.taginterceptor']/class[@name='TagInterceptor']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.ddagent']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.logger']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.monitor']" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.opentelemetry.internal']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.relocate.api']" />
+	<remove-node path="/api/package[@name='com.datadog.trace.util']" />
+	<remove-node path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpanContext']/method[@name='baggageItems' and count(parameter)=0]" />
+	<remove-node
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDTracer']/method[@name='finalize' and count(parameter)=0]" />
+	<remove-node
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpan']/method[@name='getRootSpan' and count(parameter)=0]" />
+	<remove-node path="/api/package[@name='com.datadog.opentracing.jfr']" />
+	<remove-node path="/api/package[@name='io.opentracing']/interface[@name='Tracer.SpanBuilder']/method[@name='startManual']" />
+	<remove-node path="/api/package[@name='io.opentracing']/interface[@name='Scope']/method[@name='span']" />
+	<remove-node path="/api/package[@name='io.opentracing']/interface[@name='ScopeManager']/method[@name='activate' and count(parameter)=2 and parameter[1][@type='io.opentracing.Span'] and parameter[2][@type='boolean']]" />
+	<remove-node path="/api/package[@name='io.opentracing']/interface[@name='ScopeManager']/method[@name='active' and count(parameter)=0]" />
+	<remove-node path="/api/package[@name='io.opentracing.tag']/class[@name='BooleanTag']" />
+	<remove-node path="/api/package[@name='io.opentracing.tag']/class[@name='IntTag']" />
+	<remove-node path="/api/package[@name='io.opentracing.tag']/class[@name='StringTag']" />
+	<remove-node
+		path="/api/package[@name='com.datadog.trace.core']/interface[@name='CoreSpan']/method[@name='getTag' and count(parameter)=2 and parameter[1][@type='java.lang.CharSequence'] and parameter[2][@type='U']]" />
+	<remove-node path="/api/package[@name='io.opentelemetry.api.internal']" />
+	<remove-node path="/api/package[@name='io.opentelemetry.api.baggage']" />
+	<remove-node path="/api/package[@name='io.opentelemetry.api.common']" />
+	<remove-node path="/api/package[@name='io.opentelemetry.api']" />
+	<remove-node path="/api/package[@name='io.opentelemetry.api.baggage.propagation']" />
+	<remove-node path="/api/package[@name='io.opentelemetry.api.trace']" />
+	<remove-node path="/api/package[@name='io.opentelemetry.context']" />
+	<remove-node path="/api/package[@name='io.opentelemetry.context.propagation']" />
+	<remove-node path="/api/package[@name='io.opentelemetry.context.internal.shaded']" />
+	<remove-node path="/api/package[@name='io.opentelemetry.api.trace.propagation']" />
+	<remove-node
+		path="/api/package[@name='io.opentracing.util']/class[@name='GlobalTracer']/method[@name='register' and count(parameter)=1 and parameter[1][@type='io.opentracing.Tracer']]" />
+	<remove-node path="/api/package[@name='io.opentracing.util']/class[@name='AutoFinishScopeManager']" />
+	<remove-node path="/api/package[@name='io.opentracing.util']/class[@name='AutoFinishScope']" />
+	<remove-node path="/api/package[@name='io.opentracing.util']/class[@name='ThreadLocalScope']" />
+	<remove-node path="/api/package[@name='io.opentracing.util']/class[@name='ThreadLocalScopeManager']" />
+	<remove-node path="/api/package[@name='io.opentracing.log']/class[@name='Fields']" />
+	<remove-node path="/api/package[@name='io.opentracing.util']/class[@name='GlobalTracer']" />
+	<remove-node path="/api/package[@name='io.opentracing.tag']/class[@name='Tags']" />
+	<remove-node path="/api/package[@name='io.opentracing.tag']/class[@name='AbstractTag']" />
+	<remove-node path="/api/package[@name='io.opentracing']/class[@name='References']" />
+	<remove-node path="/api/package[@name='io.opentracing.propagation']/interface[@name='Binary']" />
+	<remove-node path="/api/package[@name='io.opentracing.propagation']/class[@name='BinaryAdapters']" />
+	<remove-node path="/api/package[@name='io.opentracing.propagation']/interface[@name='BinaryExtract']" />
+	<remove-node path="/api/package[@name='io.opentracing.propagation']/interface[@name='TextMap']" />
+	<remove-node path="/api/package[@name='io.opentracing.propagation']/class[@name='TextMapAdapter']" />
+	<remove-node path="/api/package[@name='io.opentracing.propagation']/interface[@name='TextMapExtract']" />
+	<remove-node path="/api/package[@name='io.opentracing.propagation']/class[@name='TextMapExtractAdapter']" />
+	<remove-node path="/api/package[@name='io.opentracing.propagation']/class[@name='TextMapInjectAdapter']" />
+	
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Device.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Device']/method[starts-with(@name,'component')]" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Os.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Os']/method[starts-with(@name,'component')]" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Span.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Span']/method[starts-with(@name,'component')]" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Type.Companion']" />
+	<remove-node path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Type']/method[starts-with(@name,'component')]" />
+
+	<remove-node path="/api/package/class[@deprecated='deprecated']" />
+	<remove-node path="/api/package/interface[@deprecated='deprecated']" />
+	<remove-node path="/api/package/class/method[@deprecated='deprecated']" />
+	<remove-node path="/api/package/interface/method[@deprecated='deprecated']" />
+
+	<attr path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Dd']" name="managedName">DD</attr>
+	<attr path="/api/package[@name='com.datadog.android.trace.model']/class[@name='SpanEvent.Usr']" name="managedName">User</attr>
+	<attr path="/api/package[@name='com.datadog.android.trace']/class[@name='SpanExtKt']" name="visibility">internal</attr>
+	<attr path="/api/package[@name='com.datadog.android.trace.sqlite']/class[@name='SqliteDatabaseExtKt']" name="visibility">internal</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDTracer.DDSpanBuilder']/method[@name='addReference' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='io.opentracing.SpanContext']]"
+		name="managedReturn">
+		IO.OpenTracing.ITracer.ISpanBuilder
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDTracer.DDSpanBuilder']/method[@name='asChildOf' and count(parameter)=1 and parameter[1][@type='io.opentracing.Span']]"
+		name="managedReturn">
+		IO.OpenTracing.ITracer.ISpanBuilder
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDTracer.DDSpanBuilder']/method[@name='asChildOf' and count(parameter)=1 and parameter[1][@type='io.opentracing.SpanContext']]"
+		name="managedReturn">
+		IO.OpenTracing.ITracer.ISpanBuilder
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDTracer.DDSpanBuilder']/method[@name='withStartTimestamp' and count(parameter)=1 and parameter[1][@type='long']]"
+		name="managedReturn">
+		IO.OpenTracing.ITracer.ISpanBuilder
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDTracer.DDSpanBuilder']/method[@name='withTag' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='boolean']]"
+		name="managedReturn">
+		IO.OpenTracing.ITracer.ISpanBuilder
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDTracer.DDSpanBuilder']/method[@name='withTag' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.Number']]"
+		name="managedReturn">
+		IO.OpenTracing.ITracer.ISpanBuilder
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDTracer.DDSpanBuilder']/method[@name='withTag' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]"
+		name="managedReturn">
+		IO.OpenTracing.ITracer.ISpanBuilder
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpan']/method[@name='context' and count(parameter)=0]"
+		name="managedReturn">
+		IO.OpenTracing.ISpanContext
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpan']/method[@name='log' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+		name="managedReturn">
+		IO.OpenTracing.ISpan
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpan']/method[@name='log' and count(parameter)=1 and parameter[1][@type='java.util.Map&lt;java.lang.String, ?&gt;']]"
+		name="managedReturn">
+		IO.OpenTracing.ISpan
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpan']/method[@name='log' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='java.lang.String']]"
+		name="managedReturn">
+		IO.OpenTracing.ISpan
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpan']/method[@name='log' and count(parameter)=2 and parameter[1][@type='long'] and parameter[2][@type='java.util.Map&lt;java.lang.String, ?&gt;']]"
+		name="managedReturn">
+		IO.OpenTracing.ISpan
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpan']/method[@name='setBaggageItem' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]"
+		name="managedReturn">
+		IO.OpenTracing.ISpan
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpan']/method[@name='setOperationName' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+		name="managedReturn">
+		IO.OpenTracing.ISpan
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.legacy.trace.api.interceptor']/interface[@name='MutableSpan']/method[@name='setOperationName' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+		name="managedName">
+		SetOperationNameForMutableSpan
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.legacy.trace.api.interceptor']/interface[@name='MutableSpan']/method[@name='setError' and count(parameter)=1 and parameter[1][@type='boolean']]"
+		name="managedName">
+		SetErrorForMutableSpan
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.legacy.trace.api.interceptor']/interface[@name='MutableSpan']/method[@name='setResourceName' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+		name="managedName">
+		SetResourceNameForMutableSpan
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.legacy.trace.api.interceptor']/interface[@name='MutableSpan']/method[@name='setServiceName' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+		name="managedName">
+		SetServiceNameForMutableSpan
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.legacy.trace.api.interceptor']/interface[@name='MutableSpan']/method[@name='setSpanType' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+		name="managedName">
+		SetSpanTypeForMutableSpan
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.legacy.trace.api.interceptor']/interface[@name='MutableSpan']/method[@name='setTag' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='boolean']]"
+		name="managedName">
+		SetTagForMutableSpan
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.legacy.trace.api.interceptor']/interface[@name='MutableSpan']/method[@name='setTag' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.Number']]"
+		name="managedName">
+		SetTagForMutableSpan
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.legacy.trace.api.interceptor']/interface[@name='MutableSpan']/method[@name='setTag' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]"
+		name="managedName">
+		SetTagForMutableSpan
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpan']/method[@name='setResourceName' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+		name="managedReturn">
+		IO.OpenTracing.ISpan
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpan']/method[@name='setTag' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='boolean']]"
+		name="managedReturn">
+		IO.OpenTracing.ISpan
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpan']/method[@name='setTag' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.Number']]"
+		name="managedReturn">
+		IO.OpenTracing.ISpan
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpan']/method[@name='setTag' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]"
+		name="managedReturn">
+		IO.OpenTracing.ISpan
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpan']/method[@name='setTag' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]"
+		name="managedReturn">
+		IO.OpenTracing.ISpan
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.trace.core']/class[@name='DDSpan']/method[@name='getSamplingPriority' and count(parameter)=0]"
+		name="managedName">
+		SamplingPriorityInternal
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.trace.core']/class[@name='DDSpan']/method[@name='getSamplingPriority' and count(parameter)=0]"
+		name="visibility">
+		internal
+	</attr>
+	<attr
+		path="/api/package[@name='com.datadog.opentracing']/class[@name='DDSpanContext']/method[@name='getBaggageItems' and count(parameter)=0]"
+		name="managedName">
+		BaggageItemsAsDictionary
+	</attr>
+</metadata>

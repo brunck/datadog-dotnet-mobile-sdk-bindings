@@ -1,0 +1,224 @@
+<Type Name="DDWebViewTracking" FullName="Datadog.iOS.WebViewTracking.DDWebViewTracking">
+  <TypeSignature Language="C#" Value="public class DDWebViewTracking : Foundation.NSObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DDWebViewTracking extends Foundation.NSObject" />
+  <AssemblyInfo>
+    <AssemblyName>wvt</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Foundation.NSObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>Foundation.Register("DDWebViewTracking", true)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.Nullable(0)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.CompilerServices.NullableContext(1)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Real User Monitoring allows you to monitor web views and eliminate blind spots in your hybrid iOS applications.</summary>
+    <remarks>
+      <para>Prerequisites:</para>
+      <para>
+        Set up the web page you want rendered on your mobile iOS and tvOS application with the RUM Browser SDK first. 
+        For more information, see the RUM Browser Monitoring documentation at https://docs.datadoghq.com/real_user_monitoring/browser/#npm.
+      </para>
+      <para>You can perform the following:</para>
+      <list type="bullet">
+        <item>
+          <description>Track user journeys across web and native components in mobile applications.</description>
+        </item>
+        <item>
+          <description>Scope the root cause of latency to web pages or native components in mobile applications.</description>
+        </item>
+        <item>
+          <description>Support users that have difficulty loading web pages on mobile devices.</description>
+        </item>
+      </list>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DDWebViewTracking (Foundation.NSObjectFlag t);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(valuetype Foundation.NSObjectFlag t) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="t" Type="Foundation.NSObjectFlag" />
+      </Parameters>
+      <Docs>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected internal DDWebViewTracking (ObjCRuntime.NativeHandle handle);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(valuetype ObjCRuntime.NativeHandle handle) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.ComponentModel.EditorBrowsable</AttributeName>
+        </Attribute>
+      </Attributes>
+      <Parameters>
+        <Parameter Name="handle" Type="ObjCRuntime.NativeHandle" />
+      </Parameters>
+      <Docs>
+        <param name="handle">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClassHandle">
+      <MemberSignature Language="C#" Value="public override ObjCRuntime.NativeHandle ClassHandle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype ObjCRuntime.NativeHandle ClassHandle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ObjCRuntime.NativeHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Disable">
+      <MemberSignature Language="C#" Value="public static void Disable (WebKit.WKWebView webView);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Disable(class WebKit.WKWebView webView) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("disableWithWebView:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webView" Type="WebKit.WKWebView" />
+      </Parameters>
+      <Docs>
+        <param name="webView">The web-view to stop tracking.</param>
+        <summary>Disables Datadog iOS SDK and Datadog Browser SDK integration.</summary>
+        <remarks>
+          <para>Removes Datadog's ScriptMessageHandler and UserScript from the caller.</para>
+          <para>Note: This method <i>must</i> be called when the webview can be deinitialized.</para>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enable">
+      <MemberSignature Language="C#" Value="public static void Enable (WebKit.WKWebView webView);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Enable(class WebKit.WKWebView webView) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webView" Type="WebKit.WKWebView" />
+      </Parameters>
+      <Docs>
+        <param name="webView">The <see cref="WKWebView" /> to track.</param>
+        <summary>
+          <para>Enables SDK to correlate Datadog RUM events and Logs from the WebView with native RUM session.</para>
+          <para>If the content loaded in WebView uses Datadog Browser SDK (`v4.2.0+`) and matches specified `hosts`, web events will be correlated with the RUM session from native SDK.</para>
+          <para>Default values of an empty NSSet&lt;NSString&gt; and <see cref="MaxSampleRate"/> of 100.</para>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Enable">
+      <MemberSignature Language="C#" Value="public static void Enable (WebKit.WKWebView webView, Foundation.NSSet&lt;Foundation.NSString&gt; hosts, float logsSampleRate);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Enable(class WebKit.WKWebView webView, class Foundation.NSSet`1&lt;class Foundation.NSString&gt; hosts, float32 logsSampleRate) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>Foundation.Export("enableWithWebView:hosts:logsSampleRate:")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>ObjCRuntime.BindingImpl(ObjCRuntime.BindingImplOptions.GeneratedCode | ObjCRuntime.BindingImplOptions.Optimizable)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="webView" Type="WebKit.WKWebView" />
+        <Parameter Name="hosts" Type="Foundation.NSSet&lt;Foundation.NSString&gt;" />
+        <Parameter Name="logsSampleRate" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="webView">The web-view to track.</param>
+        <param name="hosts">A set of hosts instrumented with Browser SDK to capture Datadog events from.</param>
+        <param name="logsSampleRate">
+          The sampling rate for logs coming from the WebView. Must be a value between <c>0</c> and <c>100</c>,
+          where 0 means no logs will be sent and 100 means all will be uploaded. Default: <c>100</c>.</param>
+        <summary>
+          Enables SDK to correlate Datadog RUM events and Logs from the WebView with native RUM session.
+          If the content loaded in WebView uses Datadog Browser SDK (<c>v4.2.0+</c>) and matches specified
+          <c>hosts</c>, web events will be correlated with the RUM session from native SDK.
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxSampleRate">
+      <MemberSignature Language="C#" Value="public static float MaxSampleRate;" />
+      <MemberSignature Language="ILAsm" Value=".field public static float32 MaxSampleRate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Maximum sampling rate. It means every event is kept.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
