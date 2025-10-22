@@ -8,6 +8,8 @@ These .NET bindings apply only to the Datadog Mobile SDKs for both iOS and Andro
 
 For more information, please refer to the [Datadog iOS SDK repository](https://github.com/DataDog/dd-sdk-ios) and the [Datadog Android SDK repository](https://github.com/DataDog/dd-sdk-android).
 
+Submodules are included for each SDK.
+
 # Platforms
 
 ## iOS
