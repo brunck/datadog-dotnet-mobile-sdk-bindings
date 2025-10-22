@@ -20,6 +20,9 @@ See the [iOS-specific documentation](src/iOS) for this package.
 
 [Sample](src/iOS/T/)
 
+#### Documentation
+There is IntelliSense documentation provided for iOS only.
+
 ## Android
 
 Requires Android 26 or later.
