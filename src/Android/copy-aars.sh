@@ -1,8 +1,10 @@
 #!/bin/bash
 
 # Source and destination paths
-DD_SDK_ROOT="dd-sdk-android"
-BINDINGS_ROOT="src/Android/Bindings"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+DD_SDK_ROOT="$REPO_ROOT/dd-sdk-android"
+BINDINGS_ROOT="$SCRIPT_DIR/Bindings"
 
 # Function to copy AAR file if it exists
 copy_aar() {
