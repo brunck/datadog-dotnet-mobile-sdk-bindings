@@ -280,7 +280,8 @@ namespace Datadog.iOS.ObjC
 		AppHang = 2,
 		Exception = 3,
 		WatchdogTermination = 4,
-		MemoryWarning = 5
+		MemoryWarning = 5,
+		Network = 6
 	}
 
 	[Native]
@@ -1017,6 +1018,46 @@ namespace Datadog.iOS.ObjC
 		DDRUMVitalEventVitalVitalTypeStep = 1
 	}
 
+
+	[Native]
+	public enum DDRUMLongTaskEventDDProfilingErrorReason : long
+	{
+		DDRUMLongTaskEventDDProfilingErrorReasonNone = 0,
+		DDRUMLongTaskEventDDProfilingErrorReasonNotSupportedByBrowser = 1,
+		DDRUMLongTaskEventDDProfilingErrorReasonFailedToLazyLoad = 2,
+		DDRUMLongTaskEventDDProfilingErrorReasonMissingDocumentPolicyHeader = 3,
+		DDRUMLongTaskEventDDProfilingErrorReasonUnexpectedException = 4,
+	}
+
+	[Native]
+	public enum DDRUMLongTaskEventDDProfilingStatus : long
+	{
+		DDRUMLongTaskEventDDProfilingStatusNone = 0,
+		DDRUMLongTaskEventDDProfilingStatusStarting = 1,
+		DDRUMLongTaskEventDDProfilingStatusRunning = 2,
+		DDRUMLongTaskEventDDProfilingStatusStopped = 3,
+		DDRUMLongTaskEventDDProfilingStatusError = 4,
+	}
+
+	[Native]
+	public enum DDRUMViewEventDDProfilingErrorReason : long
+	{
+		DDRUMViewEventDDProfilingErrorReasonNone = 0,
+		DDRUMViewEventDDProfilingErrorReasonNotSupportedByBrowser = 1,
+		DDRUMViewEventDDProfilingErrorReasonFailedToLazyLoad = 2,
+		DDRUMViewEventDDProfilingErrorReasonMissingDocumentPolicyHeader = 3,
+		DDRUMViewEventDDProfilingErrorReasonUnexpectedException = 4,
+	}
+
+	[Native]
+	public enum DDRUMViewEventDDProfilingStatus : long
+	{
+		DDRUMViewEventDDProfilingStatusNone = 0,
+		DDRUMViewEventDDProfilingStatusStarting = 1,
+		DDRUMViewEventDDProfilingStatusRunning = 2,
+		DDRUMViewEventDDProfilingStatusStopped = 3,
+		DDRUMViewEventDDProfilingStatusError = 4,
+	}
 	[Native]
 	public enum DDRUMVitalsFrequency : long
 	{

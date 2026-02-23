@@ -133,6 +133,26 @@ namespace Datadog.iOS.ObjC
 		[Export ("addUserExtraInfo:")]
 		void AddUserExtraInfo (NSDictionary<NSString, NSObject> extraInfo);
 
+		// +(void)clearUserInfo;
+		[Static]
+		[Export ("clearUserInfo")]
+		void ClearUserInfo ();
+
+		// +(void)setAccountInfoWithAccountId:(NSString * _Nonnull)accountId name:(NSString * _Nullable)name extraInfo:(NSDictionary<NSString *, id> * _Nonnull)extraInfo;
+		[Static]
+		[Export ("setAccountInfoWithAccountId:name:extraInfo:")]
+		void SetAccountInfo (string accountId, [NullAllowed] string name, NSDictionary<NSString, NSObject> extraInfo);
+
+		// +(void)addAccountExtraInfo:(NSDictionary<NSString *,id> * _Nonnull)extraInfo;
+		[Static]
+		[Export ("addAccountExtraInfo:")]
+		void AddAccountExtraInfo (NSDictionary<NSString, NSObject> extraInfo);
+
+		// +(void)clearAccountInfo;
+		[Static]
+		[Export ("clearAccountInfo")]
+		void ClearAccountInfo ();
+
 		// +(void)setTrackingConsentWithConsent:(DDTrackingConsent * _Nonnull)consent;
 		[Static]
 		[Export ("setTrackingConsentWithConsent:")]
@@ -203,6 +223,61 @@ namespace Datadog.iOS.ObjC
 		[Export ("rumViewFor:")]
 		[return: NullAllowed]
 		DDRUMView RumView (UIViewController viewController);
+	}
+#pragma warning restore CS0108
+
+	interface IDDSwiftUIRUMActionsPredicate {}
+
+	// @protocol DDSwiftUIRUMActionsPredicate
+	[Protocol (Name = "_TtP11DatadogObjc28DDSwiftUIRUMActionsPredicate_")]
+	interface DDSwiftUIRUMActionsPredicate
+	{
+		// @required -(DDRUMAction * _Nullable)rumActionWith:(NSString * _Nonnull)componentName
+		[Abstract]
+		[Export ("rumActionWith:")]
+		[return: NullAllowed]
+		DDRUMAction RumAction (string componentName);
+	}
+
+#pragma warning disable CS0108
+	// @interface DDDefaultSwiftUIRUMActionsPredicate : NSObject <DDSwiftUIRUMActionsPredicate>
+	[BaseType (typeof(NSObject), Name = "_TtC11DatadogObjc35DDDefaultSwiftUIRUMActionsPredicate")]
+	interface DDDefaultSwiftUIRUMActionsPredicate : DDSwiftUIRUMActionsPredicate
+	{
+		// -(instancetype _Nonnull)initWithIsLegacyDetectionEnabled:(BOOL)isLegacyDetectionEnabled __attribute__((objc_designated_initializer));
+		[Export ("initWithIsLegacyDetectionEnabled:")]
+		[DesignatedInitializer]
+		NativeHandle Constructor (bool isLegacyDetectionEnabled);
+
+		// -(DDRUMAction * _Nullable)rumActionWith:(NSString * _Nonnull)componentName
+		[Export ("rumActionWith:")]
+		[return: NullAllowed]
+		DDRUMAction RumAction (string componentName);
+	}
+#pragma warning restore CS0108
+
+	interface IDDSwiftUIRUMViewsPredicate {}
+
+	// @protocol DDSwiftUIRUMViewsPredicate
+	[Protocol (Name = "_TtP11DatadogObjc26DDSwiftUIRUMViewsPredicate_")]
+	interface DDSwiftUIRUMViewsPredicate
+	{
+		// @required -(DDRUMView * _Nullable)rumViewFor:(NSString * _Nonnull)extractedViewName
+		[Abstract]
+		[Export ("rumViewFor:")]
+		[return: NullAllowed]
+		DDRUMView RumView (string extractedViewName);
+	}
+
+#pragma warning disable CS0108
+	// @interface DDDefaultSwiftUIRUMViewsPredicate : NSObject <DDSwiftUIRUMViewsPredicate>
+	[BaseType (typeof(NSObject), Name = "_TtC11DatadogObjc33DDDefaultSwiftUIRUMViewsPredicate")]
+	interface DDDefaultSwiftUIRUMViewsPredicate : DDSwiftUIRUMViewsPredicate
+	{
+		// -(DDRUMView * _Nullable)rumViewFor:(NSString * _Nonnull)extractedViewName
+		[Export ("rumViewFor:")]
+		[return: NullAllowed]
+		DDRUMView RumView (string extractedViewName);
 	}
 #pragma warning restore CS0108
 
@@ -294,6 +369,10 @@ namespace Datadog.iOS.ObjC
 		[Export ("userInfo", ArgumentSemantic.Strong)]
 		DDLogEventUserInfo UserInfo { get; }
 
+		// @property (readonly, nonatomic, strong) DDLogEventAccountInfo * _Nonnull accountInfo;
+		[Export ("accountInfo", ArgumentSemantic.Strong)]
+		DDLogEventAccountInfo AccountInfo { get; }
+
 		// @property (readonly, nonatomic, strong) DDLogEventNetworkConnectionInfo * _Nullable networkConnectionInfo;
 		[NullAllowed, Export ("networkConnectionInfo", ArgumentSemantic.Strong)]
 		DDLogEventNetworkConnectionInfo NetworkConnectionInfo { get; }
@@ -319,6 +398,24 @@ namespace Datadog.iOS.ObjC
 		// @property (copy, nonatomic) NSDictionary<NSString *,id> * _Nonnull userAttributes;
 		[Export ("userAttributes", ArgumentSemantic.Copy)]
 		NSDictionary<NSString, NSObject> UserAttributes { get; set; }
+	}
+
+	// @interface DDLogEventAccountInfo : NSObject
+	[BaseType (typeof(NSObject), Name = "_TtC11DatadogObjc21DDLogEventAccountInfo")]
+	[DisableDefaultCtor]
+	interface DDLogEventAccountInfo
+	{
+		// @property (nonatomic, readonly, copy) NSString * _Nonnull id;
+		[Export ("id")]
+		string Id { get; }
+
+		// @property (nonatomic, readonly, copy) NSString * _Nullable name;
+		[NullAllowed, Export ("name")]
+		string Name { get; }
+
+		// @property (nonatomic, copy) NSDictionary<NSString *, id> * _Nonnull extraInfo;
+		[Export ("extraInfo", ArgumentSemantic.Copy)]
+		NSDictionary<NSString, NSObject> ExtraInfo { get; set; }
 	}
 
 	// @interface DDLogEventBinaryImage : NSObject
@@ -790,6 +887,10 @@ namespace Datadog.iOS.ObjC
 		[Export ("date", ArgumentSemantic.Strong)]
 		NSNumber Date { get; }
 
+		// @property (readonly, copy, nonatomic) NSString * _Nullable ddtags;
+		[NullAllowed, Export ("ddtags")]
+		string Ddtags { get; }
+
 		// @property (readonly, nonatomic, strong) DDRUMActionEventRUMDevice * _Nullable device;
 		[NullAllowed, Export ("device", ArgumentSemantic.Strong)]
 		DDRUMActionEventRUMDevice Device { get; }
@@ -960,6 +1061,10 @@ namespace Datadog.iOS.ObjC
 	[DisableDefaultCtor]
 	interface DDRUMActionEventApplication
 	{
+		// @property (readonly, copy, nonatomic) NSString * _Nullable currentLocale;
+		[NullAllowed, Export ("currentLocale")]
+		string CurrentLocale { get; }
+
 		// @property (readonly, copy, nonatomic) NSString * _Nonnull id;
 		[Export ("id")]
 		string Id { get; }
@@ -1009,6 +1114,10 @@ namespace Datadog.iOS.ObjC
 		// @property (readonly, nonatomic, strong) NSNumber * _Nonnull formatVersion;
 		[Export ("formatVersion", ArgumentSemantic.Strong)]
 		NSNumber FormatVersion { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable sdkName;
+		[NullAllowed, Export ("sdkName")]
+		string SdkName { get; }
 
 		// @property (readonly, nonatomic, strong) DDRUMActionEventDDSession * _Nullable session;
 		[NullAllowed, Export ("session", ArgumentSemantic.Strong)]
@@ -1070,6 +1179,10 @@ namespace Datadog.iOS.ObjC
 	[DisableDefaultCtor]
 	interface DDRUMActionEventDDConfiguration
 	{
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable profilingSampleRate;
+		[NullAllowed, Export ("profilingSampleRate", ArgumentSemantic.Strong)]
+		NSNumber ProfilingSampleRate { get; }
+
 		// @property (readonly, nonatomic, strong) NSNumber * _Nullable sessionReplaySampleRate;
 		[NullAllowed, Export ("sessionReplaySampleRate", ArgumentSemantic.Strong)]
 		NSNumber SessionReplaySampleRate { get; }
@@ -1172,9 +1285,25 @@ namespace Datadog.iOS.ObjC
 		[NullAllowed, Export ("architecture")]
 		string Architecture { get; }
 
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable batteryLevel;
+		[NullAllowed, Export ("batteryLevel", ArgumentSemantic.Strong)]
+		NSNumber BatteryLevel { get; }
+
 		// @property (readonly, copy, nonatomic) NSString * _Nullable brand;
 		[NullAllowed, Export ("brand")]
 		string Brand { get; }
+
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable brightnessLevel;
+		[NullAllowed, Export ("brightnessLevel", ArgumentSemantic.Strong)]
+		NSNumber BrightnessLevel { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable locale;
+		[NullAllowed, Export ("locale")]
+		string Locale { get; }
+
+		// @property (readonly, copy, nonatomic) NSArray<NSString *> * _Nullable locales;
+		[NullAllowed, Export ("locales", ArgumentSemantic.Copy)]
+		string[] Locales { get; }
 
 		// @property (readonly, copy, nonatomic) NSString * _Nullable model;
 		[NullAllowed, Export ("model")]
@@ -1183,6 +1312,14 @@ namespace Datadog.iOS.ObjC
 		// @property (readonly, copy, nonatomic) NSString * _Nullable name;
 		[NullAllowed, Export ("name")]
 		string Name { get; }
+
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable powerSavingMode;
+		[NullAllowed, Export ("powerSavingMode", ArgumentSemantic.Strong)]
+		NSNumber PowerSavingMode { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable timeZone;
+		[NullAllowed, Export ("timeZone")]
+		string TimeZone { get; }
 
 		// @property (readonly, nonatomic) enum DDRUMActionEventRUMDeviceRUMDeviceType type;
 		[Export ("type")]
@@ -1343,6 +1480,14 @@ namespace Datadog.iOS.ObjC
 		[NullAllowed, Export("uiKitActionsPredicate", ArgumentSemantic.Strong)]
 		IDDUIKitRUMActionsPredicate UIKitActionsPredicate { get; set; }
 
+		// @property (nonatomic, strong) id<DDSwiftUIRUMViewsPredicate> _Nullable swiftUIViewsPredicate;
+		[NullAllowed, Export("swiftUIViewsPredicate", ArgumentSemantic.Strong)]
+		IDDSwiftUIRUMViewsPredicate SwiftUIViewsPredicate { get; set; }
+
+		// @property (nonatomic, strong) id<DDSwiftUIRUMActionsPredicate> _Nullable swiftUIActionsPredicate;
+		[NullAllowed, Export("swiftUIActionsPredicate", ArgumentSemantic.Strong)]
+		IDDSwiftUIRUMActionsPredicate SwiftUIActionsPredicate { get; set; }
+
 		// -(void)setURLSessionTracking:(DDRUMURLSessionTracking * _Nonnull)tracking;
 		[Export("setURLSessionTracking:")]
 		void SetURLSessionTracking(DDRUMURLSessionTracking tracking);
@@ -1453,6 +1598,10 @@ namespace Datadog.iOS.ObjC
 		[Export ("date", ArgumentSemantic.Strong)]
 		NSNumber Date { get; }
 
+		// @property (readonly, copy, nonatomic) NSString * _Nullable ddtags;
+		[NullAllowed, Export ("ddtags")]
+		string Ddtags { get; }
+
 		// @property (readonly, nonatomic, strong) DDRUMErrorEventRUMDevice * _Nullable device;
 		[NullAllowed, Export ("device", ArgumentSemantic.Strong)]
 		DDRUMErrorEventRUMDevice Device { get; }
@@ -1557,6 +1706,10 @@ namespace Datadog.iOS.ObjC
 	[DisableDefaultCtor]
 	interface DDRUMErrorEventApplication
 	{
+		// @property (readonly, copy, nonatomic) NSString * _Nullable currentLocale;
+		[NullAllowed, Export ("currentLocale")]
+		string CurrentLocale { get; }
+
 		// @property (readonly, copy, nonatomic) NSString * _Nonnull id;
 		[Export ("id")]
 		string Id { get; }
@@ -1603,6 +1756,10 @@ namespace Datadog.iOS.ObjC
 		[Export ("formatVersion", ArgumentSemantic.Strong)]
 		NSNumber FormatVersion { get; }
 
+		// @property (readonly, copy, nonatomic) NSString * _Nullable sdkName;
+		[NullAllowed, Export ("sdkName")]
+		string SdkName { get; }
+
 		// @property (readonly, nonatomic, strong) DDRUMErrorEventDDSession * _Nullable session;
 		[NullAllowed, Export ("session", ArgumentSemantic.Strong)]
 		DDRUMErrorEventDDSession Session { get; }
@@ -1613,6 +1770,10 @@ namespace Datadog.iOS.ObjC
 	[DisableDefaultCtor]
 	interface DDRUMErrorEventDDConfiguration
 	{
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable profilingSampleRate;
+		[NullAllowed, Export ("profilingSampleRate", ArgumentSemantic.Strong)]
+		NSNumber ProfilingSampleRate { get; }
+
 		// @property (readonly, nonatomic, strong) NSNumber * _Nullable sessionReplaySampleRate;
 		[NullAllowed, Export ("sessionReplaySampleRate", ArgumentSemantic.Strong)]
 		NSNumber SessionReplaySampleRate { get; }
@@ -1975,9 +2136,25 @@ namespace Datadog.iOS.ObjC
 		[NullAllowed, Export ("architecture")]
 		string Architecture { get; }
 
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable batteryLevel;
+		[NullAllowed, Export ("batteryLevel", ArgumentSemantic.Strong)]
+		NSNumber BatteryLevel { get; }
+
 		// @property (readonly, copy, nonatomic) NSString * _Nullable brand;
 		[NullAllowed, Export ("brand")]
 		string Brand { get; }
+
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable brightnessLevel;
+		[NullAllowed, Export ("brightnessLevel", ArgumentSemantic.Strong)]
+		NSNumber BrightnessLevel { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable locale;
+		[NullAllowed, Export ("locale")]
+		string Locale { get; }
+
+		// @property (readonly, copy, nonatomic) NSArray<NSString *> * _Nullable locales;
+		[NullAllowed, Export ("locales", ArgumentSemantic.Copy)]
+		string[] Locales { get; }
 
 		// @property (readonly, copy, nonatomic) NSString * _Nullable model;
 		[NullAllowed, Export ("model")]
@@ -1986,6 +2163,14 @@ namespace Datadog.iOS.ObjC
 		// @property (readonly, copy, nonatomic) NSString * _Nullable name;
 		[NullAllowed, Export ("name")]
 		string Name { get; }
+
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable powerSavingMode;
+		[NullAllowed, Export ("powerSavingMode", ArgumentSemantic.Strong)]
+		NSNumber PowerSavingMode { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable timeZone;
+		[NullAllowed, Export ("timeZone")]
+		string TimeZone { get; }
 
 		// @property (readonly, nonatomic) enum DDRUMErrorEventRUMDeviceRUMDeviceType type;
 		[Export ("type")]
@@ -2187,6 +2372,10 @@ namespace Datadog.iOS.ObjC
 		[Export ("date", ArgumentSemantic.Strong)]
 		NSNumber Date { get; }
 
+		// @property (readonly, copy, nonatomic) NSString * _Nullable ddtags;
+		[NullAllowed, Export ("ddtags")]
+		string Ddtags { get; }
+
 		// @property (readonly, nonatomic, strong) DDRUMLongTaskEventRUMDevice * _Nullable device;
 		[NullAllowed, Export ("device", ArgumentSemantic.Strong)]
 		DDRUMLongTaskEventRUMDevice Device { get; }
@@ -2283,6 +2472,10 @@ namespace Datadog.iOS.ObjC
 	[DisableDefaultCtor]
 	interface DDRUMLongTaskEventApplication
 	{
+		// @property (readonly, copy, nonatomic) NSString * _Nullable currentLocale;
+		[NullAllowed, Export ("currentLocale")]
+		string CurrentLocale { get; }
+
 		// @property (readonly, copy, nonatomic) NSString * _Nonnull id;
 		[Export ("id")]
 		string Id { get; }
@@ -2333,6 +2526,14 @@ namespace Datadog.iOS.ObjC
 		[Export ("formatVersion", ArgumentSemantic.Strong)]
 		NSNumber FormatVersion { get; }
 
+		// @property (readonly, nonatomic, strong) DDRUMLongTaskEventDDProfiling * _Nullable profiling;
+		[NullAllowed, Export ("profiling", ArgumentSemantic.Strong)]
+		DDRUMLongTaskEventDDProfiling Profiling { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable sdkName;
+		[NullAllowed, Export ("sdkName")]
+		string SdkName { get; }
+
 		// @property (readonly, nonatomic, strong) DDRUMLongTaskEventDDSession * _Nullable session;
 		[NullAllowed, Export ("session", ArgumentSemantic.Strong)]
 		DDRUMLongTaskEventDDSession Session { get; }
@@ -2343,6 +2544,10 @@ namespace Datadog.iOS.ObjC
 	[DisableDefaultCtor]
 	interface DDRUMLongTaskEventDDConfiguration
 	{
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable profilingSampleRate;
+		[NullAllowed, Export ("profilingSampleRate", ArgumentSemantic.Strong)]
+		NSNumber ProfilingSampleRate { get; }
+
 		// @property (readonly, nonatomic, strong) NSNumber * _Nullable sessionReplaySampleRate;
 		[NullAllowed, Export ("sessionReplaySampleRate", ArgumentSemantic.Strong)]
 		NSNumber SessionReplaySampleRate { get; }
@@ -2350,6 +2555,20 @@ namespace Datadog.iOS.ObjC
 		// @property (readonly, nonatomic, strong) NSNumber * _Nonnull sessionSampleRate;
 		[Export ("sessionSampleRate", ArgumentSemantic.Strong)]
 		NSNumber SessionSampleRate { get; }
+	}
+
+	// @interface DDRUMLongTaskEventDDProfiling : NSObject
+	[BaseType (typeof(NSObject), Name = "_TtC11DatadogObjc29DDRUMLongTaskEventDDProfiling")]
+	[DisableDefaultCtor]
+	interface DDRUMLongTaskEventDDProfiling
+	{
+		// @property (nonatomic, readonly) enum DDRUMLongTaskEventDDProfilingErrorReason errorReason;
+		[Export ("errorReason")]
+		DDRUMLongTaskEventDDProfilingErrorReason ErrorReason { get; }
+
+		// @property (nonatomic, readonly) enum DDRUMLongTaskEventDDProfilingStatus status;
+		[Export ("status")]
+		DDRUMLongTaskEventDDProfilingStatus Status { get; }
 	}
 
 	// @interface DDRUMLongTaskEventDDSession : NSObject
@@ -2541,9 +2760,25 @@ namespace Datadog.iOS.ObjC
 		[NullAllowed, Export ("architecture")]
 		string Architecture { get; }
 
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable batteryLevel;
+		[NullAllowed, Export ("batteryLevel", ArgumentSemantic.Strong)]
+		NSNumber BatteryLevel { get; }
+
 		// @property (readonly, copy, nonatomic) NSString * _Nullable brand;
 		[NullAllowed, Export ("brand")]
 		string Brand { get; }
+
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable brightnessLevel;
+		[NullAllowed, Export ("brightnessLevel", ArgumentSemantic.Strong)]
+		NSNumber BrightnessLevel { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable locale;
+		[NullAllowed, Export ("locale")]
+		string Locale { get; }
+
+		// @property (readonly, copy, nonatomic) NSArray<NSString *> * _Nullable locales;
+		[NullAllowed, Export ("locales", ArgumentSemantic.Copy)]
+		string[] Locales { get; }
 
 		// @property (readonly, copy, nonatomic) NSString * _Nullable model;
 		[NullAllowed, Export ("model")]
@@ -2552,6 +2787,14 @@ namespace Datadog.iOS.ObjC
 		// @property (readonly, copy, nonatomic) NSString * _Nullable name;
 		[NullAllowed, Export ("name")]
 		string Name { get; }
+
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable powerSavingMode;
+		[NullAllowed, Export ("powerSavingMode", ArgumentSemantic.Strong)]
+		NSNumber PowerSavingMode { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable timeZone;
+		[NullAllowed, Export ("timeZone")]
+		string TimeZone { get; }
 
 		// @property (readonly, nonatomic) enum DDRUMLongTaskEventRUMDeviceRUMDeviceType type;
 		[Export ("type")]
@@ -2838,6 +3081,10 @@ namespace Datadog.iOS.ObjC
 		[Export ("date", ArgumentSemantic.Strong)]
 		NSNumber Date { get; }
 
+		// @property (readonly, copy, nonatomic) NSString * _Nullable ddtags;
+		[NullAllowed, Export ("ddtags")]
+		string Ddtags { get; }
+
 		// @property (readonly, nonatomic, strong) DDRUMResourceEventRUMDevice * _Nullable device;
 		[NullAllowed, Export ("device", ArgumentSemantic.Strong)]
 		DDRUMResourceEventRUMDevice Device { get; }
@@ -2934,6 +3181,10 @@ namespace Datadog.iOS.ObjC
 	[DisableDefaultCtor]
 	interface DDRUMResourceEventApplication
 	{
+		// @property (readonly, copy, nonatomic) NSString * _Nullable currentLocale;
+		[NullAllowed, Export ("currentLocale")]
+		string CurrentLocale { get; }
+
 		// @property (readonly, copy, nonatomic) NSString * _Nonnull id;
 		[Export ("id")]
 		string Id { get; }
@@ -2984,9 +3235,17 @@ namespace Datadog.iOS.ObjC
 		[Export ("formatVersion", ArgumentSemantic.Strong)]
 		NSNumber FormatVersion { get; }
 
+		// @property (readonly, copy, nonatomic) NSString * _Nullable parentSpanId;
+		[NullAllowed, Export ("parentSpanId")]
+		string ParentSpanId { get; }
+
 		// @property (readonly, nonatomic, strong) NSNumber * _Nullable rulePsr;
 		[NullAllowed, Export ("rulePsr", ArgumentSemantic.Strong)]
 		NSNumber RulePsr { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable sdkName;
+		[NullAllowed, Export ("sdkName")]
+		string SdkName { get; }
 
 		// @property (readonly, nonatomic, strong) DDRUMResourceEventDDSession * _Nullable session;
 		[NullAllowed, Export ("session", ArgumentSemantic.Strong)]
@@ -3006,6 +3265,10 @@ namespace Datadog.iOS.ObjC
 	[DisableDefaultCtor]
 	interface DDRUMResourceEventDDConfiguration
 	{
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable profilingSampleRate;
+		[NullAllowed, Export ("profilingSampleRate", ArgumentSemantic.Strong)]
+		NSNumber ProfilingSampleRate { get; }
+
 		// @property (readonly, nonatomic, strong) NSNumber * _Nullable sessionReplaySampleRate;
 		[NullAllowed, Export ("sessionReplaySampleRate", ArgumentSemantic.Strong)]
 		NSNumber SessionReplaySampleRate { get; }
@@ -3108,9 +3371,25 @@ namespace Datadog.iOS.ObjC
 		[NullAllowed, Export ("architecture")]
 		string Architecture { get; }
 
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable batteryLevel;
+		[NullAllowed, Export ("batteryLevel", ArgumentSemantic.Strong)]
+		NSNumber BatteryLevel { get; }
+
 		// @property (readonly, copy, nonatomic) NSString * _Nullable brand;
 		[NullAllowed, Export ("brand")]
 		string Brand { get; }
+
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable brightnessLevel;
+		[NullAllowed, Export ("brightnessLevel", ArgumentSemantic.Strong)]
+		NSNumber BrightnessLevel { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable locale;
+		[NullAllowed, Export ("locale")]
+		string Locale { get; }
+
+		// @property (readonly, copy, nonatomic) NSArray<NSString *> * _Nullable locales;
+		[NullAllowed, Export ("locales", ArgumentSemantic.Copy)]
+		string[] Locales { get; }
 
 		// @property (readonly, copy, nonatomic) NSString * _Nullable model;
 		[NullAllowed, Export ("model")]
@@ -3119,6 +3398,14 @@ namespace Datadog.iOS.ObjC
 		// @property (readonly, copy, nonatomic) NSString * _Nullable name;
 		[NullAllowed, Export ("name")]
 		string Name { get; }
+
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable powerSavingMode;
+		[NullAllowed, Export ("powerSavingMode", ArgumentSemantic.Strong)]
+		NSNumber PowerSavingMode { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable timeZone;
+		[NullAllowed, Export ("timeZone")]
+		string TimeZone { get; }
 
 		// @property (readonly, nonatomic) enum DDRUMResourceEventRUMDeviceRUMDeviceType type;
 		[Export ("type")]
@@ -3550,6 +3837,10 @@ namespace Datadog.iOS.ObjC
 		[Export ("date", ArgumentSemantic.Strong)]
 		NSNumber Date { get; }
 
+		// @property (readonly, copy, nonatomic) NSString * _Nullable ddtags;
+		[NullAllowed, Export ("ddtags")]
+		string Ddtags { get; }
+
 		// @property (readonly, nonatomic, strong) DDRUMViewEventRUMDevice * _Nullable device;
 		[NullAllowed, Export ("device", ArgumentSemantic.Strong)]
 		DDRUMViewEventRUMDevice Device { get; }
@@ -3626,6 +3917,10 @@ namespace Datadog.iOS.ObjC
 	[DisableDefaultCtor]
 	interface DDRUMViewEventApplication
 	{
+		// @property (readonly, copy, nonatomic) NSString * _Nullable currentLocale;
+		[NullAllowed, Export ("currentLocale")]
+		string CurrentLocale { get; }
+
 		// @property (readonly, copy, nonatomic) NSString * _Nonnull id;
 		[Export ("id")]
 		string Id { get; }
@@ -3684,9 +3979,17 @@ namespace Datadog.iOS.ObjC
 		[NullAllowed, Export ("pageStates", ArgumentSemantic.Copy)]
 		DDRUMViewEventDDPageStates[] PageStates { get; }
 
+		// @property (readonly, nonatomic, strong) DDRUMViewEventDDProfiling * _Nullable profiling;
+		[NullAllowed, Export ("profiling", ArgumentSemantic.Strong)]
+		DDRUMViewEventDDProfiling Profiling { get; }
+
 		// @property (readonly, nonatomic, strong) DDRUMViewEventDDReplayStats * _Nullable replayStats;
 		[NullAllowed, Export ("replayStats", ArgumentSemantic.Strong)]
 		DDRUMViewEventDDReplayStats ReplayStats { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable sdkName;
+		[NullAllowed, Export ("sdkName")]
+		string SdkName { get; }
 
 		// @property (readonly, nonatomic, strong) DDRUMViewEventDDSession * _Nullable session;
 		[NullAllowed, Export ("session", ArgumentSemantic.Strong)]
@@ -3708,6 +4011,10 @@ namespace Datadog.iOS.ObjC
 	[DisableDefaultCtor]
 	interface DDRUMViewEventDDConfiguration
 	{
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable profilingSampleRate;
+		[NullAllowed, Export ("profilingSampleRate", ArgumentSemantic.Strong)]
+		NSNumber ProfilingSampleRate { get; }
+
 		// @property (readonly, nonatomic, strong) NSNumber * _Nullable sessionReplaySampleRate;
 		[NullAllowed, Export ("sessionReplaySampleRate", ArgumentSemantic.Strong)]
 		NSNumber SessionReplaySampleRate { get; }
@@ -3751,6 +4058,20 @@ namespace Datadog.iOS.ObjC
 		// @property (readonly, nonatomic, strong) NSNumber * _Nullable segmentsTotalRawSize;
 		[NullAllowed, Export ("segmentsTotalRawSize", ArgumentSemantic.Strong)]
 		NSNumber SegmentsTotalRawSize { get; }
+	}
+
+	// @interface DDRUMViewEventDDProfiling : NSObject
+	[BaseType (typeof(NSObject), Name = "_TtC11DatadogObjc25DDRUMViewEventDDProfiling")]
+	[DisableDefaultCtor]
+	interface DDRUMViewEventDDProfiling
+	{
+		// @property (nonatomic, readonly) enum DDRUMViewEventDDProfilingErrorReason errorReason;
+		[Export ("errorReason")]
+		DDRUMViewEventDDProfilingErrorReason ErrorReason { get; }
+
+		// @property (nonatomic, readonly) enum DDRUMViewEventDDProfilingStatus status;
+		[Export ("status")]
+		DDRUMViewEventDDProfilingStatus Status { get; }
 	}
 
 	// @interface DDRUMViewEventDDSession : NSObject
@@ -3892,9 +4213,25 @@ namespace Datadog.iOS.ObjC
 		[NullAllowed, Export ("architecture")]
 		string Architecture { get; }
 
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable batteryLevel;
+		[NullAllowed, Export ("batteryLevel", ArgumentSemantic.Strong)]
+		NSNumber BatteryLevel { get; }
+
 		// @property (readonly, copy, nonatomic) NSString * _Nullable brand;
 		[NullAllowed, Export ("brand")]
 		string Brand { get; }
+
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable brightnessLevel;
+		[NullAllowed, Export ("brightnessLevel", ArgumentSemantic.Strong)]
+		NSNumber BrightnessLevel { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable locale;
+		[NullAllowed, Export ("locale")]
+		string Locale { get; }
+
+		// @property (readonly, copy, nonatomic) NSArray<NSString *> * _Nullable locales;
+		[NullAllowed, Export ("locales", ArgumentSemantic.Copy)]
+		string[] Locales { get; }
 
 		// @property (readonly, copy, nonatomic) NSString * _Nullable model;
 		[NullAllowed, Export ("model")]
@@ -3903,6 +4240,14 @@ namespace Datadog.iOS.ObjC
 		// @property (readonly, copy, nonatomic) NSString * _Nullable name;
 		[NullAllowed, Export ("name")]
 		string Name { get; }
+
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable powerSavingMode;
+		[NullAllowed, Export ("powerSavingMode", ArgumentSemantic.Strong)]
+		NSNumber PowerSavingMode { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable timeZone;
+		[NullAllowed, Export ("timeZone")]
+		string TimeZone { get; }
 
 		// @property (readonly, nonatomic) enum DDRUMViewEventRUMDeviceRUMDeviceType type;
 		[Export ("type")]
@@ -4016,6 +4361,10 @@ namespace Datadog.iOS.ObjC
 	[DisableDefaultCtor]
 	interface DDRUMViewEventView
 	{
+		// @property (readonly, nonatomic, strong) DDRUMViewEventViewAccessibility * _Nullable accessibility;
+		[NullAllowed, Export ("accessibility", ArgumentSemantic.Strong)]
+		DDRUMViewEventViewAccessibility Accessibility { get; }
+
 		// @property (readonly, nonatomic, strong) DDRUMViewEventViewAction * _Nonnull action;
 		[Export ("action", ArgumentSemantic.Strong)]
 		DDRUMViewEventViewAction Action { get; }
@@ -4215,6 +4564,75 @@ namespace Datadog.iOS.ObjC
 		// @property (copy, nonatomic) NSString * _Nonnull url;
 		[Export ("url")]
 		string Url { get; set; }
+	}
+
+	// @interface DDRUMViewEventViewAccessibility : NSObject
+	[BaseType (typeof(NSObject), Name = "_TtC11DatadogObjc31DDRUMViewEventViewAccessibility")]
+	[DisableDefaultCtor]
+	interface DDRUMViewEventViewAccessibility
+	{
+		[NullAllowed, Export ("assistiveSwitchEnabled", ArgumentSemantic.Strong)]
+		NSNumber AssistiveSwitchEnabled { get; }
+
+		[NullAllowed, Export ("assistiveTouchEnabled", ArgumentSemantic.Strong)]
+		NSNumber AssistiveTouchEnabled { get; }
+
+		[NullAllowed, Export ("boldTextEnabled", ArgumentSemantic.Strong)]
+		NSNumber BoldTextEnabled { get; }
+
+		[NullAllowed, Export ("buttonShapesEnabled", ArgumentSemantic.Strong)]
+		NSNumber ButtonShapesEnabled { get; }
+
+		[NullAllowed, Export ("closedCaptioningEnabled", ArgumentSemantic.Strong)]
+		NSNumber ClosedCaptioningEnabled { get; }
+
+		[NullAllowed, Export ("grayscaleEnabled", ArgumentSemantic.Strong)]
+		NSNumber GrayscaleEnabled { get; }
+
+		[NullAllowed, Export ("increaseContrastEnabled", ArgumentSemantic.Strong)]
+		NSNumber IncreaseContrastEnabled { get; }
+
+		[NullAllowed, Export ("invertColorsEnabled", ArgumentSemantic.Strong)]
+		NSNumber InvertColorsEnabled { get; }
+
+		[NullAllowed, Export ("monoAudioEnabled", ArgumentSemantic.Strong)]
+		NSNumber MonoAudioEnabled { get; }
+
+		[NullAllowed, Export ("onOffSwitchLabelsEnabled", ArgumentSemantic.Strong)]
+		NSNumber OnOffSwitchLabelsEnabled { get; }
+
+		[NullAllowed, Export ("reduceMotionEnabled", ArgumentSemantic.Strong)]
+		NSNumber ReduceMotionEnabled { get; }
+
+		[NullAllowed, Export ("reduceTransparencyEnabled", ArgumentSemantic.Strong)]
+		NSNumber ReduceTransparencyEnabled { get; }
+
+		[NullAllowed, Export ("reducedAnimationsEnabled", ArgumentSemantic.Strong)]
+		NSNumber ReducedAnimationsEnabled { get; }
+
+		[NullAllowed, Export ("screenReaderEnabled", ArgumentSemantic.Strong)]
+		NSNumber ScreenReaderEnabled { get; }
+
+		[NullAllowed, Export ("shakeToUndoEnabled", ArgumentSemantic.Strong)]
+		NSNumber ShakeToUndoEnabled { get; }
+
+		[NullAllowed, Export ("shouldDifferentiateWithoutColor", ArgumentSemantic.Strong)]
+		NSNumber ShouldDifferentiateWithoutColor { get; }
+
+		[NullAllowed, Export ("singleAppModeEnabled", ArgumentSemantic.Strong)]
+		NSNumber SingleAppModeEnabled { get; }
+
+		[NullAllowed, Export ("speakScreenEnabled", ArgumentSemantic.Strong)]
+		NSNumber SpeakScreenEnabled { get; }
+
+		[NullAllowed, Export ("speakSelectionEnabled", ArgumentSemantic.Strong)]
+		NSNumber SpeakSelectionEnabled { get; }
+
+		[NullAllowed, Export ("textSize")]
+		string TextSize { get; }
+
+		[NullAllowed, Export ("videoAutoplayEnabled", ArgumentSemantic.Strong)]
+		NSNumber VideoAutoplayEnabled { get; }
 	}
 
 	// @interface DDRUMViewEventViewAction : NSObject
@@ -4600,6 +5018,10 @@ namespace Datadog.iOS.ObjC
 		[Export ("date", ArgumentSemantic.Strong)]
 		NSNumber Date { get; }
 
+		// @property (readonly, copy, nonatomic) NSString * _Nullable ddtags;
+		[NullAllowed, Export ("ddtags")]
+		string Ddtags { get; }
+
 		// @property (readonly, nonatomic, strong) DDRUMVitalEventRUMDevice * _Nullable device;
 		[NullAllowed, Export ("device", ArgumentSemantic.Strong)]
 		DDRUMVitalEventRUMDevice Device { get; }
@@ -4672,6 +5094,10 @@ namespace Datadog.iOS.ObjC
 	[DisableDefaultCtor]
 	interface DDRUMVitalEventApplication
 	{
+		// @property (readonly, copy, nonatomic) NSString * _Nullable currentLocale;
+		[NullAllowed, Export ("currentLocale")]
+		string CurrentLocale { get; }
+
 		// @property (readonly, copy, nonatomic) NSString * _Nonnull id;
 		[Export ("id")]
 		string Id { get; }
@@ -4718,6 +5144,10 @@ namespace Datadog.iOS.ObjC
 		[Export ("formatVersion", ArgumentSemantic.Strong)]
 		NSNumber FormatVersion { get; }
 
+		// @property (readonly, copy, nonatomic) NSString * _Nullable sdkName;
+		[NullAllowed, Export ("sdkName")]
+		string SdkName { get; }
+
 		// @property (readonly, nonatomic, strong) DDRUMVitalEventDDSession * _Nullable session;
 		[NullAllowed, Export ("session", ArgumentSemantic.Strong)]
 		DDRUMVitalEventDDSession Session { get; }
@@ -4732,6 +5162,10 @@ namespace Datadog.iOS.ObjC
 	[DisableDefaultCtor]
 	interface DDRUMVitalEventDDConfiguration
 	{
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable profilingSampleRate;
+		[NullAllowed, Export ("profilingSampleRate", ArgumentSemantic.Strong)]
+		NSNumber ProfilingSampleRate { get; }
+
 		// @property (readonly, nonatomic, strong) NSNumber * _Nullable sessionReplaySampleRate;
 		[NullAllowed, Export ("sessionReplaySampleRate", ArgumentSemantic.Strong)]
 		NSNumber SessionReplaySampleRate { get; }
@@ -4844,9 +5278,25 @@ namespace Datadog.iOS.ObjC
 		[NullAllowed, Export ("architecture")]
 		string Architecture { get; }
 
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable batteryLevel;
+		[NullAllowed, Export ("batteryLevel", ArgumentSemantic.Strong)]
+		NSNumber BatteryLevel { get; }
+
 		// @property (readonly, copy, nonatomic) NSString * _Nullable brand;
 		[NullAllowed, Export ("brand")]
 		string Brand { get; }
+
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable brightnessLevel;
+		[NullAllowed, Export ("brightnessLevel", ArgumentSemantic.Strong)]
+		NSNumber BrightnessLevel { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable locale;
+		[NullAllowed, Export ("locale")]
+		string Locale { get; }
+
+		// @property (readonly, copy, nonatomic) NSArray<NSString *> * _Nullable locales;
+		[NullAllowed, Export ("locales", ArgumentSemantic.Copy)]
+		string[] Locales { get; }
 
 		// @property (readonly, copy, nonatomic) NSString * _Nullable model;
 		[NullAllowed, Export ("model")]
@@ -4855,6 +5305,14 @@ namespace Datadog.iOS.ObjC
 		// @property (readonly, copy, nonatomic) NSString * _Nullable name;
 		[NullAllowed, Export ("name")]
 		string Name { get; }
+
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable powerSavingMode;
+		[NullAllowed, Export ("powerSavingMode", ArgumentSemantic.Strong)]
+		NSNumber PowerSavingMode { get; }
+
+		// @property (readonly, copy, nonatomic) NSString * _Nullable timeZone;
+		[NullAllowed, Export ("timeZone")]
+		string TimeZone { get; }
 
 		// @property (readonly, nonatomic) enum DDRUMVitalEventRUMDeviceRUMDeviceType type;
 		[Export ("type")]
@@ -5544,6 +6002,10 @@ namespace Datadog.iOS.ObjC
 		[NullAllowed, Export ("architecture")]
 		string Architecture { get; }
 
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable batteryLevel;
+		[NullAllowed, Export ("batteryLevel", ArgumentSemantic.Strong)]
+		NSNumber BatteryLevel { get; }
+
 		// @property (readonly, copy, nonatomic) NSString * _Nullable brand;
 		[NullAllowed, Export ("brand")]
 		string Brand { get; }
@@ -5717,6 +6179,10 @@ namespace Datadog.iOS.ObjC
 		// @property (readonly, copy, nonatomic) NSString * _Nullable architecture;
 		[NullAllowed, Export ("architecture")]
 		string Architecture { get; }
+
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable batteryLevel;
+		[NullAllowed, Export ("batteryLevel", ArgumentSemantic.Strong)]
+		NSNumber BatteryLevel { get; }
 
 		// @property (readonly, copy, nonatomic) NSString * _Nullable brand;
 		[NullAllowed, Export ("brand")]
@@ -5909,6 +6375,10 @@ namespace Datadog.iOS.ObjC
 		// @property (readonly, copy, nonatomic) NSString * _Nullable architecture;
 		[NullAllowed, Export ("architecture")]
 		string Architecture { get; }
+
+		// @property (readonly, nonatomic, strong) NSNumber * _Nullable batteryLevel;
+		[NullAllowed, Export ("batteryLevel", ArgumentSemantic.Strong)]
+		NSNumber BatteryLevel { get; }
 
 		// @property (readonly, copy, nonatomic) NSString * _Nullable brand;
 		[NullAllowed, Export ("brand")]
