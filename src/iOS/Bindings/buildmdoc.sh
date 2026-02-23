@@ -4,7 +4,7 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Define the library path and output directory
 BASE_REF_PATH="/usr/local/share/dotnet/packs"
-LIBRARY_PATH=$(find "$BASE_REF_PATH" -maxdepth 1 -type d -name "Microsoft.iOS.Ref.net9.0*" | head -n 1)
+LIBRARY_PATH=$(find "$BASE_REF_PATH" -maxdepth 1 -type d -name "Microsoft.iOS.Ref.net10.0*" | head -n 1)
 OUTPUT_DIR="Mdoc"
 
 # If no directory found, exit

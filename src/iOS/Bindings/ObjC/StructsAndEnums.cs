@@ -189,13 +189,14 @@ namespace Datadog.iOS.ObjC
 	[Native]
 	public enum DDRUMActionEventRUMDeviceRUMDeviceType : long
 	{
-		Mobile = 0,
-		Desktop = 1,
-		Tablet = 2,
-		TV = 3,
-		GamingConsole = 4,
-		Bot = 5,
-		Other = 6
+		None = 0,
+		Mobile = 1,
+		Desktop = 2,
+		Tablet = 3,
+		TV = 4,
+		GamingConsole = 5,
+		Bot = 6,
+		Other = 7
 	}
 
 	[Native]
@@ -401,13 +402,14 @@ namespace Datadog.iOS.ObjC
 	[Native]
 	public enum DDRUMErrorEventRUMDeviceRUMDeviceType : long
 	{
-		Mobile = 0,
-		Desktop = 1,
-		Tablet = 2,
-		TV = 3,
-		GamingConsole = 4,
-		Bot = 5,
-		Other = 6
+		None = 0,
+		Mobile = 1,
+		Desktop = 2,
+		Tablet = 3,
+		TV = 4,
+		GamingConsole = 5,
+		Bot = 6,
+		Other = 7
 	}
 
 	[Native]
@@ -532,13 +534,14 @@ namespace Datadog.iOS.ObjC
 	[Native]
 	public enum DDRUMLongTaskEventRUMDeviceRUMDeviceType : long
 	{
-		Mobile = 0,
-		Desktop = 1,
-		Tablet = 2,
-		TV = 3,
-		GamingConsole = 4,
-		Bot = 5,
-		Other = 6
+		None = 0,
+		Mobile = 1,
+		Desktop = 2,
+		Tablet = 3,
+		TV = 4,
+		GamingConsole = 5,
+		Bot = 6,
+		Other = 7
 	}
 
 	[Native]
@@ -647,13 +650,14 @@ namespace Datadog.iOS.ObjC
 	[Native]
 	public enum DDRUMResourceEventRUMDeviceRUMDeviceType : long
 	{
-		Mobile = 0,
-		Desktop = 1,
-		Tablet = 2,
-		TV = 3,
-		GamingConsole = 4,
-		Bot = 5,
-		Other = 6
+		None = 0,
+		Mobile = 1,
+		Desktop = 2,
+		Tablet = 3,
+		TV = 4,
+		GamingConsole = 5,
+		Bot = 6,
+		Other = 7
 	}
 
 	[Native]
@@ -858,13 +862,14 @@ namespace Datadog.iOS.ObjC
 	[Native]
 	public enum DDRUMViewEventRUMDeviceRUMDeviceType : long
 	{
-		Mobile = 0,
-		Desktop = 1,
-		Tablet = 2,
-		TV = 3,
-		GamingConsole = 4,
-		Bot = 5,
-		Other = 6
+		None = 0,
+		Mobile = 1,
+		Desktop = 2,
+		Tablet = 3,
+		TV = 4,
+		GamingConsole = 5,
+		Bot = 6,
+		Other = 7
 	}
 
 	[Native]
@@ -973,13 +978,14 @@ namespace Datadog.iOS.ObjC
 	[Native]
 	public enum DDRUMVitalEventRUMDeviceRUMDeviceType : long
 	{
-		Mobile = 0,
-		Desktop = 1,
-		Tablet = 2,
-		TV = 3,
-		GamingConsole = 4,
-		Bot = 5,
-		Other = 6
+		None = 0,
+		Mobile = 1,
+		Desktop = 2,
+		Tablet = 3,
+		TV = 4,
+		GamingConsole = 5,
+		Bot = 6,
+		Other = 7
 	}
 
 	[Native]
@@ -1007,7 +1013,8 @@ namespace Datadog.iOS.ObjC
 	[Native]
 	public enum DDRUMVitalEventVitalVitalType : long
 	{
-		DDRUMVitalEventVitalVitalTypeDuration = 0
+		DDRUMVitalEventVitalVitalTypeDuration = 0,
+		DDRUMVitalEventVitalVitalTypeStep = 1
 	}
 
 	[Native]

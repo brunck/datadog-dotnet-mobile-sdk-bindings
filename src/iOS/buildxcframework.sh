@@ -66,7 +66,7 @@ function archive {
     -derivedDataPath "${DERIVED_DATA_PATH}" \
     -IDECustomBuildProductsPath="" -IDECustomBuildIntermediatesPath="" \
     ONLY_ACTIVE_ARCH=NO \
-    IPHONEOS_DEPLOYMENT_TARGET=17.0 \
+    IPHONEOS_DEPLOYMENT_TARGET=26.0 \
     ENABLE_BITCODE=NO \
     SKIP_INSTALL=NO \
     BUILD_LIBRARY_FOR_DISTRIBUTION=YES \

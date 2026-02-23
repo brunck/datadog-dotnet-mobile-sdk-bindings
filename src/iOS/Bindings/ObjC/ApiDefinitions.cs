@@ -750,9 +750,9 @@ namespace Datadog.iOS.ObjC
 		[Export ("dd", ArgumentSemantic.Strong)]
 		DDRUMActionEventDD DD { get; }
 
-		// @property (readonly, nonatomic, strong) DDRUMActionEventAccount * _Nullable account;
+		// @property (readonly, nonatomic, strong) DDRUMActionEventRUMAccount * _Nullable account;
 		[NullAllowed, Export("account", ArgumentSemantic.Strong)]
-		DDRUMActionEventAccount Account { get; }
+		DDRUMActionEventRUMAccount Account { get; }
 
 		// @property (readonly, nonatomic, strong) DDRUMActionEventAction * _Nonnull action;
 		[Export("action", ArgumentSemantic.Strong)]
@@ -835,10 +835,10 @@ namespace Datadog.iOS.ObjC
 		DDRUMActionEventView View { get; }
 	}
 
-	// @interface DDRUMActionEventAccount : NSObject
-	[BaseType(typeof(NSObject), Name = "_TtC11DatadogObjc23DDRUMActionEventAccount")]
+	// @interface DDRUMActionEventRUMAccount : NSObject
+	[BaseType(typeof(NSObject), Name = "_TtC11DatadogObjc26DDRUMActionEventRUMAccount")]
 	[DisableDefaultCtor]
-	interface DDRUMActionEventAccount
+	interface DDRUMActionEventRUMAccount
 	{
 		// @property (nonatomic, readonly, copy) NSString * _Nonnull id;
 		[Export("id")]
@@ -1413,9 +1413,9 @@ namespace Datadog.iOS.ObjC
 		[Export ("dd", ArgumentSemantic.Strong)]
 		DDRUMErrorEventDD DD { get; }
 
-		// @property (nonatomic, readonly, strong) DDRUMErrorEventAccount * _Nullable account;
+		// @property (nonatomic, readonly, strong) DDRUMErrorEventRUMAccount * _Nullable account;
 		[NullAllowed, Export("account", ArgumentSemantic.Strong)]
-		DDRUMErrorEventAccount Account { get; }
+		DDRUMErrorEventRUMAccount Account { get; }
 
 		// @property (readonly, nonatomic, strong) DDRUMErrorEventAction * _Nullable action;
 		[NullAllowed, Export("action", ArgumentSemantic.Strong)]
@@ -1510,10 +1510,10 @@ namespace Datadog.iOS.ObjC
 		DDRUMErrorEventView View { get; }
 	}
 
-	// @interface DDRUMErrorEventAccount : NSObject
-	[BaseType(typeof(NSObject), Name = "_TtC11DatadogObjc22DDRUMErrorEventAccount")]
+	// @interface DDRUMErrorEventRUMAccount : NSObject
+	[BaseType(typeof(NSObject), Name = "_TtC11DatadogObjc25DDRUMErrorEventRUMAccount")]
 	[DisableDefaultCtor]
-	interface DDRUMErrorEventAccount
+	interface DDRUMErrorEventRUMAccount
 	{
 		// @property (nonatomic, readonly, copy) NSString * _Nonnull id;
 		[Export("id")]
@@ -2147,9 +2147,9 @@ namespace Datadog.iOS.ObjC
 		[Export ("dd", ArgumentSemantic.Strong)]
 		DDRUMLongTaskEventDD DD { get; }
 
-		// @property (nonatomic, readonly, strong) DDRUMLongTaskEventAccount * _Nullable account;
+		// @property (nonatomic, readonly, strong) DDRUMLongTaskEventRUMAccount * _Nullable account;
 		[NullAllowed, Export("account", ArgumentSemantic.Strong)]
-		DDRUMLongTaskEventAccount Account { get; }
+		DDRUMLongTaskEventRUMAccount Account { get; }
 
 		// @property (readonly, nonatomic, strong) DDRUMLongTaskEventAction * _Nullable action;
 		[NullAllowed, Export("action", ArgumentSemantic.Strong)]
@@ -2236,10 +2236,10 @@ namespace Datadog.iOS.ObjC
 		DDRUMLongTaskEventView View { get; }
 	}
 
-	// @interface DDRUMLongTaskEventAccount : NSObject
-	[BaseType(typeof(NSObject), Name = "_TtC11DatadogObjc25DDRUMLongTaskEventAccount")]
+	// @interface DDRUMLongTaskEventRUMAccount : NSObject
+	[BaseType(typeof(NSObject), Name = "_TtC11DatadogObjc28DDRUMLongTaskEventRUMAccount")]
 	[DisableDefaultCtor]
-	interface DDRUMLongTaskEventAccount
+	interface DDRUMLongTaskEventRUMAccount
 	{
 		// @property (nonatomic, readonly, copy) NSString * _Nonnull id;
 		[Export("id")]
@@ -2798,9 +2798,9 @@ namespace Datadog.iOS.ObjC
 		[Export ("dd", ArgumentSemantic.Strong)]
 		DDRUMResourceEventDD DD { get; }
 
-		// @property (readonly, nonatomic, strong) DDRUMResourceEventAccount * _Nullable account;
+		// @property (readonly, nonatomic, strong) DDRUMResourceEventRUMAccount * _Nullable account;
 		[NullAllowed, Export("account", ArgumentSemantic.Strong)]
-		DDRUMResourceEventAccount Account { get; }
+		DDRUMResourceEventRUMAccount Account { get; }
 
 		// @property (readonly, nonatomic, strong) DDRUMResourceEventAction * _Nullable action;
 		[NullAllowed, Export("action", ArgumentSemantic.Strong)]
@@ -2887,10 +2887,10 @@ namespace Datadog.iOS.ObjC
 		DDRUMResourceEventView View { get; }
 	}
 
-	// @interface DDRUMResourceEventAccount : NSObject
-	[BaseType(typeof(NSObject), Name = "_TtC11DatadogObjc25DDRUMResourceEventAccount")]
+	// @interface DDRUMResourceEventRUMAccount : NSObject
+	[BaseType(typeof(NSObject), Name = "_TtC11DatadogObjc28DDRUMResourceEventRUMAccount")]
 	[DisableDefaultCtor]
-	interface DDRUMResourceEventAccount
+	interface DDRUMResourceEventRUMAccount
 	{
 		// @property (nonatomic, readonly, copy) NSString * _Nonnull id;
 		[Export("id")]
@@ -3514,9 +3514,9 @@ namespace Datadog.iOS.ObjC
 		[Export ("dd", ArgumentSemantic.Strong)]
 		DDRUMViewEventDD DD { get; }
 
-		// @property (readonly, nonatomic, strong) DDRUMViewEventAccount * _Nullable account;
+		// @property (readonly, nonatomic, strong) DDRUMViewEventRUMAccount * _Nullable account;
 		[NullAllowed, Export("account", ArgumentSemantic.Strong)]
-		DDRUMViewEventAccount Account { get; }
+		DDRUMViewEventRUMAccount Account { get; }
 
 		// @property (readonly, nonatomic, strong) DDRUMViewEventApplication * _Nonnull application;
 		[Export("application", ArgumentSemantic.Strong)]
@@ -3603,10 +3603,10 @@ namespace Datadog.iOS.ObjC
 		DDRUMViewEventView View { get; }
 	}
 
-	// @interface DDRUMViewEventAccount : NSObject
-	[BaseType(typeof(NSObject), Name = "_TtC11DatadogObjc21DDRUMViewEventAccount")]
+	// @interface DDRUMViewEventRUMAccount : NSObject
+	[BaseType(typeof(NSObject), Name = "_TtC11DatadogObjc24DDRUMViewEventRUMAccount")]
 	[DisableDefaultCtor]
-	interface DDRUMViewEventAccount
+	interface DDRUMViewEventRUMAccount
 	{
 		// @property (nonatomic, readonly, copy) NSString * _Nonnull id;
 		[Export("id")]
@@ -4564,9 +4564,9 @@ namespace Datadog.iOS.ObjC
 		[Export ("dd", ArgumentSemantic.Strong)]
 		DDRUMVitalEventDD DD { get; }
 
-		// @property (nonatomic, readonly, strong) DDRUMVitalEventAccount * _Nullable account;
+		// @property (nonatomic, readonly, strong) DDRUMVitalEventRUMAccount * _Nullable account;
 		[NullAllowed, Export("account", ArgumentSemantic.Strong)]
-		DDRUMVitalEventAccount Account { get; }
+		DDRUMVitalEventRUMAccount Account { get; }
 
 		// @property (readonly, nonatomic, strong) DDRUMVitalEventApplication * _Nonnull application;
 		[Export("application", ArgumentSemantic.Strong)]
@@ -4649,10 +4649,10 @@ namespace Datadog.iOS.ObjC
 		DDRUMVitalEventVital Vital { get; }
 	}
 
-	// @interface DDRUMVitalEventAccount : NSObject
-	[BaseType(typeof(NSObject), Name = "_TtC11DatadogObjc22DDRUMVitalEventAccount")]
+	// @interface DDRUMVitalEventRUMAccount : NSObject
+	[BaseType(typeof(NSObject), Name = "_TtC11DatadogObjc25DDRUMVitalEventRUMAccount")]
 	[DisableDefaultCtor]
-	interface DDRUMVitalEventAccount
+	interface DDRUMVitalEventRUMAccount
 	{
 		// @property (nonatomic, readonly, copy) NSString * _Nonnull id;
 		[Export("id")]
