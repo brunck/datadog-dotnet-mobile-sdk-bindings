@@ -10,7 +10,7 @@
 	</PropertyGroup>
 	<PropertyGroup>
 		<PackageId>Bcr.Datadog.Android.Sdk.Trace</PackageId>
-		<Version>2.21.0</Version>
+		<Version>2.21.0.1</Version>
 		<PackageReleaseNotes><![CDATA[
 			This addresses the 16 KB requirement for Android.
 			]]></PackageReleaseNotes>
@@ -46,6 +46,6 @@
 		<AndroidNamespaceReplacement Include="IO.Opentracing." Replacement="IO.OpenTracing" />
 	</ItemGroup>
 	<ItemGroup>
-	  <PackageReference Include="Bcr.Datadog.Android.Sdk.Core" Version="2.21.0" />
+	  <PackageReference Include="Bcr.Datadog.Android.Sdk.Core" Version="2.21.0.1" />
 	</ItemGroup>
 </Project>

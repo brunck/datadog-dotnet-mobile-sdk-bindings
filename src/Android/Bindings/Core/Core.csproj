@@ -10,7 +10,7 @@
 	</PropertyGroup>
 	<PropertyGroup>
 		<PackageId>Bcr.Datadog.Android.Sdk.Core</PackageId>
-		<Version>2.21.0</Version>
+		<Version>2.21.0.1</Version>
 		<PackageReleaseNotes><![CDATA[
 			This addresses the 16 KB requirement for Android.
 			]]></PackageReleaseNotes>
@@ -30,15 +30,18 @@
 		<None Include="LICENSE" Pack="true" PackagePath="/" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Bcr.Datadog.Android.Sdk.Internal" Version="2.21.0" />
+		<PackageReference Include="Bcr.Datadog.Android.Sdk.Internal" Version="2.21.0.1" />
 		<PackageReference Include="GoogleGson" Version="2.10.1.11" />
 		<PackageReference Include="Square.OkHttp3" Version="4.12.0" />
 		<PackageReference Include="Xamarin.AndroidX.Work.Runtime" Version="2.8.1" />
 	</ItemGroup>
 	<ItemGroup>
 		<AndroidLibrary Update="aars\dd-sdk-android-core-release.aar" />
-		<AndroidLibrary Update="aars\kronos-java-0.0.1-alpha11.jar" Bind="false" />
 		<AndroidLibrary Update="aars\kronos-android-0.0.1-alpha11.aar" Bind="false" />
+		<!--Workaround for .NET 10 regression: standalone JARs included as AndroidLibrary
+		    are dropped from NuGet pack. See https://github.com/dotnet/android/issues/10481 -->
+		<AndroidLibrary Remove="aars\kronos-java-0.0.1-alpha11.jar" />
+		<AndroidJavaLibrary Include="aars\kronos-java-0.0.1-alpha11.jar" Bind="false" />
 	</ItemGroup>
 	<ItemGroup>
 		<AndroidNamespaceReplacement Include="com.datadog.android." Replacement="Datadog.Android" />
